@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import os
+import timeit
 
 data_l_m = pd.read_csv(os.path.dirname(__file__) + "/inputs/nazwiska_meskie.csv")
 last_names_m = data_l_m["Nazwisko aktualne"].to_numpy()
@@ -48,9 +49,12 @@ def person_probability(first_name, last_name, gender):
 if __name__ == "__main__":
     print(f"\nrandom man name: {random_man_name()}")
     print(f"random woman name: {random_woman_name()}")
+    
+    t = timeit.Timer(random_man_name)
+    print(f"\n1000 random names generated time: {t.timeit(number=1000)} [s]")
 
     AG = person_probability("ADRIAN", "GALIK", "M")
     print(f"\nAdrian probabilit: {AG[0]}\nGalik probability: {AG[1]}\nAdrian Galik probability: {AG[2]}")
 
     TS = person_probability("TOMASZ", "STROIŃSKI", "M")
-    print(f"\nTomasz probabilit: {TS[0]}\nStroiński probability: {TS[1]}\nTomasz Stroiński probability: {TS[2]}")   
+    print(f"\nTomasz probabilit: {TS[0]}\nStroiński probability: {TS[1]}\nTomasz Stroiński probability: {TS[2]}\n")   
