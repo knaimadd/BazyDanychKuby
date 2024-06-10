@@ -130,7 +130,41 @@ def random_pesel_date_woman(years_lims, date_format = "/"):
     return pesel, day_no + date_format + str(month+101)[-2:] + date_format + str(year)
 
 
-    
+# Miasta
+
+cities = pd.read_excel(os.path.dirname(__file__) + "/inputs/miasta_ludnosc.xlsx", sheet_name = "tabl. 22")
+# partisioning data based no voivoidship
+voi_partision = np.where(cities.iloc()[:,5].isna())[0][1:]
+voi_partision = [(voi_partision[i], voi_partision[i+1]) for i in range(len(voi_partision)-1)]
+voi_partision.append((voi_partision[-1][1], len(cities.iloc()[:,5])))
+
+pop_in_cities = [cities.iloc()[:,5][voi_partision[i][0]+1:voi_partision[i][1]].array for i in range(len(voi_partision))] # number of peaople per city per voivoidship
+sum_pop_in_cities = [np.sum(pop) for pop in pop_in_cities] # sum of people per voivoidship
+prob_in_cities = [pop_in_cities[i]/sum_pop_in_cities[i] for i in range(len(pop_in_cities))] # normalized probability of getting a person from city per voivoidship
+cities_in_voi = [cities.iloc()[:,1][voi_partision[i][0]+1:voi_partision[i][1]].values for i in range(len(voi_partision))] # names of cities per voivoidship
+
+voi_probability = np.array([5, 3, 1, 4, 3, 2, 2, 4, 1, 1, 3, 3, 2, 2, 4, 3]) # how likely to get city form this voivoidship (based on location to dolnośląskie) 
+voi_probability = voi_probability/np.sum(voi_probability)
+
+def random_city():
+    voi = np.random.choice(np.arange(0, 16), p = voi_probability)
+    return np.random.choice(cities_in_voi[voi], p = prob_in_cities[voi])
+
+
+# Ulice
+
+# Probably will have to save this to some file, because its quite slow (few seconds)
+streets = pd.read_csv(os.path.dirname(__file__) + "/inputs/ulica.csv", delimiter=";")
+can_live = np.where(streets["CECHA"].isin(["ul.", "pl.", "al."]))[0]
+addresses = np.array([streets["CECHA"].iloc()[can_live[i]] + " " +
+             str(streets["NAZWA_2"].iloc()[can_live[i]]).replace("nan", "") + " " +
+             streets["NAZWA_1"].iloc()[can_live[i]] for i in range(len(can_live))])
+
+
+def random_street():
+    return np.random.choice(addresses)
+
+
 if __name__ == "__main__":
     print(f"\nrandom man name: {random_name_man()}")
     pdm = random_pesel_date_man([1980, 2010])
@@ -138,14 +172,18 @@ if __name__ == "__main__":
     print(f"random woman name: {random_name_woman()}")
     pdw = random_pesel_date_woman([1980, 2010])
     print(f"random man pesel and date: {pdw[0]}, {pdw[1]}")
+    print(f"random address: {random_city()}, {random_street()}")
     
     t = timeit.Timer(random_name_man)
     print(f"\n1000 random names generated time: {t.timeit(number=1000)} [s]")
     tp = timeit.Timer(lambda: random_pesel_date_man([1980, 2010]))
     print(f"\n1000 random pesels and dates generated time: {tp.timeit(number=1000)} [s]")
+    tc = timeit.Timer(random_city)
+    ts = timeit.Timer(random_street)
+    print(f"\n1000 random addresses generated time: {tc.timeit(number=1000) + ts.timeit(number=1000)} [s]")
 
     AG = person_probability("ADRIAN", "GALIK", "M")
     print(f"\nAdrian probabilit: {AG[0]}\nGalik probability: {AG[1]}\nAdrian Galik probability: {AG[2]}")
 
     TS = person_probability("TOMASZ", "STROIŃSKI", "M")
-    print(f"\nTomasz probabilit: {TS[0]}\nStroiński probability: {TS[1]}\nTomasz Stroiński probability: {TS[2]}\n")   
+    print(f"\nTomasz probabilit: {TS[0]}\nStroiński probability: {TS[1]}\nTomasz Stroiński probability: {TS[2]}\n")
