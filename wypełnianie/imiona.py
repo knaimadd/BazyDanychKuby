@@ -1,7 +1,11 @@
+import faker.providers
+import faker.providers.phone_number
 import numpy as np
 import pandas as pd
 import os
 import timeit
+import string
+from unidecode import unidecode
 
 # Name
 
@@ -153,26 +157,87 @@ def random_city():
 
 # Ulice
 
-# Probably will have to save this to some file, because its quite slow (few seconds)
-streets = pd.read_csv(os.path.dirname(__file__) + "/inputs/ulica.csv", delimiter=";")
+# Probably will have to save this to some file, because its quite slow (few seconds) (done)
+"""streets = pd.read_csv(os.path.dirname(__file__) + "/inputs/ulica.csv", delimiter=";")
 can_live = np.where(streets["CECHA"].isin(["ul.", "pl.", "al."]))[0]
-addresses = np.array([streets["CECHA"].iloc()[can_live[i]] + " " +
-             str(streets["NAZWA_2"].iloc()[can_live[i]]).replace("nan", "") + " " +
-             streets["NAZWA_1"].iloc()[can_live[i]] for i in range(len(can_live))])
+addresses = np.array([(streets["CECHA"].iloc()[can_live[i]] + " " +
+             str(streets["NAZWA_2"].iloc()[can_live[i]]) + " " +
+             streets["NAZWA_1"].iloc()[can_live[i]]).replace(" nan ", " ") for i in range(len(can_live))])
+adresses_df = pd.DataFrame({"address": addresses})
+adresses_df.to_csv(os.path.dirname(__file__) + '/inputs/adresy.csv')"""
+
+addresses = pd.read_csv(os.path.dirname(__file__) + '/inputs/adresy.csv')["address"].values
 
 
 def random_street():
     return np.random.choice(addresses)
 
+used_phone_list = []
+
+def random_phone():
+    if np.random.rand() <= 0.002:
+        country_code = str(np.random.randint(1, 999))
+        phone_number = ""
+        for i in range(np.random.randint(8, 13)):
+            phone_number += str(np.random.randint(10))
+    else:
+        country_code = "48"
+        phone_number = str(np.random.randint(1000000000, 1999999999))[1:]
+
+    phone = country_code + phone_number
+    if phone in used_phone_list:
+        return random_phone()
+    else:
+        used_phone_list.append(phone)
+        return phone
+    
+domains = np.array(["gmail.com", "wp.pl", "onet.pl", "interia.pl", "opayq.com", "yahoo.com", "outlook.com", "vp.pl", "protonmail.com", "o2.pl", "gazeta.pl", 'int.pl'])
+domain_weights = np.array([36, 22, 13, 9, 0.1, 1, 3, 4, 2, 10, 2, 0.5])
+domain_weights = domain_weights/np.sum(domain_weights)
+
+def random_email(first_name, last_name):
+    first_name = unidecode(first_name.lower())
+    last_name = unidecode(last_name.lower())
+    b = np.random.rand()
+    num = ""
+    if b <= 0.5:
+        num = str(np.random.randint(9999))
+
+    p = np.random.randint(6)
+    domain = np.random.choice(domains, p=domain_weights)
+    symbol = np.random.choice(np.array([".", "-", "_", ""]))
+    if p == 0:
+        return first_name[0] + symbol + last_name + num + "@" + domain
+    if p == 1:
+        return first_name[:3] + symbol + last_name[:min(len(last_name) - 1, np.random.randint(1,10))] + num + "@" + domain
+    if p == 2:
+        return first_name[0] + symbol + last_name[:min(len(last_name) - 1, np.random.randint(1,10))] + num + "@" + domain
+    if p == 3:
+        return last_name + num + str(np.random.randint(10)) + "@" + domain
+    if p == 4: 
+        random_ascii = np.random.choice(list(string.ascii_lowercase), np.random.randint(4, 10)).tolist()
+        random_nums = np.random.choice([str(i) for i in range(10)], np.random.randint(1, 10)).tolist()
+        random_string = np.array(random_ascii + random_nums)
+        np.random.shuffle(random_string[1:])
+        r = np.random.randint(2)
+        return ["".join(random_string) + "@opayq.com", "".join(random_string) + "@" + domain][r]
+    if p == 5:
+        return last_name[:min(len(last_name) - 1, np.random.randint(10))] + symbol + first_name[:min(len(last_name) - 1, np.random.randint(10))] + num + "@" + domain
+
 
 if __name__ == "__main__":
-    print(f"\nrandom man name: {random_name_man()}")
+    mname = random_name_man()
+    print(f"\nrandom man name: {mname}")
+    print(f"random email: {random_email(mname[0], mname[1])}")
     pdm = random_pesel_date_man([1980, 2010])
     print(f"random man pesel and date: {pdm[0]}, {pdm[1]}")
-    print(f"random woman name: {random_name_woman()}")
+    wname = random_name_woman()
+    print(f"random woman name: {wname}")
+    print(f"random email: {random_email(wname[0], wname[1])}")
     pdw = random_pesel_date_woman([1980, 2010])
-    print(f"random man pesel and date: {pdw[0]}, {pdw[1]}")
+    print(f"random woman pesel and date: {pdw[0]}, {pdw[1]}")
     print(f"random address: {random_city()}, {random_street()}")
+    print(f"random phone number: {random_phone()}")
     
     t = timeit.Timer(random_name_man)
     print(f"\n1000 random names generated time: {t.timeit(number=1000)} [s]")
@@ -181,6 +246,10 @@ if __name__ == "__main__":
     tc = timeit.Timer(random_city)
     ts = timeit.Timer(random_street)
     print(f"\n1000 random addresses generated time: {tc.timeit(number=1000) + ts.timeit(number=1000)} [s]")
+    tn = timeit.Timer(random_phone)
+    print(f"\n1000 random phone numbers generated time: {tn.timeit(number=1000)} [s]")
+    te = timeit.Timer(lambda: random_email("Adrian", "Galik"))
+    print(f"\n1000 random email generated time: {te.timeit(number=1000)} [s]")
 
     AG = person_probability("ADRIAN", "GALIK", "M")
     print(f"\nAdrian probabilit: {AG[0]}\nGalik probability: {AG[1]}\nAdrian Galik probability: {AG[2]}")
