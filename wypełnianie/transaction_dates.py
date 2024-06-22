@@ -59,7 +59,6 @@ def calculate_easter_monday(year, algorithm = calculate_easterA):
 def valid_dates(first_date, last_date):
     dates = pd.date_range(first_date, last_date, freq='d').to_list()
     old = 0
-    print(len(dates))
     for date in dates:
         year = date.year
         month = date.month
@@ -104,8 +103,7 @@ def valid_dates(first_date, last_date):
 
 def random_transaction_dates(first_date, last_date, n):
     dates = valid_dates(first_date, last_date)
-    return sorted(np.random.choice(dates, n))
+    return np.array(sorted(np.random.choice(np.array(dates), n)))
+    
 
 
-if __name__ == "__main__":
-    print(random_transaction_dates("2014-01-01", "2020-12-31", 2000))

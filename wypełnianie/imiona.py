@@ -60,7 +60,7 @@ control_weights = np.array([1,3,7,9,1,3,7,9,1,3])
 
 def control_number(number_str):
     number_arr = np.array([int(d) for d in number_str])
-    return 10 - (np.dot(number_arr, control_weights) % 10)
+    return str(10 - (np.dot(number_arr, control_weights) % 10))[-1:]
 
 def random_pesel_date_man(years_lims, date_format = "/"):
     year = np.random.randint(years_lims[0], years_lims[1]+1)
@@ -93,7 +93,7 @@ def random_pesel_date_man(years_lims, date_format = "/"):
     ordinal_no = str(rand_ordinal)[-3:] + str(gender_ordinal)
 
     pesel += ordinal_no
-    pesel += str(control_number(pesel))
+    pesel += control_number(pesel)
     return pesel, day_no + date_format + str(month+101)[-2:] + date_format + str(year)
 
 
@@ -130,7 +130,7 @@ def random_pesel_date_woman(years_lims, date_format = "/"):
     ordinal_no = str(rand_ordinal)[-3:] + str(gender_ordinal)
 
     pesel += ordinal_no
-    pesel += str(control_number(pesel))
+    pesel += control_number(pesel)
     return pesel, day_no + date_format + str(month+101)[-2:] + date_format + str(year)
 
 
@@ -151,6 +151,8 @@ voi_probability = np.array([5, 3, 1, 4, 3, 2, 2, 4, 1, 1, 3, 3, 2, 2, 4, 3]) # h
 voi_probability = voi_probability/np.sum(voi_probability)
 
 def random_city():
+    if np.random.rand() <= 0.5:
+        return "Wrocław"
     voi = np.random.choice(np.arange(0, 16), p = voi_probability)
     return np.random.choice(cities_in_voi[voi], p = prob_in_cities[voi])
 
@@ -162,7 +164,8 @@ def random_city():
 can_live = np.where(streets["CECHA"].isin(["ul.", "pl.", "al."]))[0]
 addresses = np.array([(streets["CECHA"].iloc()[can_live[i]] + " " +
              str(streets["NAZWA_2"].iloc()[can_live[i]]) + " " +
-             streets["NAZWA_1"].iloc()[can_live[i]]).replace(" nan ", " ") for i in range(len(can_live))])
+             streets["NAZWA_1"].iloc()[can_live[i]]).replace(" nan ", " ").replace("pl. Plac", "pl.").replace("ul. Rynek", "Rynek").replace("ul. Aleja", "Aleja")
+             for i in range(len(can_live))])
 adresses_df = pd.DataFrame({"address": addresses})
 adresses_df.to_csv(os.path.dirname(__file__) + '/inputs/adresy.csv')"""
 
@@ -170,7 +173,11 @@ addresses = pd.read_csv(os.path.dirname(__file__) + '/inputs/adresy.csv')["addre
 
 
 def random_street():
-    return np.random.choice(addresses)
+    if np.random.rand() <= 0.7:
+        num = str(np.random.randint(1, 99)) + "/" + str(np.random.randint(1, 52))
+    else:
+        num = str(np.random.randint(1, 99))
+    return np.random.choice(addresses) + " " + num
 
 used_phone_list = []
 
@@ -222,7 +229,7 @@ def random_email(first_name, last_name):
         r = np.random.randint(2)
         return ["".join(random_string) + "@opayq.com", "".join(random_string) + "@" + domain][r]
     if p == 5:
-        return last_name[:min(len(last_name) - 1, np.random.randint(10))] + symbol + first_name[:min(len(last_name) - 1, np.random.randint(10))] + num + "@" + domain
+        return last_name[0:min(len(last_name) - 1, np.random.randint(1, 10))] + symbol + first_name[:min(len(last_name) - 1, np.random.randint(10))] + num + "@" + domain
 
 
 if __name__ == "__main__":
