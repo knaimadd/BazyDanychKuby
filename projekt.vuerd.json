@@ -3,8 +3,8 @@
     "version": "2.2.13",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -674.5348837209303,
-    "scrollLeft": 0,
+    "scrollTop": -134,
+    "scrollLeft": -552,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
@@ -889,7 +889,7 @@
           "active": false,
           "left": 88.75,
           "top": 1375.1077,
-          "zIndex": 13,
+          "zIndex": 9,
           "widthName": 68.47900390625,
           "widthComment": 60
         },
@@ -947,29 +947,6 @@
             }
           },
           {
-            "id": "f075305a-68d4-4163-bdec-9ebd35eeeaf1",
-            "name": "ilość",
-            "comment": "",
-            "dataType": "",
-            "default": "0",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            }
-          },
-          {
             "id": "8c02f63b-b09d-4113-88f5-a70e064ec30e",
             "name": "atrybut",
             "comment": "",
@@ -993,11 +970,11 @@
             }
           },
           {
-            "id": "634293ae-a098-414d-b553-b78192c30a1b",
-            "name": "kompatybilność",
+            "id": "f075305a-68d4-4163-bdec-9ebd35eeeaf1",
+            "name": "ilość",
             "comment": "",
-            "dataType": "VARCHAR(50)",
-            "default": "ALL",
+            "dataType": "",
+            "default": "0",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
@@ -1009,9 +986,9 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 91.59716796875,
+              "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 87.71875,
+              "widthDataType": 60,
               "widthDefault": 60
             }
           },
@@ -1040,10 +1017,10 @@
           }
         ],
         "ui": {
-          "active": false,
+          "active": true,
           "left": 1098.9989,
           "top": 13.5557,
-          "zIndex": 4,
+          "zIndex": 16,
           "widthName": 77.15625,
           "widthComment": 60
         },
@@ -1079,7 +1056,7 @@
           },
           {
             "id": "02baac05-6613-40b1-abf8-9af0e2fcab7a",
-            "name": "id_naprawy",
+            "name": "id_usługi",
             "comment": "",
             "dataType": "INT",
             "default": "",
@@ -1094,7 +1071,7 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 68.4853515625,
+              "widthName": 60,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
@@ -1151,7 +1128,7 @@
           "active": false,
           "left": 1034.4454,
           "top": 556.7773,
-          "zIndex": 5,
+          "zIndex": 14,
           "widthName": 76.419921875,
           "widthComment": 60
         },
@@ -1823,7 +1800,7 @@
           "columnIds": [
             "02baac05-6613-40b1-abf8-9af0e2fcab7a"
           ],
-          "x": 1212.18807578125,
+          "x": 1207.9454,
           "y": 707.7773,
           "direction": "bottom"
         },
@@ -1840,8 +1817,8 @@
           "columnIds": [
             "dedc7225-b6dd-45cf-9de9-5cc3a62db872"
           ],
-          "x": 1335.171995703125,
-          "y": 205.5557,
+          "x": 1326.1424546875,
+          "y": 185.0557,
           "direction": "bottom"
         },
         "end": {
@@ -1849,7 +1826,7 @@
           "columnIds": [
             "506062d8-3d35-4d59-97ce-f58cda5ca40d"
           ],
-          "x": 1212.18807578125,
+          "x": 1207.9454,
           "y": 556.7773,
           "direction": "top"
         },
@@ -1892,8 +1869,8 @@
           "columnIds": [
             "dedc7225-b6dd-45cf-9de9-5cc3a62db872"
           ],
-          "x": 1571.34509140625,
-          "y": 109.5557,
+          "x": 1553.286009375,
+          "y": 99.3057,
           "direction": "right"
         },
         "end": {

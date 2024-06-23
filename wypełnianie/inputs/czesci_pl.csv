@@ -1,66 +1,66 @@
-id,część,atrybuty,relacja,motor
-0,Maska,marka model kolor,przod,False
-1,Zderzak,marka model kolor,przod tyl,False
-2,Kratka,marka model kolor,przod,False
-3,Spojler,marka model kolor,tyl,False
-4,Felga,rozmiar kolor,przod tyl kola,True
-5,Opona zimowa,rozmiar,przod tyl kola,True
-6,Opona letnia,rozmiar,przod tyl kola,True
-7,Zewnętrzna klamka drzwi,marka model,drzwi,False
-8,Wewnętrzna klamka drzwi,marka model,drzwi,False
-9,Drzwi prawe przednie,marka model kolor,drzwi,False
-10,Drzwi lewe przednie,marka model kolor,drzwi,False
-11,Drzwi prawe tylne,marka model kolor,drzwi,False
-12,Drzwi lewe tylne,marka model kolor,drzwi,False
-13,Lakier, kolor,lakier,True
-14,Regulator okna,marka model,drzwi,False
-15,Radio,marka model,wyposazenie,False
-16,Głośnik,marka model,wyposazenie,False
-17,Alternator,marka model,elektryka,True
-18,Akumulator,marka model,elektryka,True
-19,Dystrybutor,marka model,srodek,True
-20,Światło mgłowe,marka model,swiatla,True
-21,Reflektor,marka model,swiatla,True
-22,Światło wewnętrzne,marka model,swiatla,False
-23,Podświetlenie tablicy,,swiatla,True
-24,Oświetlenie boczne,marka model,swiatla,True
-25,Światła tylne,marka model,swiatla,True
-26,Poduszka powietrzna,,wyposazenie,False
-27,Rozrusznik,marka model,srodek,True
-28,Bezpiecznik,,srodek,True
-29,Deska rozdzielcza,marka model,wyposazenie,True
-30,Dywan,marka model,wyposazenie,False
-31,Zagłówek,marka model,fotele,False
-32,Pasy bezpieczeństwa,,fotele,False
-33,Fotel tylny,marka model material,fotele,False
-34,Fotel przedni,marka model material,fotele,True
-35,Przewód hamulcowy,,hamulce,True
-36,Klocek hamulcowy,marka model,hamulce,True
-37,Pedał hamulca,marka model,hamulce,False
-38,Hamulec ręczny,marka model,hamulce,False
-39,Silnik,marka model pojemnosc,srodek,True
-40,Rozrząd,,srodek,True
-41,Wał korbowy,marka model,srodek,True
-42,Chłodnica,marka model,srodek,False
-43,Miska olejowa,marka model,srodek,False
-44,Kolektor wydechowy,,wydech,True
-45,Rura wydechowa,,wydech,True
-46,Tłumik,,wydech,True
-47,Zawór EGR,,wydech,True
-48,Ogniwo paliwowe,marka model,paliwo,True
-49,Filtr paliwa,marka model,paliwo,True
-50,Wtrysk paliwa,marka model,paliwo,True
-51,Pompa paliwowa,marka model,paliwo,True
-52,Zbiornik paliwa,marka model,paliwo,True
-53,Zespół układu LPG,,paliwo,False
-54,Amortyzator,,kola,True
-55,Wał sterujący,,kierownica,True
-56,Kierownica,marka model,kierownica,True
-57,Drążek kierowniczy,,kierownica,True
-58,Sprzęgło,marka model,srodek,False
-59,Skrzynia biegów,marka model skrzynia,srodek,True
-60,Dźwignia zmiany biegów,marka model,srodek,False
-61,Lusterko zewnętrzne lewe,marka model kolor,lusterko,True
-62,Lusterko zewnętrzne prawe,marka model kolor,lusterko,True
-63,Lusterko wewnętrzne,marka model,lusterko,False
+id,część,atrybuty,relacja,motor,cena
+0,Maska,marka model kolor,przod,False,500
+1,Zderzak,marka model kolor,przod tyl,False,300
+2,Kratka,marka model kolor,przod,False,300
+3,Spojler,marka model kolor,tyl,False,400
+4,Felga,rozmiar kolor,przod tyl kola,True,100
+5,Opona zimowa,rozmiar,przod tyl kola,True,250
+6,Opona letnia,rozmiar,przod tyl kola,True,250
+7,Zewnętrzna klamka drzwi,marka model,drzwi,False,10
+8,Wewnętrzna klamka drzwi,marka model,drzwi,False,10
+9,Drzwi prawe przednie,marka model kolor,drzwi,False,500
+10,Drzwi lewe przednie,marka model kolor,drzwi,False,500
+11,Drzwi prawe tylne,marka model kolor,drzwi,False,500
+12,Drzwi lewe tylne,marka model kolor,drzwi,False,500
+13,Lakier, kolor,lakier,True,250
+14,Regulator okna,marka model,drzwi,False,50
+15,Radio,marka model,wyposazenie,False,100
+16,Głośnik,marka model,wyposazenie,False,100
+17,Alternator,marka model,elektryka,True,200
+18,Akumulator,marka model,elektryka,True,600
+19,Dystrybutor,marka model,srodek,True,300
+20,Światło mgłowe,marka model,swiatla,True,50
+21,Reflektor,marka model,swiatla,True,70
+22,Światło wewnętrzne,marka model,swiatla,False,10
+23,Podświetlenie tablicy,,swiatla,True,20
+24,Oświetlenie boczne,marka model,swiatla,True,100
+25,Światła tylne,marka model,swiatla,True,70
+26,Poduszka powietrzna,,wyposazenie,False,100
+27,Rozrusznik,marka model,srodek,True,400
+28,Bezpiecznik,,srodek,True,10
+29,Deska rozdzielcza,marka model,wyposazenie,True,150
+30,Dywan,marka model,wyposazenie,False,20
+31,Zagłówek,marka model,fotele,False,20
+32,Pasy bezpieczeństwa,,fotele,False,50
+33,Fotel tylny,marka model material,fotele,False,300
+34,Fotel przedni,marka model material,fotele,True,300
+35,Przewód hamulcowy,,hamulce,True,50
+36,Klocek hamulcowy,marka model,hamulce,True,20
+37,Pedał hamulca,marka model,hamulce,False,70
+38,Hamulec ręczny,marka model,hamulce,False,50
+39,Silnik,marka model pojemnosc,srodek,True,3000
+40,Rozrząd,,srodek,True,2500
+41,Wał korbowy,marka model,srodek,True,1000
+42,Chłodnica,marka model,srodek,False,700
+43,Miska olejowa,marka model,srodek,False,600
+44,Kolektor wydechowy,,wydech,True,500
+45,Rura wydechowa,,wydech,True,100
+46,Tłumik,,wydech,True,200
+47,Zawór EGR,,wydech,True,500
+48,Ogniwo paliwowe,marka model,paliwo,True,300
+49,Filtr paliwa,marka model,paliwo,True,400
+50,Wtrysk paliwa,marka model,paliwo,True,400
+51,Pompa paliwowa,marka model,paliwo,True,400
+52,Zbiornik paliwa,marka model,paliwo,True,400
+53,Zespół układu LPG,,paliwo,False,500
+54,Amortyzator,,kola,True,150
+55,Wał sterujący,,kierownica,True,150
+56,Kierownica,marka model,kierownica,True,100
+57,Drążek kierowniczy,,kierownica,True,100
+58,Sprzęgło,marka model,srodek,False,400
+59,Skrzynia biegów,marka model skrzynia,srodek,True,2000
+60,Dźwignia zmiany biegów,marka model,srodek,False,100
+61,Lusterko zewnętrzne lewe,marka model kolor,lusterko,True,30
+62,Lusterko zewnętrzne prawe,marka model kolor,lusterko,True,30
+63,Lusterko wewnętrzne,marka model,lusterko,False,20
 
