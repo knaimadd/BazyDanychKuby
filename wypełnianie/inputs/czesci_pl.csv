@@ -12,7 +12,7 @@
 10,Drzwi lewe przednie,marka model kolor,drzwi
 11,Drzwi prawe tylne,marka model kolor,drzwi
 12,Drzwi lewe tylne,marka model kolor,drzwi
-13,Zawias,rozmiar2,czesc
+13,Lakier, kolor,lakier
 14,Regulator okna,marka model,drzwi
 15,Radio,marka model,wyposazenie
 16,Głośnik,marka model,wyposazenie
@@ -63,6 +63,4 @@
 61,Lusterko zewnętrzne lewe,marka model kolor,lusterko
 62,Lusterko zewnętrzne prawe,marka model kolor,lusterko
 63,Lusterko wewnętrzne,marka model,lusterko
-64,Śrubka, rozmiar2,czesc
-65,Łożysko, rozmiar2,czesc
-66,Lakier, kolor,lakier
+

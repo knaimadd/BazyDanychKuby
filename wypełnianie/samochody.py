@@ -109,57 +109,57 @@ def get_num_of_seats(is_car, seat_prob = 0.25):
         return 1
     
 
-def get_availability(av_prob=0.01):
+def get_car_data():
+    data_car = pd.read_csv(os.path.dirname(__file__) + '/inputs/samochody.csv')
+    data_bike = pd.read_csv(os.path.dirname(__file__) + '/inputs/motocykle.csv')
+    return data_car, data_bike
+
+# def create_car():
+
+#     is_car = rng.random() < 0.5
+#     colors = np.array(('czarny', 'biały', 'szary', 'srebrny', 'niebieski', 'czerwony', 'brązowy', 'złoty', 'żółty', 'inny'))
+#     colors_weights = np.array((0.22, 0.19, 0.18, 0.15, 0.10, 0.09, 0.03, 0.02, 0.01, 0.01))
+
+#     if is_car:
+#         index = rng.choice(len(make_list_car), p=car_weights)
+#         make, model = make_list_car[index], model_list_car[index]
+#         weights = data_car[(data_car['make'] == make) & (data_car['model'] == model)]
+#         body = np.array(('SUV', 'Hatchback', 'Sedan', 'Kombi', 'Coupe', 'Van', 'Minivan', 'Kabriolet'))
+#         body_weights = np.array((0.25, 0.25, 0.23, 0.17, 0.06, 0.03, 0.009, 0.001))
+#     else:
+#         index = rng.choice(len(make_list_bike), p=bike_weights)
+#         make, model = make_list_bike[index], model_list_bike[index]
+#         weights = False
+#         body = False
+#         body_weights = False
+
+#     wheels = 4 if is_car else 2
+#     year = get_year()
+#     gear = get_gear(weights, is_car)
+#     fuel = get_fuel(weights, is_car)
+#     post_accident = get_post_accident()
+#     hp = get_hp(weights, is_car)
+#     color = get_color(colors, colors_weights)
+#     body_type = get_body_type(body, body_weights, is_car)
+#     engine_capacity = get_engine_capacity(hp, is_car)
+#     doors = get_doors(is_car)
+#     seats = get_num_of_seats(is_car)
+#     available = get_availability()
     
-    return rng.random() < av_prob
+#     return [make, model, wheels, year, body_type, post_accident, color, fuel, engine_capacity, gear, doors, available]
 
 
-def create_car():
-
-    is_car = rng.random() < 0.5
-    colors = np.array(('czarny', 'biały', 'szary', 'srebrny', 'niebieski', 'czerwony', 'brązowy', 'złoty', 'żółty', 'inny'))
-    colors_weights = np.array((0.22, 0.19, 0.18, 0.15, 0.10, 0.09, 0.03, 0.02, 0.01, 0.01))
-
-    if is_car:
-        index = rng.choice(len(make_list_car), p=car_weights)
-        make, model = make_list_car[index], model_list_car[index]
-        weights = data_car[(data_car['make'] == make) & (data_car['model'] == model)]
-        body = np.array(('SUV', 'Hatchback', 'Sedan', 'Kombi', 'Coupe', 'Van', 'Minivan', 'Kabriolet'))
-        body_weights = np.array((0.25, 0.25, 0.23, 0.17, 0.06, 0.03, 0.009, 0.001))
-    else:
-        index = rng.choice(len(make_list_bike), p=bike_weights)
-        make, model = make_list_bike[index], model_list_bike[index]
-        weights = False
-        body = False
-        body_weights = False
-
-    wheels = 4 if is_car else 2
-    year = get_year()
-    gear = get_gear(weights, is_car)
-    fuel = get_fuel(weights, is_car)
-    post_accident = get_post_accident()
-    hp = get_hp(weights, is_car)
-    color = get_color(colors, colors_weights)
-    body_type = get_body_type(body, body_weights, is_car)
-    engine_capacity = get_engine_capacity(hp, is_car)
-    doors = get_doors(is_car)
-    seats = get_num_of_seats(is_car)
-    available = get_availability()
+# def create_table(n):
     
-    return [make, model, wheels, year, body_type, post_accident, color, fuel, engine_capacity, gear, doors, available]
+#     df = pd.DataFrame(columns=['marka', 'model', 'liczba_kół', 'rok_produkcji', 'typ_nadwozia', 'czy_powypadkowy', 'kolor', 'typ_paliwa', 'pojemość_silnika', 'skrzynia_biegów', 'liczba_drzwi', 'czy_dostępny'])
+#     for i in range(n):
+#         row = create_car()
+#         df.loc[i] = row
+#     return df
 
 
-def create_table(n):
-    
-    df = pd.DataFrame(columns=['marka', 'model', 'liczba_kół', 'rok_produkcji', 'typ_nadwozia', 'czy_powypadkowy', 'kolor', 'typ_paliwa', 'pojemość_silnika', 'skrzynia_biegów', 'liczba_drzwi', 'czy_dostępny'])
-    for i in range(n):
-        row = create_car()
-        df.loc[i] = row
-    return df
+# if __name__ == '__main__':
+#     make_list_car, model_list_car, car_weights = get_car_weights()
+#     make_list_bike, model_list_bike, bike_weights = get_bike_weights()
 
-
-if __name__ == '__main__':
-    make_list_car, model_list_car, car_weights = get_car_weights()
-    make_list_bike, model_list_bike, bike_weights = get_bike_weights()
-
-    print(create_table(20))
+#     print(create_table(20))
