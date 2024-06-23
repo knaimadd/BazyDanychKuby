@@ -3,8 +3,8 @@
     "version": "2.2.13",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -969,
-    "scrollLeft": -91,
+    "scrollTop": -674.5348837209303,
+    "scrollLeft": 0,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
@@ -303,8 +303,8 @@
         ],
         "ui": {
           "active": false,
-          "left": 602.8896,
-          "top": 138,
+          "left": 600.3896,
+          "top": 215.5,
           "zIndex": 8,
           "widthName": 67.025390625,
           "widthComment": 60
@@ -551,7 +551,7 @@
           "active": false,
           "left": 47.8906,
           "top": 4.2219,
-          "zIndex": 3,
+          "zIndex": 2,
           "widthName": 60,
           "widthComment": 60
         },
@@ -588,6 +588,29 @@
           {
             "id": "76ba3d47-cd0c-40c5-9fc5-99671421ff4e",
             "name": "marka",
+            "comment": "",
+            "dataType": "VARCHAR(25)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "a368482a-947c-4a61-b1b8-b472f660a419",
+            "name": "model",
             "comment": "",
             "dataType": "VARCHAR(25)",
             "default": "",
@@ -664,7 +687,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": true
+              "notNull": false
             },
             "ui": {
               "active": false,
@@ -816,10 +839,10 @@
             }
           },
           {
-            "id": "0ec3506a-b62b-4fe6-ba82-7345d47f0c83",
-            "name": "wartość",
+            "id": "bdd93d1c-5895-454c-9aa1-f2a18290481e",
+            "name": "liczba_miejsc",
             "comment": "",
-            "dataType": "DECIMAL(12,2)",
+            "dataType": "ENUM(1,2,5,7)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -832,9 +855,9 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 60,
+              "widthName": 79.3017578125,
               "widthComment": 60,
-              "widthDataType": 93.7490234375,
+              "widthDataType": 88.68994140625,
               "widthDefault": 60
             }
           },
@@ -864,9 +887,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 0,
-          "top": 1185.1077,
-          "zIndex": 7,
+          "left": 88.75,
+          "top": 1375.1077,
+          "zIndex": 13,
           "widthName": 68.47900390625,
           "widthComment": 60
         },
@@ -1017,10 +1040,10 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 1098.9989,
           "top": 13.5557,
-          "zIndex": 9,
+          "zIndex": 4,
           "widthName": 77.15625,
           "widthComment": 60
         },
@@ -1126,9 +1149,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 928.8902,
-          "top": 488.9996,
-          "zIndex": 4,
+          "left": 1034.4454,
+          "top": 556.7773,
+          "zIndex": 5,
           "widthName": 76.419921875,
           "widthComment": 60
         },
@@ -1282,7 +1305,7 @@
           "active": false,
           "left": 1404.8872,
           "top": 390.7771,
-          "zIndex": 5,
+          "zIndex": 6,
           "widthName": 80.0380859375,
           "widthComment": 60
         },
@@ -1436,7 +1459,7 @@
           "active": false,
           "left": 873.9989,
           "top": 987.3317,
-          "zIndex": 1,
+          "zIndex": 7,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1590,7 +1613,7 @@
           "active": false,
           "left": 0,
           "top": 602.5557,
-          "zIndex": 2,
+          "zIndex": 1,
           "widthName": 111.12890625,
           "widthComment": 60
         },
@@ -1767,7 +1790,7 @@
           "active": false,
           "left": 304.8884,
           "top": 906.7764,
-          "zIndex": 6,
+          "zIndex": 3,
           "widthName": 129.18798828125,
           "widthComment": 60
         },
@@ -1800,8 +1823,8 @@
           "columnIds": [
             "02baac05-6613-40b1-abf8-9af0e2fcab7a"
           ],
-          "x": 1106.63287578125,
-          "y": 639.9996,
+          "x": 1212.18807578125,
+          "y": 707.7773,
           "direction": "bottom"
         },
         "constraintName": "fk_naprawy_to_użyte_części",
@@ -1826,9 +1849,9 @@
           "columnIds": [
             "506062d8-3d35-4d59-97ce-f58cda5ca40d"
           ],
-          "x": 1284.3755515625,
-          "y": 564.4996,
-          "direction": "right"
+          "x": 1212.18807578125,
+          "y": 556.7773,
+          "direction": "top"
         },
         "constraintName": "fk_części_to_użyte_części",
         "visible": true
@@ -1843,8 +1866,8 @@
           "columnIds": [
             "9452bfbf-a3de-4e2a-b141-a66d1bd392ea"
           ],
-          "x": 520.00244140625,
-          "y": 1352.8577,
+          "x": 608.75244140625,
+          "y": 1553.1077,
           "direction": "right"
         },
         "end": {
@@ -1895,8 +1918,8 @@
           "columnIds": [
             "9452bfbf-a3de-4e2a-b141-a66d1bd392ea"
           ],
-          "x": 130.0006103515625,
-          "y": 1185.1077,
+          "x": 218.7506103515625,
+          "y": 1375.1077,
           "direction": "top"
         },
         "end": {
@@ -1921,8 +1944,8 @@
           "columnIds": [
             "9452bfbf-a3de-4e2a-b141-a66d1bd392ea"
           ],
-          "x": 390.0018310546875,
-          "y": 1185.1077,
+          "x": 478.7518310546875,
+          "y": 1375.1077,
           "direction": "top"
         },
         "end": {
@@ -1930,9 +1953,9 @@
           "columnIds": [
             "97555960-3540-4049-a684-ca627f903e67"
           ],
-          "x": 304.8884,
-          "y": 1013.0264,
-          "direction": "left"
+          "x": 548.626925390625,
+          "y": 1119.2764,
+          "direction": "bottom"
         },
         "constraintName": "fk_samochody_to_sprzedaż_samochodu",
         "visible": true
@@ -1947,8 +1970,8 @@
           "columnIds": [
             "1ac9be49-f50c-4804-a11b-36bb8bc9d513"
           ],
-          "x": 602.8896,
-          "y": 285.25,
+          "x": 600.3896,
+          "y": 362.75,
           "direction": "left"
         },
         "end": {
@@ -2025,8 +2048,8 @@
           "columnIds": [
             "1ac9be49-f50c-4804-a11b-36bb8bc9d513"
           ],
-          "x": 724.716504296875,
-          "y": 432.5,
+          "x": 722.216504296875,
+          "y": 510,
           "direction": "bottom"
         },
         "end": {
@@ -2051,8 +2074,8 @@
           "columnIds": [
             "1ac9be49-f50c-4804-a11b-36bb8bc9d513"
           ],
-          "x": 968.370312890625,
-          "y": 432.5,
+          "x": 965.870312890625,
+          "y": 510,
           "direction": "bottom"
         },
         "end": {
