@@ -150,8 +150,8 @@ cities_in_voi = [cities.iloc()[:,1][voi_partision[i][0]+1:voi_partision[i][1]].v
 voi_probability = np.array([5, 3, 1, 4, 3, 2, 2, 4, 1, 1, 3, 3, 2, 2, 4, 3]) # how likely to get city form this voivoidship (based on location to dolnośląskie) 
 voi_probability = voi_probability/np.sum(voi_probability)
 
-def random_city():
-    if np.random.rand() <= 0.5:
+def random_city(prob = 0.5):
+    if np.random.rand() <= prob:
         return "Wrocław"
     voi = np.random.choice(np.arange(0, 16), p = voi_probability)
     return np.random.choice(cities_in_voi[voi], p = prob_in_cities[voi])
@@ -202,13 +202,17 @@ domains = np.array(["gmail.com", "wp.pl", "onet.pl", "interia.pl", "opayq.com", 
 domain_weights = np.array([36, 22, 13, 9, 0.1, 1, 3, 4, 2, 10, 2, 0.5])
 domain_weights = domain_weights/np.sum(domain_weights)
 
-def random_email(first_name, last_name):
+def random_email(first_name, last_name, year):
     first_name = unidecode(first_name.lower())
     last_name = unidecode(last_name.lower())
     b = np.random.rand()
     num = ""
-    if b <= 0.5:
+    if b <= 0.1:
         num = str(np.random.randint(9999))
+    if b > 0.1 and b <= 0.4:
+        num = year
+    if b > 0.4 and b <= 0.6:
+        num = year[-2:]
 
     p = np.random.randint(6)
     domain = np.random.choice(domains, p=domain_weights)
@@ -231,6 +235,8 @@ def random_email(first_name, last_name):
     if p == 5:
         return last_name[0:min(len(last_name) - 1, np.random.randint(1, 10))] + symbol + first_name[:min(len(last_name) - 1, np.random.randint(10))] + num + "@" + domain
 
+def employee_email(first_name, last_name):
+    return unidecode(first_name.lower()) + "." + unidecode(last_name.lower()) + "@kuba.pl"
 
 if __name__ == "__main__":
     mname = random_name_man()
