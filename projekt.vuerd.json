@@ -3,8 +3,8 @@
     "version": "2.2.13",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -1246.5656999999999,
-    "scrollLeft": -179,
+    "scrollTop": -330,
+    "scrollLeft": -1123,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
@@ -19,7 +19,7 @@
     },
     "database": "MySQL",
     "databaseName": "",
-    "canvasType": "ERD",
+    "canvasType": "@vuerd/builtin-visualization",
     "language": "GraphQL",
     "tableCase": "pascalCase",
     "columnCase": "camelCase",
@@ -843,7 +843,7 @@
             "name": "liczba_drzwi",
             "comment": "",
             "dataType": "ENUM('0','3','5')",
-            "default": "0",
+            "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
@@ -909,10 +909,10 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 88.75,
           "top": 1375.1077,
-          "zIndex": 115,
+          "zIndex": 118,
           "widthName": 68.47900390625,
           "widthComment": 60
         },
@@ -1258,7 +1258,7 @@
             "id": "28286b3c-fdde-4b29-9270-29cd25b0ce6f",
             "name": "ilość",
             "comment": "",
-            "dataType": "",
+            "dataType": "INT",
             "default": "1",
             "option": {
               "autoIncrement": false,
@@ -1302,10 +1302,10 @@
           }
         ],
         "ui": {
-          "active": false,
+          "active": true,
           "left": 1404.8872,
           "top": 390.7771,
-          "zIndex": 9,
+          "zIndex": 120,
           "widthName": 80.0380859375,
           "widthComment": 60
         },
