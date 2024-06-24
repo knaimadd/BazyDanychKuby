@@ -3,8 +3,8 @@
     "version": "2.2.13",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -190.56569999999988,
-    "scrollLeft": -609,
+    "scrollTop": -1246.5656999999999,
+    "scrollLeft": -179,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
@@ -117,29 +117,6 @@
             }
           },
           {
-            "id": "eb149510-0da8-4035-a8f6-b26d6199e578",
-            "name": "data_urodzenia",
-            "comment": "",
-            "dataType": "DATE",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 91.62890625,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            }
-          },
-          {
             "id": "bbc3fe16-b8a4-4da4-84cc-6ba138378afa",
             "name": "pesel",
             "comment": "",
@@ -159,6 +136,29 @@
               "widthName": 60,
               "widthComment": 60,
               "widthDataType": 60.98876953125,
+              "widthDefault": 60
+            }
+          },
+          {
+            "id": "d5f68a18-8b0c-4108-b76d-76c3464fe0f9",
+            "name": "miasto",
+            "comment": "",
+            "dataType": "VARCHAR(255)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 94.94873046875,
               "widthDefault": 60
             }
           },
@@ -299,13 +299,36 @@
               "widthDataType": 87.71875,
               "widthDefault": 60
             }
+          },
+          {
+            "id": "a81bea5a-a074-4a99-a5b8-b11139d00676",
+            "name": "płaca",
+            "comment": "zł/h",
+            "dataType": "DECIMAL(5,2)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 86.51904296875,
+              "widthDefault": 60
+            }
           }
         ],
         "ui": {
           "active": false,
           "left": 600.3896,
           "top": 215.5,
-          "zIndex": 8,
+          "zIndex": 103,
           "widthName": 67.025390625,
           "widthComment": 60
         },
@@ -349,7 +372,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": true
+              "notNull": false
             },
             "ui": {
               "active": false,
@@ -372,7 +395,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": true
+              "notNull": false
             },
             "ui": {
               "active": false,
@@ -382,29 +405,6 @@
               "widthName": 60,
               "widthComment": 60,
               "widthDataType": 94.94873046875,
-              "widthDefault": 60
-            }
-          },
-          {
-            "id": "7c25f656-584b-41e0-815f-43b010a11799",
-            "name": "data_urodzenia",
-            "comment": "",
-            "dataType": "DATE",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 91.62890625,
-              "widthComment": 60,
-              "widthDataType": 60,
               "widthDefault": 60
             }
           },
@@ -441,7 +441,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": true
+              "notNull": false
             },
             "ui": {
               "active": false,
@@ -455,6 +455,29 @@
             }
           },
           {
+            "id": "30221fb5-0cb7-4b70-a92a-10b916868f82",
+            "name": "miasto",
+            "comment": "",
+            "dataType": "VARCHAR(255)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 94.94873046875,
+              "widthDefault": 60
+            }
+          },
+          {
             "id": "ae7ad193-57e0-4bfd-a08a-df48ad66dce6",
             "name": "adres",
             "comment": "",
@@ -464,7 +487,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": true
+              "notNull": false
             },
             "ui": {
               "active": false,
@@ -487,7 +510,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": true
+              "notNull": false
             },
             "ui": {
               "active": false,
@@ -510,7 +533,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": true
+              "notNull": false
             },
             "ui": {
               "active": false,
@@ -533,7 +556,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": true
+              "notNull": false
             },
             "ui": {
               "active": false,
@@ -549,9 +572,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 47.8906,
-          "top": 4.2219,
-          "zIndex": 2,
+          "left": 12.8906,
+          "top": 0,
+          "zIndex": 93,
           "widthName": 60,
           "widthComment": 60
         },
@@ -635,7 +658,7 @@
             "id": "0c3e51d1-cf5b-4ddf-9643-e911cc1e64da",
             "name": "liczba_kół",
             "comment": "",
-            "dataType": "ENUM(2,4)",
+            "dataType": "ENUM('2','4')",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -650,7 +673,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 67.00634765625,
+              "widthDataType": 76.93408203125,
               "widthDefault": 60
             }
           },
@@ -819,7 +842,7 @@
             "id": "e590a085-44dc-4ea6-822e-97e57bcd8118",
             "name": "liczba_drzwi",
             "comment": "",
-            "dataType": "ENUM(0,3,5)",
+            "dataType": "ENUM('0','3','5')",
             "default": "0",
             "option": {
               "autoIncrement": false,
@@ -834,7 +857,7 @@
               "pfk": false,
               "widthName": 72.8017578125,
               "widthComment": 60,
-              "widthDataType": 77.84814453125,
+              "widthDataType": 92.73974609375,
               "widthDefault": 60
             }
           },
@@ -842,7 +865,7 @@
             "id": "bdd93d1c-5895-454c-9aa1-f2a18290481e",
             "name": "liczba_miejsc",
             "comment": "",
-            "dataType": "ENUM(1,2,5,7)",
+            "dataType": "ENUM('1','2','5','7')",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -857,7 +880,7 @@
               "pfk": false,
               "widthName": 79.3017578125,
               "widthComment": 60,
-              "widthDataType": 88.68994140625,
+              "widthDataType": 108.54541015625,
               "widthDefault": 60
             }
           },
@@ -886,10 +909,10 @@
           }
         ],
         "ui": {
-          "active": false,
+          "active": true,
           "left": 88.75,
           "top": 1375.1077,
-          "zIndex": 9,
+          "zIndex": 115,
           "widthName": 68.47900390625,
           "widthComment": 60
         },
@@ -973,7 +996,7 @@
             "id": "f075305a-68d4-4163-bdec-9ebd35eeeaf1",
             "name": "ilość",
             "comment": "",
-            "dataType": "",
+            "dataType": "INT",
             "default": "0",
             "option": {
               "autoIncrement": false,
@@ -1020,7 +1043,7 @@
           "active": false,
           "left": 1098.9989,
           "top": 13.5557,
-          "zIndex": 18,
+          "zIndex": 108,
           "widthName": 77.15625,
           "widthComment": 60
         },
@@ -1104,7 +1127,7 @@
             "id": "f0746f69-aacf-4dcb-816b-7fc1c78515f1",
             "name": "ilość",
             "comment": "",
-            "dataType": "",
+            "dataType": "INT",
             "default": "1",
             "option": {
               "autoIncrement": false,
@@ -1128,7 +1151,7 @@
           "active": false,
           "left": 1034.4454,
           "top": 556.7773,
-          "zIndex": 17,
+          "zIndex": 105,
           "widthName": 76.419921875,
           "widthComment": 60
         },
@@ -1282,7 +1305,7 @@
           "active": false,
           "left": 1404.8872,
           "top": 390.7771,
-          "zIndex": 19,
+          "zIndex": 9,
           "widthName": 80.0380859375,
           "widthComment": 60
         },
@@ -1436,7 +1459,7 @@
           "active": false,
           "left": 873.9989,
           "top": 987.3317,
-          "zIndex": 7,
+          "zIndex": 109,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1590,7 +1613,7 @@
           "active": false,
           "left": 0,
           "top": 602.5557,
-          "zIndex": 1,
+          "zIndex": 40,
           "widthName": 111.12890625,
           "widthComment": 60
         },
@@ -1948,7 +1971,7 @@
             "1ac9be49-f50c-4804-a11b-36bb8bc9d513"
           ],
           "x": 600.3896,
-          "y": 362.75,
+          "y": 373,
           "direction": "left"
         },
         "end": {
@@ -1973,8 +1996,8 @@
           "columnIds": [
             "34ded840-7d5c-4a6f-843a-c9c54adb7469"
           ],
-          "x": 296.5907953125,
-          "y": 278.2219,
+          "x": 385.94089296875,
+          "y": 274,
           "direction": "bottom"
         },
         "end": {
@@ -1999,9 +2022,9 @@
           "columnIds": [
             "34ded840-7d5c-4a6f-843a-c9c54adb7469"
           ],
-          "x": 462.3909255208333,
-          "y": 278.2219,
-          "direction": "bottom"
+          "x": 510.290990625,
+          "y": 137,
+          "direction": "right"
         },
         "end": {
           "tableId": "6bc7c728-c582-4a62-ae79-2e1e515d7352",
@@ -2026,7 +2049,7 @@
             "1ac9be49-f50c-4804-a11b-36bb8bc9d513"
           ],
           "x": 722.216504296875,
-          "y": 510,
+          "y": 530.5,
           "direction": "bottom"
         },
         "end": {
@@ -2052,7 +2075,7 @@
             "1ac9be49-f50c-4804-a11b-36bb8bc9d513"
           ],
           "x": 965.870312890625,
-          "y": 510,
+          "y": 530.5,
           "direction": "bottom"
         },
         "end": {
@@ -2077,8 +2100,8 @@
           "columnIds": [
             "34ded840-7d5c-4a6f-843a-c9c54adb7469"
           ],
-          "x": 130.79066510416666,
-          "y": 278.2219,
+          "x": 137.24069765625,
+          "y": 274,
           "direction": "bottom"
         },
         "end": {

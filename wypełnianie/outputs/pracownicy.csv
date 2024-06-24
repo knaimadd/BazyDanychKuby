@@ -1,0 +1,13 @@
+id,imię,nazwisko,pesel,miasto,adres,telefon,email,data_zatrudnienia,data_zwolnienia,stanowisko,płaca[zł/h]
+1,Wanda,Rzeźnik,73011254649,Wrocław,ul. Gęsia 48,48102088113,wanda.rzeznik@kuba.pl,2014-01-01,,menadżer,62.00000000000003
+2,Maria,Zawodna,74052249368,Wrocław,ul. Wypoczynkowa 78/24,48145556416,maria.zawodna@kuba.pl,2014-01-01,2016-08-09,sprzedawca,57.00000000000017
+3,Krystyna,Woźnica,68022332323,Wrocław,ul. Urocza 89/6,48097683001,krystyna.woznica@kuba.pl,2014-01-01,,sprzedawca,47.80000000000004
+4,Mirosław,Świerc,75120243972,Wrocław,ul. Przęsłowa 57/46,48629335383,miroslaw.swierc@kuba.pl,2014-01-01,,mechanik,46.60000000000002
+5,Piotr,Halushka,83042812457,Ciechanów,ul. Sokoła 34/4,48602712923,piotr.halushka@kuba.pl,2014-01-01,,informatyk,42.10000000000003
+6,Zdzisław,Błaszczak,94020519879,Chrzanów,ul. Stefana Okrzei 40/12,48332253213,zdzislaw.blaszczak@kuba.pl,2016-05-10,,mechanik,47.30000000000003
+7,Monika,Grzybowska,67013184761,Wrocław,ul. Kościelna 97/41,48274117297,monika.grzybowska@kuba.pl,2016-10-27,,mechanik,58.40000000000019
+8,Barbara,Świniarska,72021074829,Wrocław,ul. Sokołowska 28/38,48066212055,barbara.swiniarska@kuba.pl,2016-12-04,2017-01-21,mechanik,59.500000000000206
+9,Tadeusz,Różycki,72040938971,Prudnik,ul. Gorajowicka 82,48292972808,tadeusz.rozycki@kuba.pl,2016-12-17,,mechanik,53.800000000000125
+10,Anna,Magda,71010886328,Wrocław,Aleja Róż 80/48,48897938705,anna.magda@kuba.pl,2016-12-27,,pomocnik mechanika,44.30000000000013
+11,Sylwia,Grabska,73052004681,Wrocław,ul. Stawowa 70/12,48705269177,sylwia.grabska@kuba.pl,2017-01-04,,diagnosta samochodowy,53.000000000000085
+12,Elżbieta,Welenc,91112553904,Wrocław,ul. Moniuszki 80,48774858983,elzbieta.welenc@kuba.pl,2017-09-20,,sprzątający,36.800000000000026

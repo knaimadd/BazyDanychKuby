@@ -1,0 +1,18 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "giniewicz.it",
+            "port": 3306,
+            "driver": "MariaDB",
+            "database": "team07",
+            "username": "team07",
+            "password": "te@m24ot",
+            "name": "PimpMyRide"
+        }
+    ]
+}
