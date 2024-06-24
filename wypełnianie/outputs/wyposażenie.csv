@@ -1,162 +1,138 @@
 id,nazwa,atrybut,cena_części
-1,Pompa paliwowa,Porsche Boxster,1128.0
-2,Radio,Porsche Boxster,261.0
-3,Hamulec ręczny,Porsche Boxster,154.0
-4,Deska rozdzielcza,Honda Shine,42.0
-5,Tłumik,,200.0
-6,Reflektor,Bajaj Discover 110,3.0
-7,Pasy bezpieczeństwa,,50.0
-8,Kratka,Renault Clio czarny,233.0
-9,Klocek hamulcowy,Hero Honda Splendor Plus,7.0
-10,Przewód hamulcowy,,50.0
-11,Dystrybutor,smart forTwo,142.0
-12,Maska,Lexus UX 250h złoty,731.0
-13,Wał korbowy,Volkswagen Sharan,1346.0
-14,Fotel przedni,Ford Fiesta skóra,238.0
-15,Zawór EGR,,500.0
-16,Bezpiecznik,,10.0
-17,Lusterko zewnętrzne prawe,Opel Insignia biały,40.0
-18,Poduszka powietrzna,,100.0
-19,Rozrusznik,Opel Astra,529.0
-20,Kolektor wydechowy,,500.0
-21,Dźwignia zmiany biegów,Skoda Fabia,96.0
-22,Światło wewnętrzne,Skoda Fabia,8.0
-23,Wał korbowy,Kia Sportage,1504.0
-24,Fotel przedni,Volkswagen Crafter materiał,371.0
-25,Miska olejowa,Volkswagen Crafter,902.0
-26,Wtrysk paliwa,Bajaj Pulsar 135 LS,45.0
-27,Lusterko zewnętrzne lewe,Bajaj Pulsar 135 LS srebrny,2.0
-28,Drzwi lewe tylne,Volkswagen Golf biały,324.0
-29,Rura wydechowa,,100.0
-30,Pompa paliwowa,Volkswagen Golf,270.0
-31,Kierownica,Volvo XC60,184.0
-32,Ogniwo paliwowe,Volvo XC60,620.0
-33,Drzwi lewe tylne,Volvo XC60 czerwony,1110.0
-34,Pedał hamulca,Volkswagen Polo,49.0
-35,Radio,Audi Q3,134.0
-36,Pedał hamulca,Skoda Fabia,41.0
-37,Wewnętrzna klamka drzwi,Skoda Citigo,6.0
-38,Rozrząd,,2500.0
-39,Drążek kierowniczy,,100.0
-40,Lusterko zewnętrzne lewe,Alfa Romeo MiTo czarny,38.0
-41,Zespół układu LPG,,500.0
-42,Miska olejowa,Alfa Romeo MiTo,731.0
-43,Dźwignia zmiany biegów,BMW 116,132.0
-44,Dźwignia zmiany biegów,Ford S-Max,132.0
-45,Chłodnica,Suzuki Swift,478.0
-46,Lusterko zewnętrzne lewe,Hyundai i10 niebieski,23.0
-47,Filtr paliwa,KTM RC 390,184.0
-48,Zbiornik paliwa,KTM RC 390,169.0
-49,Zbiornik paliwa,Hyundai i10,288.0
-50,Pompa paliwowa,Opel Insignia,303.0
-51,Skrzynia biegów,Peugeot 308 Automatyczna,2394.0
-52,Alternator,BMW 640,501.0
-53,Lusterko zewnętrzne prawe,BMW 640 srebrny,81.0
-54,Rozrusznik,Fiat 500,233.0
-55,Amortyzator,,150.0
-56,Rozrusznik,Audi A3,516.0
-57,Wał sterujący,,150.0
-58,Drzwi prawe tylne,Kia Ceed / cee'd niebieski,518.0
-59,Głośnik,Volvo XC90,273.0
-60,Opona zimowa,R16,16.0
-61,Lusterko zewnętrzne prawe,Honda CB Trigger czerwony,1.0
-62,Fotel tylny,Opel Astra skóra,401.0
-63,Zagłówek,smart forTwo,9.0
-64,Filtr paliwa,Honda CB Hornet 160R,150.0
-65,Kierownica,Honda CB Hornet 160R,32.0
-66,Podświetlenie tablicy,,20.0
-67,Filtr paliwa,Skoda Fabia,257.0
-68,Chłodnica,Skoda Fabia,635.0
-69,Wał korbowy,Skoda Fabia,637.0
-70,Rozrusznik,Lancia Ypsilon,265.0
-71,Pompa paliwowa,Bajaj Platina 100,44.0
-72,Pompa paliwowa,Ford Ka/Ka+,245.0
-73,Akumulator,Opel Corsa,395.0
-74,Zbiornik paliwa,Volkswagen Polo,250.0
-75,Światła tylne,Fiat 500X,70.0
-76,Lusterko wewnętrzne,Renault Twingo,10.0
-77,Zbiornik paliwa,Opel Corsa,206.0
-78,Dywan,BMW X1,38.0
-79,Ogniwo paliwowe,Hyundai i40,297.0
-80,Filtr paliwa,Hyundai i40,424.0
-81,Lakier,czerwony,329.0
-82,Dystrybutor,Audi A4,568.0
-83,Lusterko zewnętrzne lewe,Ford Mondeo inny,32.0
-84,Światło mgłowe,Yamaha FZ16,18.0
-85,Silnik,Skoda Roomster 1.4,2492.0
-86,Drzwi prawe tylne,Skoda Roomster czarny,353.0
-87,Drzwi prawe tylne,SEAT Arona czarny,660.0
-88,Dywan,SEAT Arona,25.0
-89,Opona letnia,R17,322.0
-90,Felga,R17 biały,169.0
-91,Dystrybutor,BMW 320,462.0
-92,Fotel tylny,Jeep Renegade materiał,345.0
-93,Drzwi prawe tylne,BMW 750 srebrny,2081.0
-94,Fotel przedni,Chevrolet Spark materiał,205.0
-95,Dywan,Chevrolet Spark,14.0
-96,Chłodnica,Opel Mokka X,883.0
-97,Kratka,Audi A6 czerwony,638.0
-98,Maska,Audi A6 czerwony,1056.0
-99,Opona letnia,R15,173.0
-100,Drzwi prawe tylne,Toyota RAV 4 brązowy,757.0
-101,Fotel tylny,Jaguar E-Pace skóra,440.0
-102,Wał korbowy,Ford Focus,1158.0
-103,Kierownica,Opel Adam,104.0
-104,Deska rozdzielcza,Volkswagen Polo,80.0
-105,Drzwi prawe tylne,Hyundai i30 srebrny,519.0
-106,Drzwi prawe przednie,Volkswagen Golf Variant czarny,420.0
-107,Dystrybutor,Volkswagen Golf Variant,252.0
-108,Filtr paliwa,Kia ProCeed / pro_cee'd,690.0
-109,Spojler,Fiat 500 szary,259.0
-110,Głośnik,Renault Scenic,127.0
-111,Radio,Opel Corsa,59.0
-112,Światła tylne,Renault Kangoo,47.0
-113,Filtr paliwa,Volkswagen up!,184.0
-114,Zagłówek,Fiat Doblo,18.0
-115,Pompa paliwowa,Renault Megane,404.0
-116,Skrzynia biegów,Suzuki Swift Automatyczna,1575.0
-117,Deska rozdzielcza,Skoda Rapid/Spaceback,127.0
-118,Wtrysk paliwa,Audi A6,1032.0
-119,Klocek hamulcowy,Audi A6,47.0
-120,Drzwi prawe przednie,Opel Corsa szary,495.0
-121,Alternator,Hyundai i30,146.0
-122,Miska olejowa,Hyundai i30,485.0
-123,Światło wewnętrzne,Hyundai i30,8.0
-124,Lakier,biały,188.0
-125,Miska olejowa,Opel Corsa,496.0
-126,Dystrybutor,Honda Shine,97.0
-127,Lusterko zewnętrzne lewe,Honda Shine biały,6.0
-128,Zbiornik paliwa,Honda Shine,90.0
-129,Lakier,srebrny,75.0
-130,Drzwi prawe przednie,Ford Mondeo niebieski,728.0
-131,Światło wewnętrzne,smart forTwo,3.0
-132,Światło mgłowe,Opel Insignia,75.0
-133,Opona letnia,R16,190.0
-134,Lusterko zewnętrzne prawe,Skoda Fabia czerwony,24.0
-135,Zewnętrzna klamka drzwi,Volkswagen Touran,8.0
-136,Drzwi lewe przednie,BMW 330 srebrny,1438.0
-137,Miska olejowa,BMW 330,1346.0
-138,Filtr paliwa,BMW 330,1061.0
-139,Światła tylne,Bajaj Pulsar 180F,16.0
-140,Regulator okna,Audi A6,88.0
-141,Dźwignia zmiany biegów,Audi A6,172.0
-142,Wał korbowy,Mercedes-Benz E 200,1789.0
-143,Akumulator,Mercedes-Benz E 200,917.0
-144,Silnik,Opel Zafira Tourer 2.2,3454.0
-145,Fotel tylny,Peugeot 207 materiał,350.0
-146,Drzwi lewe tylne,Peugeot 207 czerwony,611.0
-147,Światła tylne,Opel Corsa,68.0
-148,Lusterko zewnętrzne prawe,Volkswagen Polo czarny,28.0
-149,Radio,Volkswagen Golf,116.0
-150,Hamulec ręczny,Renault Clio,27.0
-151,Lusterko zewnętrzne prawe,Honda Dream Neo czerwony,11.0
-152,Reflektor,Renault Kangoo,59.0
-153,Rozrusznik,Renault Kangoo,417.0
-154,Zewnętrzna klamka drzwi,Ford Focus,11.0
-155,Klocek hamulcowy,Mazda MX-5,28.0
-156,Wtrysk paliwa,Mazda MX-5,566.0
-157,Wtrysk paliwa,Fiat Panda,228.0
-158,Silnik,Opel Corsa 1.3,1793.0
-159,Felga,R15 szary,120.0
-160,Deska rozdzielcza,Renault Megane,179.0
-161,Światło mgłowe,Peugeot 2008,31.0
+1,Dźwignia zmiany biegów,Opel Adam,75.0
+2,Przewód hamulcowy,,50.0
+3,Reflektor,Opel Adam,58.0
+4,Wał korbowy,Land Rover Range Rover,2303.0
+5,Radio,Land Rover Range Rover,252.0
+6,Maska,Dacia Dokker biały,379.0
+7,Zbiornik paliwa,Opel Corsa,317.0
+8,Amortyzator,,150.0
+9,Drzwi prawe tylne,Volkswagen Passat Variant czarny,704.0
+10,Lusterko wewnętrzne,SEAT Alhambra,31.0
+11,Drzwi lewe przednie,Infiniti Q70 czarny,1333.0
+12,Wewnętrzna klamka drzwi,Ford Focus,9.0
+13,Wał sterujący,,150.0
+14,Rura wydechowa,,100.0
+15,Regulator okna,Skoda Octavia,55.0
+16,Akumulator,Fiat Panda,336.0
+17,Tłumik,,200.0
+18,Klocek hamulcowy,Renault Twingo,16.0
+19,Skrzynia biegów,Toyota C-HR Automatyczna,2297.0
+20,Filtr paliwa,Toyota C-HR,473.0
+21,Drzwi lewe tylne,Hyundai Kona szary,681.0
+22,Lusterko wewnętrzne,smart forTwo,13.0
+23,Drzwi prawe tylne,smart forTwo srebrny,286.0
+24,Maska,smart forTwo srebrny,279.0
+25,Dźwignia zmiany biegów,Volkswagen Polo,98.0
+26,Akumulator,Audi TT RS,2157.0
+27,Kolektor wydechowy,,500.0
+28,Pompa paliwowa,Opel Adam,272.0
+29,Spojler,Opel Adam biały,290.0
+30,Rozrząd,,2500.0
+31,Filtr paliwa,Volkswagen up!,206.0
+32,Światło wewnętrzne,Volkswagen up!,4.0
+33,Filtr paliwa,Kia Rio,247.0
+34,Fotel tylny,smart forFour materiał,188.0
+35,Hamulec ręczny,Renault Megane,48.0
+36,Zawór EGR,,500.0
+37,Bezpiecznik,,10.0
+38,Chłodnica,Ford C-Max,952.0
+39,Pedał hamulca,Hyundai i30,56.0
+40,Skrzynia biegów,Renault Clio Manualna,1548.0
+41,Reflektor,Renault Clio,37.0
+42,Zespół układu LPG,,500.0
+43,Maska,Opel Adam czerwony,325.0
+44,Pasy bezpieczeństwa,,50.0
+45,Ogniwo paliwowe,smart forTwo,196.0
+46,Hamulec ręczny,Volkswagen Golf,31.0
+47,Drzwi prawe tylne,Volkswagen Touran niebieski,437.0
+48,Zagłówek,Peugeot 207,24.0
+49,Opona letnia,R16,250.0
+50,Pompa paliwowa,Royal Enfield Electra 4 S,25.0
+51,Opona letnia,R17,13.0
+52,Alternator,Kia ProCeed / pro_cee'd,423.0
+53,Felga,R17 czerwony,172.0
+54,Zagłówek,BMW 216,20.0
+55,Chłodnica,Citroen C1,493.0
+56,Drzwi lewe przednie,Citroen C1 srebrny,246.0
+57,Reflektor,Bajaj Dominar 400,17.0
+58,Oświetlenie boczne,Bajaj Dominar 400,26.0
+59,Ogniwo paliwowe,TVS Apache RTR 160,55.0
+60,Reflektor,TVS Apache RTR 160,10.0
+61,Zderzak,Opel Astra czerwony,527.0
+62,Opona zimowa,R16,423.0
+63,Głośnik,Ford Puma,118.0
+64,Lusterko zewnętrzne lewe,Kia Sorento szary,59.0
+65,Kratka,SEAT Mii szary,177.0
+66,Deska rozdzielcza,Honda Dream Neo,39.0
+67,Dystrybutor,Honda Dream Neo,55.0
+68,Poduszka powietrzna,,100.0
+69,Lusterko zewnętrzne lewe,Suzuki SX4 niebieski,34.0
+70,Akumulator,Suzuki SX4,626.0
+71,Dywan,Opel Astra,23.0
+72,Lusterko wewnętrzne,Opel Astra,26.0
+73,Lakier,srebrny,112.0
+74,Chłodnica,Ford B-Max,671.0
+75,Kratka,Volkswagen Golf Variant srebrny,269.0
+76,Światło wewnętrzne,Skoda Fabia,5.0
+77,Felga,R15 srebrny,71.0
+78,Ogniwo paliwowe,Skoda Fabia,313.0
+79,Lusterko wewnętrzne,Ford Mondeo,24.0
+80,Światło mgłowe,Opel Corsa,51.0
+81,Wtrysk paliwa,Ford Ka/Ka+,255.0
+82,Wewnętrzna klamka drzwi,Ford Ka/Ka+,6.0
+83,Reflektor,Hyundai Tucson,116.0
+84,Podświetlenie tablicy,,20.0
+85,Fotel przedni,Ford Focus materiał,410.0
+86,Zewnętrzna klamka drzwi,Skoda Fabia,8.0
+87,Hamulec ręczny,Opel Astra,72.0
+88,Klocek hamulcowy,Opel Astra,22.0
+89,Wał korbowy,Hero Honda Hunk,375.0
+90,Lusterko zewnętrzne prawe,Skoda Superb czerwony,50.0
+91,Pedał hamulca,Ford Mondeo,87.0
+92,Maska,Volkswagen Touran niebieski,561.0
+93,Sprzęgło,Volkswagen Golf,477.0
+94,Spojler,Ford Ka/Ka+ czerwony,258.0
+95,Akumulator,Bajaj Avenger Cruise 220,240.0
+96,Światło wewnętrzne,Volkswagen Caddy,9.0
+97,Zagłówek,Toyota Avensis,24.0
+98,Dywan,Volkswagen Golf,18.0
+99,Wał korbowy,Volkswagen Golf,1043.0
+100,Światło wewnętrzne,Volkswagen Golf,10.0
+101,Silnik,Volkswagen Golf 2.1,4097.0
+102,Alternator,Mercedes-Benz E 350,513.0
+103,Maska,Volkswagen Passat Variant szary,676.0
+104,Lusterko wewnętrzne,Volkswagen Golf,20.0
+105,Drzwi lewe przednie,BMW 520 brązowy,856.0
+106,Lakier,brązowy,364.0
+107,Pompa paliwowa,BMW 116,503.0
+108,Radio,BMW 116,120.0
+109,Filtr paliwa,Volkswagen Touran,599.0
+110,Lusterko wewnętrzne,Volkswagen Touran,24.0
+111,Fotel tylny,Opel Meriva materiał,377.0
+112,Spojler,Volkswagen Tiguan szary,547.0
+113,Klocek hamulcowy,Mercedes-Benz A 160,18.0
+114,Lusterko zewnętrzne prawe,Toyota Yaris czerwony,16.0
+115,Regulator okna,Volkswagen Polo,35.0
+116,Zbiornik paliwa,Opel Astra,490.0
+117,Fotel przedni,Opel Astra materiał,350.0
+118,Kierownica,Dacia Dokker,95.0
+119,Chłodnica,Dacia Dokker,706.0
+120,Wtrysk paliwa,Volkswagen Polo,263.0
+121,Drzwi lewe przednie,Audi A4 biały,771.0
+122,Alternator,Audi A4,220.0
+123,Światło mgłowe,Volkswagen Tiguan,65.0
+124,Lusterko wewnętrzne,Volkswagen Polo,15.0
+125,Dywan,Volkswagen Golf Sportsvan,26.0
+126,Sprzęgło,Volkswagen Golf Sportsvan,428.0
+127,Felga,R16 czerwony,73.0
+128,Drzwi lewe przednie,Jeep Renegade czarny,698.0
+129,Radio,Jeep Renegade,122.0
+130,Dystrybutor,SEAT Ibiza,283.0
+131,Klocek hamulcowy,Citroen C4,20.0
+132,Kratka,BMW 218 niebieski,381.0
+133,Światła tylne,Volkswagen Golf,60.0
+134,Klocek hamulcowy,Volkswagen Golf,17.0
+135,Klocek hamulcowy,smart forTwo,11.0
+136,Fotel przedni,Hero Splendor Plus materiał,53.0
+137,Silnik,smart forTwo 1.0,1556.0

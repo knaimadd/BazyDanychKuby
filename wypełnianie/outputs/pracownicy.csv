@@ -1,16 +1,17 @@
 id,imię,nazwisko,pesel,miasto,adres,telefon,email,data_zatrudnienia,data_zwolnienia,stanowisko,płaca
-1,Sebastian,Grudziński,92070607858,Wrocław,ul. Władysława Sikorskiego 92,48326347061,sebastian.grudzinski@kuba.pl,2014-01-01,,menadżer,69.70000000000013
-2,Ryszard,Stępiński,84113024933,Wrocław,ul. Graniczna 57,48882552742,ryszard.stepinski@kuba.pl,2014-01-01,,sprzedawca,47.00000000000003
-3,Ivan,Ponichtera,93121963659,Warszawa,ul. Kwidzyńska 70/6,48560569086,ivan.ponichtera@kuba.pl,2014-01-01,2016-07-30,sprzedawca,56.20000000000016
-4,Oleksandr,Zielonka,91101042356,Ełk,ul. Platynowa 38,48464308117,oleksandr.zielonka@kuba.pl,2014-01-01,2016-12-02,mechanik,58.30000000000019
-5,Justyna,Okos,79032926361,Wrocław,ul. Baraniok 10/24,48594207068,justyna.okos@kuba.pl,2014-01-01,,informatyk,42.10000000000003
-6,Stanisław,Niezgódka,62061270855,Wrocław,ul. Flisacka 72/17,48421491617,stanislaw.niezgodka@kuba.pl,2014-07-25,,sprzedawca,51.20000000000009
-7,Kamil,Rakuś,83081066752,Wrocław,ul. Plac Wolności 44,48900451961,kamil.rakus@kuba.pl,2014-10-19,,sprzedawca,52.0000000000001
-8,Jacek,Pająk,88122780714,Wrocław,ul. Zawiszy Czarnego 77/36,48281883459,jacek.pajak@kuba.pl,2015-01-17,2017-05-09,mechanik,48.100000000000044
-9,Mirosław,Jeżewski,78040778971,Wrocław,ul. Platynowa 74/11,48231468043,miroslaw.jezewski@kuba.pl,2016-05-02,2017-06-03,mechanik,51.9000000000001
-10,Jan,Sikorski,84100962853,Wrocław,ul. Dowsi 25/12,48924900141,jan.sikorski@kuba.pl,2016-11-19,,mechanik,48.60000000000005
-11,Joanna,Duszyńska,85032600628,Wrocław,ul. Karola Chodkiewicza 48/48,48933988126,joanna.duszynska@kuba.pl,2017-01-05,,mechanik,48.60000000000005
-12,Marcel,Mikołajczyk,72081657657,Łódź,ul. Jaśminowa 96,48166156226,marcel.mikolajczyk@kuba.pl,2017-02-28,,pomocnik mechanika,37.80000000000004
-13,Janusz,Sikorski,76071922279,Wrocław,ul. Warszawska 24/40,48595555889,janusz.sikorski@kuba.pl,2017-03-08,,diagnosta samochodowy,50.100000000000044
-14,Paweł,Pawlikowski,85022670772,Szczecin,ul. Romualda Traugutta 47/21,48780548226,pawel.pawlikowski@kuba.pl,2017-07-23,,sprzątający,36.50000000000002
-15,Marta,Prus,61012328944,Wrocław,ul. Partyzantów 78/49,48200734671,marta.prus@kuba.pl,2017-11-24,,informatyk,43.100000000000044
+1,Anna,Moszyk,82122536825,Wrocław,ul. 400-lecia Bitwy pod Byczyną 43,48907681210,anna.moszyk@kuba.pl,2014-01-01,,menadżer,70.50000000000014
+2,Mateusz,Hryhorenko,90111107374,Wrocław,ul. Malownicza 45/16,48293869570,mateusz.hryhorenko@kuba.pl,2014-01-01,,sprzedawca,49.90000000000007
+3,Joanna,Galor,86022705688,Wrocław,ul. Lipowa 7/11,48328082490,joanna.galor@kuba.pl,2014-01-01,2016-07-01,sprzedawca,53.50000000000012
+4,Adrian,Skindzier,61101248717,Bydgoszcz,ul. Myśliwska 84/44,48776067009,adrian.skindzier@kuba.pl,2014-01-01,,mechanik,49.80000000000007
+5,Waldemar,Kończewski,68111700132,Wrocław,ul. Kazimierza 7,48035608602,waldemar.konczewski@kuba.pl,2014-01-01,,informatyk,45.80000000000008
+6,Krzysztof,Krzyżanowski,95032281037,Wrocław,ul. Jana Vermeera 43/29,48988505686,krzysztof.krzyzanowski@kuba.pl,2015-02-11,,sprzedawca,58.100000000000186
+7,Stanisław,Muchowski,65010130976,Wrocław,ul. Łąkowa 83,48072719932,stanislaw.muchowski@kuba.pl,2015-02-25,,sprzedawca,45.80000000000001
+8,Jan,Matlak,63011844274,Wrocław,ul. Lisia 45/35,48129554842,jan.matlak@kuba.pl,2015-06-20,,mechanik,57.60000000000018
+9,Kamil,Długołęcki,84052133378,Wrocław,ul. Brzozowa 65/23,48854835426,kamil.dlugolecki@kuba.pl,2015-06-27,2017-05-04,mechanik,57.70000000000018
+10,Klaudyna,Szyjka,68020335403,Wrocław,ul. Świerkowa 3/9,48533895451,klaudyna.szyjka@kuba.pl,2015-07-21,,mechanik,47.30000000000003
+11,Jadwiga,Kwaśniewska,62112337168,Wrocław,ul. Mikołaja Reja 4,48777403450,jadwiga.kwasniewska@kuba.pl,2015-09-29,,pomocnik mechanika,39.80000000000007
+12,Paweł,Rysmanowski,70050461852,Wrocław,ul. Magnezowa 77/19,48590373587,pawel.rysmanowski@kuba.pl,2016-02-07,,pomocnik mechanika,38.50000000000005
+13,Bogdan,Szląskiewicz,64051631237,Wrocław,ul. Mazowiecka 6,48087771686,bogdan.szlaskiewicz@kuba.pl,2016-05-13,,diagnosta samochodowy,54.90000000000011
+14,Maciej,Wsuł,89011974331,Wrocław,ul. Południowa 52/9,48753474262,maciej.wsul@kuba.pl,2016-06-21,,diagnosta samochodowy,57.00000000000014
+15,Paweł,Jankowski,69081136211,Giżycko,ul. Franciszka Stefczyka 47,48181007710,pawel.jankowski@kuba.pl,2016-07-05,,sprzątający,37.00000000000003
+16,Monika,Szulta,67011823725,Wrocław,ul. Sportowa 12/25,48387363227,monika.szulta@kuba.pl,2017-02-05,,sprzątający,35.70000000000001
