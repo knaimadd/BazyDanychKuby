@@ -1,0 +1,111 @@
+\documentclass{article}\usepackage[]{graphicx}\usepackage[]{xcolor}
+% maxwidth is the original width if it is less than linewidth
+% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{tgpagella}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{polski}
+\renewcommand*{\figurename}{Rysunek}
+\usepackage{nicefrac, xfrac}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage[bottom]{footmisc}
+\usepackage{float}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{library}\hlstd{(}\hlstr{"RMariaDB"}\hlstd{)}
+
+\hlstd{con} \hlkwb{<-} \hlkwd{dbConnect}\hlstd{(RMariaDB}\hlopt{::}\hlkwd{MariaDB}\hlstd{(),}
+                 \hlkwc{dbname} \hlstd{=} \hlstr{"team07"}\hlstd{,}
+                 \hlkwc{username} \hlstd{=} \hlstr{"team07"}\hlstd{,}
+                 \hlkwc{password} \hlstd{=} \hlstr{"te@m24ot"}\hlstd{,}
+                 \hlkwc{host} \hlstd{=} \hlstr{"giniewicz.it"}\hlstd{)}
+\hlstd{query} \hlkwb{<-} \hlstr{"SELECT * FROM klienci"}
+
+\hlstd{df} \hlkwb{<-} \hlkwd{dbGetQuery}\hlstd{(con, query)}
+\hlkwd{head}\hlstd{(df)}
+\end{alltt}
+\begin{verbatim}
+##   id     imię     nazwisko płeć       PESEL    miasto               adres
+## 1  1 Gabriela       Bartel    K 96040990632   Wrocław        ul. Celna 80
+## 2  2   Patryk        Bebel    M 76102106894   Wrocław  ul. Kukułcza 36/43
+## 3  3    Edyta     Dettlaff    K 75010431373   Wrocław ul. Szpitalna 67/35
+## 4  4   Danuta        Urban    K 92021369073   Wrocław   ul. Browarna 63/8
+## 5  5 Wiesława Mazurkiewicz    K 93011362171   Wrocław      ul. Pigwowa 58
+## 6  6  Wiesław    Biskowski    M 97030650819 Głubczyce      ul. Sobótki 58
+##   karta_lojalnościowa     telefon            email
+## 1               FALSE 48973503270   gbar96@onet.pl
+## 2               FALSE 48618121053   pbeb76@onet.pl
+## 3               FALSE 48130623215  edettlaff@wp.pl
+## 4                TRUE 48851032773 dan_urba92@o2.pl
+## 5               FALSE 48504595082      w-maz@wp.pl
+## 6               FALSE 48245762774 wb6981@gmail.com
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{dbDisconnect}\hlstd{(con)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+
+\end{document}
