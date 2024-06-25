@@ -1,17 +1,14 @@
 id,imię,nazwisko,pesel,miasto,adres,telefon,email,data_zatrudnienia,data_zwolnienia,stanowisko,płaca
-1,Anna,Moszyk,82122536825,Wrocław,ul. 400-lecia Bitwy pod Byczyną 43,48907681210,anna.moszyk@kuba.pl,2014-01-01,,menadżer,70.50000000000014
-2,Mateusz,Hryhorenko,90111107374,Wrocław,ul. Malownicza 45/16,48293869570,mateusz.hryhorenko@kuba.pl,2014-01-01,,sprzedawca,49.90000000000007
-3,Joanna,Galor,86022705688,Wrocław,ul. Lipowa 7/11,48328082490,joanna.galor@kuba.pl,2014-01-01,2016-07-01,sprzedawca,53.50000000000012
-4,Adrian,Skindzier,61101248717,Bydgoszcz,ul. Myśliwska 84/44,48776067009,adrian.skindzier@kuba.pl,2014-01-01,,mechanik,49.80000000000007
-5,Waldemar,Kończewski,68111700132,Wrocław,ul. Kazimierza 7,48035608602,waldemar.konczewski@kuba.pl,2014-01-01,,informatyk,45.80000000000008
-6,Krzysztof,Krzyżanowski,95032281037,Wrocław,ul. Jana Vermeera 43/29,48988505686,krzysztof.krzyzanowski@kuba.pl,2015-02-11,,sprzedawca,58.100000000000186
-7,Stanisław,Muchowski,65010130976,Wrocław,ul. Łąkowa 83,48072719932,stanislaw.muchowski@kuba.pl,2015-02-25,,sprzedawca,45.80000000000001
-8,Jan,Matlak,63011844274,Wrocław,ul. Lisia 45/35,48129554842,jan.matlak@kuba.pl,2015-06-20,,mechanik,57.60000000000018
-9,Kamil,Długołęcki,84052133378,Wrocław,ul. Brzozowa 65/23,48854835426,kamil.dlugolecki@kuba.pl,2015-06-27,2017-05-04,mechanik,57.70000000000018
-10,Klaudyna,Szyjka,68020335403,Wrocław,ul. Świerkowa 3/9,48533895451,klaudyna.szyjka@kuba.pl,2015-07-21,,mechanik,47.30000000000003
-11,Jadwiga,Kwaśniewska,62112337168,Wrocław,ul. Mikołaja Reja 4,48777403450,jadwiga.kwasniewska@kuba.pl,2015-09-29,,pomocnik mechanika,39.80000000000007
-12,Paweł,Rysmanowski,70050461852,Wrocław,ul. Magnezowa 77/19,48590373587,pawel.rysmanowski@kuba.pl,2016-02-07,,pomocnik mechanika,38.50000000000005
-13,Bogdan,Szląskiewicz,64051631237,Wrocław,ul. Mazowiecka 6,48087771686,bogdan.szlaskiewicz@kuba.pl,2016-05-13,,diagnosta samochodowy,54.90000000000011
-14,Maciej,Wsuł,89011974331,Wrocław,ul. Południowa 52/9,48753474262,maciej.wsul@kuba.pl,2016-06-21,,diagnosta samochodowy,57.00000000000014
-15,Paweł,Jankowski,69081136211,Giżycko,ul. Franciszka Stefczyka 47,48181007710,pawel.jankowski@kuba.pl,2016-07-05,,sprzątający,37.00000000000003
-16,Monika,Szulta,67011823725,Wrocław,ul. Sportowa 12/25,48387363227,monika.szulta@kuba.pl,2017-02-05,,sprzątający,35.70000000000001
+1,Magdalena,Falkowska,90080511206,Jarocin,ul. Dębowa 25/15,48931843254,magdalena.falkowska@kuba.pl,2014-01-01,,menadżer,62.00000000000003
+2,Lucjan,Kramarz,86112107178,Bartoszyce,ul. Pograniczników 94/49,48128706704,lucjan.kramarz@kuba.pl,2014-01-01,2016-04-14,sprzedawca,58.40000000000019
+3,Marta,Burchacka,61042051184,Wrocław,ul. Marii Konopnickiej 68,48339241328,marta.burchacka@kuba.pl,2014-01-01,,sprzedawca,52.1000000000001
+4,Halina,Feluś,82100971226,Elbląg,ul. Budzówka 8/29,48359495725,halina.felus@kuba.pl,2014-01-01,2015-08-16,mechanik,48.40000000000005
+5,Wioletta,Okroj,89083106263,Rzepin,ul. Mazura 47,48358487814,wioletta.okroj@kuba.pl,2014-01-01,,informatyk,47.50000000000011
+6,Wojciech,Safronov,74081384557,Wrocław,ul. Osiedlowa 22/38,48905707614,wojciech.safronov@kuba.pl,2014-03-19,,sprzedawca,58.000000000000185
+7,Yan,Hura,95061852790,Wrocław,ul. Mahoniowa 80/36,48209699419,yan.hura@kuba.pl,2015-03-28,,mechanik,55.300000000000146
+8,Michał,Walasek,75040677354,Wrocław,ul. Modrzewiowa 26/40,48041822788,michal.walasek@kuba.pl,2015-09-01,,mechanik,55.00000000000014
+9,Dariusz,Peroń,89091874394,Wrocław,ul. Piaskowa 85/49,48429216030,dariusz.peron@kuba.pl,2016-02-26,,pomocnik mechanika,42.90000000000011
+10,Zofia,Puławska,76030669403,Wrocław,ul. Leśna 4/15,48590130563,zofia.pulawska@kuba.pl,2016-04-28,,diagnosta samochodowy,52.40000000000008
+11,Nadiia,Szponarowicz,95110882606,Wrocław,ul. Wąska 21/51,48206373196,nadiia.szponarowicz@kuba.pl,2016-12-23,,diagnosta samochodowy,52.60000000000008
+12,Daniel,Błaszczyk,64032691010,Wrocław,ul. Sieradzka 46/44,48417888867,daniel.blaszczyk@kuba.pl,2017-05-18,,sprzątający,35.2
+13,Andrzej,Derczyński,70111030012,Wrocław,ul. Przemysłowa 60,48385985459,andrzej.derczynski@kuba.pl,2017-06-18,,informatyk,52.60000000000018
