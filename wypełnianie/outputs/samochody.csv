@@ -1,981 +1,978 @@
 id,marka,model,liczba_kół,rok_produkcji,typ_nadwozia,czy_powypadkowy,kolor,typ_paliwa,pojemność_silnika,moc,skrzynia_biegów,liczba_drzwi,liczba_miejsc,czy_dostępny
-1,Lexus,NX 300,4,2006,Sedan,False,srebrny,Elektryczny/Benzyna,3.2,197,Automatyczna,5,5,False
-2,BMW,330,4,2008,Kombi,True,szary,Diesel,3.9,252,Automatyczna,3,2,False
-3,Alfa,Romeo Giulietta,4,2015,Kombi,False,biały,Diesel,1.9,120,Manualna,5,5,False
-4,Audi,A4,4,2005,Kombi,True,czarny,Benzyna,2.6,170,Automatyczna,3,5,False
-5,Mercedes-Benz,C 180,4,2012,Hatchback,False,szary,Benzyna,2.3,156,Automatyczna,3,5,False
-6,Yamaha,Fazer,2,2004,,False,czerwony,Benzyna,0.4,62,Manualna,0,1,False
-7,Ford,B-Max,4,2005,Kombi,False,niebieski,Benzyna,1.8,101,Manualna,5,5,False
-8,Ford,S-Max,4,2002,Sedan,False,czarny,Diesel,2.1,140,Automatyczna,5,2,False
-9,Volkswagen,Golf,4,2008,SUV,False,biały,Diesel,4.3,265,Manualna,5,2,False
-10,Bajaj,Xcd,2,2004,,False,niebieski,Benzyna,0.1,18,Automatyczna,0,1,False
-11,Audi,A3,4,2008,Coupe,False,biały,Benzyna,2.3,150,Manualna,3,5,False
-12,Audi,A8,4,2010,Kombi,True,szary,Diesel,6.3,385,Automatyczna,5,5,False
-13,Audi,RS Q3,4,2017,Sedan,False,szary,Benzyna,6.7,430,Automatyczna,3,5,False
-14,Honda,CB Unicorn 150,2,2015,,True,srebrny,Benzyna,0.4,56,Manualna,0,1,False
-15,Nissan,Micra,4,2006,SUV,False,niebieski,Benzyna,1.2,80,Manualna,5,5,False
-16,Audi,Q7,4,2015,Kombi,False,srebrny,Elektryczny/Diesel,4.4,272,Automatyczna,5,2,False
-17,Opel,Astra,4,2014,SUV,False,czarny,Diesel,1.4,95,Manualna,5,5,False
-18,Skoda,Fabia,4,2003,Hatchback,False,złoty,Benzyna,1.3,90,Manualna,5,5,False
-19,Opel,Corsa,4,2013,Minivan,False,srebrny,Benzyna,1.8,101,Manualna,3,5,False
-20,Volkswagen,Sharan,4,2004,SUV,False,czerwony,Diesel,2.2,150,Automatyczna,5,5,False
-21,Volkswagen,Caddy,4,2009,Hatchback,False,czarny,Diesel,1.6,102,Automatyczna,3,5,False
-22,Audi,RS3,4,2006,Sedan,False,szary,Benzyna,6.5,400,Automatyczna,3,5,False
-23,Skoda,Rapid/Spaceback,4,2005,Kombi,False,niebieski,Diesel,1.4,90,Automatyczna,5,2,False
-24,Peugeot,108,4,2012,Hatchback,False,czarny,Benzyna,1.1,72,Manualna,5,5,False
-25,smart,forFour,4,2009,Kombi,False,złoty,Benzyna,1.2,90,Manualna,5,5,False
-26,Ford,Fiesta,4,2007,Sedan,False,szary,Benzyna,1.8,125,Manualna,5,2,False
-27,Fiat,Panda,4,2010,Hatchback,True,szary,Benzyna,1.0,69,Manualna,5,5,False
-28,Opel,Corsa,4,2005,Hatchback,False,niebieski,Benzyna,1.4,87,Manualna,5,5,False
-29,Opel,Corsa,4,2005,Kabriolet,True,srebrny,Benzyna,1.3,90,Manualna,5,2,False
-30,smart,forTwo,4,1999,Kombi,True,biały,Benzyna,1.1,71,Automatyczna,5,5,False
-31,Kia,Rio,4,2011,Hatchback,True,niebieski,Benzyna,1.3,86,Manualna,3,2,False
-32,Opel,Corsa,4,2000,Sedan,True,czarny,Benzyna,1.4,87,Manualna,5,5,False
-33,Opel,Astra,4,2000,Kombi,True,brązowy,Benzyna,2.0,136,Manualna,5,2,False
-34,Mercedes-Benz,GLA 220,4,2002,Sedan,False,biały,Diesel,2.7,177,Automatyczna,5,2,False
-35,Audi,A4,4,2004,SUV,False,czerwony,Diesel,2.9,190,Automatyczna,5,5,False
-36,Volvo,XC40,4,2002,Hatchback,False,srebrny,Benzyna,3.1,190,Automatyczna,5,5,False
-37,Skoda,Fabia,4,2013,Coupe,True,biały,Benzyna,1.0,75,Manualna,5,5,False
-38,BMW,420,4,2010,Kombi,False,niebieski,Diesel,2.8,184,Automatyczna,5,5,False
-39,Opel,Mokka,4,2003,Hatchback,False,niebieski,Benzyna,2.0,131,Manualna,5,5,False
-40,Volkswagen,up!,4,2004,Hatchback,False,biały,Benzyna,0.9,60,Manualna,5,5,False
-41,Fiat,Grande Punto,4,2008,Sedan,True,szary,Benzyna,1.0,69,Manualna,5,5,False
-42,Audi,Q2,4,2009,SUV,False,szary,Benzyna,2.4,150,Manualna,5,5,False
-43,Skoda,Octavia,4,2012,Sedan,False,szary,Benzyna,2.4,150,Manualna,5,5,False
-44,Ford,Focus,4,2023,Kombi,False,czerwony,Diesel,1.6,101,Manualna,5,5,False
-45,Volkswagen,Golf Sportsvan,4,2009,Kombi,False,srebrny,Benzyna,1.8,116,Automatyczna,5,2,False
-46,Citroen,C4 Cactus,4,2002,Kombi,True,czerwony,Benzyna,1.2,82,Manualna,5,2,False
-47,Hero,Maestro Edge,2,2000,,False,szary,Benzyna,0.6,88,Manualna,0,1,False
-48,Fiat,500,4,2006,Kombi,False,biały,Benzyna,1.2,86,Manualna,5,5,False
-49,Audi,A7,4,2003,Kombi,False,srebrny,Diesel,3.6,231,Automatyczna,5,5,False
-50,Renault,ZOE,4,2003,SUV,False,czerwony,Elektryczny,1.6,92,Automatyczna,5,5,False
-51,Renault,Grand Scenic,4,2011,Kombi,False,srebrny,Diesel,2.4,150,Automatyczna,5,5,False
-52,Renault,Clio,4,2004,SUV,False,biały,Diesel,1.4,91,Manualna,3,5,False
-53,Renault,Clio,4,2010,Hatchback,False,niebieski,Benzyna,1.7,101,Manualna,5,5,False
-54,Fiat,500,4,2008,Coupe,False,czerwony,Benzyna,1.1,69,Manualna,3,5,False
-55,Skoda,Fabia,4,2015,Kombi,False,czarny,Benzyna,1.3,86,Manualna,5,5,False
-56,Skoda,Superb,4,1999,Hatchback,False,srebrny,Benzyna,2.4,150,Manualna,5,5,False
-57,Suzuki,Access 125,2,2013,,True,biały,Benzyna,0.5,68,Manualna,0,1,False
-58,MINI,One,4,2007,Hatchback,True,niebieski,Benzyna,1.5,102,Manualna,5,5,False
-59,Audi,A4,4,2005,Hatchback,False,czarny,Diesel,2.2,143,Automatyczna,5,5,False
-60,BMW,320,4,2011,Sedan,False,niebieski,Inny,3.0,190,Automatyczna,5,5,False
-61,Fiat,Punto Evo,4,2012,Coupe,False,biały,Benzyna,1.1,69,Manualna,3,5,False
-62,Hyundai,Tucson,4,2010,SUV,False,szary,Benzyna,2.1,132,Automatyczna,3,5,False
-63,Ford,C-Max,4,2008,Hatchback,False,biały,Benzyna,2.1,125,Manualna,3,5,False
-64,Opel,Combo,4,2005,Hatchback,False,czarny,Diesel,2.2,131,Manualna,5,5,False
-65,Ford,Galaxy,4,2017,SUV,False,biały,Diesel,2.1,140,Manualna,5,2,False
-66,Renault,Clio,4,2010,SUV,False,czarny,Benzyna,1.4,90,Manualna,5,5,False
-67,Volkswagen,Golf,4,2019,Kombi,True,czarny,Benzyna,2.4,150,Manualna,5,5,False
-68,Suzuki,Swift,4,2013,Coupe,False,niebieski,Elektryczny/Benzyna,1.6,94,Manualna,5,5,False
-69,Mercedes-Benz,B 180,4,2006,Hatchback,False,czerwony,Benzyna,1.6,109,Manualna,5,2,False
-70,Mazda,5,4,2003,Hatchback,False,srebrny,Benzyna,2.5,150,Manualna,5,5,False
-71,Hyundai,i10,4,2018,Coupe,False,srebrny,Benzyna,1.2,67,Manualna,3,2,False
-72,Renault,ZOE,4,2008,Sedan,False,biały,Elektryczny,0.9,58,Automatyczna,5,5,False
-73,Mercedes-Benz,E 350,4,2005,Kombi,False,biały,Diesel,4.0,258,Automatyczna,5,5,False
-74,Fiat,Punto Evo,4,2005,Kombi,True,srebrny,Benzyna,0.9,68,Manualna,5,5,False
-75,Volkswagen,Polo,4,2000,Coupe,True,czarny,Benzyna,1.9,105,Manualna,5,2,False
-76,Skoda,Superb,4,2005,Hatchback,True,czerwony,Benzyna,2.5,150,Manualna,5,7,False
-77,Volkswagen,Caddy,4,2008,Sedan,False,niebieski,Diesel,1.6,109,Manualna,5,5,False
-78,Volkswagen,Golf,4,2004,SUV,False,srebrny,Diesel,1.7,110,Manualna,5,5,False
-79,Citroen,DS3,4,2012,SUV,False,szary,Benzyna,1.9,110,Manualna,5,5,False
-80,Volkswagen,Golf,4,2009,Kombi,False,czarny,Benzyna,1.5,105,Automatyczna,5,5,False
-81,KTM,390 Duke ABS,2,2012,,False,złoty,Benzyna,0.2,25,Automatyczna,0,1,False
-82,Opel,Combo,4,2010,Coupe,False,czerwony,Diesel,1.4,95,Automatyczna,3,5,False
-83,smart,forTwo,4,1998,SUV,False,szary,Benzyna,0.9,56,Automatyczna,3,5,False
-84,Mercedes-Benz,C 300,4,2001,SUV,False,czerwony,Benzyna,4.1,258,Automatyczna,3,5,False
-85,KTM,200 Duke,2,2005,,False,czarny,Benzyna,0.3,40,Manualna,0,1,False
-86,Volkswagen,Caddy,4,2001,Coupe,False,niebieski,Diesel,1.5,102,Manualna,5,5,False
-87,Volkswagen,up!,4,2004,Kombi,True,biały,Benzyna,0.9,60,Manualna,5,5,False
-88,Citroen,C1,4,2003,Sedan,False,szary,Benzyna,1.1,68,Manualna,5,2,False
-89,Dacia,Lodgy,4,2008,SUV,False,czerwony,Benzyna,1.8,107,Manualna,3,2,False
-90,Volkswagen,Arteon,4,2009,Sedan,False,niebieski,Benzyna,2.3,150,Automatyczna,5,2,False
-91,Volkswagen,up!,4,2009,Hatchback,False,biały,Benzyna,1.0,60,Manualna,5,2,False
-92,Kia,Rio,4,1998,SUV,True,szary,Benzyna,1.5,86,Manualna,5,5,False
-93,Opel,Astra,4,2001,Hatchback,False,brązowy,Diesel,2.1,125,Manualna,5,5,False
-94,Mazda,3,4,2004,Kombi,False,biały,Benzyna,1.8,116,Manualna,3,2,False
-95,Mercedes-Benz,E 220,4,2003,SUV,False,szary,Diesel,3.0,194,Automatyczna,5,5,False
-96,Jawa,42,2,2005,,True,czarny,Benzyna,0.4,56,Manualna,0,1,False
-97,Mercedes-Benz,C 300,4,2000,Hatchback,True,srebrny,Diesel,3.4,211,Automatyczna,5,2,False
-98,smart,forTwo,4,2015,Hatchback,False,złoty,Benzyna,1.4,90,Manualna,3,5,False
-99,Volkswagen,Beetle,4,2017,Sedan,True,biały,Benzyna,1.7,110,Manualna,3,2,False
-100,Hyundai,i30,4,2004,Sedan,False,inny,Benzyna,1.5,99,Manualna,3,5,False
-101,Kia,Picanto,4,2006,Coupe,False,srebrny,Benzyna,1.2,67,Manualna,5,5,False
-102,Audi,A3,4,2003,Sedan,False,czerwony,Benzyna,1.6,105,Manualna,5,2,False
-103,Bajaj,Avenger Street 220,2,2005,,True,szary,Benzyna,0.8,112,Manualna,0,1,False
-104,Fiat,500,4,2005,SUV,True,czarny,Benzyna,1.0,69,Automatyczna,3,5,False
-105,Volvo,XC60,4,2001,Hatchback,False,czerwony,Elektryczny/Benzyna,3.8,235,Manualna,5,2,False
-106,Skoda,Citigo,4,2008,Van,False,szary,Benzyna,1.1,75,Manualna,5,5,False
-107,Volkswagen,Passat Variant,4,2006,Sedan,False,czarny,Diesel,1.8,120,Manualna,3,5,False
-108,Volkswagen,Golf Plus,4,2004,Coupe,False,biały,Benzyna,1.6,105,Manualna,5,5,False
-109,Renault,Megane,4,2007,SUV,False,srebrny,Diesel,1.9,116,Manualna,3,5,False
-110,Skoda,Octavia,4,2009,Kombi,False,czarny,Diesel,2.5,150,Automatyczna,5,5,False
-111,Renault,Captur,4,2014,Sedan,False,szary,Benzyna,1.9,110,Manualna,3,2,False
-112,Citroen,C4,4,2008,SUV,True,złoty,Benzyna,1.3,95,Automatyczna,5,5,False
-113,Toyota,Aygo,4,2008,Sedan,False,srebrny,Benzyna,1.0,69,Manualna,5,5,False
-114,Mitsubishi,Space Star,4,2010,Van,False,inny,Benzyna,1.2,80,Manualna,5,2,False
-115,Subaru,Forester,4,2011,Minivan,True,niebieski,Diesel,2.4,147,Manualna,3,5,False
-116,Renault,Captur,4,2007,SUV,False,szary,Benzyna,1.3,90,Automatyczna,5,5,False
-117,Ford,C-Max,4,2008,Hatchback,False,szary,Benzyna,2.0,116,Automatyczna,5,5,False
-118,Volkswagen,Polo,4,2002,Sedan,False,niebieski,Benzyna,1.4,90,Manualna,5,5,False
-119,Royal,Enfield Classic Chrome,2,2007,,False,niebieski,Benzyna,0.4,56,Manualna,0,1,False
-120,Ford,Focus,4,2005,Hatchback,False,czarny,Benzyna,4.6,280,Manualna,5,5,False
-121,Volkswagen,Golf,4,2008,Van,False,biały,Diesel,1.0,80,Manualna,3,5,False
-122,Hyundai,i10,4,2009,Hatchback,False,czarny,Benzyna,0.8,67,Manualna,5,5,False
-123,Volkswagen,Passat Variant,4,2004,Hatchback,False,biały,Diesel,1.9,120,Manualna,5,5,False
-124,Audi,A5,4,2013,SUV,False,czarny,Diesel,2.4,170,Automatyczna,3,2,False
-125,Ford,S-Max,4,2009,SUV,False,biały,Benzyna,2.5,150,Automatyczna,5,5,False
-126,Citroen,Jumper,4,2007,Coupe,False,biały,Diesel,1.9,131,Manualna,5,2,False
-127,Opel,Astra,4,2011,Hatchback,False,czerwony,Diesel,1.5,101,Manualna,5,5,False
-128,SEAT,Mii,4,2008,Kombi,False,czerwony,Benzyna,1.0,60,Manualna,3,2,False
-129,Honda,Jazz,4,2012,Van,False,srebrny,Benzyna,1.5,102,Manualna,5,5,False
-130,Fiat,500C,4,2005,Hatchback,False,srebrny,Benzyna,0.9,69,Manualna,5,5,False
-131,Nissan,Juke,4,2007,Hatchback,False,czerwony,Benzyna,1.7,110,Manualna,3,5,False
-132,Fiat,Bravo,4,2003,Kombi,False,żółty,Benzyna,1.3,90,Manualna,5,5,False
-133,Volkswagen,Scirocco,4,2007,SUV,False,czarny,Benzyna,3.4,211,Manualna,5,5,False
-134,Volkswagen,Polo,4,2009,Hatchback,False,srebrny,Benzyna,1.4,95,Manualna,3,2,False
-135,Volkswagen,Polo GTI,4,2005,Sedan,False,czarny,Benzyna,3.2,192,Automatyczna,5,5,False
-136,Opel,Astra,4,2002,SUV,False,biały,Diesel,1.8,110,Automatyczna,5,5,False
-137,Mercedes-Benz,E 250,4,2009,Coupe,True,szary,Diesel,3.4,204,Automatyczna,5,2,False
-138,Mercedes-Benz,C 180,4,2001,Hatchback,False,szary,Benzyna,2.4,156,Manualna,5,5,False
-139,Volkswagen,up!,4,2010,Hatchback,False,biały,Benzyna,1.2,60,Automatyczna,5,5,False
-140,Mercedes-Benz,Vito,4,2016,Van,True,srebrny,Diesel,1.8,114,Manualna,3,5,False
-141,Hyundai,i20,4,2008,Hatchback,False,szary,Benzyna,1.0,84,Automatyczna,5,5,False
-142,Volvo,XC90,4,2009,Hatchback,False,szary,Diesel,3.8,250,Automatyczna,3,5,False
-143,Hero,CBZ,2,2004,,False,czerwony,Benzyna,0.4,52,Manualna,0,1,False
-144,Volkswagen,up!,4,2005,Hatchback,False,czarny,Benzyna,1.2,75,Manualna,5,5,False
-145,Renault,Megane,4,2000,Hatchback,False,czerwony,Diesel,1.7,116,Manualna,5,5,False
-146,Mercedes-Benz,B 180,4,2012,Kombi,False,niebieski,Diesel,1.9,122,Manualna,5,5,False
-147,Jaguar,XE,4,2002,Hatchback,False,biały,Benzyna,3.0,179,Automatyczna,5,2,False
-148,Audi,A7,4,2000,Hatchback,False,biały,Diesel,4.5,286,Automatyczna,5,5,False
-149,Volkswagen,up!,4,2009,Sedan,False,czarny,Benzyna,0.7,60,Automatyczna,5,2,False
-150,Hyundai,i10,4,2006,Coupe,False,złoty,Benzyna,0.9,67,Manualna,3,2,False
-151,Ford,EcoSport,4,2003,SUV,False,czarny,Benzyna,2.2,125,Manualna,3,5,False
-152,Honda,CB Trigger,2,2015,,False,szary,Benzyna,0.2,30,Manualna,0,1,False
-153,Renault,Megane,4,2010,Sedan,False,srebrny,Benzyna,1.6,101,Manualna,5,5,False
-154,Dacia,Sandero,4,2011,Kombi,False,srebrny,Benzyna,1.3,90,Manualna,5,2,False
-155,Audi,Q3,4,2004,Coupe,False,złoty,Diesel,2.7,184,Automatyczna,3,5,False
-156,Ford,Focus,4,2010,Hatchback,False,niebieski,Benzyna,1.8,125,Automatyczna,5,5,False
-157,Peugeot,308,4,2012,SUV,False,czarny,Diesel,1.9,111,Manualna,5,2,False
-158,Volkswagen,Golf,4,2007,SUV,True,biały,Diesel,2.2,140,Manualna,5,2,False
-159,Ford,Focus,4,2017,Sedan,False,niebieski,Benzyna,2.1,116,Manualna,5,5,False
-160,Volkswagen,T-Roc,4,2009,Kombi,False,czarny,Benzyna,2.4,150,Automatyczna,5,5,False
-161,Nissan,Micra,4,2012,Hatchback,False,czarny,Benzyna,1.3,80,Manualna,3,5,False
-162,Skoda,Yeti,4,2006,SUV,False,biały,Diesel,1.9,122,Manualna,3,5,False
-163,Bajaj,Discover 100,2,2008,,False,srebrny,Benzyna,0.4,56,Manualna,0,1,False
-164,Ford,Galaxy,4,2006,Kombi,False,niebieski,Diesel,2.5,160,Automatyczna,5,5,False
-165,Ford,Fiesta,4,2008,Sedan,False,czerwony,Benzyna,1.1,75,Manualna,5,5,False
-166,Skoda,Octavia,4,2004,Sedan,False,srebrny,Diesel,2.3,150,Manualna,3,2,False
-167,Volkswagen,Passat Variant,4,2006,SUV,False,żółty,Diesel,2.1,140,Automatyczna,3,5,False
-168,Volkswagen,up!,4,2008,Sedan,False,czarny,Benzyna,0.9,60,Manualna,5,7,False
-169,Audi,A4,4,2007,Kombi,False,szary,Diesel,2.5,170,Automatyczna,5,5,False
-170,Volkswagen,T6.1 California,4,2009,Kombi,False,srebrny,Diesel,3.0,199,Automatyczna,5,2,False
-171,Alfa,Romeo Giulietta,4,1999,Kombi,False,biały,Benzyna,1.8,105,Manualna,5,5,False
-172,BMW,116,4,2006,Van,False,srebrny,Diesel,2.2,136,Manualna,5,5,False
-173,Opel,Meriva,4,1999,Hatchback,False,szary,Benzyna,1.7,120,Manualna,5,2,False
-174,Ford,Kuga,4,2013,Kombi,False,czarny,Diesel,2.5,150,Manualna,3,5,False
-175,BMW,116,4,2008,Kombi,False,biały,Diesel,1.9,116,Manualna,3,5,False
-176,Subaru,XV,4,2005,Hatchback,False,srebrny,Diesel,2.3,147,Manualna,5,5,False
-177,Volvo,XC90,4,2011,SUV,False,szary,Diesel,3.6,224,Automatyczna,3,2,False
-178,Renault,Kangoo,4,2016,SUV,False,biały,Diesel,1.0,75,Manualna,3,5,False
-179,Renault,Kangoo,4,2002,SUV,False,szary,Diesel,1.9,110,Manualna,5,5,False
-180,SEAT,Leon,4,2011,Sedan,False,czerwony,Benzyna,2.2,150,Manualna,5,5,False
-181,Opel,Karl,4,2011,SUV,False,niebieski,Benzyna,1.1,73,Manualna,3,5,False
-182,Hyundai,i20,4,2005,Kombi,False,czerwony,Benzyna,1.5,86,Manualna,5,5,False
-183,Mercedes-Benz,Vito,4,2013,Hatchback,False,szary,Diesel,2.2,136,Automatyczna,3,5,False
-184,Fiat,500X,4,2014,SUV,True,srebrny,Benzyna,1.6,114,Automatyczna,5,2,False
-185,Ford,Fiesta,4,2004,Hatchback,False,srebrny,Benzyna,1.1,71,Manualna,5,5,False
-186,Volkswagen,Passat,4,2010,SUV,False,czerwony,Diesel,2.0,122,Automatyczna,3,5,False
-187,Suzuki,Ignis,4,2005,Hatchback,False,szary,Benzyna,1.2,83,Manualna,5,5,False
-188,Renault,Clio,4,2013,Hatchback,False,czarny,Benzyna,1.0,75,Manualna,5,5,False
-189,smart,forTwo,4,2008,Kombi,True,srebrny,Benzyna,1.2,71,Automatyczna,5,5,False
-190,Opel,Corsa,4,2012,Coupe,False,biały,Benzyna,0.8,69,Automatyczna,5,5,False
-191,Skoda,Citigo,4,2004,SUV,False,niebieski,Benzyna,0.9,60,Manualna,5,5,False
-192,Toyota,Avensis,4,2006,Minivan,False,srebrny,Diesel,2.4,147,Manualna,5,2,False
-193,Mercedes-Benz,GLK 220,4,2009,SUV,True,niebieski,Diesel,2.6,170,Automatyczna,5,5,False
-194,Ford,Fiesta,4,2012,Hatchback,True,czerwony,Benzyna,1.4,86,Manualna,5,5,False
-195,Skoda,Superb,4,2013,Sedan,False,biały,Diesel,2.2,140,Automatyczna,3,5,False
-196,Skoda,Fabia,4,2008,Hatchback,False,szary,Benzyna,1.1,60,Manualna,5,5,False
-197,Opel,Corsa,4,2015,SUV,False,srebrny,Benzyna,1.4,86,Automatyczna,3,5,False
-198,Yamaha,FZ S,2,2006,,False,brązowy,Benzyna,0.5,73,Manualna,0,1,False
-199,Skoda,Octavia,4,2008,Sedan,False,czarny,Diesel,2.4,150,Manualna,5,5,False
-200,Opel,Corsa,4,2007,Hatchback,False,złoty,Benzyna,3.2,207,Manualna,5,2,False
-201,Royal,Enfield Classic 350,2,2002,,True,biały,Benzyna,0.6,92,Manualna,0,1,False
-202,Hyundai,i10,4,2004,SUV,False,niebieski,Benzyna,1.3,87,Manualna,5,5,False
-203,Bajaj,Pulsar 150,2,2003,,True,szary,Benzyna,0.5,78,Manualna,0,1,False
-204,Ford,Focus,4,2013,Sedan,False,szary,Diesel,1.8,125,Manualna,5,5,False
-205,smart,forTwo,4,2011,Sedan,False,biały,Benzyna,1.2,71,Automatyczna,5,5,False
-206,Volvo,V60,4,2005,Hatchback,False,inny,Diesel,2.5,150,Automatyczna,3,2,False
-207,Volkswagen,Golf,4,1999,Sedan,False,niebieski,Diesel,1.7,110,Manualna,3,2,False
-208,Ford,Fiesta,4,2009,Kombi,False,czarny,Benzyna,1.6,101,Manualna,3,5,False
-209,Honda,Civic,4,2002,Hatchback,False,biały,Benzyna,2.2,141,Manualna,3,5,False
-210,Ford,B-Max,4,2017,SUV,False,biały,Diesel,1.9,125,Manualna,5,5,False
-211,Hero,Achiever 150,2,2012,,False,czarny,Benzyna,0.4,53,Manualna,0,1,False
-212,Mercedes-Benz,Viano,4,2010,Kombi,False,szary,Diesel,2.4,163,Automatyczna,5,2,False
-213,SEAT,Tarraco,4,2002,Sedan,True,szary,Benzyna,2.4,150,Automatyczna,3,5,False
-214,Hyundai,i30,4,2010,Kombi,False,biały,Benzyna,1.7,120,Manualna,5,2,False
-215,Volkswagen,Passat Variant,4,2017,Kombi,False,biały,Diesel,2.9,179,Manualna,5,5,False
-216,smart,forTwo,4,2013,Kombi,False,czerwony,Elektryczny,1.1,71,Automatyczna,5,2,False
-217,Opel,Mokka,4,2009,SUV,False,srebrny,Benzyna,2.1,140,Automatyczna,5,2,False
-218,Volkswagen,Golf Sportsvan,4,2003,SUV,False,biały,Benzyna,2.2,131,Automatyczna,5,5,False
-219,Opel,Astra,4,2013,Hatchback,False,szary,Diesel,2.4,140,Manualna,5,5,False
-220,Toyota,Aygo,4,2010,Hatchback,False,szary,Benzyna,1.0,68,Manualna,5,5,False
-221,Renault,Twingo,4,2011,Hatchback,False,szary,Benzyna,1.1,75,Manualna,5,5,False
-222,Ford,Focus,4,2015,SUV,False,czarny,Diesel,1.8,125,Automatyczna,5,5,False
-223,Mercedes-Benz,C 200,4,2013,Van,False,srebrny,Diesel,2.9,184,Manualna,5,2,False
-224,Skoda,Octavia,4,2007,Hatchback,False,niebieski,Benzyna,2.9,179,Automatyczna,5,5,False
-225,Chevrolet,Spark,4,2008,SUV,False,czarny,Benzyna,1.1,68,Manualna,5,2,False
-226,Skoda,Yeti,4,2004,Kombi,False,czarny,Benzyna,1.5,110,Manualna,5,2,False
-227,Kia,Sorento,4,2007,Hatchback,False,czarny,Diesel,3.2,201,Automatyczna,3,5,False
-228,Audi,A5,4,2012,Hatchback,False,czarny,Benzyna,3.8,245,Automatyczna,5,5,False
-229,Opel,Astra,4,2007,SUV,True,czerwony,Diesel,1.8,105,Automatyczna,3,5,False
-230,BMW,116,4,2011,Sedan,True,brązowy,Diesel,1.8,116,Automatyczna,5,5,False
-231,Hero,Super Splendor,2,2015,,False,szary,Benzyna,0.5,78,Automatyczna,0,1,False
-232,Skoda,Citigo,4,2006,Sedan,False,czarny,Benzyna,0.9,60,Manualna,5,5,False
-233,Opel,Adam,4,2001,Hatchback,False,czarny,Benzyna,1.2,69,Manualna,5,5,False
-234,Skoda,Superb,4,2003,SUV,False,biały,Diesel,1.9,125,Automatyczna,5,5,False
-235,Ford,Focus,4,2010,Hatchback,True,brązowy,Diesel,2.3,150,Manualna,5,5,False
-236,Kia,ProCeed / pro_cee'd,4,2006,SUV,True,czerwony,Diesel,3.3,204,Manualna,3,5,False
-237,Mercedes-Benz,C 180,4,2013,Hatchback,False,biały,Benzyna,2.4,156,Manualna,5,2,False
-238,Renault,Twingo,4,2010,Sedan,False,niebieski,Benzyna,1.6,90,Manualna,5,5,False
-239,Ford,Kuga,4,2010,Hatchback,True,czerwony,Benzyna,2.3,150,Manualna,5,5,False
-240,Ford,Fiesta,4,2014,Hatchback,False,srebrny,Benzyna,1.5,101,Manualna,5,5,False
-241,Opel,Corsa,4,2014,Kombi,False,biały,Benzyna,1.1,69,Manualna,5,5,False
-242,BMW,116,4,2007,Sedan,False,czarny,Benzyna,1.9,116,Manualna,3,5,False
-243,Volkswagen,up!,4,2010,Hatchback,False,szary,Benzyna,1.1,60,Manualna,5,5,False
-244,Skoda,Superb,4,2004,Kombi,False,biały,Diesel,3.0,190,Manualna,5,5,False
-245,Bajaj,Pulsar 220 DTS-i,2,2004,,False,srebrny,Benzyna,0.4,48,Automatyczna,0,1,False
-246,SEAT,Arona,4,2006,Coupe,False,czarny,Benzyna,1.3,90,Manualna,5,5,False
-247,Cupra,Formentor,4,2005,SUV,True,biały,Benzyna,3.0,190,Automatyczna,3,5,False
-248,Opel,Astra,4,2011,Sedan,False,czerwony,Diesel,1.8,120,Automatyczna,3,2,False
-249,BMW,420,4,2005,Hatchback,False,czarny,Benzyna,3.1,190,Automatyczna,5,5,False
-250,Skoda,Octavia,4,2009,Kombi,False,czerwony,Benzyna,2.6,184,Manualna,3,5,False
-251,SEAT,Ateca,4,2000,SUV,False,biały,Benzyna,2.4,150,Automatyczna,3,2,False
-252,Renault,Megane,4,2008,Sedan,False,srebrny,Diesel,2.3,140,Manualna,3,2,False
-253,Audi,A6,4,2012,Sedan,True,szary,Diesel,2.9,190,Manualna,5,5,False
-254,Volkswagen,Golf,4,2004,Hatchback,False,srebrny,Diesel,1.7,105,Manualna,5,2,False
-255,Ford,Fiesta,4,2005,Kombi,False,czarny,Benzyna,1.2,75,Manualna,5,5,False
-256,SEAT,Ibiza,4,2000,Kombi,False,srebrny,Benzyna,1.5,95,Manualna,5,5,False
-257,Volkswagen,Tiguan,4,2006,SUV,False,srebrny,Benzyna,2.0,122,Automatyczna,5,5,False
-258,Volkswagen,Touran,4,2009,Sedan,True,szary,Benzyna,1.6,105,Manualna,5,5,False
-259,Citroen,C1,4,2016,SUV,False,szary,Benzyna,1.1,68,Manualna,5,2,False
-260,Fiat,500C,4,2015,SUV,False,srebrny,Benzyna,1.0,69,Manualna,3,5,False
-261,Volkswagen,Passat Variant,4,2006,Sedan,False,czarny,Diesel,1.9,120,Manualna,3,5,False
-262,Bentley,Bentayga,4,1999,Kombi,False,biały,Diesel,6.9,435,Automatyczna,5,5,False
-263,Honda,Aviator,2,2006,,False,szary,Benzyna,0.3,43,Manualna,0,1,False
-264,Bajaj,Xcd,2,2009,,True,czarny,Benzyna,0.2,24,Manualna,0,1,False
-265,Bajaj,Pulsar 180,2,2000,,False,srebrny,Benzyna,0.6,86,Automatyczna,0,1,False
-266,Ford,Focus,4,2004,Hatchback,False,czerwony,Benzyna,2.4,150,Manualna,5,5,False
-267,Mercedes-Benz,GLC 43 AMG,4,2007,Kombi,False,szary,Benzyna,5.8,367,Automatyczna,5,7,False
-268,Opel,Corsa,4,2007,Hatchback,False,srebrny,Benzyna,1.3,87,Manualna,5,5,False
-269,Hyundai,i30,4,2004,Sedan,False,szary,Benzyna,1.5,99,Manualna,5,2,False
-270,Opel,Adam,4,2000,Hatchback,False,złoty,Benzyna,1.4,87,Manualna,5,5,False
-271,Audi,A3,4,2009,Kombi,True,biały,Benzyna,1.7,110,Manualna,5,5,False
-272,Volkswagen,Tiguan,4,2006,SUV,False,biały,Diesel,2.6,170,Automatyczna,3,5,False
-273,Hyundai,i20,4,2007,Hatchback,True,biały,Benzyna,1.9,120,Manualna,5,2,False
-274,Honda,CB Unicorn 150,2,2005,,False,szary,Benzyna,0.2,31,Manualna,0,1,False
-275,Ford,Kuga,4,2009,Coupe,False,srebrny,Diesel,2.5,150,Manualna,5,5,False
-276,Skoda,Octavia,4,2006,Van,False,szary,Diesel,1.6,110,Manualna,3,5,False
-277,SEAT,Ateca,4,2003,SUV,False,niebieski,Benzyna,3.1,190,Automatyczna,5,5,False
-278,smart,forTwo,4,2007,Hatchback,True,szary,Benzyna,1.2,82,Automatyczna,5,5,False
-279,Citroen,C3,4,2010,SUV,False,szary,Benzyna,1.1,68,Manualna,5,5,False
-280,Ford,Focus,4,2003,SUV,False,szary,Diesel,2.9,182,Automatyczna,3,2,False
-281,Toyota,Verso,4,2015,Sedan,False,srebrny,Diesel,2.4,147,Manualna,5,7,False
-282,Renault,Clio,4,2008,Sedan,False,czerwony,Benzyna,1.4,90,Manualna,5,2,False
-283,Ford,Grand Tourneo,4,2005,Hatchback,False,czarny,Diesel,1.8,116,Manualna,5,5,False
-284,Royal,Enfield Thunderbird 350,2,2013,,False,biały,Benzyna,0.5,74,Manualna,0,1,False
-285,Volvo,V60,4,2004,Sedan,False,szary,Diesel,1.6,114,Automatyczna,5,5,False
-286,Aston,Martin V8,4,2001,Hatchback,False,biały,Benzyna,8.0,510,Automatyczna,5,2,False
-287,Volvo,XC60,4,2002,Hatchback,False,biały,Benzyna,3.9,245,Automatyczna,5,2,False
-288,Hero,Honda CD Deluxe,2,2002,,False,czerwony,Benzyna,0.3,41,Manualna,0,1,False
-289,Dacia,Logan,4,2007,Kombi,False,biały,Diesel,1.3,90,Manualna,3,5,False
-290,Kia,Picanto,4,2010,Kombi,False,biały,Benzyna,1.0,69,Manualna,5,5,False
-291,Volkswagen,Touran,4,2010,Hatchback,False,biały,Diesel,2.1,140,Manualna,5,5,False
-292,Opel,Astra,4,2010,Sedan,False,srebrny,Diesel,2.6,170,Manualna,5,5,False
-293,Fiat,500,4,2008,Sedan,False,brązowy,Elektryczny/Benzyna,1.0,71,Manualna,5,2,False
-294,Fiat,500,4,2007,Hatchback,False,biały,Benzyna,1.0,69,Manualna,5,2,False
-295,Volkswagen,Sharan,4,2001,Sedan,False,czerwony,Diesel,2.0,140,Manualna,5,5,False
-296,Nissan,Qashqai,4,2011,Kombi,False,biały,Benzyna,1.8,116,Manualna,5,5,False
-297,BMW,120,4,2002,Hatchback,False,biały,Diesel,2.7,177,Manualna,5,5,False
-298,Mazda,5,4,2008,SUV,False,szary,Benzyna,1.8,116,Manualna,5,5,False
-299,Volkswagen,T-Roc,4,2014,Hatchback,False,czarny,Benzyna,2.3,150,Automatyczna,3,2,False
-300,Audi,Q3,4,2009,SUV,False,czerwony,Diesel,2.2,150,Automatyczna,5,2,False
-301,Mazda,CX-5,4,2004,Van,False,czerwony,Diesel,2.8,165,Automatyczna,5,5,False
-302,Honda,CB Twister,2,2010,,False,biały,Benzyna,0.6,87,Manualna,0,1,False
-303,Alpina,XD3,4,2006,SUV,False,szary,Diesel,6.2,387,Automatyczna,5,2,False
-304,Audi,A4,4,2005,Coupe,True,czarny,Diesel,2.6,190,Automatyczna,5,5,False
-305,Volkswagen,up!,4,2010,Hatchback,False,biały,Benzyna,0.9,60,Manualna,5,5,False
-306,Mercedes-Benz,GLC 43 AMG,4,2006,Kombi,False,biały,Benzyna,5.7,367,Automatyczna,5,5,False
-307,Fiat,500,4,2011,SUV,False,czerwony,Benzyna,0.9,69,Manualna,3,5,False
-308,Ford,Focus,4,2012,Hatchback,False,brązowy,Benzyna,1.8,120,Automatyczna,3,5,False
-309,Mazda,CX-5,4,2008,Hatchback,True,czarny,Benzyna,2.8,175,Automatyczna,5,5,False
-310,Volkswagen,up!,4,2000,SUV,False,biały,Benzyna,0.8,60,Manualna,3,5,False
-311,Opel,Corsa,4,2011,Coupe,False,srebrny,Benzyna,1.2,75,Manualna,5,5,False
-312,Skoda,Yeti,4,2004,SUV,False,czerwony,Benzyna,1.6,105,Manualna,5,5,False
-313,Skoda,Citigo,4,2009,Sedan,False,czerwony,Benzyna,0.9,60,Manualna,5,2,False
-314,Opel,Mokka,4,2010,SUV,True,czerwony,Diesel,1.9,131,Automatyczna,5,5,False
-315,Renault,Clio,4,2012,Coupe,False,czarny,Diesel,1.4,90,Manualna,5,5,False
-316,MINI,Cooper SE,4,2010,SUV,False,biały,Elektryczny,1.7,102,Manualna,3,5,False
-317,Peugeot,208,4,2008,SUV,False,biały,Diesel,1.2,82,Manualna,5,2,False
-318,Renault,Kangoo,4,2015,SUV,False,biały,Diesel,1.0,60,Manualna,5,2,False
-319,Kia,Picanto,4,2009,Hatchback,True,srebrny,Benzyna,1.3,86,Automatyczna,5,5,False
-320,BMW,X3,4,2008,SUV,False,czarny,Benzyna,3.0,190,Automatyczna,5,2,False
-321,smart,forTwo,4,2008,Sedan,False,szary,Benzyna,0.8,54,Automatyczna,5,2,False
-322,Renault,Kadjar,4,2007,SUV,True,niebieski,Benzyna,2.1,131,Automatyczna,5,2,False
-323,Volkswagen,Polo,4,2004,Hatchback,False,czerwony,Benzyna,1.9,110,Automatyczna,5,5,False
-324,Porsche,Panamera,4,2006,Kombi,False,srebrny,Elektryczny/Benzyna,6.6,421,Automatyczna,5,2,False
-325,Volkswagen,Passat Variant,4,2012,Sedan,False,biały,Diesel,3.6,239,Manualna,5,5,False
-326,Hero,Honda Passion PRO,2,2010,,False,czerwony,Benzyna,0.3,38,Manualna,0,1,False
-327,Nissan,Pulsar,4,2009,SUV,False,żółty,Benzyna,1.7,116,Manualna,5,5,False
-328,Opel,Corsa,4,2011,Kombi,False,czarny,Benzyna,1.2,69,Manualna,5,2,False
-329,Volkswagen,Golf Sportsvan,4,2001,Sedan,False,czarny,Diesel,2.4,150,Manualna,3,2,False
-330,SEAT,Alhambra,4,2008,SUV,False,czarny,Diesel,2.4,150,Manualna,5,5,False
-331,smart,forTwo,4,2008,Sedan,False,szary,Benzyna,1.1,71,Automatyczna,5,2,False
-332,Hero,Duet,2,2008,,False,szary,Benzyna,0.8,111,Manualna,0,1,False
-333,Volkswagen,up!,4,2013,Hatchback,False,szary,Benzyna,1.0,60,Manualna,5,5,False
-334,Volkswagen,Golf Variant,4,2007,Sedan,False,biały,Diesel,2.4,150,Manualna,5,5,False
-335,Fiat,500,4,2001,Van,False,czarny,Benzyna,1.2,69,Manualna,3,5,False
-336,Subaru,Forester,4,2007,SUV,False,biały,Diesel,2.3,147,Manualna,5,5,False
-337,SEAT,Mii,4,2016,Hatchback,True,srebrny,Benzyna,0.7,60,Manualna,5,5,False
-338,Citroen,DS3,4,2000,SUV,True,czerwony,Benzyna,1.7,110,Manualna,5,5,False
-339,Renault,Clio,4,2009,SUV,True,srebrny,Elektryczny/Benzyna,1.4,90,Manualna,5,5,False
-340,Honda,CR-V,4,2009,Kombi,False,srebrny,Benzyna,2.5,150,Manualna,5,5,False
-341,MINI,One,4,2010,Hatchback,False,biały,Benzyna,1.1,75,Manualna,5,5,False
-342,Volkswagen,Passat CC,4,2011,Coupe,False,niebieski,Diesel,2.3,140,Manualna,5,5,False
-343,Citroen,Grand C4 Picasso,4,2011,SUV,False,srebrny,Diesel,2.4,150,Manualna,3,5,False
-344,Ford,Focus,4,2009,Kombi,False,czarny,Diesel,1.6,101,Manualna,5,5,False
-345,Opel,Insignia,4,2013,Kombi,False,czarny,Benzyna,3.0,194,Automatyczna,5,5,False
-346,Toyota,RAV 4,4,2010,Kombi,False,szary,Elektryczny/Benzyna,2.5,150,Automatyczna,5,2,False
-347,SEAT,Ibiza,4,2004,Sedan,False,czarny,Benzyna,1.5,105,Manualna,3,5,False
-348,Peugeot,2008,4,2009,Hatchback,False,szary,Benzyna,1.6,120,Manualna,5,2,False
-349,SEAT,Mii,4,2013,Hatchback,False,czarny,Benzyna,1.0,68,Manualna,3,2,False
-350,Volkswagen,Touran,4,2000,SUV,False,niebieski,Diesel,1.7,105,Manualna,5,5,False
-351,Opel,Insignia,4,2013,Hatchback,False,brązowy,Diesel,1.9,131,Automatyczna,3,5,False
-352,BMW,520,4,2002,Hatchback,False,czarny,Diesel,2.8,184,Automatyczna,5,5,False
-353,Kia,ProCeed / pro_cee'd,4,2008,Coupe,False,czarny,Benzyna,2.4,160,Manualna,5,2,False
-354,BMW,320,4,2009,Coupe,False,biały,Diesel,2.8,184,Automatyczna,5,5,False
-355,Skoda,Octavia,4,1998,Hatchback,False,niebieski,Diesel,2.0,122,Automatyczna,3,5,False
-356,TVS,Victor GLX,2,2009,,False,żółty,Benzyna,0.2,26,Manualna,0,1,False
-357,Volkswagen,Touran,4,2005,Hatchback,False,srebrny,Diesel,2.5,150,Manualna,5,5,False
-358,Hyundai,i10,4,2009,Hatchback,False,szary,Benzyna,1.0,67,Manualna,5,2,False
-359,Ford,Mondeo,4,2009,Sedan,False,biały,Benzyna,2.7,160,Automatyczna,5,5,False
-360,Toyota,Avensis,4,2011,SUV,False,żółty,Diesel,2.0,124,Manualna,5,5,False
-361,Volkswagen,Golf,4,2013,SUV,False,szary,Benzyna,2.4,150,Manualna,5,5,False
-362,Opel,Meriva,4,2006,Sedan,False,szary,Benzyna,2.2,136,Manualna,3,5,False
-363,BMW,218,4,2012,Kombi,True,czerwony,Benzyna,2.3,140,Automatyczna,5,5,False
-364,Ford,Grand C-Max,4,2018,Hatchback,False,czarny,Diesel,2.5,150,Manualna,5,2,False
-365,Opel,Mokka,4,2012,Sedan,False,srebrny,Diesel,2.2,140,Manualna,5,5,False
-366,Mercedes-Benz,S 350,4,2010,Kombi,False,srebrny,Diesel,4.1,258,Automatyczna,5,5,False
-367,Renault,Clio,4,2016,Coupe,False,niebieski,Benzyna,1.5,91,Manualna,5,5,False
-368,Opel,Astra,4,2009,Hatchback,False,niebieski,Diesel,2.1,125,Manualna,5,5,False
-369,Fiat,Panda,4,2011,Kombi,True,niebieski,Benzyna,1.1,69,Manualna,3,5,False
-370,Bajaj,V15,2,2011,,True,szary,Benzyna,0.7,97,Manualna,0,1,False
-371,Kia,Ceed SW / cee'd SW,4,2008,Hatchback,False,szary,Diesel,2.1,116,Manualna,5,5,False
-372,Ford,Fiesta,4,2011,Hatchback,False,srebrny,Benzyna,1.6,95,Manualna,5,2,False
-373,Peugeot,308,4,2007,Hatchback,False,czarny,Diesel,1.7,120,Automatyczna,5,5,False
-374,Audi,A4,4,2011,Hatchback,False,srebrny,Diesel,2.5,150,Automatyczna,5,5,False
-375,Opel,Corsa,4,2009,Van,True,szary,Benzyna,1.5,90,Manualna,5,5,False
-376,Opel,Corsa,4,2004,Sedan,False,szary,Benzyna,1.5,101,Manualna,3,2,False
-377,Bajaj,Discover 125,2,2012,,False,czarny,Benzyna,0.5,79,Manualna,0,1,False
-378,Renault,Talisman,4,2010,SUV,False,niebieski,Benzyna,3.1,200,Automatyczna,5,5,False
-379,Opel,Adam,4,2002,Hatchback,True,szary,Benzyna,2.4,150,Manualna,5,2,False
-380,Aston,Martin,4,2010,Hatchback,True,niebieski,Benzyna,9.7,604,Automatyczna,3,2,False
-381,SEAT,Ibiza,4,2017,SUV,True,złoty,Benzyna,1.4,86,Manualna,5,5,False
-382,BMW,116,4,2009,Sedan,False,biały,Benzyna,1.9,116,Manualna,5,5,False
-383,Ford,C-Max,4,2008,Hatchback,False,czerwony,Benzyna,1.8,125,Manualna,5,5,False
-384,Opel,Corsa,4,2008,Hatchback,False,biały,Benzyna,1.2,90,Automatyczna,3,5,False
-385,Volkswagen,Crafter,4,2009,Coupe,False,biały,Diesel,2.8,177,Manualna,5,5,False
-386,Hyundai,i10,4,2005,Kombi,False,szary,Benzyna,1.1,67,Manualna,5,2,False
-387,Nissan,Qashqai,4,2015,Kombi,True,czerwony,Diesel,2.4,150,Automatyczna,5,5,False
-388,Volkswagen,Passat Variant,4,2008,Hatchback,True,złoty,Benzyna,2.3,140,Manualna,5,5,False
-389,Volkswagen,Golf,4,2010,Kombi,False,szary,Diesel,4.0,245,Automatyczna,5,2,False
-390,Volkswagen,T-Roc,4,2013,SUV,False,biały,Benzyna,2.3,150,Manualna,3,5,False
-391,Opel,Corsa,4,2003,Sedan,False,niebieski,Benzyna,1.2,86,Manualna,5,5,False
-392,Peugeot,108,4,2008,Sedan,False,biały,Benzyna,1.0,69,Manualna,5,2,False
-393,Volkswagen,Golf,4,2006,Sedan,False,biały,Benzyna,1.8,110,Manualna,5,5,False
-394,Volvo,V90,4,2017,Hatchback,False,czarny,Diesel,3.8,235,Automatyczna,5,2,False
-395,Mercedes-Benz,E 250,4,2017,SUV,False,czerwony,Benzyna,3.1,204,Automatyczna,5,5,False
-396,Ford,Focus,4,2006,Hatchback,False,niebieski,Diesel,2.5,150,Manualna,3,5,False
-397,Ford,Mondeo,4,2004,Van,False,srebrny,Benzyna,3.0,188,Automatyczna,5,5,False
-398,Audi,RS Q3,4,2010,Kombi,False,biały,Benzyna,6.4,400,Automatyczna,5,5,False
-399,Opel,Astra,4,2010,Sedan,False,czarny,Benzyna,2.2,140,Manualna,5,2,False
-400,Skoda,Citigo,4,2018,SUV,False,czarny,Benzyna,0.9,60,Manualna,5,5,False
-401,Renault,ZOE,4,2005,Sedan,False,szary,Elektryczny,0.8,58,Automatyczna,5,2,False
-402,Volkswagen,Transporter,4,2008,Hatchback,False,biały,Diesel,1.6,110,Manualna,5,5,False
-403,Peugeot,3008,4,2008,Sedan,False,czarny,Diesel,1.9,131,Automatyczna,5,5,False
-404,Volvo,XC90,4,2017,Sedan,True,czarny,Diesel,3.8,235,Automatyczna,5,5,False
-405,Fiat,500,4,2010,Van,False,biały,Benzyna,1.0,69,Manualna,3,5,False
-406,Ford,Transit,4,2006,Hatchback,False,czerwony,Diesel,2.0,125,Manualna,5,5,False
-407,Honda,CB Shine SP,2,2001,,False,czerwony,Benzyna,0.6,90,Manualna,0,1,False
-408,Mercedes-Benz,B 200,4,2003,Sedan,False,złoty,Benzyna,2.5,156,Manualna,5,5,False
-409,Skoda,Yeti,4,2005,Hatchback,False,biały,Benzyna,2.0,122,Manualna,5,2,False
-410,Renault,Clio,4,1998,SUV,True,srebrny,Diesel,1.3,75,Manualna,3,5,False
-411,Kia,Sportage,4,2008,SUV,False,srebrny,Diesel,2.7,177,Automatyczna,3,2,False
-412,BMW,230,4,2007,Sedan,False,biały,Benzyna,4.0,252,Automatyczna,5,2,False
-413,SEAT,Leon,4,2012,Hatchback,False,czerwony,Benzyna,1.4,102,Manualna,3,5,False
-414,BMW,X1,4,2006,SUV,False,czerwony,Diesel,3.0,190,Automatyczna,5,2,False
-415,Volkswagen,Polo,4,2012,Hatchback,False,szary,Benzyna,1.5,95,Manualna,3,2,False
-416,Hero,Maestro Edge,2,2005,,False,biały,Benzyna,0.6,89,Manualna,0,1,False
-417,Toyota,Yaris,4,2006,Kombi,False,srebrny,Benzyna,1.5,101,Manualna,5,5,False
-418,smart,forFour,4,2018,Kombi,False,czarny,Benzyna,1.2,71,Automatyczna,5,2,False
-419,Peugeot,308,4,2012,Sedan,True,czarny,Diesel,2.1,120,Manualna,5,2,False
-420,Ford,Focus,4,2004,SUV,False,czarny,Benzyna,1.9,125,Manualna,5,5,False
-421,Volkswagen,Polo,4,2011,Kombi,False,srebrny,Benzyna,1.5,90,Manualna,5,5,False
-422,Toyota,Yaris,4,1999,Hatchback,False,biały,Benzyna,1.2,72,Automatyczna,5,5,False
-423,Audi,e-tron,4,1998,Hatchback,True,czarny,Elektryczny,7.5,476,Automatyczna,5,5,False
-424,Ford,Focus,4,2009,Kombi,True,biały,Benzyna,2.0,125,Automatyczna,5,5,False
-425,Skoda,Fabia,4,1999,Hatchback,False,inny,Benzyna,1.5,95,Manualna,5,5,False
-426,SEAT,Leon,4,2011,SUV,True,czarny,Diesel,1.5,105,Manualna,5,5,False
-427,Hyundai,i10,4,2013,Hatchback,False,czarny,Benzyna,1.3,87,Manualna,5,2,False
-428,Ford,Fiesta,4,2008,SUV,False,biały,Benzyna,1.3,86,Manualna,3,2,False
-429,SEAT,Ibiza,4,2008,Hatchback,False,biały,Benzyna,1.7,105,Manualna,5,5,False
-430,Renault,Scenic,4,2008,SUV,False,czarny,Diesel,2.1,140,Automatyczna,5,5,False
-431,Hero,Glamour 125,2,2010,,False,biały,Benzyna,0.5,77,Manualna,0,1,False
-432,Yamaha,FZ S V 2.0,2,2009,,False,biały,Benzyna,0.4,59,Manualna,0,1,False
-433,Volkswagen,Golf Sportsvan,4,2017,Kombi,False,brązowy,Benzyna,1.9,116,Manualna,3,5,False
-434,Mahindra,Mojo XT300,2,2008,,False,czarny,Benzyna,0.4,61,Automatyczna,0,1,False
-435,Renault,Clio,4,2003,Kombi,False,inny,Benzyna,1.5,101,Manualna,5,5,False
-436,Volkswagen,Golf,4,2010,SUV,False,złoty,Benzyna,2.2,150,Manualna,3,5,False
-437,SEAT,Leon,4,2008,Hatchback,True,czarny,Diesel,1.7,105,Manualna,5,5,False
-438,Opel,Astra,4,2008,Hatchback,False,biały,Diesel,1.9,125,Manualna,5,5,False
-439,BMW,320,4,2008,Hatchback,False,biały,Diesel,2.8,184,Automatyczna,5,5,False
-440,Opel,Meriva,4,2014,Hatchback,False,czarny,Benzyna,1.8,120,Manualna,5,5,False
-441,Ford,Fiesta,4,2014,Hatchback,False,biały,Benzyna,1.3,86,Manualna,5,5,False
-442,Audi,A6,4,2006,Coupe,True,szary,Diesel,3.1,190,Automatyczna,3,5,False
-443,Peugeot,208,4,2005,Hatchback,False,czarny,Benzyna,1.8,110,Manualna,5,5,False
-444,Opel,Insignia,4,2002,Hatchback,True,szary,Diesel,2.9,179,Automatyczna,5,2,False
-445,Opel,Zafira,4,2015,Kombi,False,czarny,Diesel,2.2,140,Manualna,3,5,False
-446,Hyundai,Tucson,4,2009,Sedan,False,srebrny,Benzyna,2.9,179,Automatyczna,5,2,False
-447,Dacia,Dokker,4,2014,Hatchback,False,biały,Diesel,2.1,131,Manualna,5,2,False
-448,Lada,Niva,4,2015,Kombi,False,biały,Benzyna,1.2,83,Manualna,3,5,False
-449,Renault,Megane,4,2009,Sedan,False,czarny,Benzyna,1.8,110,Manualna,5,5,False
-450,Ford,Fiesta,4,2012,Hatchback,False,czerwony,Benzyna,1.4,86,Manualna,5,5,False
-451,Fiat,Punto Evo,4,2003,SUV,True,czerwony,Benzyna,1.7,105,Manualna,5,5,False
-452,BMW,216,4,1997,SUV,False,srebrny,Diesel,1.9,116,Automatyczna,5,5,False
-453,Land,Rover Discovery Sport,4,2009,Sedan,False,biały,Diesel,2.3,150,Automatyczna,3,5,False
-454,Hero,Honda Splendor Plus,2,2005,,False,srebrny,Benzyna,0.2,35,Manualna,0,1,False
-455,Fiat,Panda,4,2009,Kombi,False,srebrny,Benzyna,1.1,69,Manualna,3,5,False
-456,Volkswagen,Passat Variant,4,2003,Hatchback,False,szary,Diesel,2.4,150,Automatyczna,5,5,False
-457,Volkswagen,Polo,4,2009,Kombi,False,srebrny,Benzyna,1.5,95,Manualna,5,5,False
-458,Hero,Splendor PRO,2,2002,,False,czerwony,Benzyna,0.7,104,Manualna,0,1,False
-459,Audi,A6,4,2004,Sedan,False,srebrny,Diesel,4.6,286,Automatyczna,5,5,False
-460,Volkswagen,Golf,4,2016,Sedan,False,czarny,Benzyna,1.8,122,Manualna,3,5,False
-461,smart,forTwo,4,2016,SUV,True,biały,Benzyna,1.1,71,Manualna,5,5,False
-462,Audi,A3,4,2009,SUV,False,srebrny,Benzyna,1.6,105,Automatyczna,3,5,False
-463,Honda,CBR150 R,2,2010,,False,czerwony,Benzyna,0.2,37,Manualna,0,1,False
-464,Peugeot,207,4,2010,Sedan,False,szary,Benzyna,1.8,120,Manualna,3,5,False
-465,Ford,C-Max,4,2009,SUV,False,srebrny,Benzyna,1.9,125,Manualna,5,5,False
-466,Renault,Grand Scenic,4,2015,Kombi,False,czerwony,Diesel,1.9,116,Manualna,3,5,False
-467,Ford,Focus,4,2002,Sedan,False,czarny,Diesel,1.7,120,Manualna,5,5,False
-468,Audi,A3,4,2009,Coupe,False,czarny,Diesel,1.5,105,Automatyczna,5,5,False
-469,Opel,Corsa,4,2003,Sedan,False,czarny,Benzyna,1.1,87,Manualna,5,2,False
-470,Volkswagen,up!,4,2005,Kombi,False,srebrny,Benzyna,1.0,68,Manualna,5,5,False
-471,Opel,Corsa,4,2005,Sedan,False,czarny,Diesel,1.4,90,Manualna,5,5,False
-472,Honda,Activa 125,2,2007,,True,szary,Benzyna,0.5,78,Manualna,0,1,False
-473,Royal,Enfield Thunderbird 350,2,2008,,False,czarny,Benzyna,0.1,20,Manualna,0,1,False
-474,Ford,Kuga,4,2005,Hatchback,False,szary,Diesel,2.5,150,Manualna,5,5,False
-475,Volkswagen,up!,4,2005,SUV,False,biały,Benzyna,0.9,60,Manualna,5,5,False
-476,Mazda,CX-5,4,2000,Sedan,False,srebrny,Benzyna,3.1,194,Automatyczna,3,2,False
-477,Fiat,500C,4,2008,SUV,False,czarny,Benzyna,1.0,69,Manualna,3,2,False
-478,Porsche,997,4,2008,Coupe,True,srebrny,Benzyna,6.5,408,Automatyczna,5,5,False
-479,Ford,Fiesta,4,2006,SUV,False,szary,Benzyna,1.5,101,Manualna,3,5,False
-480,Volkswagen,up!,4,2012,Sedan,False,biały,Benzyna,1.1,75,Manualna,5,5,False
-481,Peugeot,2008,4,2009,SUV,True,złoty,Benzyna,1.8,110,Manualna,5,2,False
-482,Opel,Meriva,4,2002,Hatchback,False,niebieski,Benzyna,2.2,140,Manualna,5,5,False
-483,Fiat,Talento,4,1994,Hatchback,False,czarny,Diesel,1.8,120,Manualna,3,5,False
-484,Skoda,Octavia,4,2014,Kombi,False,srebrny,Benzyna,2.3,140,Automatyczna,5,5,False
-485,Nissan,Pixo,4,2009,Kombi,False,czarny,Benzyna,1.1,68,Manualna,5,5,False
-486,Skoda,Citigo,4,2002,Kombi,False,szary,Benzyna,1.1,60,Manualna,5,2,False
-487,Toyota,Yaris,4,2006,Sedan,False,czarny,Benzyna,1.1,69,Manualna,5,2,False
-488,Ford,Focus,4,2001,Sedan,False,srebrny,Diesel,1.8,120,Manualna,5,5,False
-489,Toyota,Auris,4,2012,Hatchback,False,czarny,Diesel,1.7,116,Manualna,5,2,False
-490,Hero,Honda Street Smart,2,2006,,True,biały,Benzyna,0.7,100,Manualna,0,1,False
-491,Honda,HR-V,4,2012,SUV,False,niebieski,Benzyna,2.1,131,Manualna,5,5,False
-492,Opel,Grandland X,4,2008,SUV,False,srebrny,Benzyna,1.9,131,Manualna,5,5,False
-493,Ford,Puma,4,1998,Coupe,True,biały,Benzyna,1.9,125,Manualna,5,5,False
-494,Ford,Fiesta,4,2004,Hatchback,False,szary,Benzyna,1.7,125,Manualna,3,2,False
-495,Audi,A6,4,2010,Hatchback,False,żółty,Diesel,2.9,179,Automatyczna,5,2,False
-496,Mercedes-Benz,E 220,4,2002,SUV,False,biały,Diesel,3.1,194,Automatyczna,5,5,False
-497,Mercedes-Benz,C 180,4,2004,SUV,True,czarny,Benzyna,2.4,156,Automatyczna,5,5,False
-498,Volkswagen,Caddy,4,2015,Hatchback,True,inny,Benzyna,1.9,125,Manualna,5,2,False
-499,Fiat,Punto,4,2006,SUV,False,czarny,Benzyna,1.2,69,Manualna,3,5,False
-500,Porsche,Taycan,4,1999,Coupe,False,czarny,Elektryczny,9.9,625,Automatyczna,3,5,False
-501,Nissan,Micra,4,2002,Hatchback,True,czarny,Benzyna,1.4,92,Manualna,5,5,False
-502,Suzuki,Alto,4,2006,Sedan,False,szary,Benzyna,1.1,68,Manualna,5,5,False
-503,SEAT,Leon,4,2013,SUV,False,biały,Elektryczny/Benzyna,1.7,110,Manualna,5,5,False
-504,SEAT,Ateca,4,2018,SUV,False,czerwony,Diesel,2.4,150,Automatyczna,5,2,False
-505,Toyota,Auris,4,2000,SUV,False,czerwony,Benzyna,1.6,99,Automatyczna,5,5,False
-506,Kia,Soul,4,2006,Hatchback,False,niebieski,Benzyna,1.7,110,Manualna,5,5,False
-507,Hyundai,i30,4,2008,Coupe,False,czarny,Benzyna,1.5,90,Manualna,3,5,False
-508,SEAT,Altea XL,4,2005,Kombi,True,szary,Benzyna,1.7,105,Manualna,5,5,False
-509,Opel,Astra,4,2005,Kombi,True,srebrny,Diesel,1.7,110,Manualna,5,5,False
-510,Skoda,Octavia,4,2007,Sedan,False,szary,Benzyna,2.4,150,Manualna,3,5,False
-511,SEAT,Ibiza,4,2012,Hatchback,False,szary,Benzyna,1.1,90,Manualna,5,5,False
-512,Opel,Corsa,4,2012,Coupe,False,złoty,Benzyna,2.1,131,Manualna,5,5,False
-513,Opel,Astra,4,2001,Hatchback,False,szary,Benzyna,2.6,165,Manualna,3,5,False
-514,Volkswagen,Caddy,4,2015,Sedan,True,biały,Diesel,2.4,150,Automatyczna,5,5,False
-515,Ford,Focus,4,2003,SUV,False,srebrny,Benzyna,1.8,125,Manualna,5,5,False
-516,BMW,430,4,2008,SUV,False,biały,Diesel,3.8,252,Automatyczna,5,5,False
-517,Dacia,Lodgy,4,2009,Kombi,False,niebieski,Benzyna,1.7,102,Manualna,5,2,False
-518,Opel,Astra,4,2005,SUV,False,niebieski,Diesel,1.8,110,Automatyczna,5,2,False
-519,BMW,X3,4,2007,Coupe,False,czarny,Diesel,3.0,190,Automatyczna,5,5,False
-520,Volkswagen,up!,4,2010,Hatchback,True,brązowy,Benzyna,1.3,82,Manualna,3,2,False
-521,Kia,Stonic,4,2005,Hatchback,False,czerwony,Benzyna,1.5,101,Manualna,5,2,False
-522,Mercedes-Benz,A 180,4,2005,Kombi,False,biały,Diesel,1.8,116,Automatyczna,3,5,False
-523,Mercedes-Benz,E 220,4,2012,Van,False,czarny,Diesel,2.7,170,Automatyczna,5,2,False
-524,Audi,A4,4,2006,SUV,True,biały,Benzyna,2.2,150,Automatyczna,5,5,False
-525,Volkswagen,Touran,4,2015,Kombi,False,czarny,Benzyna,2.1,140,Manualna,3,2,False
-526,Mazda,2,4,2000,Kombi,False,czarny,Benzyna,1.1,75,Manualna,3,5,False
-527,Skoda,Rapid/Spaceback,4,2009,SUV,False,biały,Benzyna,1.2,90,Manualna,5,5,False
-528,Audi,Q3,4,2009,SUV,False,szary,Benzyna,2.3,150,Manualna,5,5,False
-529,Skoda,Octavia,4,2007,Kombi,False,biały,Benzyna,3.6,230,Automatyczna,5,5,False
-530,Suzuki,Gixxer,2,2004,,False,niebieski,Benzyna,0.6,84,Manualna,0,1,False
-531,Volkswagen,T6 Multivan,4,2004,Sedan,True,biały,Diesel,3.3,204,Automatyczna,3,5,False
-532,Renault,Trafic,4,2000,Coupe,False,srebrny,Diesel,1.6,114,Manualna,3,2,False
-533,Volvo,V90 Cross Country,4,2006,Sedan,False,biały,Diesel,3.7,235,Automatyczna,5,5,False
-534,Volkswagen,T6.1 Multivan,4,2009,Hatchback,False,czarny,Diesel,2.3,150,Automatyczna,5,5,False
-535,Fiat,500,4,2007,Coupe,False,złoty,Benzyna,1.2,69,Manualna,5,2,False
-536,Bajaj,Avenger Street 220,2,2004,,False,niebieski,Benzyna,0.3,40,Automatyczna,0,1,False
-537,BMW,218,4,2014,Sedan,False,biały,Diesel,2.1,136,Manualna,5,2,False
-538,Renault,Megane,4,2007,SUV,False,szary,Diesel,2.0,132,Manualna,5,2,False
-539,Hyundai,Kona,4,2001,Hatchback,False,szary,Benzyna,3.3,204,Manualna,3,2,False
-540,Peugeot,Partner,4,2005,Sedan,False,srebrny,Diesel,1.7,99,Manualna,3,5,False
-541,SEAT,Leon,4,2012,Sedan,True,biały,Benzyna,2.2,150,Manualna,5,5,False
-542,Volkswagen,Golf Variant,4,2005,Kombi,True,szary,Benzyna,2.4,150,Manualna,3,5,False
-543,SEAT,Ibiza,4,2011,Sedan,False,biały,Benzyna,1.7,110,Manualna,5,5,False
-544,smart,forTwo,4,2009,Kombi,False,szary,Elektryczny,0.9,71,Manualna,3,2,False
-545,Skoda,Fabia,4,2007,Sedan,False,srebrny,Benzyna,0.8,60,Manualna,5,5,False
-546,Peugeot,5008,4,2011,Kombi,False,czarny,Benzyna,1.9,114,Automatyczna,5,5,False
-547,Audi,A4,4,2001,Coupe,False,srebrny,Benzyna,2.8,177,Manualna,5,5,False
-548,Volkswagen,Golf,4,2009,Hatchback,False,biały,Benzyna,1.8,110,Manualna,5,2,False
-549,Kia,Venga,4,2010,SUV,True,srebrny,Benzyna,1.5,90,Manualna,5,2,False
-550,Ford,S-Max,4,2014,SUV,False,szary,Diesel,2.5,165,Automatyczna,5,5,False
-551,Renault,Clio,4,2007,Coupe,False,niebieski,Benzyna,1.5,90,Manualna,5,7,False
-552,Land,Rover Range Rover Velar,4,2007,Kombi,False,niebieski,Diesel,4.8,300,Automatyczna,5,5,False
-553,Audi,A4,4,2009,SUV,False,srebrny,Diesel,3.0,190,Automatyczna,5,5,False
-554,Kia,Ceed / cee'd,4,2005,Sedan,False,szary,Diesel,1.3,90,Manualna,3,2,False
-555,Skoda,Octavia,4,2000,SUV,False,czerwony,Diesel,2.1,122,Manualna,3,5,False
-556,Volvo,XC40,4,2012,SUV,False,czarny,Benzyna,2.4,150,Automatyczna,5,5,False
-557,Renault,Kadjar,4,2009,SUV,False,biały,Benzyna,2.1,131,Manualna,3,5,False
-558,Fiat,500,4,2010,Kombi,False,srebrny,Benzyna,0.9,71,Manualna,5,5,False
-559,Peugeot,Boxer,4,2004,Sedan,False,srebrny,Diesel,1.9,120,Manualna,5,2,False
-560,SEAT,Leon,4,2008,Kombi,False,czerwony,Diesel,2.3,150,Automatyczna,3,5,False
-561,Ford,Focus,4,2003,Hatchback,False,czarny,Diesel,2.2,150,Manualna,3,5,False
-562,Volkswagen,Amarok,4,2008,Kombi,False,szary,Diesel,2.1,140,Manualna,5,5,False
-563,Toyota,Aygo,4,1998,Coupe,True,biały,Benzyna,1.3,72,Manualna,3,5,False
-564,Ford,Grand C-Max,4,2007,Hatchback,False,czarny,Diesel,2.7,170,Automatyczna,5,5,False
-565,BMW,320,4,1998,SUV,False,czarny,Diesel,2.9,184,Automatyczna,5,5,False
-566,smart,forTwo,4,2006,SUV,False,szary,Benzyna,1.0,71,Manualna,5,5,False
-567,Kia,Ceed / cee'd,4,2003,Hatchback,False,biały,Benzyna,2.2,136,Manualna,3,2,False
-568,Citroen,C3 Aircross,4,2011,SUV,False,brązowy,Benzyna,1.7,110,Manualna,5,7,False
-569,Volkswagen,Passat Variant,4,2006,Hatchback,False,czarny,Diesel,2.4,150,Automatyczna,3,5,False
-570,Opel,Corsa,4,2000,SUV,False,szary,Benzyna,1.4,90,Manualna,5,5,False
-571,SEAT,Leon,4,2003,Hatchback,False,szary,Diesel,2.9,184,Automatyczna,5,5,False
-572,SEAT,Leon,4,2001,SUV,False,srebrny,Benzyna,1.6,110,Automatyczna,3,2,False
-573,smart,forTwo,4,2000,Hatchback,False,czarny,Benzyna,1.2,84,Półautomatyczna,5,5,False
-574,Audi,A4,4,2017,Sedan,False,szary,Diesel,2.8,177,Automatyczna,3,5,False
-575,Citroen,C3,4,2006,Sedan,True,szary,Benzyna,1.2,82,Manualna,5,2,False
-576,Dacia,Duster,4,2003,Sedan,False,czarny,Diesel,1.8,125,Manualna,5,2,False
-577,Hero,Glamour 125,2,2012,,False,żółty,Benzyna,0.2,24,Manualna,0,1,False
-578,Bajaj,Pulsar 150,2,2012,,True,szary,Benzyna,0.5,74,Automatyczna,0,1,False
-579,Volkswagen,Arteon,4,2001,Van,False,czarny,Diesel,3.0,190,Automatyczna,5,5,False
-580,Opel,Astra,4,2014,Kombi,False,szary,Benzyna,1.7,105,Manualna,3,7,False
-581,Ford,Mondeo,4,2014,SUV,True,biały,Benzyna,2.8,190,Manualna,3,5,False
-582,Audi,Q5,4,2007,SUV,False,czerwony,Diesel,3.9,258,Automatyczna,5,5,False
-583,Audi,A5,4,2011,Kombi,False,czarny,Diesel,3.4,218,Automatyczna,5,5,False
-584,Hyundai,i30,4,2007,Sedan,True,czarny,Benzyna,2.3,140,Manualna,5,5,False
-585,Fiat,Scudo,4,2015,Sedan,True,niebieski,Diesel,1.4,90,Manualna,5,2,False
-586,Ford,Fiesta,4,2011,Sedan,False,niebieski,Benzyna,1.1,71,Automatyczna,5,2,False
-587,Skoda,Superb,4,2010,Sedan,False,srebrny,Diesel,2.6,170,Automatyczna,5,5,False
-588,Volkswagen,Polo,4,2009,SUV,False,niebieski,Benzyna,1.1,60,Manualna,3,5,False
-589,Renault,Twingo,4,1995,SUV,True,biały,Benzyna,1.2,71,Manualna,3,5,False
-590,Skoda,Fabia,4,2013,SUV,False,srebrny,Benzyna,1.8,110,Manualna,3,5,False
-591,Opel,Insignia,4,2014,Hatchback,False,srebrny,Diesel,2.6,160,Automatyczna,5,5,False
-592,Mercedes-Benz,Sprinter,4,2005,SUV,False,biały,Diesel,2.5,163,Manualna,3,5,False
-593,Audi,e-tron,4,2013,Sedan,False,czarny,Elektryczny,7.6,476,Automatyczna,5,5,False
-594,Audi,A3,4,2013,Sedan,False,srebrny,Diesel,1.9,125,Automatyczna,5,5,False
-595,Hyundai,i20,4,2000,SUV,False,srebrny,Benzyna,1.5,86,Automatyczna,5,2,False
-596,Kia,Venga,4,2017,SUV,False,biały,Diesel,1.8,128,Manualna,3,5,False
-597,Mercedes-Benz,C 200,4,2011,SUV,False,czarny,Benzyna,2.9,184,Automatyczna,5,5,False
-598,Opel,Corsa,4,2011,Sedan,False,szary,Benzyna,1.1,69,Manualna,5,5,False
-599,Volkswagen,Tiguan,4,2004,Sedan,False,czerwony,Diesel,3.0,190,Manualna,5,5,False
-600,SEAT,Leon,4,2007,Kombi,False,czarny,Benzyna,1.7,105,Automatyczna,5,5,False
-601,Hyundai,i30,4,2007,Kombi,False,czarny,Diesel,1.4,90,Manualna,3,2,False
-602,smart,forTwo,4,1998,Coupe,True,srebrny,Benzyna,1.2,71,Automatyczna,3,7,False
-603,Ford,Kuga,4,2009,Hatchback,False,srebrny,Diesel,2.9,179,Automatyczna,5,5,False
-604,Renault,Twingo,4,2009,Hatchback,False,czerwony,Benzyna,1.2,75,Manualna,5,2,False
-605,Opel,Corsa,4,2011,Sedan,False,czerwony,Benzyna,1.3,87,Manualna,5,2,False
-606,Volkswagen,Sharan,4,2012,Hatchback,False,inny,Diesel,2.4,140,Manualna,5,2,False
-607,MINI,Cooper Clubman,4,2008,Sedan,False,szary,Benzyna,2.2,136,Manualna,5,5,False
-608,Citroen,Grand C4 Picasso,4,2007,Sedan,False,szary,Diesel,2.1,131,Automatyczna,5,5,False
-609,Toyota,C-HR,4,2003,Kombi,False,czarny,Elektryczny/Benzyna,1.7,116,Automatyczna,5,5,False
-610,Skoda,Karoq,4,2009,Sedan,False,biały,Benzyna,1.7,116,Automatyczna,5,5,False
-611,Audi,TTS,4,2007,SUV,False,brązowy,Benzyna,4.3,272,Automatyczna,5,5,False
-612,Cupra,Formentor,4,2013,SUV,True,biały,Benzyna,2.4,150,Manualna,5,5,False
-613,Opel,Corsa,4,2007,Hatchback,False,brązowy,Benzyna,1.5,101,Manualna,5,5,False
-614,Audi,A4,4,2008,Kombi,False,czerwony,Diesel,2.7,170,Automatyczna,3,5,False
-615,Renault,Clio,4,2011,Hatchback,False,biały,Benzyna,1.1,76,Manualna,5,2,False
-616,Hyundai,i40,4,2008,SUV,False,czarny,Diesel,2.1,135,Manualna,5,5,False
-617,SEAT,Arona,4,2016,SUV,True,niebieski,Benzyna,1.8,110,Automatyczna,5,5,False
-618,Suzuki,Alto,4,2018,SUV,True,czarny,Benzyna,1.0,68,Manualna,5,2,False
-619,Opel,Corsa,4,2002,Hatchback,False,biały,Benzyna,1.3,90,Manualna,5,2,False
-620,Hyundai,i10,4,2005,Sedan,False,szary,Benzyna,0.9,67,Manualna,5,5,False
-621,Ford,Fiesta,4,2008,Sedan,False,czarny,Benzyna,1.4,86,Automatyczna,5,5,False
-622,Opel,Astra,4,2009,SUV,False,szary,Benzyna,1.9,110,Manualna,5,5,False
-623,Ford,Mondeo,4,2003,Minivan,False,srebrny,Diesel,2.1,140,Manualna,5,5,False
-624,Mitsubishi,Space Star,4,2006,Hatchback,True,srebrny,Benzyna,1.0,71,Manualna,5,2,False
-625,Mazda,MX-5,4,2008,Hatchback,False,czerwony,Benzyna,2.1,132,Manualna,5,5,False
-626,Hyundai,iX35,4,2006,SUV,False,srebrny,Benzyna,2.0,116,Manualna,5,5,False
-627,Opel,Corsa,4,2006,Minivan,True,biały,Benzyna,1.6,87,Manualna,5,5,False
-628,Ford,Fiesta,4,2006,SUV,False,złoty,Diesel,1.0,71,Manualna,5,5,False
-629,Hero,Honda Splendor Plus,2,2009,,True,biały,Benzyna,0.7,102,Automatyczna,0,1,False
-630,Fiat,500,4,2007,SUV,False,czarny,Benzyna,1.0,69,Manualna,5,5,False
-631,BMW,X1,4,2007,Coupe,False,czarny,Diesel,2.4,150,Automatyczna,3,5,False
-632,Toyota,Verso,4,2007,Sedan,False,niebieski,Benzyna,2.5,147,Manualna,5,5,False
-633,Dacia,Sandero,4,2003,SUV,False,czarny,Diesel,1.3,90,Manualna,5,2,False
-634,Peugeot,3008,4,2009,Hatchback,False,złoty,Diesel,2.1,131,Automatyczna,5,5,False
-635,Mazda,CX-3,4,2005,SUV,True,niebieski,Benzyna,1.8,120,Manualna,5,5,False
-636,Opel,Corsa,4,2007,Hatchback,False,biały,Benzyna,1.3,90,Manualna,5,5,False
-637,Suzuki,SX4,4,2001,SUV,False,szary,Benzyna,1.8,120,Automatyczna,3,2,False
-638,Ford,Kuga,4,2002,Sedan,True,szary,Benzyna,2.5,150,Automatyczna,3,5,False
-639,Volkswagen,Polo,4,2000,Hatchback,False,biały,Benzyna,1.2,90,Manualna,3,5,False
-640,Mazda,6,4,2005,Sedan,False,czarny,Benzyna,2.9,184,Automatyczna,5,5,False
-641,Hyundai,i20,4,2004,Hatchback,False,czarny,Benzyna,1.3,75,Manualna,5,5,False
-642,Opel,Astra,4,2006,Sedan,False,czarny,Benzyna,1.3,87,Manualna,3,5,False
-643,Skoda,Citigo,4,2006,Sedan,False,srebrny,Benzyna,1.0,60,Manualna,3,5,False
-644,SEAT,Toledo,4,2007,Sedan,True,biały,Benzyna,1.2,90,Manualna,5,5,False
-645,Bajaj,Pulsar 150,2,2001,,False,srebrny,Benzyna,0.2,29,Manualna,0,1,False
-646,Toyota,Yaris,4,2011,Hatchback,True,szary,Benzyna,1.0,69,Manualna,5,5,False
-647,Audi,A4,4,2010,SUV,True,biały,Benzyna,2.6,177,Automatyczna,5,5,False
-648,Volkswagen,Tiguan,4,2010,Hatchback,False,niebieski,Diesel,3.1,190,Automatyczna,5,5,False
-649,Skoda,Fabia,4,2005,Van,False,srebrny,Benzyna,1.5,95,Manualna,5,5,False
-650,Ford,Focus,4,2005,Minivan,False,szary,Benzyna,1.6,101,Manualna,3,5,False
-651,Dacia,Logan,4,2010,Sedan,False,czerwony,Diesel,1.3,90,Manualna,3,5,False
-652,Renault,Grand Scenic,4,2010,SUV,False,szary,Diesel,2.1,131,Manualna,5,2,False
-653,Land,Rover Discovery,4,2005,Hatchback,False,czarny,Diesel,3.9,258,Automatyczna,5,5,False
-654,TVS,Victor GLX,2,2009,,False,czarny,Benzyna,0.3,37,Manualna,0,1,False
-655,Skoda,Karoq,4,2009,Sedan,False,szary,Benzyna,2.4,150,Manualna,3,5,False
-656,Volkswagen,Polo,4,2008,SUV,False,srebrny,Benzyna,1.4,90,Manualna,5,5,False
-657,smart,forTwo,4,2003,Sedan,False,srebrny,Benzyna,0.9,71,Automatyczna,5,5,False
-658,Volkswagen,Caddy,4,2015,SUV,False,czarny,Diesel,2.4,150,Manualna,3,5,False
-659,Opel,Astra,4,2011,Kombi,False,niebieski,Diesel,1.7,110,Manualna,3,5,False
-660,Suzuki,Swift,4,2009,Minivan,False,niebieski,Benzyna,2.2,136,Manualna,5,5,False
-661,Skoda,Fabia,4,2006,Hatchback,False,szary,Benzyna,0.8,60,Manualna,5,5,False
-662,Ford,C-Max,4,2012,Van,False,czerwony,Benzyna,1.4,95,Manualna,3,5,False
-663,Honda,Jazz,4,2018,Kombi,False,czarny,Benzyna,1.6,90,Manualna,3,5,False
-664,Opel,Zafira,4,2003,Kombi,False,biały,Diesel,2.8,170,Manualna,3,5,False
-665,Skoda,Kodiaq,4,2017,SUV,True,srebrny,Benzyna,2.8,179,Manualna,3,5,False
-666,Volkswagen,Golf,4,1999,Sedan,False,żółty,Benzyna,1.6,105,Manualna,5,2,False
-667,Opel,Zafira,4,2010,SUV,False,biały,Benzyna,2.5,165,Manualna,5,5,False
-668,Opel,Astra,4,2003,Coupe,True,czarny,Diesel,2.1,140,Manualna,5,2,False
-669,Audi,A6,4,2004,Hatchback,False,biały,Diesel,2.9,190,Automatyczna,5,5,False
-670,Volkswagen,Golf Variant,4,2018,Hatchback,False,czerwony,Diesel,1.8,110,Manualna,5,5,False
-671,Toyota,Verso,4,2010,Coupe,False,złoty,Diesel,2.4,147,Manualna,5,5,False
-672,Volkswagen,Golf,4,2004,SUV,True,biały,Benzyna,2.0,122,Manualna,3,5,False
-673,Volkswagen,Caddy,4,2002,Kombi,True,biały,Diesel,1.3,75,Manualna,5,5,False
-674,Citroen,C3,4,2006,Hatchback,False,srebrny,Diesel,1.3,68,Manualna,3,5,False
-675,Volkswagen,Caddy,4,2004,SUV,False,czarny,Diesel,1.2,86,Automatyczna,3,5,False
-676,Renault,Captur,4,2014,Kombi,False,czarny,Benzyna,1.4,101,Automatyczna,5,5,False
-677,Volkswagen,Polo,4,2005,SUV,False,biały,Benzyna,1.8,110,Manualna,3,5,False
-678,Volkswagen,Touran,4,2005,Hatchback,True,czarny,Diesel,2.3,150,Automatyczna,5,5,False
-679,MINI,One,4,1999,Hatchback,False,czarny,Benzyna,1.2,75,Manualna,5,5,False
-680,Toyota,Auris,4,2013,Kombi,False,biały,Benzyna,2.1,132,Manualna,5,2,False
-681,Mitsubishi,Space Star,4,2008,SUV,False,czarny,Benzyna,1.1,80,Manualna,3,5,False
-682,Opel,Corsa,4,2007,SUV,False,czarny,Benzyna,1.2,90,Manualna,5,5,False
-683,Audi,SQ5,4,2007,SUV,False,biały,Diesel,4.9,313,Automatyczna,5,5,False
-684,Skoda,Octavia,4,2011,Kabriolet,True,biały,Diesel,3.0,179,Manualna,5,5,False
-685,Skoda,Octavia,4,2011,SUV,True,biały,Diesel,2.1,150,Automatyczna,3,5,False
-686,SEAT,Arona,4,2007,Kombi,True,szary,Benzyna,1.8,116,Manualna,5,5,False
-687,Honda,Activa 3G,2,2006,,False,biały,Benzyna,0.4,49,Manualna,0,1,False
-688,Volkswagen,Golf,4,2010,Hatchback,False,czarny,Benzyna,1.7,110,Manualna,3,5,False
-689,Opel,Astra,4,2010,Hatchback,False,niebieski,Diesel,2.4,160,Automatyczna,5,5,False
-690,Tesla,Model 3,4,2008,Hatchback,False,srebrny,Elektryczny,7.9,487,Automatyczna,3,2,False
-691,Audi,A5,4,2015,Hatchback,False,srebrny,Diesel,4.5,286,Automatyczna,5,5,False
-692,Mercedes-Benz,B 180,4,2008,SUV,False,szary,Benzyna,1.6,109,Automatyczna,3,2,False
-693,Volkswagen,Caddy,4,2005,Coupe,True,czarny,Benzyna,1.1,75,Manualna,3,2,False
-694,Opel,Adam,4,2008,Hatchback,False,niebieski,Benzyna,1.2,87,Manualna,3,5,False
-695,Volkswagen,Golf Variant,4,2006,Sedan,False,czerwony,Benzyna,4.9,300,Automatyczna,5,5,False
-696,MINI,Cooper,4,2009,SUV,False,srebrny,Diesel,2.0,122,Manualna,3,2,False
-697,Peugeot,308,4,2008,Coupe,False,złoty,Benzyna,1.5,110,Manualna,5,5,False
-698,Ferrari,812,4,2009,Hatchback,False,czarny,Benzyna,12.8,799,Automatyczna,5,5,False
-699,Renault,Kangoo,4,2014,Coupe,False,szary,Diesel,1.6,106,Manualna,3,5,False
-700,Mazda,3,4,2008,Van,True,czerwony,Benzyna,2.6,165,Manualna,5,5,False
-701,Activa,3g,2,2003,,False,szary,Benzyna,0.6,84,Manualna,0,1,False
-702,BMW,i3,4,1998,Coupe,True,srebrny,Elektryczny/Benzyna,2.9,184,Automatyczna,3,5,False
-703,Fiat,Punto,4,2001,Hatchback,False,szary,Benzyna,1.1,77,Manualna,5,5,False
-704,Ford,EcoSport,4,2004,Hatchback,True,srebrny,Benzyna,2.0,125,Manualna,5,5,False
-705,Opel,Astra,4,2000,Kombi,False,biały,Diesel,2.3,136,Manualna,5,5,False
-706,Audi,Q5,4,2010,Hatchback,False,biały,Diesel,4.1,258,Automatyczna,5,5,False
-707,Mercedes-Benz,SLK 200,4,2002,Kombi,False,biały,Benzyna,2.8,184,Manualna,5,5,False
-708,Ford,Transit,4,2001,Hatchback,False,szary,Diesel,1.3,86,Manualna,3,5,False
-709,Skoda,Fabia,4,2012,Sedan,False,czerwony,Benzyna,1.0,60,Manualna,5,5,False
-710,Volvo,V90,4,2014,Sedan,False,czarny,Diesel,3.8,235,Automatyczna,5,2,False
-711,Volkswagen,up!,4,2004,Sedan,False,niebieski,Benzyna,0.7,60,Manualna,3,2,False
-712,Dacia,Duster,4,2004,Kombi,False,biały,Diesel,1.5,101,Manualna,3,5,False
-713,Skoda,Octavia,4,2005,SUV,True,niebieski,Diesel,2.0,122,Manualna,5,5,False
-714,Volvo,S80,4,2013,SUV,False,biały,Diesel,2.8,181,Automatyczna,5,5,False
-715,SEAT,Arona,4,2004,SUV,True,czarny,CNG,1.8,110,Manualna,3,2,False
-716,Chevrolet,Cruze,4,2007,SUV,False,czarny,Benzyna,1.9,124,Manualna,3,5,False
-717,McLaren,720S,4,2009,Sedan,True,szary,Benzyna,11.6,721,Automatyczna,5,5,False
-718,Audi,A4,4,2014,Kombi,False,czarny,Diesel,2.3,143,Automatyczna,5,5,False
-719,Hyundai,i10,4,2008,SUV,False,szary,Benzyna,1.3,84,Manualna,5,5,False
-720,Opel,Corsa,4,2011,Sedan,False,czerwony,Benzyna,1.4,87,Manualna,5,5,False
-721,Ford,Fiesta,4,2011,Kombi,False,czerwony,Benzyna,0.9,60,Manualna,5,5,False
-722,Nissan,Pixo,4,2001,SUV,False,czarny,Benzyna,1.0,68,Manualna,5,5,False
-723,Opel,Meriva,4,2004,Kombi,False,czarny,Benzyna,1.9,120,Manualna,3,5,False
-724,Ford,Edge,4,1994,Hatchback,False,szary,Diesel,3.3,209,Automatyczna,3,2,False
-725,Toyota,Aygo,4,2004,Sedan,False,czarny,Benzyna,1.2,72,Manualna,3,2,False
-726,SEAT,Leon,4,2006,Coupe,False,biały,Benzyna,2.0,140,Automatyczna,5,5,False
-727,Jaguar,XKR,4,2006,SUV,False,niebieski,Benzyna,8.8,551,Automatyczna,5,2,False
-728,Volkswagen,up!,4,2002,Minivan,False,szary,Benzyna,0.9,60,Manualna,5,5,False
-729,Skoda,Octavia,4,2011,Kombi,False,brązowy,Diesel,1.7,110,Manualna,5,5,False
-730,Volkswagen,Sharan,4,2007,Sedan,True,szary,Diesel,2.2,140,Manualna,5,5,False
-731,Mitsubishi,ASX,4,2008,Hatchback,False,srebrny,Diesel,2.5,150,Manualna,5,5,False
-732,Ford,Fiesta,4,2005,Sedan,True,czerwony,Benzyna,1.3,86,Manualna,5,5,False
-733,Mazda,6,4,2002,SUV,False,czarny,Diesel,3.0,194,Automatyczna,5,5,False
-734,Opel,Corsa,4,2013,Sedan,False,niebieski,Benzyna,0.9,75,Manualna,5,2,False
-735,Kia,Venga,4,2008,SUV,True,szary,Benzyna,2.0,128,Manualna,5,5,False
-736,Ford,B-Max,4,2009,SUV,True,czarny,Benzyna,1.9,125,Automatyczna,5,5,False
-737,Volkswagen,Passat Variant,4,2007,Coupe,True,biały,Diesel,2.6,177,Manualna,5,5,False
-738,Ford,Fiesta,4,2010,SUV,False,szary,Diesel,1.4,86,Manualna,3,5,False
-739,Toyota,RAV 4,4,2005,Hatchback,True,biały,Elektryczny/Benzyna,2.4,143,Automatyczna,3,5,False
-740,Hyundai,i40,4,2007,Kombi,True,szary,Diesel,2.3,135,Manualna,3,5,False
-741,BMW,X3 M,4,2010,Kombi,False,biały,Benzyna,5.1,326,Automatyczna,5,5,False
-742,BMW,116,4,2011,SUV,True,szary,Diesel,1.9,116,Manualna,5,5,False
-743,Dacia,Duster,4,2017,Hatchback,False,szary,Benzyna,1.6,114,Manualna,5,5,False
-744,Fiat,Tipo,4,2004,SUV,True,srebrny,Benzyna,1.9,120,Manualna,5,5,False
-745,Hero,Xtreme Sports,2,2012,,False,srebrny,Benzyna,0.5,74,Manualna,0,1,False
-746,Bajaj,Pulsar 150,2,2006,,False,złoty,Benzyna,0.8,110,Manualna,0,1,False
-747,Mercedes-Benz,E 220,4,2004,SUV,False,czarny,Diesel,3.0,194,Automatyczna,5,2,False
-748,Volkswagen,Caddy,4,2003,Hatchback,False,biały,Diesel,1.9,125,Manualna,5,5,False
-749,Ford,C-Max,4,2003,Hatchback,False,czerwony,Benzyna,2.3,150,Manualna,5,5,False
-750,Ford,Mondeo,4,2003,Van,False,złoty,Diesel,2.3,140,Automatyczna,5,5,False
-751,Skoda,Octavia,4,2009,Kombi,False,biały,Diesel,2.1,150,Manualna,5,5,False
-752,Mercedes-Benz,B 180,4,2005,Hatchback,False,czerwony,Benzyna,1.7,122,Manualna,5,5,False
-753,Ford,Puma,4,2012,Kombi,False,czarny,Benzyna,1.8,125,Manualna,5,5,False
-754,Volkswagen,Golf,4,2011,Van,False,biały,Diesel,1.7,116,Automatyczna,3,5,False
-755,Volkswagen,Tiguan,4,2003,Hatchback,True,złoty,Diesel,2.1,140,Automatyczna,3,2,False
-756,Toyota,Yaris,4,2009,Hatchback,False,szary,Benzyna,1.7,102,Manualna,5,5,False
-757,Honda,Activa 3G,2,2011,,False,szary,Benzyna,0.1,15,Manualna,0,1,False
-758,Volkswagen,Golf,4,2003,Hatchback,False,czerwony,Benzyna,1.7,105,Manualna,5,5,False
-759,Bajaj,Discover 100,2,2015,,False,srebrny,Benzyna,0.3,38,Manualna,0,1,False
-760,Opel,Corsa,4,2014,Hatchback,False,szary,Diesel,1.5,101,Manualna,5,5,False
-761,Opel,Corsa,4,2005,Kombi,True,czarny,Benzyna,1.0,69,Manualna,5,5,False
-762,Peugeot,308,4,2007,Kombi,False,czarny,Diesel,1.7,114,Półautomatyczna,3,2,False
-763,Volkswagen,Golf,4,2006,SUV,False,inny,Diesel,2.3,150,Manualna,5,2,False
-764,Volkswagen,Golf,4,2009,Kombi,False,srebrny,Benzyna,1.6,105,Manualna,5,5,False
-765,Volkswagen,Golf Plus,4,2010,Sedan,False,biały,Benzyna,1.3,80,Manualna,5,5,False
-766,Skoda,Octavia,4,2011,Sedan,False,szary,Diesel,2.4,150,Automatyczna,5,2,False
-767,Chevrolet,Captiva,4,2011,Hatchback,False,biały,Benzyna,2.9,184,Automatyczna,5,5,False
-768,Mercedes-Benz,A 200,4,2007,Coupe,False,szary,Diesel,2.5,163,Manualna,5,5,False
-769,Skoda,Karoq,4,2012,Kombi,False,czarny,Benzyna,1.7,110,Automatyczna,3,5,False
-770,SEAT,Leon,4,2005,Sedan,False,czarny,Benzyna,1.8,105,Automatyczna,5,5,False
-771,MINI,Cooper,4,2008,Kombi,False,biały,Benzyna,1.7,111,Manualna,3,5,False
-772,Skoda,Rapid/Spaceback,4,2009,Hatchback,True,niebieski,Benzyna,1.8,105,Manualna,5,5,False
-773,Volkswagen,Caddy,4,2003,Sedan,False,biały,Diesel,1.4,102,Automatyczna,5,5,False
-774,Royal,Enfield Classic 350,2,2015,,False,biały,Benzyna,0.3,40,Manualna,0,1,False
-775,Renault,Clio,4,2013,Hatchback,False,biały,Benzyna,1.4,90,Manualna,5,5,False
-776,Bajaj,Discover 150,2,2020,,False,szary,Benzyna,0.8,110,Manualna,0,1,False
-777,Kia,Picanto,4,2016,Sedan,False,biały,Benzyna,1.1,67,Manualna,5,5,False
-778,Renault,Clio,4,2003,Kombi,False,srebrny,Benzyna,1.3,90,Manualna,5,5,False
-779,SEAT,Ibiza,4,2004,Hatchback,True,czarny,Benzyna,1.3,75,Manualna,3,5,False
-780,Opel,Corsa,4,2011,Sedan,False,biały,Benzyna,1.3,69,Manualna,5,5,False
-781,Renault,Clio,4,2006,Hatchback,False,czerwony,Benzyna,1.2,75,Manualna,5,5,False
-782,smart,forFour,4,2012,Kombi,False,czarny,Benzyna,1.1,71,Manualna,5,2,False
-783,Hyundai,i30,4,2000,Hatchback,False,czarny,Benzyna,1.6,109,Automatyczna,5,2,False
-784,Mitsubishi,Space Star,4,2007,Minivan,False,srebrny,Benzyna,1.1,71,Manualna,3,5,False
-785,Renault,Trafic,4,2007,Hatchback,False,biały,Diesel,2.3,145,Manualna,3,5,False
-786,Opel,Vivaro,4,2007,SUV,False,niebieski,Diesel,1.9,120,Manualna,3,5,False
-787,Ford,Focus,4,2001,Sedan,False,czerwony,Benzyna,1.3,95,Manualna,5,5,False
-788,KTM,390 Duke ,2,2008,,False,niebieski,Benzyna,0.1,16,Manualna,0,1,False
-789,Audi,A6,4,2004,Hatchback,False,czarny,Diesel,5.1,326,Automatyczna,5,5,False
-790,Ford,Kuga,4,2010,Sedan,False,biały,Benzyna,2.5,150,Automatyczna,5,5,False
-791,Hyundai,iX35,4,2006,Hatchback,False,czerwony,Diesel,2.1,135,Manualna,5,5,False
-792,Hyundai,i20,4,2012,SUV,True,biały,Benzyna,1.0,84,Manualna,3,5,False
-793,Fiat,Grande Punto,4,1996,Sedan,False,czerwony,Benzyna,1.2,69,Manualna,5,5,False
-794,Audi,Q2,4,2015,SUV,False,brązowy,Benzyna,1.8,116,Automatyczna,5,5,False
-795,Mazda,2,4,2004,Hatchback,False,niebieski,Benzyna,1.4,90,Manualna,5,5,False
-796,Ford,Grand C-Max,4,1999,Van,False,czarny,Diesel,1.7,116,Manualna,3,5,False
-797,Renault,Twingo,4,2014,Sedan,False,szary,Benzyna,1.1,75,Manualna,5,2,False
-798,Audi,A4,4,2013,Coupe,False,niebieski,Diesel,2.5,150,Automatyczna,5,5,False
-799,smart,forTwo,4,2010,Kombi,False,srebrny,Benzyna,1.0,71,Automatyczna,5,5,False
-800,Honda,CB Unicorn 150,2,2015,,False,czerwony,Benzyna,0.5,71,Manualna,0,1,False
-801,Volkswagen,up!,4,1998,Sedan,False,niebieski,Benzyna,1.2,75,Manualna,5,5,False
-802,Audi,A4,4,2006,SUV,False,czarny,Benzyna,2.7,190,Manualna,5,2,False
-803,Volkswagen,T6 Kombi,4,2006,Sedan,False,niebieski,Diesel,2.3,150,Automatyczna,3,5,False
-804,Kia,Stinger,4,2015,Sedan,False,czarny,Benzyna,3.3,200,Automatyczna,5,5,False
-805,BMW,325,4,2003,Hatchback,False,czerwony,Diesel,3.1,204,Automatyczna,5,2,False
-806,Honda,Shine,2,2003,,False,czerwony,Benzyna,0.7,98,Manualna,0,1,False
-807,Bajaj,Pulsar 150,2,2008,,False,biały,Benzyna,0.7,95,Manualna,0,1,False
-808,Audi,RS6,4,2000,Sedan,False,szary,Benzyna,9.4,600,Manualna,3,5,False
-809,Volkswagen,Polo,4,2004,SUV,False,czarny,Benzyna,1.0,75,Manualna,5,2,False
-810,Ford,Focus,4,2010,Kombi,False,czarny,Diesel,1.8,120,Manualna,5,5,False
-811,Opel,Mokka,4,2008,Sedan,False,brązowy,Diesel,2.1,140,Automatyczna,3,2,False
-812,BMW,118,4,2000,Van,False,czarny,Benzyna,2.3,136,Automatyczna,5,5,False
-813,Lancia,Delta,4,2017,Kombi,False,srebrny,Diesel,2.2,140,Automatyczna,3,2,False
-814,Volkswagen,Tiguan,4,2007,Sedan,False,czarny,Diesel,1.8,122,Manualna,5,5,False
-815,Peugeot,108,4,2004,Van,False,biały,Benzyna,1.2,72,Manualna,5,5,False
-816,Mercedes-Benz,B 220,4,2009,SUV,True,złoty,Benzyna,2.8,184,Automatyczna,5,5,False
-817,Ford,Fiesta,4,2003,Hatchback,False,złoty,Benzyna,1.5,101,Manualna,5,5,False
-818,Fiat,500,4,2006,Hatchback,False,biały,Elektryczny/Benzyna,1.0,69,Manualna,5,5,False
-819,Alfa,Romeo Giulietta,4,2008,Kombi,False,srebrny,Benzyna,2.3,150,Manualna,5,5,False
-820,SEAT,Leon,4,2009,SUV,False,biały,Diesel,1.9,110,Automatyczna,3,5,True
-821,Ford,Grand C-Max,4,2004,Sedan,False,biały,Diesel,1.9,125,Manualna,5,2,False
-822,Opel,Corsa,4,2006,SUV,False,czarny,Benzyna,1.5,95,Manualna,5,2,False
-823,Volkswagen,Golf,4,2008,Sedan,False,niebieski,Benzyna,1.5,86,Automatyczna,3,5,False
-824,Ford,Galaxy,4,2014,Sedan,True,szary,Diesel,2.8,190,Manualna,5,2,False
-825,BMW,420,4,2012,Kombi,False,czerwony,Benzyna,3.2,190,Automatyczna,5,5,False
-826,Renault,Kadjar,4,2005,SUV,False,czarny,Benzyna,2.0,131,Manualna,5,5,False
-827,Opel,Mokka X,4,2011,Hatchback,False,złoty,Benzyna,1.7,110,Manualna,5,2,False
-828,SEAT,Exeo,4,2010,SUV,False,szary,Benzyna,2.3,143,Manualna,5,5,False
-829,Honda,CB Unicorn 160,2,2010,,False,biały,Benzyna,0.6,89,Manualna,0,1,False
-830,Volkswagen,Golf,4,2013,Kombi,False,czarny,Benzyna,1.8,110,Manualna,5,5,False
-831,Ford,Tourneo Custom,4,1995,SUV,False,czerwony,Diesel,2.8,185,Automatyczna,5,5,False
-832,Volkswagen,Golf Variant,4,2002,SUV,False,srebrny,Benzyna,2.2,150,Manualna,3,5,False
-833,Nissan,Micra,4,2006,SUV,False,biały,Benzyna,1.4,92,Automatyczna,5,5,False
-834,Bajaj,Pulsar 150,2,2003,,False,czarny,Benzyna,0.7,106,Manualna,0,1,False
-835,Skoda,Octavia,4,2005,Kombi,False,czarny,Diesel,1.8,110,Automatyczna,5,5,False
-836,Volkswagen,Tiguan,4,2002,Sedan,False,szary,Benzyna,3.7,239,Manualna,3,5,False
-837,Volkswagen,Passat,4,2006,Kombi,False,biały,Diesel,2.4,150,Manualna,3,5,False
-838,Volkswagen,Golf Variant,4,2009,SUV,False,niebieski,Diesel,1.9,116,Manualna,5,5,False
-839,Opel,Mokka,4,2011,Sedan,False,biały,Diesel,2.2,131,Manualna,5,2,False
-840,Ford,Fiesta,4,2001,Kombi,True,szary,Benzyna,1.5,80,Manualna,5,5,False
-841,Hero,Honda Glamour,2,2010,,True,złoty,Benzyna,0.7,96,Manualna,0,1,False
-842,Volkswagen,CC,4,2001,Sedan,False,czarny,Diesel,2.5,160,Automatyczna,3,5,False
-843,Skoda,Octavia,4,2008,Coupe,False,czerwony,Benzyna,1.7,105,Manualna,5,5,False
-844,Ford,Fiesta,4,2008,Hatchback,False,niebieski,Benzyna,2.0,140,Manualna,3,2,False
-845,BMW,330,4,2003,Coupe,False,czarny,Diesel,4.2,258,Automatyczna,5,2,False
-846,SEAT,Ibiza,4,2010,Hatchback,False,szary,Benzyna,1.4,95,Manualna,5,5,False
-847,Toyota,Aygo,4,2006,Coupe,False,biały,Benzyna,1.1,72,Manualna,5,5,False
-848,Ford,Galaxy,4,2011,Kombi,False,szary,Diesel,2.9,190,Manualna,5,5,False
-849,Citroen,C3,4,2006,Sedan,False,czarny,Benzyna,1.8,110,Manualna,3,7,False
-850,Opel,Combo,4,2007,Sedan,False,srebrny,Diesel,1.6,105,Manualna,3,5,False
-851,Renault,Twingo,4,2008,Hatchback,False,srebrny,Benzyna,1.1,71,Manualna,5,5,False
-852,smart,forTwo,4,2006,Kombi,False,srebrny,Benzyna,0.9,61,Manualna,5,5,False
-853,Nissan,Micra,4,2007,Hatchback,False,szary,Benzyna,1.3,80,Manualna,3,5,False
-854,Citroen,C1,4,2004,Sedan,False,biały,Benzyna,1.0,69,Manualna,3,5,False
-855,Volkswagen,Passat Variant,4,2003,Coupe,False,czerwony,Diesel,2.0,122,Automatyczna,5,5,False
-856,Hero,Honda CD Deluxe,2,2017,,False,czerwony,Benzyna,0.3,44,Manualna,0,1,False
-857,Peugeot,508,4,2001,Hatchback,False,szary,Diesel,3.4,224,Manualna,5,5,False
-858,Volkswagen,Golf,4,2009,Coupe,False,biały,Benzyna,1.7,105,Manualna,5,5,False
-859,Audi,SQ8,4,2005,Sedan,False,biały,Diesel,6.9,435,Automatyczna,5,5,False
-860,Fiat,Qubo,4,2004,Sedan,True,żółty,Diesel,1.3,77,Półautomatyczna,5,5,False
-861,Volvo,XC60,4,1999,Hatchback,True,srebrny,Diesel,3.0,190,Automatyczna,5,5,False
-862,Fiat,500C,4,2012,Kombi,True,biały,Benzyna,1.2,69,Manualna,5,5,False
-863,Mercedes-Benz,C 200,4,2007,Hatchback,False,czarny,Diesel,2.5,160,Manualna,5,5,False
-864,Mercedes-Benz,G 350,4,2001,Hatchback,False,złoty,Diesel,3.8,245,Automatyczna,5,5,False
-865,Honda,CB Unicorn 150,2,2001,,False,niebieski,Benzyna,0.6,89,Automatyczna,0,1,False
-866,Cupra,Ateca,4,2008,Coupe,True,szary,Benzyna,4.8,300,Automatyczna,5,5,False
-867,Volkswagen,Tiguan,4,2004,SUV,False,szary,Benzyna,3.3,220,Manualna,5,5,False
-868,Infiniti,Q30,4,2001,Sedan,False,biały,Benzyna,1.6,109,Automatyczna,5,5,False
-869,Renault,Twingo,4,2008,Hatchback,False,srebrny,Benzyna,1.2,71,Manualna,5,2,False
-870,TVS,Scooty Pep Plus,2,2005,,False,biały,Benzyna,0.7,101,Manualna,0,1,False
-871,Skoda,Citigo,4,2008,SUV,True,biały,Benzyna,1.0,60,Manualna,5,2,False
-872,Toyota,Yaris,4,2009,SUV,True,czarny,Benzyna,1.2,69,Manualna,5,5,False
-873,Volkswagen,Caddy,4,2003,Sedan,False,czerwony,Benzyna,2.4,150,Automatyczna,5,5,False
-874,Honda,CB Hornet 160R,2,2004,,False,czarny,Benzyna,0.7,107,Automatyczna,0,1,False
-875,MINI,Cooper,4,2007,Van,True,czarny,Benzyna,2.1,122,Automatyczna,5,2,False
-876,Kia,Picanto,4,2006,Kombi,False,niebieski,Benzyna,1.1,69,Manualna,5,2,False
-877,Ford,Kuga,4,2004,Kombi,False,biały,Benzyna,2.4,150,Manualna,3,5,False
-878,Skoda,Rapid/Spaceback,4,2009,Hatchback,False,niebieski,Diesel,1.6,105,Manualna,5,5,False
-879,SEAT,Leon,4,2013,SUV,False,czarny,Benzyna,2.4,150,Manualna,5,2,False
-880,Volkswagen,Passat,4,2005,SUV,True,biały,Diesel,3.8,239,Manualna,5,5,False
-881,Skoda,Fabia,4,2005,Kombi,False,niebieski,Benzyna,1.5,90,Manualna,3,5,False
-882,BMW,X3,4,2003,Coupe,True,biały,Benzyna,3.0,190,Manualna,5,5,False
-883,SEAT,Leon,4,2009,Sedan,False,srebrny,Benzyna,1.7,110,Manualna,5,2,False
-884,Alfa,Romeo Giulietta,4,2007,Hatchback,False,biały,Benzyna,2.7,170,Manualna,5,5,False
-885,Renault,Talisman,4,2006,Hatchback,False,niebieski,Benzyna,2.4,158,Manualna,5,5,False
-886,Kia,Rio,4,2006,Kombi,False,czerwony,Benzyna,1.3,86,Manualna,5,5,False
-887,Audi,A5,4,2005,Kombi,False,biały,Benzyna,3.8,245,Automatyczna,3,5,False
-888,Ford,Focus,4,2008,Hatchback,False,szary,Diesel,1.6,86,Automatyczna,3,5,False
-889,Skoda,Citigo,4,2000,SUV,False,biały,Benzyna,1.1,60,Manualna,5,5,False
-890,Royal,Enfield Classic 350,2,2000,,False,czerwony,Benzyna,0.7,100,Manualna,0,1,False
-891,Audi,A4 allroad,4,2013,SUV,False,czerwony,Benzyna,4.5,286,Automatyczna,5,5,False
-892,Hyundai,i30,4,2003,SUV,True,biały,Benzyna,1.8,110,Manualna,5,5,False
-893,Fiat,Punto,4,2005,SUV,False,szary,Benzyna,1.3,84,Manualna,5,5,False
-894,Honda,Activa i,2,2007,,False,srebrny,Benzyna,0.6,90,Manualna,0,1,False
-895,Mitsubishi,ASX,4,2014,Sedan,False,inny,Benzyna,2.5,150,Manualna,3,7,False
-896,Dacia,Sandero,4,2010,Sedan,False,szary,Benzyna,1.3,84,Manualna,5,5,False
-897,Volkswagen,Golf,4,2008,SUV,False,biały,Benzyna,2.0,122,Automatyczna,3,5,False
-898,Volkswagen,Golf,4,2007,SUV,True,czarny,Diesel,2.2,150,Manualna,5,5,False
-899,Dacia,Logan,4,2009,Hatchback,False,czarny,Benzyna,1.2,84,Manualna,3,5,False
-900,Honda,CB Hornet 160R,2,2011,,False,niebieski,Benzyna,0.4,58,Manualna,0,1,False
-901,Skoda,Rapid/Spaceback,4,2003,Sedan,True,czarny,Benzyna,1.6,105,Manualna,5,5,False
-902,Renault,Trafic,4,2010,Hatchback,False,czerwony,Diesel,1.6,114,Manualna,5,5,False
-903,Opel,Karl,4,2004,Sedan,False,srebrny,Benzyna,1.2,73,Manualna,3,2,False
-904,TVS,Apache RTR 160,2,2003,,False,srebrny,Benzyna,0.7,104,Manualna,0,1,False
-905,Volkswagen,Tiguan,4,2001,Hatchback,False,srebrny,Diesel,2.4,150,Automatyczna,5,5,False
-906,Opel,Astra,4,2010,Sedan,True,srebrny,Benzyna,2.2,136,Manualna,5,2,False
-907,BMW,520,4,2007,Hatchback,False,czarny,Benzyna,2.9,184,Automatyczna,3,5,False
-908,Skoda,Octavia,4,2008,Kombi,False,szary,Diesel,3.1,200,Automatyczna,3,2,False
-909,Ford,Kuga,4,2012,Hatchback,False,biały,Diesel,2.3,140,Manualna,3,5,False
-910,smart,forTwo,4,2006,Kombi,False,srebrny,Benzyna,1.1,71,Automatyczna,5,5,False
-911,Skoda,Fabia,4,2002,Hatchback,False,biały,Benzyna,1.1,75,Manualna,5,5,False
-912,Opel,Crossland X,4,2008,Kombi,False,złoty,Benzyna,1.7,110,Manualna,5,5,False
-913,smart,forTwo,4,2005,Sedan,False,srebrny,Benzyna,0.9,71,Manualna,3,5,False
-914,Dacia,Sandero,4,2015,SUV,False,szary,Benzyna,1.3,88,Manualna,5,2,False
-915,Royal,Enfield Classic 350,2,2010,,False,czarny,Benzyna,0.3,47,Manualna,0,1,False
-916,Bajaj,Pulsar 180,2,2009,,False,niebieski,Benzyna,0.3,36,Manualna,0,1,False
-917,Volkswagen,Arteon,4,2003,Hatchback,False,czarny,Diesel,3.1,200,Manualna,5,5,False
-918,Volkswagen,up!,4,2008,Sedan,False,czerwony,CNG,1.0,60,Manualna,5,5,False
-919,BMW,118,4,2006,Hatchback,False,złoty,Benzyna,2.1,136,Manualna,5,5,False
-920,Mitsubishi,Space Star,4,2013,Hatchback,False,srebrny,Benzyna,1.1,80,Manualna,5,2,False
-921,Peugeot,508,4,2006,Kombi,True,czerwony,Diesel,3.5,224,Automatyczna,5,5,False
-922,Hyundai,i40,4,2011,Coupe,True,biały,Diesel,2.2,141,Manualna,3,5,False
-923,Volkswagen,up!,4,2008,Sedan,False,srebrny,Benzyna,1.2,75,Automatyczna,5,5,False
-924,SEAT,Ibiza,4,1998,SUV,True,biały,Benzyna,1.1,69,Manualna,3,5,False
-925,Honda,Activa,2,2008,,True,brązowy,Benzyna,0.6,89,Manualna,0,1,False
-926,Audi,SQ7,4,2004,Coupe,False,czerwony,Diesel,6.9,435,Automatyczna,5,5,False
-927,Volkswagen,Touran,4,2007,SUV,False,czarny,Diesel,2.1,140,Automatyczna,5,2,False
-928,smart,forTwo,4,2006,SUV,False,biały,Benzyna,1.2,71,Automatyczna,5,2,False
-929,Volkswagen,up!,4,2004,SUV,False,czerwony,Benzyna,1.1,60,Manualna,5,2,False
-930,Renault,Twingo,4,2009,SUV,False,czarny,Benzyna,1.1,69,Manualna,5,2,False
-931,Volkswagen,Golf,4,2012,Hatchback,False,czerwony,Diesel,1.7,105,Manualna,5,5,False
-932,Ford,Focus,4,2008,Hatchback,True,biały,Diesel,1.9,120,Manualna,5,5,False
-933,Kia,Sportage,4,1999,SUV,False,biały,Diesel,2.2,135,Manualna,5,5,False
-934,Ford,Fiesta,4,2011,Kombi,False,biały,Benzyna,1.2,86,Manualna,5,2,False
-935,Nissan,Qashqai,4,2015,Sedan,False,czerwony,Benzyna,1.8,117,Automatyczna,5,5,False
-936,Harley-Davidson,Street 750,2,2009,,False,czarny,Benzyna,0.7,98,Manualna,0,1,False
-937,Ford,Kuga,4,2007,Sedan,True,biały,Benzyna,2.3,150,Automatyczna,3,2,False
-938,Volkswagen,Golf,4,2005,Minivan,False,szary,Elektryczny/Benzyna,1.8,110,Manualna,5,5,False
-939,Kia,Picanto,4,2011,SUV,False,srebrny,Benzyna,1.1,69,Manualna,5,5,False
-940,Mercedes-Benz,S 500,4,2008,Sedan,False,szary,Benzyna,7.1,455,Automatyczna,5,2,False
-941,SEAT,Ateca,4,2006,Kombi,False,czarny,Benzyna,1.8,116,Manualna,3,5,False
-942,Fiat,500C,4,2012,SUV,False,srebrny,Benzyna,1.2,86,Manualna,5,5,False
-943,Volkswagen,up!,4,2003,Sedan,False,czarny,Elektryczny,1.0,75,Manualna,5,5,False
-944,Ford,Fiesta,4,2009,Hatchback,True,srebrny,Benzyna,1.0,75,Manualna,5,5,False
-945,Skoda,Kodiaq,4,2010,SUV,False,srebrny,Diesel,2.8,190,Automatyczna,5,5,False
-946,Toyota,Auris,4,2003,Sedan,False,czarny,Diesel,2.1,136,Automatyczna,5,5,False
-947,Kia,XCeed,4,2006,Van,False,srebrny,Benzyna,2.2,140,Manualna,5,2,False
-948,Fiat,500,4,2010,SUV,False,srebrny,Benzyna,1.1,69,Manualna,5,5,False
-949,Volkswagen,up!,4,2003,Hatchback,False,biały,Benzyna,1.2,65,Manualna,3,5,False
-950,smart,forTwo,4,2014,Hatchback,False,czarny,Benzyna,1.0,71,Manualna,5,2,False
-951,smart,forFour,4,2015,Hatchback,True,szary,Benzyna,1.1,71,Automatyczna,3,5,False
-952,Hero,Honda Glamour,2,2006,,True,czarny,Benzyna,0.8,115,Manualna,0,1,False
-953,BMW,X4 M,4,2004,SUV,False,czerwony,Benzyna,5.6,360,Automatyczna,5,2,False
-954,Ford,Ka/Ka+,4,2007,SUV,False,biały,Benzyna,0.9,69,Manualna,5,5,False
-955,KTM,RC200,2,2006,,False,czarny,Benzyna,0.5,74,Manualna,0,1,False
-956,Skoda,Octavia,4,2003,SUV,False,biały,Benzyna,1.8,116,Manualna,5,2,False
-957,Ford,Puma,4,2010,Hatchback,False,czerwony,Elektryczny/Benzyna,2.6,155,Manualna,5,5,False
-958,BMW,X6 M,4,2012,Sedan,False,niebieski,Benzyna,6.2,381,Automatyczna,5,5,False
-959,Volkswagen,Tiguan,4,2008,Hatchback,False,szary,Diesel,3.0,190,Automatyczna,5,2,False
-960,Skoda,Karoq,4,2008,SUV,False,czarny,Benzyna,2.4,150,Manualna,3,2,False
-961,Ford,Fiesta,4,2003,SUV,False,niebieski,Benzyna,1.1,71,Manualna,5,5,False
-962,Ford,Mondeo,4,2011,SUV,False,czerwony,Diesel,3.3,200,Automatyczna,3,5,True
-963,Honda,CB Unicorn 160,2,2008,,False,biały,Benzyna,0.4,57,Manualna,0,1,False
-964,Hyundai,iX35,4,2006,Sedan,False,biały,Diesel,2.1,135,Manualna,3,5,False
-965,Bajaj,Pulsar NS160,2,2001,,False,czerwony,Benzyna,0.8,113,Automatyczna,0,1,False
-966,SEAT,Ateca,4,2008,Van,False,czerwony,Diesel,3.0,190,Manualna,5,5,False
-967,TVS,XL 100 Heavy Duty,2,2007,,False,czarny,Benzyna,0.4,52,Manualna,0,1,False
-968,Ford,Fiesta,4,2000,Sedan,False,złoty,Benzyna,1.7,101,Manualna,3,5,False
-969,SEAT,Alhambra,4,1999,Hatchback,False,czarny,Diesel,2.7,177,Automatyczna,5,2,True
-970,Audi,Q2,4,2009,Sedan,False,biały,Benzyna,1.8,116,Automatyczna,5,2,False
-971,Hyundai,i30,4,2004,Hatchback,False,srebrny,Benzyna,1.8,120,Manualna,5,2,False
-972,Audi,Q3,4,2007,Sedan,False,czarny,Diesel,2.6,150,Manualna,3,2,False
-973,Renault,Twingo,4,2009,Sedan,False,szary,Benzyna,1.0,71,Manualna,5,5,False
-974,Hyundai,i10,4,2011,Hatchback,False,biały,Benzyna,1.1,69,Manualna,5,5,False
-975,Toyota,C-HR,4,2007,SUV,False,szary,Elektryczny/Benzyna,1.8,122,Automatyczna,5,5,False
-976,Opel,Astra,4,2004,Hatchback,False,czarny,Diesel,2.0,140,Manualna,5,2,False
-977,Ford,Mondeo,4,2002,Sedan,False,biały,Diesel,2.9,188,Automatyczna,5,5,True
-978,Ford,Tourneo Connect,4,2014,SUV,False,srebrny,Benzyna,1.6,101,Manualna,5,2,False
-979,Renault,Laguna,4,2004,SUV,True,szary,Diesel,1.8,110,Manualna,5,5,True
-980,Skoda,Octavia,4,2003,Sedan,False,niebieski,Diesel,2.3,150,Automatyczna,5,5,True
+1,BMW,520,4,2004,Hatchback,False,złoty,Diesel,3.0,190,Manualna,5,5,False
+2,BMW,520,4,2005,Sedan,False,złoty,Diesel,3.0,190,Automatyczna,5,5,False
+3,Opel,Astra,4,2002,SUV,False,srebrny,Diesel,1.7,110,Manualna,5,5,False
+4,Hyundai,Kona,4,2007,Hatchback,False,biały,Diesel,1.8,120,Manualna,5,2,False
+5,Ford,Fiesta,4,2008,Hatchback,False,szary,Benzyna,1.3,95,Manualna,5,5,False
+6,Skoda,Octavia,4,2010,Sedan,False,szary,Diesel,1.5,105,Automatyczna,5,5,False
+7,Nissan,Pulsar,4,2002,Sedan,False,czarny,Benzyna,1.8,116,Manualna,5,5,False
+8,Volkswagen,Tiguan,4,1997,Kombi,False,srebrny,Diesel,2.0,122,Manualna,3,2,False
+9,BMW,535,4,2006,Hatchback,False,biały,Diesel,5.0,313,Automatyczna,5,5,False
+10,Fiat,500,4,2001,SUV,False,czerwony,Benzyna,1.3,95,Manualna,5,5,False
+11,Opel,Zafira,4,2010,Hatchback,False,czarny,Diesel,1.6,116,Manualna,3,5,False
+12,Bajaj,Pulsar 150,2,1993,,False,srebrny,Benzyna,0.1,20,Manualna,0,1,False
+13,Volkswagen,Sharan,4,2008,Kombi,False,szary,Diesel,2.4,150,Automatyczna,3,5,False
+14,Nissan,Micra,4,2000,Hatchback,False,biały,Benzyna,1.2,80,Manualna,5,2,False
+15,Hyundai,i10,4,2001,Kombi,False,szary,Benzyna,1.0,67,Manualna,5,2,False
+16,Renault,Clio,4,2003,Coupe,False,biały,Diesel,1.1,75,Manualna,5,5,False
+17,BMW,520,4,2005,Hatchback,True,biały,Diesel,3.2,190,Automatyczna,3,2,False
+18,Mercedes-Benz,C 300,4,2006,SUV,False,czarny,Diesel,4.2,258,Automatyczna,3,5,False
+19,Opel,Zafira Tourer,4,2011,Sedan,False,czarny,Diesel,2.3,140,Automatyczna,3,2,False
+20,Ford,Fiesta,4,2002,Kombi,False,szary,Diesel,1.8,125,Manualna,5,5,False
+21,Audi,S4,4,2004,Sedan,False,czarny,Diesel,5.7,347,Automatyczna,5,5,False
+22,Bajaj,Boxer,2,2008,,False,srebrny,Benzyna,0.2,23,Automatyczna,0,1,False
+23,Nissan,Juke,4,2005,Kombi,False,czarny,Benzyna,3.5,218,Manualna,3,5,False
+24,Ford,Focus,4,2001,Van,False,czerwony,Benzyna,1.7,116,Manualna,3,5,False
+25,Mercedes-Benz,C 200,4,2014,Hatchback,False,czarny,Diesel,2.1,136,Automatyczna,5,5,False
+26,Peugeot,5008,4,2009,Van,False,biały,Diesel,1.7,111,Automatyczna,3,5,False
+27,Citroen,C1,4,2008,SUV,False,czarny,Benzyna,1.1,69,Manualna,3,2,False
+28,Ford,Fiesta,4,2006,Coupe,False,szary,Benzyna,1.4,95,Manualna,5,2,False
+29,BMW,330,4,2013,Kombi,False,szary,Benzyna,4.0,252,Automatyczna,3,5,False
+30,Renault,Twingo,4,2001,Hatchback,False,szary,Benzyna,0.9,65,Manualna,5,5,False
+31,Opel,Astra,4,2008,Hatchback,False,czarny,Benzyna,2.6,160,Manualna,3,2,False
+32,Dacia,Duster,4,2008,Van,False,czarny,Diesel,1.8,107,Manualna,5,5,False
+33,Volkswagen,Polo,4,1998,Coupe,True,złoty,Benzyna,1.4,95,Manualna,3,2,False
+34,Opel,Astra,4,2006,Kombi,False,srebrny,Diesel,2.2,136,Manualna,3,5,False
+35,Audi,A1,4,2007,SUV,False,czarny,Benzyna,1.8,125,Manualna,3,5,False
+36,Mercedes-Benz,E 350,4,2011,Sedan,False,biały,Diesel,4.0,252,Automatyczna,3,5,False
+37,Ford,Fiesta,4,2010,Kombi,False,szary,Diesel,1.2,82,Manualna,3,5,False
+38,smart,forFour,4,2002,Coupe,False,biały,Elektryczny,1.5,82,Manualna,3,2,False
+39,Opel,Astra,4,2011,Minivan,False,czarny,Benzyna,1.8,125,Manualna,3,5,False
+40,Skoda,Citigo,4,2002,Sedan,True,czarny,Benzyna,1.0,60,Manualna,3,5,False
+41,Cadillac,ATS,4,2001,Kombi,True,biały,Benzyna,4.2,276,Manualna,5,5,False
+42,Volkswagen,Golf,4,2007,Kombi,True,czerwony,Diesel,2.1,140,Manualna,3,2,False
+43,Bajaj,Avenger Cruise 220,2,2010,,False,czarny,Benzyna,0.6,94,Manualna,0,1,False
+44,Peugeot,2008,4,2011,SUV,False,czarny,Benzyna,1.3,82,Manualna,5,2,False
+45,Mercedes-Benz,C 200,4,2012,SUV,False,szary,Benzyna,2.9,184,Manualna,5,5,False
+46,Volkswagen,Touareg,4,2011,Sedan,False,srebrny,Diesel,4.5,286,Automatyczna,3,5,False
+47,Porsche,911,4,2019,Hatchback,True,biały,Benzyna,6.7,420,Automatyczna,5,5,False
+48,Skoda,Rapid/Spaceback,4,2014,Hatchback,False,niebieski,Benzyna,1.3,90,Manualna,5,5,False
+49,Opel,Corsa,4,2009,Sedan,False,srebrny,Benzyna,1.0,75,Automatyczna,3,2,False
+50,Hero,Xtreme,2,2009,,False,złoty,Benzyna,0.3,42,Manualna,0,1,False
+51,Renault,Twingo,4,2002,Sedan,False,czerwony,Benzyna,0.9,75,Manualna,3,5,False
+52,Chevrolet,Spark,4,2008,Hatchback,False,czarny,Benzyna,1.0,68,Manualna,5,5,False
+53,Volvo,V90,4,2010,Hatchback,True,biały,Diesel,3.8,235,Automatyczna,5,5,False
+54,Volkswagen,Polo,4,2006,SUV,False,szary,Diesel,1.2,69,Manualna,3,2,False
+55,Volkswagen,up!,4,2001,SUV,True,czerwony,Benzyna,1.2,75,Manualna,5,5,False
+56,Opel,Corsa,4,2003,Kombi,False,srebrny,Benzyna,1.3,90,Manualna,5,2,False
+57,Renault,Megane,4,2003,Sedan,False,srebrny,Benzyna,1.8,110,Automatyczna,5,2,False
+58,Renault,Grand Scenic,4,2006,SUV,False,czarny,Diesel,2.3,159,Manualna,5,5,False
+59,Fiat,Tipo,4,2005,Kombi,False,szary,Benzyna,1.9,120,Manualna,5,5,False
+60,Mazda,6,4,2004,Kombi,False,żółty,Diesel,2.8,175,Automatyczna,5,2,False
+61,Hyundai,i30,4,1998,Coupe,False,szary,Benzyna,2.6,159,Manualna,5,5,False
+62,Skoda,Fabia,4,2003,Hatchback,False,czarny,Diesel,1.6,110,Manualna,3,5,False
+63,SEAT,Ibiza,4,1999,Sedan,False,czarny,Benzyna,1.5,95,Automatyczna,3,5,False
+64,Ford,Fiesta,4,2005,SUV,False,biały,Benzyna,1.0,71,Manualna,5,5,False
+65,Bajaj,Dominar 400,2,2001,,False,biały,Benzyna,0.4,61,Automatyczna,0,1,False
+66,Ford,Focus,4,2007,Sedan,False,srebrny,Diesel,1.7,101,Manualna,5,5,False
+67,Hyundai,i10,4,2000,Kombi,True,niebieski,Benzyna,1.3,84,Manualna,5,5,False
+68,Volkswagen,Golf,4,2017,Kombi,True,biały,Diesel,1.6,105,Manualna,5,2,False
+69,Opel,Corsa,4,2003,Hatchback,False,srebrny,Benzyna,1.5,87,Manualna,5,5,False
+70,Mercedes-Benz,A 180,4,2009,Coupe,False,czarny,Diesel,1.6,109,Manualna,5,5,False
+71,Opel,Corsa,4,2009,Hatchback,False,czarny,Benzyna,1.6,90,Manualna,5,2,False
+72,Volkswagen,Polo GTI,4,2009,Hatchback,False,srebrny,Benzyna,2.8,179,Manualna,5,5,False
+73,Renault,Kangoo,4,2012,Hatchback,False,niebieski,Diesel,1.6,110,Manualna,5,5,False
+74,Ford,Kuga,4,2009,Sedan,False,czarny,Diesel,2.2,140,Manualna,5,5,False
+75,Fiat,500,4,2009,Sedan,True,brązowy,Benzyna,1.0,69,Manualna,5,2,False
+76,Volkswagen,Tiguan,4,2007,Sedan,True,szary,Diesel,1.9,125,Manualna,5,5,False
+77,smart,forTwo,4,2008,Hatchback,True,czarny,Benzyna,1.1,71,Automatyczna,3,5,False
+78,Audi,A6,4,2003,Hatchback,False,srebrny,Diesel,4.3,272,Automatyczna,3,5,False
+79,Nissan,Note,4,2004,Hatchback,False,niebieski,Benzyna,1.3,80,Manualna,3,2,False
+80,Skoda,Roomster,4,2000,Sedan,False,czerwony,Benzyna,1.8,105,Manualna,5,2,False
+81,Fiat,500,4,2005,Sedan,False,czarny,Benzyna,1.0,69,Manualna,5,5,False
+82,Ford,Kuga,4,2017,Sedan,False,szary,Benzyna,2.3,140,Manualna,5,5,False
+83,Volkswagen,Polo,4,2002,Hatchback,False,czerwony,Benzyna,1.9,105,Manualna,5,5,False
+84,smart,forTwo,4,2003,Hatchback,False,czarny,Benzyna,1.0,71,Automatyczna,5,2,False
+85,Abarth,595C,4,2002,Sedan,False,niebieski,Benzyna,2.6,165,Manualna,5,2,False
+86,Honda,Activa,2,2005,,False,szary,Benzyna,0.4,63,Manualna,0,1,False
+87,Opel,Insignia,4,2012,Coupe,False,biały,Benzyna,3.0,194,Manualna,5,2,False
+88,Mercedes-Benz,B 180,4,2000,Sedan,False,biały,Benzyna,1.9,122,Automatyczna,5,5,False
+89,Fiat,Panda,4,2005,Hatchback,False,niebieski,Benzyna,1.2,69,Manualna,5,5,False
+90,Opel,Crossland X,4,2009,SUV,False,złoty,Benzyna,2.1,131,Manualna,5,5,False
+91,Jaguar,F-Pace,4,2003,Hatchback,True,biały,Benzyna,3.9,241,Automatyczna,3,2,False
+92,Opel,Grandland X,4,2007,Sedan,False,niebieski,Benzyna,1.9,131,Manualna,5,5,False
+93,Mercedes-Benz,V 220,4,2007,Coupe,False,czarny,Diesel,2.5,163,Automatyczna,5,5,False
+94,Fiat,500,4,2004,Hatchback,False,srebrny,Benzyna,1.0,69,Manualna,5,5,False
+95,Volkswagen,Jetta,4,2012,Kombi,False,szary,Benzyna,1.8,110,Automatyczna,5,5,False
+96,Opel,Astra,4,2005,Sedan,False,złoty,Benzyna,1.5,101,Manualna,3,5,False
+97,Peugeot,5008,4,2013,Sedan,False,niebieski,Diesel,1.9,131,Manualna,3,5,False
+98,Opel,Astra,4,2007,Kombi,False,niebieski,Benzyna,2.1,136,Manualna,3,5,False
+99,Opel,Corsa,4,2008,SUV,False,czarny,Benzyna,1.0,69,Manualna,3,5,False
+100,Volkswagen,Passat Variant,4,2008,Sedan,False,czerwony,Diesel,1.9,122,Manualna,5,5,False
+101,Kia,Ceed SW / cee'd SW,4,2004,Sedan,False,biały,Benzyna,1.7,105,Manualna,3,5,False
+102,MINI,One,4,2000,SUV,False,czarny,Benzyna,1.1,75,Automatyczna,3,5,False
+103,Dacia,Duster,4,2011,Sedan,False,czarny,Benzyna,2.0,131,Manualna,3,2,False
+104,Renault,Kadjar,4,2010,Minivan,False,szary,Benzyna,1.8,116,Automatyczna,5,5,False
+105,MINI,One,4,2007,Van,False,biały,Benzyna,1.7,102,Manualna,3,2,False
+106,Mercedes-Benz,A 180,4,2004,Sedan,False,czerwony,Benzyna,1.8,109,Automatyczna,5,5,False
+107,Mercedes-Benz,C 220,4,2008,Minivan,False,czarny,Diesel,2.7,170,Automatyczna,5,5,False
+108,Audi,S3,4,2004,Hatchback,False,szary,Benzyna,5.1,310,Automatyczna,5,5,False
+109,Hyundai,i20,4,2010,Hatchback,False,biały,Benzyna,1.1,84,Manualna,5,5,False
+110,Volkswagen,Golf Plus,4,2009,SUV,True,srebrny,Benzyna,4.9,300,Manualna,5,5,False
+111,Volkswagen,Phaeton,4,2008,Van,False,czarny,Diesel,5.3,334,Automatyczna,5,5,False
+112,Volkswagen,Golf,4,2012,Coupe,False,czarny,Benzyna,1.7,105,Manualna,5,5,False
+113,BMW,316,4,2011,Hatchback,False,czarny,Diesel,1.8,116,Manualna,3,2,False
+114,Mazda,CX-5,4,2005,SUV,False,niebieski,Benzyna,2.8,175,Manualna,3,5,False
+115,Peugeot,108,4,2001,SUV,False,czarny,Benzyna,1.1,69,Manualna,5,5,False
+116,Ford,C-Max,4,2006,Hatchback,False,szary,Diesel,1.9,125,Automatyczna,5,5,False
+117,Mercedes-Benz,C 220,4,2007,Hatchback,False,srebrny,Diesel,3.0,194,Automatyczna,5,2,False
+118,TVS,XL 100 Heavy Duty,2,2011,,False,szary,Benzyna,0.6,82,Manualna,0,1,False
+119,Audi,A3,4,2007,Hatchback,False,biały,Benzyna,1.7,110,Manualna,3,5,False
+120,Mitsubishi,Space Star,4,2005,Sedan,False,czarny,Benzyna,1.1,71,Manualna,5,2,False
+121,Ford,Fiesta,4,2006,Sedan,False,czerwony,Benzyna,1.7,101,Automatyczna,5,5,False
+122,Dacia,Sandero,4,2011,Van,False,czarny,Benzyna,1.3,90,Manualna,5,2,False
+123,Ford,Fiesta,4,2002,Kombi,False,srebrny,Benzyna,1.8,101,Manualna,5,5,False
+124,Peugeot,2008,4,2003,Hatchback,False,czerwony,Diesel,1.9,114,Manualna,3,5,False
+125,Volvo,XC90,4,2007,Sedan,False,srebrny,Benzyna,3.8,235,Automatyczna,5,5,False
+126,Volkswagen,T6 Multivan,4,2016,Sedan,False,biały,Diesel,2.4,150,Automatyczna,5,5,False
+127,Volkswagen,Polo,4,2009,Sedan,False,srebrny,Benzyna,1.0,69,Manualna,3,5,False
+128,Opel,Insignia,4,2011,SUV,False,biały,Diesel,3.1,200,Automatyczna,5,5,False
+129,Opel,Mokka X,4,2011,Sedan,False,czarny,Benzyna,1.9,140,Automatyczna,3,5,False
+130,Mercedes-Benz,E 200,4,2011,Minivan,True,biały,Benzyna,2.0,136,Automatyczna,5,5,False
+131,Volkswagen,Polo,4,2006,Van,True,srebrny,Benzyna,1.1,75,Manualna,5,5,False
+132,Ford,Kuga,4,2009,SUV,False,czarny,Diesel,2.8,179,Manualna,5,5,False
+133,Volkswagen,Sharan,4,2005,SUV,True,szary,Diesel,2.0,140,Automatyczna,5,2,False
+134,Kia,Picanto,4,2006,SUV,False,biały,Benzyna,1.1,67,Manualna,5,5,False
+135,Volkswagen,Touran,4,2003,SUV,False,czarny,Diesel,2.3,150,Automatyczna,5,5,False
+136,Peugeot,108,4,2012,SUV,False,inny,Benzyna,1.1,82,Manualna,3,2,False
+137,Toyota,Aygo,4,2002,SUV,False,szary,Benzyna,1.3,72,Manualna,5,5,False
+138,Ford,Ka/Ka+,4,1998,Hatchback,False,czerwony,Benzyna,1.0,69,Manualna,5,5,False
+139,Peugeot,108,4,2006,Hatchback,False,biały,Benzyna,1.3,72,Manualna,5,2,False
+140,Hyundai,i10,4,2013,Kombi,False,czarny,Benzyna,1.0,67,Manualna,5,5,False
+141,Skoda,Kamiq,4,2006,Minivan,False,żółty,Benzyna,2.3,150,Automatyczna,3,5,False
+142,Renault,Twingo,4,2012,Sedan,False,niebieski,Benzyna,1.3,73,Manualna,5,2,False
+143,Volvo,V60,4,2000,Hatchback,False,szary,Diesel,2.8,181,Manualna,5,5,False
+144,Volvo,S90,4,2008,Van,False,czarny,Diesel,6.1,392,Automatyczna,5,2,False
+145,Mercedes-Benz,Citan,4,2009,Kombi,False,biały,Diesel,1.4,90,Manualna,5,5,False
+146,Volkswagen,T-Cross,4,2016,Kombi,False,złoty,Benzyna,2.4,150,Automatyczna,5,2,False
+147,Kia,Rio,4,2008,Sedan,False,niebieski,Diesel,1.6,109,Manualna,5,2,False
+148,Volkswagen,T-Roc,4,1995,Hatchback,False,szary,Diesel,2.3,150,Manualna,5,2,False
+149,Mercedes-Benz,E 400,4,2002,Hatchback,False,srebrny,Benzyna,5.3,333,Automatyczna,3,5,False
+150,Mazda,6,4,2008,Sedan,False,szary,Diesel,2.8,175,Automatyczna,3,5,False
+151,Peugeot,108,4,2004,Hatchback,False,srebrny,Benzyna,1.3,82,Manualna,3,5,False
+152,Volkswagen,Golf Variant,4,2002,Kombi,False,czarny,Diesel,1.8,110,Automatyczna,5,2,False
+153,BMW,X6,4,2014,Kombi,False,czerwony,Diesel,6.1,381,Automatyczna,5,5,False
+154,Ford,Mondeo,4,2003,Kombi,True,czarny,Diesel,2.4,150,Manualna,5,5,False
+155,Peugeot,208,4,2011,Sedan,True,czarny,Benzyna,2.4,156,Manualna,3,5,False
+156,Hero,Splendor iSmart,2,2006,,False,niebieski,Benzyna,0.4,64,Manualna,0,1,False
+157,Ford,B-Max,4,2017,SUV,False,czerwony,Benzyna,2.1,125,Manualna,5,5,False
+158,Alfa,Romeo MiTo,4,2000,Hatchback,False,srebrny,Benzyna,1.8,105,Manualna,5,5,False
+159,Hyundai,i20,4,2015,Hatchback,False,szary,Benzyna,1.2,77,Manualna,5,5,False
+160,Dacia,Sandero,4,2001,Hatchback,False,niebieski,Benzyna,1.4,84,Manualna,5,5,False
+161,BMW,X1,4,2008,Kombi,False,biały,Diesel,2.4,150,Automatyczna,3,5,False
+162,smart,forTwo,4,2003,Kombi,False,czarny,Elektryczny,1.1,71,Automatyczna,5,5,False
+163,Toyota,Corolla,4,2007,Kombi,False,biały,Elektryczny/Benzyna,1.8,122,Automatyczna,5,5,False
+164,Volkswagen,Tiguan,4,2006,Hatchback,True,biały,Benzyna,1.9,116,Manualna,5,5,False
+165,Porsche,Taycan,4,2008,Kombi,False,szary,Elektryczny,6.2,381,Automatyczna,5,5,False
+166,Bajaj,V15,2,2011,,False,biały,Benzyna,0.5,74,Manualna,0,1,False
+167,smart,forTwo,4,2015,Sedan,False,czarny,Benzyna,1.3,82,Manualna,5,5,False
+168,Opel,Corsa,4,2007,SUV,True,szary,Benzyna,1.2,69,Manualna,5,5,False
+169,Volkswagen,Touran,4,2009,Sedan,False,inny,Diesel,2.3,150,Automatyczna,5,2,False
+170,Mahindra,Gusto,2,2004,,False,szary,Benzyna,0.4,65,Manualna,0,1,False
+171,Volkswagen,Golf,4,2012,Hatchback,False,czarny,Benzyna,2.2,136,Automatyczna,3,2,False
+172,Mercedes-Benz,C 180,4,2003,Hatchback,True,biały,Benzyna,2.4,156,Manualna,3,5,False
+173,Opel,Astra,4,2006,SUV,False,szary,Benzyna,2.1,125,Manualna,5,5,False
+174,SEAT,Leon,4,2002,Sedan,False,biały,Benzyna,1.7,110,Manualna,3,2,False
+175,Mercedes-Benz,C 300,4,2009,Hatchback,False,czerwony,Diesel,4.2,258,Automatyczna,5,5,False
+176,smart,forTwo,4,2003,SUV,True,żółty,Benzyna,1.1,71,Manualna,3,2,False
+177,Opel,Astra,4,2015,SUV,False,czarny,Benzyna,1.8,125,Manualna,5,5,False
+178,Hero,Honda CD100,2,2007,,False,szary,Benzyna,0.1,16,Manualna,0,1,False
+179,Honda,Activa 5G,2,2004,,False,czerwony,Benzyna,0.6,83,Manualna,0,1,False
+180,Volkswagen,Golf,4,2019,Sedan,False,srebrny,Benzyna,1.6,105,Manualna,5,5,False
+181,Bajaj,Avenger Street 150,2,2011,,False,szary,Benzyna,0.6,87,Manualna,0,1,False
+182,Kia,Picanto,4,2008,Hatchback,False,srebrny,Benzyna,1.1,67,Manualna,3,2,False
+183,Volkswagen,Golf Variant,4,2011,Kombi,False,czarny,Benzyna,1.5,105,Manualna,5,5,False
+184,Dacia,Duster,4,2015,Van,False,biały,Benzyna,2.0,125,Manualna,5,5,False
+185,Volvo,V90,4,2010,Hatchback,False,szary,Diesel,3.7,235,Automatyczna,3,2,False
+186,SEAT,Mii,4,2007,Hatchback,False,czerwony,Benzyna,1.0,60,Manualna,5,5,False
+187,Volkswagen,Sharan,4,2013,Hatchback,False,czarny,Diesel,2.2,150,Automatyczna,5,5,False
+188,Mercedes-Benz,B 180,4,2014,Hatchback,False,czarny,Diesel,2.0,122,Manualna,5,2,False
+189,Opel,Grandland X,4,2013,SUV,False,biały,Benzyna,2.2,131,Automatyczna,5,5,False
+190,Dacia,Sandero,4,2008,Sedan,False,biały,Benzyna,1.3,88,Manualna,3,2,False
+191,Ford,Edge,4,2010,Kombi,True,biały,Diesel,2.9,179,Manualna,5,5,False
+192,SEAT,Mii,4,2013,Kombi,False,szary,Benzyna,1.0,60,Manualna,5,2,False
+193,Peugeot,208,4,2012,Hatchback,False,szary,Benzyna,1.2,68,Manualna,5,5,False
+194,Volkswagen,Touran,4,2003,Kombi,False,szary,Benzyna,2.2,140,Automatyczna,5,5,False
+195,Ford,Mustang,4,2012,Hatchback,False,czarny,Benzyna,7.2,450,Automatyczna,5,5,False
+196,Opel,Adam,4,2007,Sedan,False,szary,Benzyna,1.8,116,Manualna,3,2,False
+197,Opel,Corsa,4,2009,SUV,False,szary,Benzyna,1.1,69,Manualna,5,5,False
+198,Renault,Twingo,4,2001,Sedan,False,szary,Benzyna,1.0,65,Manualna,5,5,False
+199,Yamaha,FZ25,2,2010,,False,niebieski,Benzyna,0.6,82,Manualna,0,1,False
+200,SEAT,Ibiza,4,2014,SUV,False,szary,Benzyna,1.5,86,Manualna,5,2,False
+201,Porsche,Panamera,4,2003,Sedan,False,niebieski,Elektryczny/Benzyna,7.1,441,Automatyczna,5,5,False
+202,Volkswagen,Touareg,4,2011,SUV,False,czarny,Diesel,6.6,421,Automatyczna,5,5,False
+203,Volvo,XC60,4,2002,Hatchback,True,czerwony,Diesel,3.0,190,Automatyczna,3,2,False
+204,Opel,Corsa,4,2004,Sedan,False,biały,Benzyna,1.3,90,Manualna,3,2,False
+205,Royal,Enfield Thunderbird 350,2,2004,,False,biały,Benzyna,0.6,92,Automatyczna,0,1,False
+206,Royal,Enfield Classic 500,2,2006,,False,srebrny,Benzyna,0.8,113,Manualna,0,1,False
+207,Volkswagen,Caddy,4,2009,SUV,False,srebrny,Diesel,2.0,122,Automatyczna,5,5,False
+208,Audi,A4,4,2006,SUV,False,biały,Diesel,2.6,170,Automatyczna,5,2,False
+209,Fiat,500C,4,2008,Kombi,False,biały,Benzyna,1.8,105,Manualna,5,5,False
+210,Renault,Megane,4,2003,Sedan,False,biały,Benzyna,1.7,110,Manualna,5,5,False
+211,BMW,320,4,2014,Kabriolet,False,czerwony,Diesel,2.9,184,Automatyczna,5,2,False
+212,Ford,Focus,4,2016,SUV,True,czerwony,Diesel,2.5,150,Manualna,5,5,False
+213,Peugeot,207,4,2007,SUV,True,złoty,Diesel,1.9,120,Manualna,5,5,False
+214,Opel,Zafira,4,2007,Sedan,False,srebrny,Diesel,1.7,110,Manualna,5,5,False
+215,Volkswagen,up!,4,1997,Hatchback,False,szary,Benzyna,1.0,60,Manualna,5,5,False
+216,Skoda,Citigo,4,2013,Coupe,False,czerwony,Benzyna,1.0,60,Manualna,5,5,False
+217,Volkswagen,Passat Alltrack,4,2014,SUV,False,czerwony,Diesel,3.1,190,Automatyczna,5,5,False
+218,Skoda,Yeti,4,2007,Hatchback,False,biały,Benzyna,2.0,122,Manualna,5,5,False
+219,Skoda,Fabia,4,2011,Hatchback,False,czerwony,Benzyna,1.5,95,Manualna,3,5,False
+220,Skoda,Fabia,4,2005,SUV,False,czerwony,Benzyna,1.3,86,Manualna,5,5,False
+221,Porsche,Taycan,4,2006,Hatchback,False,szary,Elektryczny,7.6,476,Automatyczna,5,5,False
+222,Porsche,Panamera,4,1998,Kombi,True,srebrny,Elektryczny/Benzyna,7.4,462,Automatyczna,5,5,False
+223,Mercedes-Benz,C 220,4,2009,SUV,False,czarny,Diesel,2.5,170,Automatyczna,3,5,False
+224,Volkswagen,up!,4,2008,SUV,False,srebrny,Benzyna,0.9,60,Manualna,5,5,False
+225,Volkswagen,up!,4,2000,Sedan,False,szary,Benzyna,1.0,60,Manualna,5,5,False
+226,Ford,Fiesta,4,2003,SUV,False,czarny,Diesel,1.4,82,Manualna,5,5,False
+227,Audi,A1,4,2013,SUV,False,szary,Diesel,1.3,95,Manualna,5,2,False
+228,Fiat,500C,4,2018,Kombi,True,biały,Benzyna,1.1,69,Manualna,5,5,False
+229,Volkswagen,up!,4,2010,Hatchback,False,czerwony,Benzyna,1.0,68,Manualna,3,2,False
+230,Citroen,C4,4,2010,SUV,False,srebrny,Benzyna,1.8,111,Automatyczna,5,2,False
+231,Hyundai,i40,4,2015,SUV,False,szary,Benzyna,1.8,116,Manualna,5,2,False
+232,SEAT,Arona,4,2008,Sedan,True,czarny,Benzyna,1.5,90,Manualna,5,2,False
+233,Ford,Fiesta,4,2003,Hatchback,False,czarny,Diesel,1.3,82,Manualna,5,5,False
+234,Kia,Picanto,4,2007,SUV,False,czerwony,Benzyna,1.0,67,Manualna,5,2,False
+235,Ford,Transit,4,2011,Kombi,True,czarny,Diesel,2.0,131,Automatyczna,5,5,False
+236,BMW,325,4,2006,Sedan,True,szary,Diesel,3.3,218,Manualna,5,5,False
+237,Skoda,Superb,4,2008,SUV,True,szary,Diesel,2.9,190,Automatyczna,5,5,False
+238,Renault,Megane,4,2003,Hatchback,False,czarny,Diesel,1.7,110,Automatyczna,3,5,False
+239,Ford,Fiesta,4,2006,SUV,False,czarny,Benzyna,1.6,92,Manualna,5,5,False
+240,BMW,520,4,2010,Hatchback,False,biały,Diesel,2.9,184,Automatyczna,5,5,False
+241,Mercedes-Benz,GLC 43 AMG,4,2012,Hatchback,False,szary,Benzyna,5.9,367,Automatyczna,5,5,False
+242,Mercedes-Benz,B 200,4,2012,Coupe,True,biały,Diesel,2.4,150,Manualna,5,5,False
+243,Skoda,Superb,4,2008,Kombi,True,szary,Diesel,2.3,150,Automatyczna,5,2,False
+244,Audi,A6 allroad,4,2006,Hatchback,False,czarny,Diesel,5.0,320,Automatyczna,5,5,False
+245,Toyota,RAV 4,4,2001,Kombi,False,biały,Elektryczny/Benzyna,2.4,155,Automatyczna,3,5,False
+246,Ligier,JS 50,4,2007,SUV,False,srebrny,Diesel,0.6,5,Automatyczna,3,2,False
+247,Suzuki,Swift,4,2005,Hatchback,False,czarny,Benzyna,1.6,94,Manualna,5,5,False
+248,Audi,Q8,4,2000,SUV,False,biały,Benzyna,5.3,340,Automatyczna,5,2,False
+249,Mercedes-Benz,C 300,4,2015,SUV,False,czarny,Benzyna,3.7,245,Automatyczna,3,5,False
+250,Ford,Fiesta,4,2007,Hatchback,False,szary,Benzyna,1.6,101,Manualna,5,2,False
+251,Fiat,500C,4,2006,Kombi,False,biały,Benzyna,1.0,69,Manualna,5,5,False
+252,Skoda,Kodiaq,4,2001,Kombi,False,biały,Diesel,2.9,190,Automatyczna,5,5,False
+253,BMW,525,4,2011,Kombi,False,czarny,Diesel,3.7,218,Automatyczna,5,5,False
+254,Skoda,Scala,4,2016,Hatchback,False,biały,Benzyna,2.2,150,Automatyczna,3,5,False
+255,Opel,Corsa,4,2006,SUV,False,biały,Benzyna,1.2,87,Manualna,3,5,False
+256,Audi,A6,4,1997,Hatchback,False,srebrny,Diesel,5.0,313,Automatyczna,5,2,False
+257,Mercedes-Benz,A 200,4,2004,SUV,False,szary,Diesel,2.6,163,Manualna,5,5,False
+258,Ford,Puma,4,2004,Hatchback,False,szary,Benzyna,1.9,125,Manualna,5,5,False
+259,Mitsubishi,ASX,4,2009,Hatchback,False,biały,Benzyna,2.3,150,Automatyczna,3,5,False
+260,Kia,Sportage,4,2004,Sedan,False,inny,Diesel,2.2,135,Manualna,5,2,False
+261,Volkswagen,T-Cross,4,2005,Sedan,False,czarny,Benzyna,1.8,116,Manualna,3,5,False
+262,BMW,235,4,2008,Hatchback,True,szary,Benzyna,4.8,306,Automatyczna,5,5,False
+263,Toyota,Avensis,4,2008,Sedan,False,biały,Benzyna,1.9,124,Manualna,5,5,False
+264,Volkswagen,Golf,4,2004,Sedan,False,srebrny,Benzyna,1.8,110,Manualna,5,5,False
+265,Opel,Corsa,4,2010,Coupe,False,brązowy,Benzyna,1.3,87,Manualna,5,5,False
+266,Mercedes-Benz,E 220,4,2011,SUV,True,srebrny,Diesel,2.7,170,Manualna,5,5,False
+267,Volkswagen,Golf Plus,4,2004,Kombi,False,niebieski,Diesel,1.8,122,Manualna,3,5,False
+268,Peugeot,5008,4,2011,Hatchback,False,niebieski,Benzyna,1.7,111,Manualna,5,5,False
+269,BMW,X1,4,2008,Hatchback,False,szary,Diesel,2.1,143,Manualna,5,5,False
+270,Subaru,OUTBACK,4,2012,SUV,False,czarny,Benzyna,2.7,167,Automatyczna,3,5,False
+271,Volkswagen,Golf Plus,4,2008,Coupe,False,czarny,Benzyna,2.1,122,Automatyczna,5,5,False
+272,Peugeot,208,4,2010,SUV,False,czarny,Benzyna,1.3,83,Manualna,5,5,False
+273,Royal,Enfield Classic 350,2,2007,,False,czerwony,Benzyna,0.2,24,Manualna,0,1,False
+274,Volkswagen,Golf Plus,4,2009,Sedan,True,srebrny,Benzyna,1.7,105,Manualna,5,5,False
+275,Mercedes-Benz,E 200,4,2010,Sedan,False,biały,Diesel,2.1,136,Automatyczna,3,5,False
+276,Suzuki,Baleno,4,2009,SUV,False,czerwony,Benzyna,1.7,111,Manualna,3,5,False
+277,Opel,Astra,4,2007,SUV,False,biały,Diesel,1.7,110,Manualna,3,5,False
+278,Honda,Shine,2,2005,,False,czerwony,Benzyna,0.8,113,Manualna,0,1,False
+279,Audi,A1,4,2014,Sedan,False,czerwony,Diesel,1.9,125,Manualna,5,5,False
+280,Mitsubishi,Lancer,4,2010,SUV,False,szary,Benzyna,1.7,117,Manualna,5,5,False
+281,Hero,Super Splendor,2,2013,,False,czarny,Benzyna,0.3,39,Manualna,0,1,False
+282,Mazda,MX-5,4,2007,Sedan,True,biały,Benzyna,2.1,132,Manualna,3,2,False
+283,Dacia,Sandero,4,2006,Kombi,False,czerwony,Benzyna,1.4,90,Manualna,5,5,False
+284,Opel,Astra,4,2004,Hatchback,False,szary,Diesel,2.1,125,Manualna,3,5,False
+285,SEAT,Ibiza,4,2012,Kombi,False,szary,Benzyna,1.2,75,Manualna,5,5,False
+286,Toyota,Yaris,4,2007,Hatchback,False,szary,Benzyna,1.0,69,Automatyczna,5,5,False
+287,Volkswagen,Golf,4,2009,SUV,True,biały,Elektryczny,2.4,150,Manualna,5,5,False
+288,Mercedes-Benz,V 220,4,2001,Kombi,False,srebrny,Diesel,2.6,163,Automatyczna,3,2,False
+289,Bajaj,Avenger Street 150,2,2001,,True,czarny,Benzyna,0.6,82,Manualna,0,1,False
+290,Renault,Twingo,4,2006,Kombi,False,czarny,Benzyna,1.2,75,Manualna,5,5,False
+291,Opel,Astra,4,2012,Kombi,True,czarny,Diesel,2.0,140,Manualna,3,5,False
+292,Renault,Kangoo,4,2019,Kombi,False,czarny,Diesel,1.3,90,Manualna,5,2,False
+293,Yamaha,Ray Z,2,1993,,False,czarny,Benzyna,0.2,27,Manualna,0,1,False
+294,Hero,Honda Splendor NXG,2,2008,,True,czarny,Benzyna,0.7,92,Manualna,0,1,False
+295,Mercedes-Benz,ML 350,4,2007,Sedan,False,szary,Diesel,3.8,258,Automatyczna,5,2,False
+296,Opel,Corsa,4,2007,Sedan,False,srebrny,Benzyna,1.0,69,Manualna,5,2,False
+297,Fiat,500,4,2004,Hatchback,False,czarny,Benzyna,1.2,69,Manualna,3,5,False
+298,MINI,One,4,2012,Coupe,False,niebieski,Benzyna,1.5,102,Manualna,3,5,False
+299,Opel,Meriva,4,2004,Hatchback,False,szary,Benzyna,1.6,95,Manualna,5,2,False
+300,BMW,X2,4,2009,Sedan,False,brązowy,Benzyna,2.2,140,Automatyczna,5,2,False
+301,Skoda,Octavia,4,2003,Hatchback,False,czarny,Diesel,1.9,110,Manualna,3,5,False
+302,Volkswagen,up!,4,2005,SUV,False,czarny,Elektryczny,1.0,60,Manualna,5,5,False
+303,Volkswagen,Sharan,4,2017,SUV,False,srebrny,Diesel,2.9,184,Automatyczna,5,2,False
+304,Hyundai,i30,4,2005,Sedan,True,czarny,Benzyna,1.3,90,Manualna,5,5,False
+305,Honda,Navi,2,2008,,False,biały,Benzyna,0.2,22,Manualna,0,1,False
+306,Renault,Trafic,4,2007,SUV,False,srebrny,Benzyna,1.9,116,Manualna,5,2,False
+307,SEAT,Altea XL,4,2006,SUV,False,szary,Diesel,1.6,105,Manualna,3,2,False
+308,Bajaj,Platina 100,2,2001,,False,biały,Benzyna,0.8,117,Manualna,0,1,False
+309,Volkswagen,Golf Sportsvan,4,2003,SUV,False,biały,Benzyna,2.0,125,Manualna,3,5,False
+310,Royal,Enfield Classic Desert Storm,2,2003,,False,złoty,Benzyna,0.5,73,Automatyczna,0,1,False
+311,Renault,Clio,4,2011,Kombi,False,szary,Diesel,1.2,90,Manualna,3,5,False
+312,SEAT,Arona,4,2008,Sedan,False,niebieski,Benzyna,1.8,110,Manualna,5,2,False
+313,Skoda,Fabia,4,2005,Hatchback,True,czarny,Benzyna,1.6,110,Manualna,5,5,False
+314,SEAT,Ibiza,4,2002,Hatchback,False,niebieski,Benzyna,1.1,69,Manualna,5,5,False
+315,Skoda,Fabia,4,2012,Sedan,False,srebrny,Benzyna,1.2,75,Manualna,5,5,False
+316,Dacia,Sandero,4,2005,Sedan,False,czarny,LPG,1.0,73,Manualna,5,5,False
+317,smart,forTwo,4,2003,SUV,False,srebrny,Benzyna,1.1,84,Automatyczna,5,5,False
+318,Chevrolet,Cruze,4,2010,SUV,False,srebrny,Benzyna,2.0,140,Automatyczna,5,5,False
+319,Volkswagen,up!,4,2006,SUV,False,srebrny,Benzyna,0.8,60,Manualna,3,2,False
+320,Kia,Ceed / cee'd,4,2006,Hatchback,False,czerwony,Diesel,1.6,101,Manualna,3,5,False
+321,Hyundai,i30,4,2006,Kombi,False,biały,Benzyna,1.7,110,Manualna,5,2,False
+322,Volkswagen,Fox,4,2000,SUV,True,biały,Benzyna,0.9,60,Manualna,5,5,False
+323,BMW,750,4,2009,Sedan,False,biały,Diesel,6.4,400,Automatyczna,3,5,False
+324,Ford,Fiesta,4,2003,Sedan,False,srebrny,Benzyna,1.4,86,Manualna,5,5,False
+325,Kia,Ceed SW / cee'd SW,4,2011,SUV,False,czarny,Diesel,1.5,105,Manualna,5,2,False
+326,Hero,Hunk,2,2013,,False,czarny,Benzyna,0.7,96,Manualna,0,1,False
+327,Kia,Stonic,4,2006,SUV,False,brązowy,Benzyna,1.6,101,Automatyczna,5,2,False
+328,Nissan,Qashqai,4,2008,SUV,True,biały,Diesel,2.0,141,Manualna,5,5,False
+329,Volkswagen,Passat Variant,4,2006,SUV,False,złoty,Diesel,2.5,150,Manualna,5,5,False
+330,Skoda,Fabia,4,2010,Van,False,szary,Benzyna,1.0,69,Manualna,3,2,False
+331,Audi,A4,4,2005,Hatchback,False,czarny,Diesel,1.8,120,Automatyczna,3,5,False
+332,Bajaj,Dominar 400,2,2004,,False,szary,Benzyna,0.6,89,Manualna,0,1,False
+333,Renault,Clio,4,2004,Sedan,False,srebrny,Benzyna,2.0,131,Manualna,5,5,False
+334,Audi,A6,4,2010,Sedan,False,niebieski,Diesel,3.7,239,Automatyczna,5,5,False
+335,Mercedes-Benz,B 180,4,2007,Kombi,False,srebrny,Diesel,2.2,122,Manualna,5,2,False
+336,Audi,Q5,4,2016,Hatchback,False,srebrny,Diesel,3.1,190,Automatyczna,5,5,False
+337,Volkswagen,Sharan,4,2009,Sedan,False,niebieski,Diesel,2.4,150,Manualna,5,2,False
+338,Bajaj,Pulsar 135 LS,2,2008,,False,biały,Benzyna,0.7,105,Manualna,0,1,False
+339,Volkswagen,up!,4,2005,SUV,True,biały,Benzyna,1.0,60,Manualna,5,2,False
+340,Skoda,Fabia,4,2006,Hatchback,False,biały,Benzyna,0.9,60,Manualna,5,5,False
+341,Kia,Venga,4,2004,Hatchback,False,srebrny,Benzyna,1.6,90,Automatyczna,5,5,False
+342,Skoda,Fabia,4,2012,Sedan,False,biały,Diesel,1.0,60,Manualna,5,2,False
+343,KTM,RC 390,2,2004,,False,szary,Benzyna,0.5,69,Manualna,0,1,False
+344,Audi,A4,4,2007,Hatchback,False,czarny,Diesel,2.9,190,Automatyczna,3,5,False
+345,Volkswagen,up!,4,2005,Hatchback,False,czerwony,Benzyna,1.0,60,Manualna,5,5,False
+346,Volkswagen,Passat,4,2006,Sedan,False,biały,Benzyna,2.8,190,Automatyczna,3,2,False
+347,Opel,Astra,4,2007,Sedan,True,srebrny,Diesel,2.2,136,Manualna,5,5,False
+348,BMW,430,4,2011,Sedan,False,niebieski,Benzyna,4.0,258,Automatyczna,5,5,False
+349,Skoda,Fabia,4,2015,SUV,False,biały,Diesel,1.3,75,Automatyczna,5,5,False
+350,Opel,Corsa,4,2007,SUV,False,szary,Diesel,1.4,87,Manualna,3,2,False
+351,Volkswagen,Golf,4,2000,Kombi,True,czerwony,Diesel,2.4,150,Manualna,5,5,False
+352,Skoda,Fabia,4,2010,Kombi,False,czarny,Benzyna,1.0,60,Manualna,3,2,False
+353,Hero,Splender iSmart,2,1999,,False,szary,Benzyna,0.2,33,Manualna,0,1,False
+354,Volkswagen,Golf,4,2014,Hatchback,True,czarny,Benzyna,1.3,86,Manualna,5,5,False
+355,Volkswagen,Touran,4,2002,Hatchback,False,srebrny,Diesel,2.2,140,Manualna,5,2,False
+356,Renault,Twingo,4,2005,Hatchback,False,szary,Benzyna,1.2,75,Manualna,5,5,False
+357,Skoda,Fabia,4,2010,Sedan,False,biały,Benzyna,1.4,86,Manualna,5,5,False
+358,Hyundai,Tucson,4,2009,Hatchback,False,czarny,Diesel,2.7,177,Automatyczna,3,5,False
+359,Mercedes-Benz,CLA 200,4,2011,Kombi,False,srebrny,Benzyna,2.2,136,Manualna,5,5,False
+360,Skoda,Yeti,4,2006,Sedan,False,czarny,Benzyna,1.8,105,Manualna,3,5,False
+361,Audi,A3,4,2012,Coupe,True,czarny,Diesel,1.9,125,Manualna,3,2,False
+362,Opel,Zafira,4,2001,SUV,False,szary,Diesel,1.7,120,Manualna,5,5,False
+363,Peugeot,108,4,2011,Hatchback,False,biały,Benzyna,1.1,72,Manualna,5,5,False
+364,Dacia,Sandero,4,2001,SUV,False,czarny,Benzyna,1.4,90,Manualna,5,7,False
+365,SEAT,Leon,4,2008,SUV,False,srebrny,Diesel,2.5,150,Manualna,5,5,False
+366,Fiat,500X,4,2001,Sedan,False,niebieski,Diesel,1.8,120,Manualna,3,5,False
+367,Kia,Ceed SW / cee'd SW,4,2010,SUV,False,niebieski,Diesel,2.1,125,Manualna,5,5,False
+368,Opel,Insignia,4,2003,Sedan,False,srebrny,Diesel,2.6,170,Automatyczna,5,5,False
+369,MINI,Cooper SD,4,2008,SUV,False,biały,Diesel,3.0,190,Manualna,5,5,False
+370,Renault,Megane,4,2003,SUV,False,srebrny,Benzyna,1.5,101,Manualna,5,2,False
+371,Renault,ZOE,4,2013,Sedan,False,żółty,Elektryczny,1.1,69,Automatyczna,3,5,False
+372,Bajaj,Discover 100,2,2008,,False,biały,Benzyna,0.3,51,Manualna,0,1,False
+373,Toyota,Aygo,4,2014,SUV,False,czerwony,Benzyna,1.2,72,Manualna,5,5,False
+374,Ford,Fiesta,4,2006,Sedan,False,biały,Benzyna,1.4,95,Manualna,5,5,False
+375,Ford,Fiesta,4,2013,Sedan,False,czarny,Benzyna,1.0,60,Manualna,5,5,False
+376,Toyota,Avensis,4,2006,SUV,False,biały,Diesel,2.3,147,Manualna,5,2,False
+377,SEAT,Leon,4,2006,Sedan,False,niebieski,Diesel,1.9,116,Manualna,3,5,False
+378,SEAT,Leon,4,2008,SUV,False,srebrny,Benzyna,2.3,150,Manualna,5,5,False
+379,Skoda,Superb,4,2009,Hatchback,False,srebrny,Diesel,2.9,190,Automatyczna,5,5,False
+380,Volkswagen,Touran,4,2009,Hatchback,False,czarny,Diesel,2.2,140,Automatyczna,3,2,False
+381,Toyota,Avensis,4,2021,Kombi,True,szary,Diesel,1.9,124,Automatyczna,5,5,False
+382,Volkswagen,Golf Plus,4,2007,Hatchback,False,szary,Diesel,1.7,105,Manualna,5,2,False
+383,Ford,EcoSport,4,2018,Sedan,False,szary,Benzyna,1.9,125,Manualna,3,2,False
+384,Citroen,C1,4,2007,Hatchback,False,szary,Benzyna,1.0,69,Manualna,3,5,False
+385,Opel,Astra,4,2018,SUV,True,czarny,Diesel,2.0,125,Manualna,5,5,False
+386,Volvo,V40,4,2003,Kombi,True,czarny,Benzyna,2.7,177,Automatyczna,5,5,False
+387,Audi,A1,4,2008,SUV,False,szary,Benzyna,1.3,86,Manualna,5,2,True
+388,Mercedes-Benz,CLA 250,4,2010,Hatchback,False,srebrny,Benzyna,3.2,211,Automatyczna,5,5,False
+389,Skoda,Citigo,4,2007,Van,False,biały,Benzyna,1.4,75,Manualna,5,2,False
+390,Mazda,6,4,2016,Hatchback,False,srebrny,Benzyna,2.9,175,Manualna,5,5,False
+391,Peugeot,Partner,4,2006,Hatchback,True,srebrny,Diesel,1.5,99,Manualna,5,5,False
+392,Renault,Megane,4,2010,Kombi,False,brązowy,Benzyna,2.1,131,Manualna,3,5,False
+393,Kia,Rio,4,2011,Coupe,True,czarny,Benzyna,1.4,86,Manualna,5,5,False
+394,Ford,Transit,4,2006,Kombi,False,srebrny,Diesel,2.2,131,Manualna,5,5,False
+395,Kia,Soul,4,2000,Sedan,True,niebieski,Benzyna,2.0,136,Automatyczna,5,5,False
+396,Volkswagen,Golf,4,2005,Hatchback,False,srebrny,Diesel,1.9,116,Manualna,3,2,False
+397,Ligier,JS 50,4,2005,Sedan,False,niebieski,Diesel,0.6,5,Automatyczna,3,5,False
+398,BMW,118,4,2006,Sedan,False,szary,Benzyna,2.3,143,Automatyczna,5,5,False
+399,Lancia,MUSA,4,2007,Coupe,False,czarny,Benzyna,1.5,95,Manualna,5,2,False
+400,Ford,Fiesta,4,2003,Sedan,False,czerwony,Benzyna,1.0,60,Manualna,5,2,False
+401,Opel,Corsa,4,2006,Hatchback,False,niebieski,Benzyna,1.1,69,Manualna,5,5,False
+402,Toyota,Aygo,4,2002,SUV,False,szary,Benzyna,0.9,68,Manualna,5,7,False
+403,Dacia,Sandero,4,2006,Sedan,False,szary,Benzyna,1.2,73,Manualna,3,5,False
+404,Dacia,Logan,4,2008,Coupe,True,biały,Benzyna,1.2,84,Manualna,5,5,False
+405,SEAT,Leon,4,2002,Sedan,False,szary,Benzyna,1.7,105,Manualna,3,5,False
+406,Mercedes-Benz,C 220,4,2012,Kombi,False,niebieski,Diesel,2.6,170,Automatyczna,3,5,False
+407,Hero,Super Splendor,2,2003,,False,srebrny,Benzyna,0.5,65,Automatyczna,0,1,False
+408,Toyota,Aygo,4,2011,Sedan,False,czarny,Benzyna,1.2,72,Manualna,5,2,False
+409,Mazda,CX-30,4,2002,SUV,False,czerwony,Benzyna,1.9,122,Manualna,5,5,False
+410,BMW,X3,4,2009,Hatchback,False,czarny,Benzyna,4.9,313,Automatyczna,5,5,False
+411,Renault,Scenic,4,2011,Sedan,False,szary,Benzyna,2.4,160,Manualna,5,5,False
+412,Skoda,Karoq,4,2001,Kombi,False,szary,Benzyna,2.4,150,Manualna,3,5,False
+413,Fiat,500,4,2010,Sedan,False,czerwony,Benzyna,1.1,69,Manualna,5,5,False
+414,Ford,Transit,4,2007,Hatchback,False,niebieski,Diesel,1.7,116,Manualna,5,2,False
+415,BMW,116,4,2014,SUV,False,szary,Diesel,2.3,136,Manualna,3,5,False
+416,Opel,Corsa,4,2008,Kombi,False,szary,Benzyna,1.0,69,Manualna,5,2,False
+417,BMW,G310GS,2,2008,,False,szary,Benzyna,0.7,103,Automatyczna,0,1,False
+418,Volkswagen,up!,4,2005,Sedan,False,srebrny,Benzyna,0.9,75,Automatyczna,5,7,False
+419,BMW,530,4,2007,Hatchback,False,biały,Diesel,4.2,265,Automatyczna,3,5,False
+420,Volkswagen,Passat,4,2009,Hatchback,True,srebrny,Diesel,2.0,122,Automatyczna,5,5,False
+421,Mercedes-Benz,B 200,4,2004,Sedan,False,szary,Diesel,2.1,140,Manualna,5,5,False
+422,Peugeot,208,4,2007,Coupe,False,biały,Benzyna,1.7,101,Manualna,5,5,False
+423,Bajaj,Xcd,2,2010,,False,srebrny,Benzyna,0.4,65,Manualna,0,1,False
+424,MINI,Cooper,4,2008,Kombi,False,szary,Benzyna,1.9,122,Manualna,5,5,False
+425,Land,Rover Range Rover Velar,4,2003,Coupe,False,inny,Diesel,3.6,241,Automatyczna,5,2,False
+426,Peugeot,207,4,2005,SUV,False,szary,Benzyna,1.1,73,Manualna,5,5,False
+427,smart,forTwo,4,2013,SUV,False,szary,Benzyna,1.0,61,Automatyczna,5,5,False
+428,Toyota,Aygo,4,2002,Hatchback,True,szary,Benzyna,1.3,72,Manualna,5,5,False
+429,Ford,Focus,4,2015,Sedan,False,szary,Benzyna,1.9,125,Manualna,5,5,False
+430,Mercedes-Benz,A 180,4,2008,Hatchback,False,biały,Diesel,1.8,109,Automatyczna,5,5,False
+431,smart,forFour,4,2007,Hatchback,False,czarny,Benzyna,0.9,71,Automatyczna,5,5,False
+432,Kia,Sportage,4,2001,SUV,False,biały,Benzyna,2.5,163,Automatyczna,5,5,False
+433,Volkswagen,Golf GTI,4,2010,Kombi,False,biały,Benzyna,3.7,230,Automatyczna,3,5,False
+434,Bajaj,CT 110,2,2007,,False,czerwony,Benzyna,0.2,32,Manualna,0,1,False
+435,MINI,One,4,2012,SUV,False,srebrny,Benzyna,1.5,98,Manualna,5,2,False
+436,SEAT,Ibiza,4,2010,Hatchback,False,szary,Benzyna,1.1,69,Manualna,5,5,False
+437,Volvo,V90,4,2005,Kombi,False,czarny,Benzyna,2.9,190,Automatyczna,5,5,False
+438,Mercedes-Benz,B 180,4,2003,Kombi,False,srebrny,Diesel,1.6,109,Manualna,5,2,False
+439,Porsche,Cayenne,4,2010,Sedan,False,czerwony,Diesel,5.3,340,Automatyczna,5,5,False
+440,Renault,Clio,4,2019,SUV,False,czarny,Benzyna,0.9,75,Manualna,5,5,False
+441,Volkswagen,ID.3,4,2006,Kombi,False,niebieski,Elektryczny,3.4,204,Automatyczna,5,5,False
+442,Opel,Astra,4,2011,Kombi,False,szary,Diesel,1.8,116,Manualna,5,5,False
+443,Chevrolet,Cruze,4,2006,Hatchback,True,złoty,Benzyna,2.1,131,Manualna,5,2,False
+444,Ford,Fiesta,4,2021,Sedan,True,czarny,Benzyna,1.2,86,Manualna,3,7,False
+445,Volkswagen,Golf,4,2006,Sedan,False,szary,Benzyna,2.2,136,Manualna,5,5,False
+446,Volkswagen,Polo,4,2011,Sedan,False,szary,Benzyna,1.0,60,Manualna,5,5,False
+447,Mercedes-Benz,C 180,4,2013,Sedan,False,srebrny,Benzyna,2.3,156,Manualna,5,5,False
+448,Renault,Clio,4,2007,SUV,False,szary,Benzyna,1.2,90,Manualna,3,5,False
+449,Mercedes-Benz,B 220,4,2006,SUV,False,biały,Diesel,2.8,177,Automatyczna,5,7,False
+450,Opel,Astra,4,2009,Kombi,False,czarny,Diesel,2.4,150,Manualna,5,5,False
+451,MINI,Cooper S,4,2004,Coupe,True,czarny,Benzyna,2.8,184,Manualna,5,2,False
+452,Ford,Fiesta,4,2016,Sedan,False,czarny,Benzyna,2.7,182,Manualna,5,5,False
+453,Skoda,Roomster,4,2007,Hatchback,False,szary,Diesel,1.4,86,Manualna,5,5,False
+454,Audi,A4,4,2011,Sedan,False,biały,Benzyna,2.3,150,Manualna,3,5,False
+455,Renault,Captur,4,2013,Sedan,False,czarny,Benzyna,2.1,131,Automatyczna,3,5,False
+456,Ford,Fiesta,4,2006,SUV,False,czarny,Benzyna,2.2,140,Manualna,5,5,False
+457,Audi,RS3,4,2003,SUV,True,inny,Benzyna,6.4,400,Automatyczna,3,2,False
+458,smart,forFour,4,2004,Hatchback,False,czarny,Benzyna,1.2,71,Manualna,3,2,False
+459,Volkswagen,Passat,4,2003,Sedan,False,srebrny,Diesel,3.9,239,Automatyczna,5,2,False
+460,Mercedes-Benz,B 180,4,2008,Sedan,False,srebrny,Benzyna,1.9,122,Automatyczna,5,5,False
+461,Ford,Fiesta,4,2007,Van,False,szary,Benzyna,0.9,60,Automatyczna,5,2,False
+462,Volkswagen,up!,4,2005,Sedan,False,czarny,Benzyna,1.4,90,Manualna,5,5,False
+463,Volkswagen,up!,4,2013,Minivan,True,czarny,Benzyna,0.9,60,Manualna,5,5,False
+464,Audi,A5,4,2018,Kombi,False,brązowy,Diesel,3.9,252,Automatyczna,5,5,False
+465,Renault,Kangoo,4,2016,SUV,False,czarny,Diesel,1.6,114,Automatyczna,5,5,False
+466,Audi,A3,4,2011,Hatchback,False,czerwony,Diesel,2.4,150,Manualna,5,5,False
+467,Fiat,500C,4,1998,Kombi,False,biały,Benzyna,1.1,71,Manualna,5,5,False
+468,smart,forFour,4,2006,SUV,True,biały,Benzyna,1.1,71,Automatyczna,5,5,False
+469,Bajaj,Pulsar 150,2,2006,,False,biały,Benzyna,0.4,62,Manualna,0,1,False
+470,Opel,Meriva,4,2005,Kombi,False,czarny,Benzyna,1.9,120,Manualna,3,2,False
+471,Bajaj,Discover 125,2,1996,,False,biały,Benzyna,0.1,20,Manualna,0,1,False
+472,Fiat,500,4,2006,Hatchback,False,czerwony,Benzyna,1.1,71,Manualna,5,5,False
+473,SEAT,Arona,4,2008,SUV,False,biały,Benzyna,1.9,110,Manualna,5,2,False
+474,Renault,Clio,4,2001,Sedan,False,czarny,Benzyna,1.2,67,Manualna,5,2,False
+475,Dacia,Sandero,4,2006,Hatchback,False,czarny,Benzyna,1.3,90,Manualna,5,5,False
+476,Volkswagen,Caddy,4,2005,Sedan,False,czerwony,Benzyna,1.2,75,Manualna,5,5,False
+477,Bajaj,Xcd,2,2006,,False,czarny,Benzyna,0.2,30,Manualna,0,1,False
+478,Yamaha,Fazer Dlx,2,2004,,False,żółty,Benzyna,0.4,62,Manualna,0,1,False
+479,Hyundai,iX35,4,2004,Hatchback,True,szary,Benzyna,2.2,135,Manualna,3,5,False
+480,Volkswagen,Amarok,4,2005,Sedan,False,szary,Diesel,2.9,179,Automatyczna,3,5,False
+481,Audi,Q3,4,2011,SUV,False,biały,Benzyna,2.2,140,Automatyczna,5,5,False
+482,Skoda,Octavia,4,2010,Coupe,False,czarny,Diesel,2.4,150,Manualna,5,2,False
+483,BMW,116,4,2003,SUV,False,szary,Benzyna,1.8,116,Manualna,5,5,False
+484,Mercedes-Benz,S 560,4,2010,Kombi,False,czarny,Benzyna,7.3,469,Automatyczna,5,5,False
+485,Ford,Focus,4,2015,SUV,False,srebrny,Diesel,1.9,125,Manualna,5,5,False
+486,Opel,Astra,4,2007,Sedan,False,srebrny,Benzyna,1.7,110,Manualna,5,2,False
+487,Skoda,Superb,4,2009,SUV,False,czarny,Diesel,3.1,190,Automatyczna,3,5,False
+488,Opel,Adam,4,2014,Kombi,True,biały,Benzyna,1.4,87,Manualna,5,5,False
+489,Volkswagen,Polo,4,2004,SUV,False,czarny,Benzyna,0.7,60,Manualna,3,5,False
+490,Audi,A6,4,2018,Hatchback,False,czarny,Diesel,5.0,320,Automatyczna,5,5,False
+491,Fiat,Punto Evo,4,2003,Hatchback,False,brązowy,Benzyna,1.2,69,Manualna,3,5,False
+492,Toyota,Auris,4,2009,Sedan,False,czerwony,Elektryczny/Benzyna,2.3,136,Automatyczna,5,5,False
+493,Volkswagen,Golf,4,2012,Sedan,False,biały,Benzyna,2.4,150,Manualna,3,2,False
+494,Hyundai,i20,4,2005,Kombi,False,srebrny,Benzyna,1.2,77,Manualna,5,2,False
+495,Fiat,500C,4,2009,Van,False,brązowy,Benzyna,1.0,69,Manualna,5,2,False
+496,Volkswagen,Tiguan,4,2006,SUV,False,niebieski,Benzyna,2.3,150,Automatyczna,5,5,False
+497,Fiat,500,4,2006,Kombi,False,niebieski,Benzyna,1.1,69,Manualna,3,5,False
+498,Mercedes-Benz,220,4,2012,Hatchback,False,szary,Diesel,2.8,190,Automatyczna,5,5,False
+499,Dacia,Logan,4,2005,Hatchback,False,czerwony,Benzyna,1.4,90,Manualna,5,5,False
+500,smart,forTwo,4,2006,SUV,True,biały,Benzyna,1.1,71,Manualna,3,5,False
+501,Audi,A6,4,2005,Kombi,False,biały,Benzyna,4.5,286,Automatyczna,5,5,False
+502,BMW,X5,4,2006,Hatchback,False,biały,Diesel,4.0,258,Automatyczna,5,5,False
+503,Opel,Insignia,4,2009,SUV,False,biały,Diesel,2.0,140,Manualna,5,5,False
+504,smart,forTwo,4,2008,Sedan,False,czarny,Benzyna,1.0,71,Automatyczna,5,5,False
+505,Volkswagen,T5 Transporter,4,2002,Coupe,False,biały,Diesel,1.6,102,Manualna,5,5,False
+506,Ford,Galaxy,4,2005,Sedan,False,złoty,Diesel,1.7,116,Automatyczna,5,5,False
+507,SEAT,Ibiza,4,2010,Hatchback,False,srebrny,Benzyna,2.2,143,Automatyczna,5,5,False
+508,Mercedes-Benz,C 180,4,2008,Sedan,False,niebieski,Benzyna,2.6,156,Manualna,3,2,False
+509,Honda,Accord,4,2007,Kombi,True,biały,Benzyna,2.5,156,Manualna,5,5,False
+510,Skoda,Fabia,4,2016,Hatchback,False,czerwony,Diesel,1.6,95,Manualna,5,5,False
+511,Peugeot,2008,4,2011,Hatchback,False,szary,Benzyna,1.8,110,Manualna,5,5,False
+512,Mercedes-Benz,GLC 250,4,2007,Sedan,False,czarny,Benzyna,3.1,204,Automatyczna,5,2,False
+513,Renault,Twingo,4,2008,SUV,False,czarny,Benzyna,1.1,71,Manualna,5,5,False
+514,Hero,HF Deluxe,2,2009,,False,szary,Benzyna,0.2,22,Manualna,0,1,False
+515,Dacia,Lodgy,4,2007,SUV,True,czarny,Diesel,1.9,116,Manualna,5,5,False
+516,Volkswagen,Tiguan,4,2004,Sedan,False,biały,Diesel,3.1,190,Automatyczna,5,5,False
+517,Mitsubishi,Space Star,4,2004,Hatchback,False,czarny,Benzyna,1.2,80,Manualna,5,2,False
+518,Audi,A6,4,2018,SUV,False,szary,Diesel,2.5,163,Automatyczna,3,2,False
+519,Volkswagen,Golf Variant,4,2018,Kombi,True,złoty,Benzyna,2.3,150,Automatyczna,5,5,False
+520,Lexus,RC 300h,4,2002,Sedan,False,srebrny,Elektryczny/Benzyna,3.6,223,Automatyczna,5,5,False
+521,Honda,CB Hornet 160R,2,2007,,True,czarny,Benzyna,0.3,50,Manualna,0,1,False
+522,TVS,Star City,2,2006,,False,brązowy,Benzyna,0.4,58,Manualna,0,1,False
+523,Fiat,Punto,4,2015,Sedan,False,srebrny,Benzyna,1.2,77,Manualna,5,5,False
+524,Opel,Corsa,4,2012,Hatchback,False,biały,Benzyna,1.1,75,Manualna,5,5,False
+525,Mitsubishi,Colt,4,2019,Kombi,False,biały,Benzyna,1.4,75,Manualna,5,5,False
+526,SEAT,Ibiza,4,2002,Hatchback,False,inny,Benzyna,1.0,69,Manualna,5,5,False
+527,smart,forTwo,4,2007,Hatchback,False,szary,Benzyna,1.1,71,Automatyczna,5,5,False
+528,SEAT,Ibiza,4,2005,SUV,False,niebieski,Benzyna,1.5,86,Manualna,5,2,False
+529,Toyota,RAV 4,4,2007,Van,False,niebieski,Elektryczny/Benzyna,2.5,155,Automatyczna,3,5,False
+530,Suzuki,SlingShot,2,2004,,False,czarny,Benzyna,0.5,73,Manualna,0,1,False
+531,Opel,Astra,4,2003,Sedan,False,niebieski,Benzyna,2.3,136,Manualna,3,2,False
+532,Volkswagen,Passat Variant,4,2015,Hatchback,False,czerwony,Diesel,2.6,160,Automatyczna,3,5,False
+533,Volkswagen,Polo,4,2005,Sedan,False,srebrny,Benzyna,1.2,75,Manualna,5,2,False
+534,Fiat,Tipo,4,2003,SUV,False,czarny,Benzyna,1.8,120,Manualna,5,5,False
+535,Opel,Zafira,4,2007,Kombi,False,biały,Diesel,2.2,125,Automatyczna,5,5,False
+536,Suzuki,Grand Vitara,4,2010,SUV,False,srebrny,Benzyna,2.3,129,Manualna,5,5,False
+537,Renault,Clio,4,2005,Hatchback,True,czarny,Benzyna,1.5,90,Manualna,5,5,False
+538,KTM,RC 200,2,2004,,False,biały,Benzyna,0.6,82,Automatyczna,0,1,False
+539,Opel,Antara,4,1999,Hatchback,False,szary,Benzyna,2.8,184,Manualna,5,5,False
+540,Ford,Mondeo,4,2011,SUV,False,niebieski,Diesel,3.9,239,Automatyczna,5,5,False
+541,Royal,Enfield Classic 350,2,2012,,False,żółty,Benzyna,0.3,38,Manualna,0,1,False
+542,Hyundai,i10,4,2006,Hatchback,False,inny,Benzyna,0.9,67,Manualna,5,5,False
+543,Hero,Honda Splendor Plus,2,2008,,False,biały,Benzyna,0.5,68,Manualna,0,1,False
+544,Peugeot,207,4,2003,SUV,True,inny,Benzyna,1.8,120,Manualna,5,5,False
+545,Opel,Karl,4,2011,SUV,False,niebieski,Benzyna,1.2,73,Manualna,3,5,False
+546,Ford,Fiesta,4,2008,Kombi,False,szary,Benzyna,1.4,86,Manualna,3,5,False
+547,Skoda,Citigo,4,2008,Hatchback,True,srebrny,LPG,1.1,60,Manualna,5,5,False
+548,Opel,Insignia,4,2005,Sedan,False,niebieski,Diesel,2.6,170,Automatyczna,5,5,False
+549,Volkswagen,Golf,4,2010,Hatchback,False,srebrny,Benzyna,1.4,86,Manualna,5,5,False
+550,Mercedes-Benz,B 180,4,2007,SUV,False,czarny,Diesel,1.8,122,Manualna,5,5,False
+551,Opel,Zafira,4,2011,Hatchback,False,niebieski,Diesel,2.2,135,Manualna,5,5,False
+552,Peugeot,2008,4,2007,SUV,False,szary,Benzyna,1.8,110,Manualna,5,5,False
+553,Land,Rover Discovery,4,2001,Sedan,True,czerwony,Diesel,4.9,306,Automatyczna,5,5,False
+554,Mercedes-Benz,A 200,4,1997,SUV,False,czarny,Benzyna,2.6,163,Manualna,5,5,False
+555,Fiat,500,4,2008,Sedan,False,szary,Benzyna,1.0,69,Manualna,5,5,False
+556,SEAT,Ibiza,4,2014,Sedan,False,czarny,Benzyna,1.8,105,Manualna,5,2,False
+557,Ford,Fiesta,4,2008,Kombi,False,złoty,Benzyna,1.3,86,Manualna,5,5,False
+558,Skoda,Octavia,4,2005,Sedan,True,szary,Diesel,1.9,122,Manualna,5,5,False
+559,Opel,Astra,4,2001,Sedan,False,niebieski,Benzyna,2.3,150,Automatyczna,5,5,False
+560,Toyota,Camry,4,1999,Kombi,True,srebrny,Elektryczny/Benzyna,3.4,218,Automatyczna,3,5,False
+561,Ford,C-Max,4,2004,Hatchback,False,czarny,Benzyna,2.2,140,Manualna,5,5,False
+562,Bajaj,Pulsar 220 F,2,2003,,False,biały,Benzyna,0.4,63,Manualna,0,1,False
+563,Opel,Insignia,4,2002,SUV,False,biały,Benzyna,2.5,163,Manualna,3,5,False
+564,Fiat,500,4,2003,Van,True,srebrny,Benzyna,0.9,69,Manualna,3,5,False
+565,Suzuki,SX4,4,2001,Hatchback,False,srebrny,Benzyna,2.0,120,Manualna,3,5,False
+566,Peugeot,108,4,2000,Kombi,False,czarny,Benzyna,1.0,72,Manualna,3,2,False
+567,Volkswagen,Polo,4,2010,Kombi,False,szary,Benzyna,1.4,90,Manualna,5,5,False
+568,Mercedes-Benz,A 180,4,2010,Kombi,False,czarny,Diesel,2.0,122,Manualna,5,5,False
+569,Mitsubishi,ASX,4,2012,SUV,False,szary,Benzyna,1.8,117,Manualna,5,5,False
+570,TVS,Apache RTR 200 4V,2,2006,,False,niebieski,Benzyna,0.7,101,Manualna,0,1,False
+571,Renault,Clio,4,2010,Kombi,True,biały,Benzyna,1.2,73,Manualna,5,5,False
+572,Opel,Mokka,4,2010,SUV,False,szary,Diesel,2.1,140,Manualna,5,5,False
+573,Volkswagen,Golf,4,2011,Hatchback,False,niebieski,Benzyna,2.4,150,Manualna,5,5,False
+574,Peugeot,208,4,2011,Sedan,False,czarny,Benzyna,1.4,82,Manualna,5,5,False
+575,Skoda,Rapid/Spaceback,4,2011,Kombi,False,niebieski,Benzyna,1.4,90,Manualna,5,5,False
+576,BMW,540,4,2012,Kombi,True,biały,Benzyna,5.5,340,Automatyczna,5,2,False
+577,Renault,Clio,4,2004,SUV,False,szary,Benzyna,2.1,118,Automatyczna,3,5,False
+578,BMW,116,4,2004,Sedan,False,czarny,Benzyna,2.2,136,Automatyczna,5,2,False
+579,Volkswagen,Arteon,4,2003,SUV,False,biały,Diesel,4.4,272,Automatyczna,5,5,False
+580,Bajaj,Discover 125,2,2009,,False,biały,Benzyna,0.3,35,Manualna,0,1,False
+581,Porsche,Cayenne,4,2006,Sedan,True,srebrny,Benzyna,7.2,441,Automatyczna,5,5,False
+582,Subaru,Impreza,4,2001,Sedan,False,szary,Benzyna,2.4,150,Manualna,5,5,False
+583,Volkswagen,up!,4,2010,Hatchback,False,szary,Benzyna,1.3,75,Automatyczna,5,5,False
+584,BMW,118,4,2004,Kombi,False,szary,Benzyna,2.1,136,Manualna,3,5,False
+585,SEAT,Arona,4,2006,Hatchback,False,biały,Benzyna,1.3,95,Manualna,3,2,False
+586,Fiat,500C,4,2005,Coupe,True,czarny,Benzyna,1.0,69,Manualna,5,5,False
+587,smart,forFour,4,2009,Hatchback,False,czarny,Benzyna,1.0,71,Manualna,5,5,False
+588,Dacia,Sandero,4,2010,Van,False,czarny,Diesel,1.3,90,Manualna,5,5,False
+589,Fiat,500,4,2015,Sedan,False,złoty,Elektryczny/Benzyna,1.1,69,Manualna,5,5,False
+590,Opel,Corsa,4,2005,SUV,True,srebrny,Benzyna,1.5,101,Manualna,3,2,False
+591,Audi,A4,4,2003,Sedan,False,szary,Diesel,2.7,190,Manualna,5,7,False
+592,Renault,Twingo,4,2015,Kombi,False,biały,Benzyna,1.1,69,Manualna,5,5,False
+593,Mercedes-Benz,E 350,4,2020,Hatchback,False,niebieski,Diesel,4.3,258,Automatyczna,5,2,False
+594,Audi,A4 allroad,4,1999,Sedan,False,czerwony,Diesel,2.6,163,Automatyczna,3,5,False
+595,Volkswagen,Golf,4,2001,Sedan,True,czarny,Benzyna,2.2,150,Manualna,5,5,False
+596,Skoda,Fabia,4,2010,Kombi,False,biały,Benzyna,1.4,86,Manualna,5,5,False
+597,Cadillac,XT4,4,2011,Kombi,False,szary,Benzyna,2.8,174,Automatyczna,5,2,False
+598,Skoda,Fabia,4,2003,Coupe,False,srebrny,Benzyna,1.7,105,Manualna,5,5,False
+599,Opel,Astra,4,2003,Coupe,False,czarny,Benzyna,1.8,116,Manualna,5,5,False
+600,MINI,Cooper Clubman,4,2002,Kombi,False,czarny,Benzyna,2.2,136,Automatyczna,5,5,False
+601,Volkswagen,up!,4,2006,Sedan,False,biały,Benzyna,1.0,60,Manualna,3,5,False
+602,Royal,Enfield Thunderbird 350,2,2013,,False,niebieski,Benzyna,0.6,81,Manualna,0,1,False
+603,Piaggio,Porter,4,2003,Sedan,False,czerwony,Benzyna,1.1,71,Manualna,3,5,False
+604,BMW,125,4,2007,Hatchback,True,biały,Diesel,3.5,218,Automatyczna,3,2,False
+605,Audi,A5,4,2006,Kombi,False,czarny,Diesel,3.9,245,Automatyczna,3,5,False
+606,Bajaj,Avenger Street 220,2,2003,,False,czarny,Benzyna,0.2,25,Manualna,0,1,False
+607,Volkswagen,Golf Variant,4,2013,SUV,True,czerwony,Diesel,1.8,110,Manualna,5,5,False
+608,Renault,Megane,4,2010,SUV,False,czarny,Benzyna,1.7,110,Manualna,3,5,False
+609,Bajaj,Discover 100 T,2,2007,,False,czarny,Benzyna,0.8,112,Manualna,0,1,False
+610,Ford,Fiesta,4,2015,Hatchback,False,czarny,Benzyna,1.2,82,Manualna,5,5,False
+611,Audi,RS3,4,2010,Sedan,False,niebieski,Benzyna,6.3,400,Automatyczna,5,2,False
+612,Audi,Q3,4,2013,Van,False,szary,Diesel,3.1,200,Automatyczna,5,5,False
+613,Ford,EcoSport,4,2011,SUV,False,szary,Benzyna,2.2,140,Manualna,5,5,False
+614,Mitsubishi,Space Star,4,1997,Hatchback,False,czarny,Benzyna,1.1,71,Manualna,5,5,False
+615,Volkswagen,Golf,4,2010,Sedan,True,czarny,Diesel,1.8,105,Automatyczna,3,5,False
+616,Mercedes-Benz,E 350,4,2011,Kombi,True,czerwony,Diesel,4.0,258,Automatyczna,5,5,False
+617,Hero,Pleasure,2,2005,,False,szary,Benzyna,0.1,26,Automatyczna,0,1,False
+618,Volkswagen,Beetle,4,2005,SUV,False,czerwony,Benzyna,1.5,105,Manualna,5,5,False
+619,Volkswagen,Golf,4,2015,SUV,False,czarny,Diesel,2.4,150,Automatyczna,5,2,False
+620,Ford,Grand C-Max,4,2009,Hatchback,False,czerwony,Diesel,2.1,140,Manualna,5,5,False
+621,Kia,Stonic,4,2005,Kombi,False,niebieski,Benzyna,1.5,101,Manualna,5,2,False
+622,Volkswagen,up!,4,2016,Sedan,False,czarny,Benzyna,1.0,60,Manualna,5,5,False
+623,Dacia,Duster,4,2002,Sedan,False,czarny,Benzyna,1.5,107,Manualna,5,5,False
+624,Ford,Focus,4,2008,Hatchback,False,czerwony,Diesel,1.9,120,Manualna,5,5,False
+625,Citroen,C3,4,2013,Hatchback,True,czerwony,Benzyna,1.2,82,Manualna,5,7,False
+626,Volkswagen,Polo,4,2010,Kombi,False,niebieski,Benzyna,1.6,90,Automatyczna,5,5,False
+627,Dacia,Dokker,4,2007,Sedan,False,szary,Benzyna,1.4,75,Manualna,5,5,False
+628,Renault,Twingo,4,2010,Kombi,False,złoty,Benzyna,1.0,65,Manualna,5,5,False
+629,Hero,Super Splendor,2,2009,,False,czarny,Benzyna,0.7,96,Automatyczna,0,1,False
+630,Skoda,Fabia,4,2007,Hatchback,False,niebieski,Benzyna,1.7,95,Automatyczna,3,5,False
+631,Mercedes-Benz,Vito,4,2012,SUV,False,szary,Diesel,2.5,163,Manualna,5,5,False
+632,TVS,Apache,2,2006,,False,biały,Benzyna,0.5,69,Manualna,0,1,False
+633,Renault,Megane,4,2005,Kombi,False,żółty,Diesel,1.5,110,Manualna,5,5,False
+634,SEAT,Mii,4,2006,Kombi,False,srebrny,Benzyna,1.0,60,Manualna,5,2,False
+635,Kia,Venga,4,2007,Hatchback,False,czarny,Benzyna,2.0,125,Manualna,3,5,False
+636,Citroen,C1,4,1999,SUV,False,srebrny,Benzyna,1.0,68,Manualna,5,5,False
+637,Skoda,Octavia,4,2016,SUV,False,biały,Benzyna,2.5,150,Automatyczna,5,5,False
+638,Hyundai,i10,4,2007,SUV,False,srebrny,Benzyna,1.1,67,Manualna,5,2,False
+639,Mercedes-Benz,Citan,4,2010,Hatchback,False,biały,Diesel,1.3,90,Manualna,5,5,False
+640,Mazda,MX-5,4,2012,SUV,False,srebrny,Benzyna,2.6,160,Manualna,3,2,False
+641,Skoda,Fabia,4,2011,SUV,False,czarny,Benzyna,1.3,86,Manualna,5,2,False
+642,Volkswagen,Caddy,4,2004,Van,False,czarny,Diesel,1.1,75,Manualna,5,5,False
+643,Bajaj,Pulsar 220S,2,2009,,True,czarny,Benzyna,0.5,69,Manualna,0,1,False
+644,Volkswagen,Golf,4,2013,SUV,False,szary,Diesel,2.3,140,Manualna,5,5,False
+645,Renault,Talisman,4,2010,Coupe,False,czerwony,Diesel,2.4,150,Automatyczna,5,5,False
+646,Opel,Corsa,4,2003,Hatchback,False,szary,Benzyna,1.3,87,Manualna,3,5,False
+647,Hyundai,i20,4,2008,Van,False,biały,Benzyna,1.7,101,Manualna,3,2,False
+648,Peugeot,208,4,1998,Sedan,False,czerwony,Benzyna,1.0,68,Manualna,5,7,False
+649,Royal,Enfield Electra 5 S,2,2010,,False,biały,Benzyna,0.4,55,Manualna,0,1,False
+650,Mercedes-Benz,Sprinter,4,2002,SUV,False,szary,Diesel,1.9,129,Manualna,5,5,False
+651,BMW,120,4,2015,Coupe,False,srebrny,Diesel,2.9,184,Manualna,3,5,False
+652,Hero,Splendor Plus,2,2008,,False,srebrny,Benzyna,0.7,97,Manualna,0,1,False
+653,Fiat,500,4,2001,Sedan,False,niebieski,Benzyna,1.1,69,Automatyczna,5,5,False
+654,Mercedes-Benz,C 180,4,2010,Hatchback,False,brązowy,Diesel,2.4,156,Automatyczna,5,5,False
+655,Skoda,Citigo,4,2008,SUV,False,czerwony,Benzyna,1.1,60,Manualna,5,5,False
+656,Volkswagen,Polo,4,2007,SUV,True,szary,Diesel,1.3,90,Manualna,5,5,False
+657,Hyundai,i10,4,2015,Sedan,True,czarny,Benzyna,1.1,69,Manualna,5,2,False
+658,Volkswagen,up!,4,2009,SUV,False,czerwony,Benzyna,0.9,60,Manualna,5,5,False
+659,Honda,Activa 3G,2,2006,,False,czerwony,Benzyna,0.4,62,Manualna,0,1,False
+660,SEAT,Leon,4,2001,SUV,False,czerwony,Benzyna,2.2,131,Automatyczna,5,2,False
+661,Fiat,Panda,4,2006,Hatchback,False,czarny,Diesel,1.1,69,Manualna,3,5,False
+662,BMW,114,4,2001,Kombi,False,czarny,Benzyna,1.5,102,Manualna,5,5,False
+663,Opel,Corsa,4,2007,Kombi,False,szary,Benzyna,1.1,69,Manualna,5,5,False
+664,Ford,Focus,4,2004,SUV,False,srebrny,Elektryczny/Benzyna,2.1,125,Manualna,5,2,False
+665,Audi,Q7,4,2011,Sedan,False,szary,Diesel,3.7,231,Automatyczna,5,5,False
+666,Yamaha,Fazer FI V 2.0,2,2007,,False,czarny,Benzyna,0.2,24,Manualna,0,1,False
+667,Opel,Zafira,4,2004,Sedan,True,czerwony,Benzyna,2.8,170,Automatyczna,3,2,False
+668,smart,forTwo,4,2014,Coupe,True,niebieski,Benzyna,1.0,61,Automatyczna,5,5,False
+669,Opel,Corsa,4,1999,SUV,False,czarny,Benzyna,0.8,64,Manualna,3,5,False
+670,Ford,EcoSport,4,1999,Sedan,False,brązowy,Diesel,1.8,111,Manualna,5,2,False
+671,Hyundai,i20,4,2011,Hatchback,True,czarny,Benzyna,1.6,101,Manualna,5,2,False
+672,Ford,Fiesta,4,2006,SUV,False,srebrny,Benzyna,1.3,86,Manualna,5,5,False
+673,Skoda,Kamiq,4,2010,Hatchback,False,czarny,Benzyna,1.8,116,Manualna,5,5,False
+674,Skoda,Superb,4,2006,SUV,False,biały,Diesel,2.2,140,Automatyczna,3,7,False
+675,Volkswagen,Tiguan,4,2008,Hatchback,True,czerwony,Benzyna,3.7,239,Automatyczna,5,5,False
+676,Kia,Niro,4,2004,Kombi,False,szary,Elektryczny/Benzyna,2.2,141,Automatyczna,3,5,False
+677,Hero,Passion PRO i3s,2,1998,,False,biały,Benzyna,0.4,64,Manualna,0,1,False
+678,Volvo,XC40,4,2003,SUV,False,niebieski,Elektryczny/Benzyna,3.2,197,Automatyczna,5,5,False
+679,Volkswagen,Golf,4,2015,Sedan,False,biały,Diesel,1.3,86,Manualna,5,2,False
+680,Volkswagen,Golf,4,2004,SUV,False,szary,Benzyna,1.4,90,Automatyczna,5,5,False
+681,Ford,Fiesta,4,2001,Sedan,False,biały,Benzyna,1.5,86,Manualna,5,2,False
+682,Opel,Grandland X,4,2005,Van,False,czarny,Benzyna,4.7,300,Automatyczna,5,5,False
+683,Skoda,Fabia,4,2018,SUV,False,szary,Benzyna,1.3,86,Manualna,5,5,False
+684,Ford,S-Max,4,2008,Coupe,False,czarny,Diesel,2.3,150,Manualna,5,5,False
+685,Fiat,500,4,2003,SUV,False,biały,Elektryczny/Benzyna,1.0,69,Manualna,5,2,False
+686,Fiat,500,4,2005,Hatchback,False,biały,Benzyna,1.0,69,Manualna,5,5,False
+687,Fiat,Punto Evo,4,2003,Hatchback,False,srebrny,Benzyna,1.1,77,Manualna,5,2,False
+688,Volkswagen,Touareg,4,2006,Sedan,False,szary,Benzyna,4.8,286,Automatyczna,5,5,False
+689,Opel,Insignia,4,2011,Sedan,True,czarny,Diesel,2.7,160,Manualna,5,5,False
+690,Fiat,500,4,2006,Van,False,srebrny,Elektryczny/Benzyna,1.0,69,Manualna,5,5,False
+691,Volkswagen,Passat Variant,4,2013,Kombi,False,niebieski,Diesel,2.3,150,Automatyczna,5,5,False
+692,Volkswagen,Golf,4,2004,Van,False,niebieski,Benzyna,2.8,184,Manualna,3,5,False
+693,Volkswagen,Caddy,4,2004,Kombi,False,czarny,Diesel,1.5,102,Automatyczna,3,5,False
+694,Peugeot,2008,4,2014,SUV,False,szary,Benzyna,1.2,82,Manualna,5,5,False
+695,smart,forTwo,4,2019,SUV,False,biały,Benzyna,1.1,71,Automatyczna,3,5,False
+696,SEAT,Leon,4,2008,Van,False,czerwony,Benzyna,1.8,110,Manualna,3,5,False
+697,Ford,Galaxy,4,2008,SUV,False,szary,Benzyna,2.9,190,Manualna,3,5,False
+698,Opel,Crossland X,4,2009,SUV,False,srebrny,Benzyna,1.7,110,Manualna,3,2,False
+699,Volkswagen,Golf,4,2008,SUV,False,szary,Benzyna,2.6,170,Manualna,5,2,False
+700,Toyota,Yaris,4,2006,Hatchback,False,złoty,Benzyna,1.1,75,Automatyczna,5,5,False
+701,Ford,Fiesta,4,2005,SUV,False,biały,Benzyna,1.1,75,Manualna,5,5,False
+702,Ford,Mustang,4,2006,Hatchback,False,czarny,Benzyna,7.3,450,Automatyczna,5,5,False
+703,Skoda,Fabia,4,2012,SUV,False,czarny,Benzyna,1.3,90,Manualna,3,5,False
+704,Toyota,Aygo,4,2019,Van,False,szary,Benzyna,1.1,68,Manualna,3,2,False
+705,Chevrolet,Captiva,4,2000,Hatchback,False,biały,Benzyna,2.9,184,Manualna,5,5,False
+706,BMW,118,4,1998,SUV,False,niebieski,Benzyna,2.7,170,Automatyczna,5,5,False
+707,Opel,Adam,4,2004,SUV,False,czarny,Benzyna,1.3,87,Manualna,5,5,False
+708,Volkswagen,Passat Variant,4,2002,Sedan,False,czarny,Diesel,2.8,190,Manualna,3,5,False
+709,Kawasaki,Ninja 300,2,2011,,False,czarny,Benzyna,0.4,58,Manualna,0,1,False
+710,Opel,Corsa,4,2011,Sedan,False,srebrny,Benzyna,1.5,101,Manualna,5,5,False
+711,Ford,Kuga,4,2004,Hatchback,False,czerwony,Benzyna,3.1,179,Automatyczna,5,5,False
+712,Dacia,Duster,4,2007,Van,False,biały,Benzyna,1.6,105,Manualna,3,2,False
+713,Peugeot,208,4,2011,Hatchback,False,szary,Benzyna,3.1,200,Manualna,5,5,False
+714,Volkswagen,Passat Variant,4,2015,Sedan,False,czarny,Diesel,2.1,140,Manualna,5,5,False
+715,Fiat,500,4,2009,Sedan,False,szary,Benzyna,1.1,69,Manualna,5,5,False
+716,Volvo,XC90,4,2002,Sedan,False,szary,Diesel,3.7,235,Automatyczna,5,2,False
+717,Ford,Fiesta,4,2008,SUV,True,czarny,Benzyna,1.5,101,Manualna,5,2,False
+718,Renault,Clio,4,2006,SUV,False,biały,Diesel,1.6,90,Manualna,3,5,False
+719,Fiat,500,4,2006,Kombi,False,biały,Benzyna,1.1,69,Manualna,5,5,False
+720,Ford,Fiesta,4,2000,Minivan,False,szary,Diesel,1.5,101,Manualna,5,5,False
+721,Fiat,500C,4,2006,SUV,False,czerwony,Benzyna,1.0,71,Manualna,5,5,False
+722,Alfa,Romeo Giulietta,4,2008,Coupe,False,czarny,Benzyna,2.0,120,Manualna,5,5,False
+723,Bajaj,Dominar 400,2,2009,,False,czarny,Benzyna,0.8,119,Manualna,0,1,False
+724,Toyota,Avensis,4,2010,SUV,False,czarny,Benzyna,2.3,143,Manualna,5,5,False
+725,SEAT,Ibiza,4,2019,SUV,False,czarny,Diesel,1.3,80,Manualna,5,2,False
+726,Volkswagen,up!,4,2008,Kombi,False,szary,Benzyna,0.8,60,Automatyczna,5,2,False
+727,smart,forTwo,4,2017,Kombi,True,brązowy,Benzyna,1.0,71,Automatyczna,5,5,False
+728,BMW,525,4,2007,Hatchback,True,czarny,Diesel,3.4,218,Automatyczna,5,5,False
+729,Volkswagen,Golf,4,1996,Kombi,False,czarny,Benzyna,2.4,150,Manualna,5,5,False
+730,Hero,Glamour 125,2,2008,,False,biały,Benzyna,0.4,50,Manualna,0,1,False
+731,Hero,Honda CD100SS,2,2005,,False,srebrny,Benzyna,0.5,66,Manualna,0,1,False
+732,Opel,Zafira,4,2003,SUV,False,biały,Benzyna,2.2,140,Manualna,5,2,False
+733,BMW,318,4,2011,Sedan,True,czerwony,Diesel,2.4,150,Manualna,3,7,False
+734,Volkswagen,Tiguan,4,2013,Sedan,False,szary,Benzyna,2.4,150,Manualna,3,5,False
+735,Peugeot,Traveller,4,2011,Coupe,False,czerwony,Diesel,2.4,150,Automatyczna,3,5,False
+736,Opel,Mokka X,4,2009,SUV,False,srebrny,Benzyna,2.2,140,Manualna,3,5,False
+737,Land,Rover Range Rover Sport,4,2015,Hatchback,False,czarny,Benzyna,6.6,404,Automatyczna,3,5,False
+738,Audi,A1,4,2008,SUV,False,czerwony,Benzyna,1.4,95,Manualna,5,2,False
+739,Citroen,C4,4,2006,Sedan,True,czerwony,Diesel,2.5,163,Manualna,5,5,False
+740,Hyundai,i30,4,2003,Sedan,False,niebieski,Benzyna,1.3,90,Automatyczna,5,5,False
+741,Mercedes-Benz,C 180,4,1998,SUV,False,srebrny,Benzyna,2.5,156,Automatyczna,3,5,False
+742,Volkswagen,Sharan,4,2007,Coupe,False,biały,Diesel,2.3,150,Automatyczna,5,5,False
+743,Cupra,Formentor,4,2007,Hatchback,False,czerwony,Benzyna,5.0,310,Automatyczna,5,5,False
+744,Kia,Rio,4,2003,Sedan,True,biały,Benzyna,1.4,86,Manualna,5,5,False
+745,Skoda,Citigo,4,2007,Sedan,False,niebieski,Benzyna,0.8,60,Manualna,3,5,False
+746,Volkswagen,Golf,4,2000,Coupe,False,biały,Benzyna,1.7,110,Manualna,5,5,False
+747,Dacia,Sandero,4,2019,Sedan,False,niebieski,Benzyna,1.5,90,Manualna,5,5,False
+748,Mazda,3,4,2008,Coupe,True,czarny,Diesel,1.8,120,Manualna,3,5,False
+749,Opel,Corsa,4,2009,Hatchback,False,czerwony,Benzyna,1.4,90,Automatyczna,3,5,False
+750,SEAT,Ateca,4,2005,Hatchback,True,czarny,Benzyna,1.8,116,Automatyczna,5,5,False
+751,Royal,Enfield Thunderbird 350,2,2020,,False,czarny,Benzyna,0.6,89,Manualna,0,1,False
+752,Chevrolet,Captiva,4,2007,Coupe,False,szary,Diesel,2.7,184,Manualna,3,5,False
+753,Audi,A4,4,2005,Sedan,True,srebrny,Benzyna,2.3,150,Automatyczna,5,5,False
+754,Ford,Fiesta,4,2005,SUV,False,srebrny,Benzyna,1.2,71,Manualna,5,5,False
+755,Volkswagen,Passat Variant,4,2012,Sedan,False,czarny,Diesel,2.3,140,Automatyczna,5,2,False
+756,Kawasaki,Ninja 650,2,2002,,False,srebrny,Benzyna,0.6,83,Manualna,0,1,False
+757,Ford,Focus,4,2005,Hatchback,False,czarny,Diesel,2.3,150,Automatyczna,5,5,False
+758,Volkswagen,T-Cross,4,2013,Coupe,False,srebrny,Benzyna,1.6,95,Automatyczna,3,5,False
+759,Opel,Adam,4,2002,Hatchback,False,niebieski,Benzyna,1.2,87,Manualna,3,5,False
+760,Fiat,500,4,2017,Sedan,False,niebieski,Benzyna,1.1,69,Manualna,5,5,False
+761,Opel,Agila,4,2004,SUV,True,srebrny,Benzyna,1.4,94,Manualna,3,2,False
+762,SEAT,Altea,4,2009,Sedan,False,szary,Diesel,2.0,125,Manualna,5,5,False
+763,Audi,S5,4,2005,Coupe,False,szary,Benzyna,5.7,354,Automatyczna,5,2,False
+764,Renault,Kangoo,4,2007,Kombi,False,biały,Diesel,1.4,90,Manualna,3,5,False
+765,Renault,Scenic,4,2005,Sedan,False,inny,Benzyna,1.8,110,Manualna,3,2,False
+766,Peugeot,108,4,2008,Sedan,False,czerwony,Benzyna,1.2,72,Manualna,5,2,False
+767,BMW,114,4,2011,Coupe,False,brązowy,Benzyna,1.3,102,Manualna,5,5,False
+768,Toyota,Avensis,4,2008,Hatchback,False,szary,Diesel,2.0,124,Manualna,5,5,False
+769,Kia,Venga,4,2001,Hatchback,False,biały,Diesel,1.8,128,Manualna,5,5,False
+770,Audi,A3,4,2007,Kombi,False,czarny,Diesel,2.2,150,Automatyczna,5,5,False
+771,Citroen,C3,4,2011,Kombi,False,srebrny,Benzyna,1.2,82,Manualna,5,5,False
+772,Volkswagen,Golf,4,2012,SUV,False,szary,Benzyna,1.6,105,Manualna,5,2,False
+773,SEAT,Alhambra,4,2008,Hatchback,False,szary,Diesel,2.3,150,Manualna,5,2,False
+774,Volkswagen,Touran,4,2015,Kombi,False,inny,Diesel,1.9,116,Manualna,5,5,False
+775,Ford,B-Max,4,2005,SUV,False,brązowy,Benzyna,1.5,101,Manualna,5,2,False
+776,BMW,316,4,2005,Hatchback,False,biały,Diesel,2.2,150,Manualna,5,5,False
+777,Morgan,3-Wheeler,4,2009,Sedan,True,szary,Benzyna,1.2,68,Manualna,3,5,False
+778,BMW,120,4,2012,Coupe,False,szary,Benzyna,2.9,184,Manualna,5,5,False
+779,Mercedes-Benz,A 180,4,2010,Hatchback,True,srebrny,Diesel,2.3,136,Manualna,3,5,False
+780,Opel,Corsa,4,2002,Sedan,False,czerwony,Benzyna,2.1,136,Manualna,5,5,False
+781,Volkswagen,Golf,4,2008,SUV,False,biały,Benzyna,1.6,105,Manualna,5,5,False
+782,BMW,320,4,2004,Coupe,False,czarny,Diesel,2.7,184,Automatyczna,5,5,False
+783,Nissan,Note,4,2007,Kombi,False,biały,Benzyna,1.7,98,Manualna,3,5,False
+784,BMW,430,4,2006,SUV,False,czerwony,Diesel,3.9,252,Automatyczna,5,5,False
+785,Ford,Tourneo Courier,4,2012,Sedan,False,czerwony,Benzyna,1.5,101,Manualna,5,2,False
+786,Renault,Megane,4,2009,Kombi,False,czerwony,Benzyna,1.8,110,Manualna,5,2,False
+787,Volkswagen,Beetle,4,2006,SUV,False,czarny,Benzyna,2.5,160,Manualna,5,5,False
+788,Citroen,C4,4,2008,Kombi,False,biały,Benzyna,2.0,120,Automatyczna,5,2,False
+789,smart,forTwo,4,2009,Van,False,czerwony,Elektryczny,0.9,54,Automatyczna,5,5,False
+790,BMW,X1,4,2011,Kombi,False,srebrny,Diesel,2.3,150,Manualna,5,5,False
+791,Kia,Ceed / cee'd,4,2012,SUV,False,czarny,Benzyna,1.6,99,Manualna,5,7,False
+792,Renault,Clio,4,2005,SUV,False,szary,Diesel,1.5,90,Manualna,3,2,False
+793,Hyundai,i30,4,2006,Sedan,True,srebrny,Benzyna,1.5,99,Manualna,3,2,False
+794,Volvo,V40,4,2000,SUV,False,srebrny,Diesel,1.9,120,Manualna,5,5,False
+795,Audi,Q2,4,2001,Kombi,False,niebieski,Diesel,2.4,150,Automatyczna,3,5,False
+796,Hyundai,iX20,4,2006,SUV,True,czerwony,Benzyna,1.5,90,Automatyczna,3,2,False
+797,Audi,Q5,4,2002,Sedan,False,czarny,Diesel,4.6,286,Automatyczna,5,5,False
+798,Volkswagen,Sharan,4,2009,Sedan,False,szary,Diesel,2.6,170,Manualna,5,5,False
+799,Ford,Transit,4,2002,Sedan,False,srebrny,Diesel,1.8,125,Manualna,5,5,False
+800,Volkswagen,Golf Sportsvan,4,2008,SUV,False,czarny,Benzyna,2.2,150,Automatyczna,5,5,False
+801,Audi,A4,4,2004,Hatchback,False,szary,Benzyna,1.7,120,Automatyczna,5,5,False
+802,BMW,114,4,2010,Kombi,False,złoty,Benzyna,1.5,102,Manualna,5,5,False
+803,SEAT,Mii,4,2013,SUV,False,czarny,Benzyna,1.0,75,Manualna,5,5,False
+804,Dacia,Sandero,4,2004,Sedan,False,szary,Benzyna,1.4,90,Manualna,5,5,False
+805,SEAT,Arona,4,2009,Sedan,False,niebieski,Benzyna,1.4,95,Manualna,5,5,False
+806,Hyundai,i10,4,2006,Sedan,False,czerwony,Benzyna,1.2,67,Manualna,5,2,False
+807,SEAT,Leon,4,2007,SUV,False,srebrny,Diesel,1.4,86,Automatyczna,5,2,False
+808,Opel,Zafira Tourer,4,2008,Sedan,False,biały,Benzyna,2.7,170,Manualna,5,5,False
+809,Kia,Ceed / cee'd,4,2010,Hatchback,False,brązowy,Benzyna,1.8,110,Manualna,5,5,False
+810,Fiat,500X,4,2007,Sedan,False,szary,Benzyna,2.4,140,Manualna,5,5,False
+811,Opel,Corsa,4,2006,Coupe,False,szary,Benzyna,1.4,86,Manualna,5,2,False
+812,Volkswagen,Golf Variant,4,2005,Coupe,False,srebrny,Benzyna,1.7,110,Manualna,3,5,False
+813,Renault,Clio,4,2004,SUV,False,srebrny,Benzyna,1.4,90,Manualna,3,5,False
+814,Skoda,Fabia,4,2015,SUV,False,biały,Benzyna,1.6,95,Automatyczna,3,2,False
+815,Skoda,Octavia,4,2006,Kombi,False,czarny,Benzyna,1.8,110,Manualna,5,5,False
+816,Kia,Ceed / cee'd,4,2011,Hatchback,False,czarny,Benzyna,1.5,99,Manualna,5,5,False
+817,Ford,Focus,4,2002,Hatchback,True,szary,Diesel,2.7,182,Manualna,5,2,False
+818,Fiat,500,4,2013,Kombi,False,czarny,Benzyna,1.2,69,Manualna,5,2,False
+819,Royal,Enfield Continental GT,2,2018,,True,brązowy,Benzyna,0.5,76,Automatyczna,0,1,False
+820,Mercedes-Benz,E 220,4,2009,Kombi,False,biały,Diesel,3.2,194,Automatyczna,5,5,False
+821,Volkswagen,Passat Variant,4,2004,Hatchback,False,biały,Diesel,2.2,140,Manualna,5,5,False
+822,Hyundai,i30,4,2011,Kombi,False,brązowy,Diesel,1.5,99,Automatyczna,5,5,False
+823,Opel,Corsa,4,2011,Kombi,False,czarny,Benzyna,1.4,90,Manualna,5,2,False
+824,Mitsubishi,Space Star,4,2008,SUV,False,szary,Benzyna,1.2,71,Manualna,5,5,False
+825,Ford,Fiesta,4,2009,SUV,False,czerwony,Benzyna,1.3,82,Manualna,3,5,False
+826,Porsche,991,4,2011,Hatchback,False,biały,Benzyna,7.0,450,Automatyczna,3,5,False
+827,Ford,Fiesta,4,2012,Sedan,False,niebieski,Benzyna,3.1,200,Manualna,3,2,False
+828,smart,forTwo,4,2006,SUV,False,czerwony,Benzyna,1.0,71,Manualna,5,5,False
+829,Bajaj,Super,2,2010,,False,czarny,Benzyna,0.3,52,Manualna,0,1,False
+830,Volkswagen,Golf,4,2005,Kombi,False,szary,Diesel,2.3,150,Manualna,3,2,False
+831,Mercedes-Benz,C 200,4,2004,Kombi,False,szary,Benzyna,2.2,136,Automatyczna,5,5,False
+832,Audi,A4,4,2010,SUV,False,szary,Benzyna,2.9,190,Manualna,5,5,False
+833,SEAT,Ateca,4,2011,Sedan,False,czerwony,Benzyna,2.2,150,Automatyczna,5,5,False
+834,Ford,Focus,4,2001,Van,False,szary,Diesel,1.8,120,Automatyczna,3,5,False
+835,Skoda,Fabia,4,2008,Kombi,True,szary,Diesel,0.9,60,Manualna,5,5,False
+836,Fiat,500,4,2006,Kombi,True,biały,Benzyna,0.8,69,Manualna,5,5,False
+837,Skoda,Octavia,4,2007,Coupe,False,czarny,Benzyna,2.7,184,Automatyczna,5,2,False
+838,Ford,Focus,4,2008,Kombi,False,niebieski,Benzyna,2.2,125,Manualna,5,5,False
+839,Jeep,Renegade,4,2009,Kombi,True,szary,Benzyna,2.5,150,Automatyczna,5,5,False
+840,Alfa,Romeo Giulietta,4,2011,SUV,False,czarny,Benzyna,1.7,120,Manualna,5,2,False
+841,Toyota,Auris,4,2010,Kombi,True,srebrny,Benzyna,1.6,99,Automatyczna,5,5,False
+842,Volkswagen,Golf Sportsvan,4,2013,SUV,False,szary,Benzyna,1.8,110,Manualna,5,2,False
+843,Volkswagen,Golf,4,2009,Kombi,False,czarny,Benzyna,1.7,110,Manualna,5,5,False
+844,smart,forFour,4,2016,Van,False,czarny,Benzyna,1.1,71,Manualna,5,5,False
+845,Jeep,Gladiator,4,2003,Sedan,False,biały,Diesel,4.4,264,Automatyczna,3,2,False
+846,Volvo,XC60,4,2008,Sedan,True,żółty,Diesel,2.2,150,Automatyczna,5,5,False
+847,Volvo,V90,4,2014,SUV,False,inny,Diesel,2.9,190,Automatyczna,5,5,False
+848,Toyota,Yaris,4,2002,Kombi,False,niebieski,Benzyna,1.6,101,Manualna,3,5,False
+849,Opel,Combo,4,2004,Hatchback,False,szary,Benzyna,1.3,76,Manualna,5,5,False
+850,Ford,Focus,4,2014,SUV,True,srebrny,Diesel,2.8,182,Manualna,5,5,False
+851,Skoda,Superb,4,2002,Sedan,False,biały,Elektryczny/Benzyna,1.9,120,Automatyczna,3,2,False
+852,SEAT,Ibiza,4,2004,Sedan,False,złoty,Benzyna,1.9,105,Manualna,5,2,False
+853,Yamaha,FZ16,2,2008,,False,biały,Benzyna,0.6,92,Automatyczna,0,1,False
+854,Mercedes-Benz,B 200,4,2013,Hatchback,False,biały,Benzyna,2.2,136,Manualna,3,2,False
+855,Mercedes-Benz,C 180,4,2012,SUV,False,biały,Benzyna,2.3,156,Automatyczna,5,2,False
+856,Volkswagen,Golf,4,2004,Hatchback,False,szary,Diesel,2.2,140,Automatyczna,5,5,False
+857,Audi,A3,4,2005,Sedan,False,szary,Diesel,2.7,179,Manualna,3,2,False
+858,Volkswagen,Caddy,4,2007,SUV,False,czarny,Diesel,1.5,105,Manualna,5,2,False
+859,SEAT,Ibiza,4,2015,Kombi,False,czarny,Benzyna,1.0,60,Manualna,5,5,False
+860,Ford,C-Max,4,2003,Sedan,False,czarny,Diesel,2.3,150,Manualna,5,5,False
+861,Opel,Astra,4,2006,Minivan,True,czarny,Diesel,1.6,110,Manualna,3,5,False
+862,Volkswagen,Polo,4,2011,SUV,False,brązowy,Benzyna,1.6,90,Manualna,5,5,False
+863,BMW,X2,4,2003,Hatchback,False,biały,Diesel,3.0,190,Automatyczna,3,5,False
+864,Kia,Picanto,4,2007,Kombi,False,czarny,Benzyna,1.0,69,Manualna,5,5,False
+865,Ford,EcoSport,4,2010,Coupe,False,biały,Benzyna,1.5,101,Manualna,3,5,False
+866,Volkswagen,Golf,4,2010,Van,False,szary,Benzyna,2.4,150,Manualna,3,5,False
+867,Audi,A4,4,2015,SUV,False,szary,Diesel,2.6,160,Automatyczna,5,5,False
+868,Hyundai,i30,4,2002,Coupe,False,biały,Benzyna,1.4,99,Manualna,5,5,False
+869,Dacia,Dokker,4,2011,Coupe,True,biały,Diesel,1.3,95,Manualna,5,5,False
+870,Mercedes-Benz,CLA 200,4,2003,Hatchback,True,czarny,Diesel,2.3,156,Automatyczna,5,5,False
+871,Hyundai,iX20,4,2006,Hatchback,False,srebrny,Diesel,1.3,90,Manualna,5,5,False
+872,Ford,Focus,4,2000,Sedan,False,srebrny,Benzyna,2.1,125,Manualna,3,5,False
+873,Bajaj,CT 100,2,2008,,False,szary,Benzyna,0.4,51,Manualna,0,1,False
+874,Opel,Meriva,4,2002,SUV,False,srebrny,Benzyna,1.9,120,Manualna,5,5,False
+875,Volkswagen,up!,4,2005,Hatchback,True,biały,Benzyna,1.3,75,Manualna,5,5,False
+876,Renault,Clio,4,2000,SUV,False,czarny,Benzyna,1.6,101,Manualna,5,5,False
+877,Skoda,Octavia,4,2012,Sedan,False,srebrny,Diesel,2.5,150,Automatyczna,5,2,False
+878,Hyundai,i40,4,2006,Sedan,False,szary,Benzyna,2.2,136,Automatyczna,5,5,False
+879,Ford,Fiesta,4,2006,SUV,False,czarny,Benzyna,1.4,86,Manualna,3,5,False
+880,smart,forTwo,4,2009,Sedan,False,czarny,Elektryczny,1.0,71,Automatyczna,5,5,False
+881,BMW,318,4,2008,Coupe,False,biały,Benzyna,2.2,143,Manualna,5,2,False
+882,Suzuki,Ignis,4,2007,SUV,False,biały,Benzyna,1.2,83,Manualna,5,2,False
+883,Peugeot,Expert,4,2010,Sedan,False,biały,Diesel,1.5,90,Manualna,3,5,False
+884,Volkswagen,Golf,4,2009,Sedan,True,szary,Benzyna,2.1,116,Manualna,5,2,False
+885,Mercedes-Benz,CLS 350,4,2010,Kombi,True,czerwony,Diesel,4.1,258,Automatyczna,5,2,False
+886,BMW,340,4,2011,Sedan,False,brązowy,Diesel,6.0,374,Automatyczna,3,5,False
+887,Royal,Enfield Classic 500,2,2004,,False,biały,Benzyna,0.8,118,Automatyczna,0,1,False
+888,Mercedes-Benz,C 220,4,2006,SUV,False,srebrny,Diesel,3.2,194,Automatyczna,3,5,False
+889,Volkswagen,Tiguan,4,2009,Hatchback,False,biały,Benzyna,2.2,140,Automatyczna,5,5,False
+890,SEAT,Mii,4,2003,SUV,False,czarny,Benzyna,0.9,60,Manualna,5,5,False
+891,Renault,Megane,4,2011,SUV,False,czarny,Diesel,2.5,158,Manualna,5,2,False
+892,Dacia,Lodgy,4,2007,Kombi,False,szary,Benzyna,1.6,107,Manualna,5,5,False
+893,Volvo,XC90,4,2001,Sedan,False,czarny,Diesel,3.7,235,Automatyczna,5,5,False
+894,Bajaj,Pulsar 150,2,2016,,False,niebieski,Benzyna,0.4,61,Manualna,0,1,False
+895,Yamaha,FZ  v 2.0,2,2010,,True,szary,Benzyna,0.1,18,Manualna,0,1,False
+896,Audi,SQ7,4,2015,SUV,True,biały,Diesel,6.8,435,Automatyczna,3,2,False
+897,Opel,Astra,4,2004,Hatchback,True,czarny,Benzyna,1.9,125,Manualna,5,5,False
+898,BMW,118,4,2001,SUV,False,czerwony,Benzyna,2.1,136,Automatyczna,5,5,False
+899,Renault,Espace,4,2014,Hatchback,False,srebrny,Benzyna,3.5,224,Automatyczna,5,5,False
+900,Audi,A7,4,2009,Hatchback,False,czerwony,Diesel,5.2,340,Automatyczna,5,5,False
+901,Volkswagen,Golf,4,2011,SUV,False,czarny,Benzyna,2.8,184,Manualna,5,2,False
+902,SEAT,Ibiza,4,2009,Kombi,True,srebrny,Benzyna,1.1,75,Manualna,3,2,False
+903,Opel,Astra,4,2009,Sedan,False,biały,Benzyna,1.8,116,Manualna,5,5,False
+904,smart,forTwo,4,2002,SUV,False,szary,Benzyna,0.9,71,Automatyczna,5,5,False
+905,Renault,Clio,4,2009,Coupe,False,biały,Benzyna,1.4,91,Manualna,5,5,False
+906,Skoda,Citigo,4,2009,Minivan,False,czarny,Benzyna,0.9,60,Manualna,5,2,False
+907,Opel,Adam,4,2001,Hatchback,False,biały,Benzyna,0.9,69,Manualna,3,5,False
+908,Opel,Corsa,4,2007,Kombi,False,szary,Benzyna,1.0,69,Manualna,5,5,False
+909,Renault,Megane,4,2004,SUV,True,srebrny,Diesel,2.5,158,Manualna,5,5,False
+910,Fiat,500,4,2008,Sedan,False,biały,Benzyna,1.1,69,Manualna,5,5,False
+911,Renault,Megane,4,2008,SUV,False,czerwony,Diesel,1.8,110,Automatyczna,5,5,False
+912,Skoda,Enyaq,4,2001,Sedan,False,szary,Elektryczny,3.3,204,Automatyczna,5,5,False
+913,Ford,Puma,4,2014,Kombi,False,złoty,Benzyna,2.0,125,Manualna,5,2,False
+914,Porsche,Cayenne,4,2008,SUV,False,czarny,Benzyna,3.8,245,Automatyczna,3,2,False
+915,Volkswagen,T-Roc,4,2008,Kombi,True,czarny,Benzyna,2.3,150,Manualna,5,5,False
+916,Skoda,Fabia,4,2008,SUV,False,szary,Benzyna,1.4,90,Manualna,3,5,False
+917,Volvo,XC60,4,2004,Sedan,False,biały,Elektryczny/Benzyna,4.9,303,Automatyczna,5,5,False
+918,Volkswagen,Tiguan,4,2003,Sedan,False,srebrny,Diesel,2.0,116,Manualna,5,5,False
+919,Mazda,2,4,2008,SUV,False,szary,Elektryczny/Benzyna,1.2,84,Manualna,5,5,False
+920,Hyundai,i10,4,2010,SUV,True,czarny,Benzyna,1.4,87,Manualna,5,5,False
+921,Hyundai,iX20,4,2015,Van,False,niebieski,Diesel,1.4,90,Manualna,5,5,False
+922,TVS,Flame,2,2010,,False,srebrny,Benzyna,0.3,44,Manualna,0,1,False
+923,Audi,A4,4,2004,Sedan,False,czarny,Diesel,2.5,170,Automatyczna,3,5,False
+924,Opel,Astra,4,2008,Kombi,False,czarny,Benzyna,1.5,101,Manualna,5,2,False
+925,Volkswagen,Caddy,4,2006,SUV,False,niebieski,Diesel,2.4,150,Manualna,3,2,False
+926,Hero,Pleasure,2,2015,,False,niebieski,Benzyna,0.3,40,Automatyczna,0,1,False
+927,smart,forTwo,4,2000,Kombi,False,czarny,Benzyna,1.0,61,Automatyczna,3,5,False
+928,Honda,Activa,2,2008,,False,szary,Benzyna,0.5,79,Automatyczna,0,1,False
+929,Mercedes-Benz,C 180,4,2011,SUV,False,biały,Diesel,1.7,120,Automatyczna,3,5,False
+930,Peugeot,108,4,2016,Hatchback,False,czerwony,Benzyna,1.1,72,Manualna,3,2,False
+931,Opel,Astra,4,2010,SUV,False,szary,Benzyna,1.6,110,Manualna,5,2,False
+932,Dacia,Logan,4,2000,Sedan,True,srebrny,Benzyna,1.3,90,Manualna,5,5,False
+933,Microcar,M8,4,2008,Sedan,False,biały,Diesel,0.6,5,Automatyczna,5,2,False
+934,Volkswagen,Passat,4,2008,Coupe,False,złoty,Diesel,2.0,122,Automatyczna,5,5,False
+935,Mercedes-Benz,A 180,4,2009,SUV,False,złoty,Diesel,2.0,136,Manualna,3,5,False
+936,Audi,A6,4,2007,SUV,False,srebrny,Diesel,3.0,190,Automatyczna,5,5,False
+937,Ford,Edge,4,2011,SUV,False,biały,Diesel,2.8,179,Automatyczna,5,5,False
+938,Kia,Picanto,4,2008,SUV,True,biały,Benzyna,1.0,69,Manualna,3,2,False
+939,Fiat,500X,4,2001,Kombi,False,biały,Benzyna,1.9,120,Manualna,3,2,False
+940,Fiat,500C,4,2003,Sedan,False,czerwony,Benzyna,1.1,69,Manualna,5,5,False
+941,Volkswagen,Touran,4,2011,Sedan,True,szary,Diesel,1.5,105,Automatyczna,5,2,False
+942,Mercedes-Benz,E 500,4,2008,Hatchback,False,szary,Benzyna,6.3,408,Automatyczna,5,2,False
+943,KTM,RC 200,2,2012,,False,niebieski,Benzyna,0.6,83,Manualna,0,1,False
+944,Audi,A3,4,2003,SUV,False,czarny,Benzyna,1.8,110,Manualna,5,2,False
+945,Hyundai,iX35,4,2012,Coupe,False,czarny,Benzyna,2.0,135,Manualna,5,5,False
+946,Volkswagen,up!,4,2011,Coupe,False,szary,Benzyna,1.2,90,Manualna,5,5,False
+947,Nissan,Note,4,2001,Sedan,True,biały,Benzyna,1.3,80,Manualna,3,5,False
+948,SsangYong,Tivoli,4,2013,Sedan,True,czarny,Benzyna,1.9,128,Manualna,5,5,False
+949,Renault,Grand Scenic,4,2005,Kombi,False,szary,Diesel,1.8,110,Manualna,3,5,False
+950,Hyundai,i10,4,2004,SUV,False,brązowy,Benzyna,1.1,67,Manualna,5,5,False
+951,Honda,Jazz,4,1999,Minivan,True,niebieski,Benzyna,1.4,90,Manualna,5,5,False
+952,BMW,340,4,2003,Hatchback,False,szary,Benzyna,5.9,374,Automatyczna,5,5,False
+953,Volkswagen,up!,4,2005,Kombi,False,szary,Benzyna,0.9,60,Automatyczna,5,2,False
+954,Audi,TT RS,4,2008,Hatchback,True,szary,Benzyna,6.3,400,Automatyczna,5,5,False
+955,Renault,Kangoo,4,2005,Sedan,False,czerwony,Elektryczny,1.6,106,Manualna,5,5,False
+956,Hero,Honda Passion Plus,2,2005,,False,biały,Benzyna,0.6,83,Manualna,0,1,False
+957,Audi,A6,4,2004,Hatchback,False,czarny,Diesel,2.9,190,Automatyczna,5,5,False
+958,SEAT,Ibiza,4,2008,Sedan,True,biały,Diesel,1.3,90,Manualna,3,5,False
+959,TVS,Scooty Pep DLX,2,2009,,False,niebieski,Benzyna,0.2,34,Manualna,0,1,False
+960,Volkswagen,up!,4,2009,SUV,False,biały,Benzyna,1.0,60,Manualna,3,2,False
+961,Volkswagen,Passat CC,4,2010,SUV,False,szary,Benzyna,3.1,200,Automatyczna,5,5,False
+962,Mercedes-Benz,Sprinter,4,2006,Sedan,False,biały,Diesel,2.5,163,Automatyczna,5,5,False
+963,Fiat,500,4,2015,Hatchback,False,srebrny,Elektryczny/Benzyna,1.0,86,Manualna,5,2,False
+964,Mazda,MX-5,4,1998,Sedan,False,szary,Benzyna,2.7,184,Manualna,5,2,False
+965,Hero,Splendor Plus,2,2014,,False,brązowy,Benzyna,0.2,29,Manualna,0,1,False
+966,Skoda,Citigo,4,2006,SUV,False,czerwony,Benzyna,1.1,60,Manualna,5,5,False
+967,Skoda,Octavia,4,2004,Coupe,False,srebrny,Benzyna,1.6,102,Automatyczna,5,5,True
+968,Volkswagen,Golf,4,2006,Coupe,False,niebieski,Benzyna,2.0,131,Manualna,5,5,False
+969,Mercedes-Benz,GLA 200,4,2007,Hatchback,False,czerwony,Diesel,2.5,156,Manualna,5,2,False
+970,Kia,XCeed,4,2014,Sedan,False,czerwony,Benzyna,1.8,120,Automatyczna,5,5,False
+971,Honda,Activa,2,2004,,False,brązowy,Benzyna,0.8,115,Manualna,0,1,False
+972,Nissan,Note,4,2006,Coupe,False,czerwony,Benzyna,1.6,98,Manualna,5,2,False
+973,Renault,Twingo,4,2012,Kombi,False,żółty,Benzyna,1.0,71,Manualna,5,5,False
+974,Volkswagen,Golf,4,2016,Kombi,False,szary,Diesel,3.3,204,Manualna,3,2,False
+975,Ford,Fiesta,4,2005,Hatchback,False,biały,Benzyna,0.9,60,Manualna,5,2,False
+976,Renault,Clio,4,2013,Van,False,szary,Benzyna,2.0,131,Manualna,3,5,True
+977,Yamaha,Fazer FI V 2.0,2,2004,,False,czerwony,Benzyna,0.7,101,Manualna,0,1,True
