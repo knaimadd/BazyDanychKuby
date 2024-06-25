@@ -1,15 +1,16 @@
 id,imię,nazwisko,pesel,miasto,adres,telefon,email,data_zatrudnienia,data_zwolnienia,stanowisko,płaca
-1,Mirosław,Kaźmierkiewicz,62053019019,Wrocław,ul. Wiosenna 95/8,48011819213,miroslaw.kazmierkiewicz@kuba.pl,2014-01-01,,menadżer,72.70000000000019
-2,Văn Tân,Musiałowski,60101120917,Wrocław,ul. Kościuszki 85/50,48254632945,van tan.musialowski@kuba.pl,2014-01-01,,sprzedawca,45.2
-3,Łukasz,Wrażeń,73030785616,Lębork,ul. Ignacego Daszyńskiego 7,48947065097,lukasz.wrazen@kuba.pl,2014-01-01,,sprzedawca,46.40000000000002
-4,Marek,Kędzierski,75101487610,Radom,ul. Wspólna 37/15,48318840125,marek.kedzierski@kuba.pl,2014-01-01,,mechanik,56.20000000000016
-5,Grażyna,Jeruszka,80100568785,Wrocław,ul. Józefa Chełmońskiego 5/34,48784303015,grazyna.jeruszka@kuba.pl,2014-01-01,,informatyk,58.40000000000026
-6,Jerzy,Galeano,87091073799,Wrocław,ul. Wiosenna 74/50,48529519180,jerzy.galeano@kuba.pl,2016-02-03,2017-07-29,mechanik,58.60000000000019
-7,Tytus,Lekki,86111248414,Wrocław,ul. Łagiewnicka 94/42,48657437391,tytus.lekki@kuba.pl,2016-02-23,,mechanik,53.30000000000012
-8,Rafał,Ignasiak,92111051912,Wrocław,ul. Morelowa 39/11,48179202440,rafal.ignasiak@kuba.pl,2016-03-01,,mechanik,56.10000000000016
-9,Bartosz,Nowak,75120654936,Wrocław,ul. Sąsiedzka 83/4,48730531393,bartosz.nowak@kuba.pl,2016-09-20,,pomocnik mechanika,38.70000000000005
-10,Dominika,Marszałek,79041959860,Wrocław,ul. Truskawkowa 62/44,48773223243,dominika.marszalek@kuba.pl,2016-10-02,,pomocnik mechanika,35.400000000000006
-11,Aleksander,Nowak,70080533251,Wrocław,ul. Kościuszki 97/41,48894697053,aleksander.nowak@kuba.pl,2016-10-30,,diagnosta samochodowy,53.50000000000009
-12,Stanisława,Czarnecka,87121334627,Wrocław,ul. Piaskowa 55/13,48674068722,stanislawa.czarnecka@kuba.pl,2017-06-14,,diagnosta samochodowy,54.300000000000104
-13,Bernadeta,Kuta,60051945602,Wrocław,ul. Szkolna 83,48841533696,bernadeta.kuta@kuba.pl,2017-08-10,,sprzątający,38.00000000000004
-14,Danuta,Nanowska,90112627688,Wrocław,ul. Słonecznikowa 70/1,48814231851,danuta.nanowska@kuba.pl,2017-11-04,,księgowy,44.10000000000006
+1,Jerzy,Hanc,88093092539,Kołobrzeg,ul. Pasierbowa 97/40,48266268161,jerzy.hanc@kuba.pl,2014-01-01,,menadżer,66.6000000000001
+2,Andrei,Wawryszuk,69081403739,Wrocław,ul. Sasankowa 4/30,48266189890,andrei.wawryszuk@kuba.pl,2014-01-01,,sprzedawca,52.60000000000011
+3,Katarzyna,Stawicka,90042338322,Wrocław,ul. Iwana Kryłowa 87,48573857571,katarzyna.stawicka@kuba.pl,2014-01-01,,sprzedawca,53.90000000000013
+4,Leokadia,Stankiewicz,67022261846,Wrocław,ul. Kwatery Głównej 95,48098232142,leokadia.stankiewicz@kuba.pl,2014-01-01,2016-10-11,mechanik,50.10000000000007
+5,Klaudia,Cieślak,92052190880,Ustroń,ul. Krótka 68,48961668484,klaudia.cieslak@kuba.pl,2014-01-01,,informatyk,49.70000000000014
+6,Iwo,Gałka,62100294051,Wrocław,ul. Różana 63/20,48208867940,iwo.galka@kuba.pl,2014-11-11,2016-08-25,sprzedawca,54.400000000000134
+7,Zenon,Augustowski,90040772076,Wrocław,ul. Brzozowa 22,48198720190,zenon.augustowski@kuba.pl,2015-04-23,,sprzedawca,54.500000000000135
+8,Krzysztof,Szymański,84070450215,Wrocław,ul. Kąty 50,48189322832,krzysztof.szymanski@kuba.pl,2015-07-10,,mechanik,47.70000000000004
+9,Julia,Żurawska,76081538509,Wrocław,ul. Azalii 96/31,48452466978,julia.zurawska@kuba.pl,2015-09-10,2016-08-27,mechanik,55.10000000000014
+10,Anna,Levchuk,95071490267,Złotów,ul. Parkowa 26/49,48302415569,anna.levchuk@kuba.pl,2015-12-08,2016-05-04,mechanik,49.600000000000065
+11,Amelia,Rybachenko,76052417549,Wrocław,ul. Kasztanowa 55/23,48684969160,amelia.rybachenko@kuba.pl,2016-01-16,,pomocnik mechanika,36.30000000000002
+12,Paulina,Hetmaniok,95012199763,Wrocław,ul. Podżarze 16/9,48155981885,paulina.hetmaniok@kuba.pl,2016-05-24,,pomocnik mechanika,40.10000000000007
+13,Mateusz,Chabior,80030872653,Wrocław,ul. Jesionowa 18,48444606716,mateusz.chabior@kuba.pl,2016-09-18,,diagnosta samochodowy,49.90000000000004
+14,Filip,Protasiewicz,81062838914,Wrocław,ul. Zaułek 74/23,48364607088,filip.protasiewicz@kuba.pl,2017-06-07,,diagnosta samochodowy,50.40000000000005
+15,Bronisława,Slesiona,92011091966,Wrocław,ul. Jagodowa 60/25,48656496125,bronislawa.slesiona@kuba.pl,2017-07-02,,sprzątający,35.50000000000001
