@@ -3,8 +3,8 @@
     "version": "2.2.13",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -746,
-    "scrollLeft": -70,
+    "scrollTop": -500,
+    "scrollLeft": -303,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
@@ -1014,59 +1014,13 @@
               "widthDataType": 87.71875,
               "widthDefault": 60
             }
-          },
-          {
-            "id": "f075305a-68d4-4163-bdec-9ebd35eeeaf1",
-            "name": "ilość",
-            "comment": "",
-            "dataType": "INT",
-            "default": "0",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            }
-          },
-          {
-            "id": "2f1598e6-981d-46f0-9964-84d6caba01a7",
-            "name": "cena_części",
-            "comment": "",
-            "dataType": "DECIMAL(12,2)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 73.5380859375,
-              "widthComment": 60,
-              "widthDataType": 93.7490234375,
-              "widthDefault": 60
-            }
           }
         ],
         "ui": {
           "active": false,
           "left": 1098.9989,
           "top": 13.5557,
-          "zIndex": 4,
+          "zIndex": 17,
           "widthName": 77.15625,
           "widthComment": 60
         },
@@ -1817,8 +1771,8 @@
           "columnIds": [
             "dedc7225-b6dd-45cf-9de9-5cc3a62db872"
           ],
-          "x": 1212.57067734375,
-          "y": 185.0557,
+          "x": 1316.358275,
+          "y": 144.0557,
           "direction": "bottom"
         },
         "end": {
@@ -1869,18 +1823,18 @@
           "columnIds": [
             "dedc7225-b6dd-45cf-9de9-5cc3a62db872"
           ],
-          "x": 1439.71423203125,
-          "y": 185.0557,
-          "direction": "bottom"
+          "x": 1533.71765,
+          "y": 78.8057,
+          "direction": "right"
         },
         "end": {
           "tableId": "cabe7c34-7a10-4286-81de-59f360661200",
           "columnIds": [
             "1e52eb03-44e9-4cf0-b42b-d5984d4969a0"
           ],
-          "x": 1404.8872,
-          "y": 466.2771,
-          "direction": "left"
+          "x": 1595.26171171875,
+          "y": 390.7771,
+          "direction": "top"
         },
         "constraintName": "fk_części_to_zakup_części",
         "visible": true
