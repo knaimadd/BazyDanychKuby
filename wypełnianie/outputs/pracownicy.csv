@@ -1,17 +1,15 @@
 id,imię,nazwisko,pesel,miasto,adres,telefon,email,data_zatrudnienia,data_zwolnienia,stanowisko,płaca
-1,Ivanna,Serena,79061575125,Wrocław,ul. Krotoszyńska 82/46,48811877327,ivanna.serena@kuba.pl,2014-01-01,,menadżer,73.6000000000002
-2,Katarzyna,Walczak,62051700063,Opalenica,ul. Długa 17/12,48351670663,katarzyna.walczak@kuba.pl,2014-01-01,,sprzedawca,51.8000000000001
-3,Elżbieta,Bukowska,72103094909,Wrocław,ul. Krucza 16,48764754820,elzbieta.bukowska@kuba.pl,2014-01-01,,sprzedawca,58.40000000000019
-4,Marian,Cwojdziński,71120277991,Szubin,ul. Tulipanowa 34/12,48337645253,marian.cwojdzinski@kuba.pl,2014-01-01,,mechanik,53.20000000000012
-5,Gabriela,Lorkowska,72102503242,Wrocław,ul. Prądnicka 91/27,48233128646,gabriela.lorkowska@kuba.pl,2014-01-01,,informatyk,56.30000000000023
-6,Andżelika,Musiał,72012351584,Wrocław,ul. Wałowa 70/40,48678309376,andzelika.musial@kuba.pl,2015-01-13,,sprzedawca,55.10000000000014
-7,Adrian,Zykau,88060707932,Wrocław,ul. Strażacka 11/32,48400604214,adrian.zykau@kuba.pl,2015-04-18,,sprzedawca,48.40000000000005
-8,Lucyna,Szymańska,80092208148,Wrocław,ul. Błękitna 73/24,48006947927,lucyna.szymanska@kuba.pl,2015-12-30,,mechanik,47.10000000000003
-9,Konrad,Piechota,65051306451,Chrzanów,ul. Granitowa 94/38,48439205822,konrad.piechota@kuba.pl,2016-03-27,,mechanik,53.50000000000012
-10,Liudmyla,Krawczyk,88022280105,Wrocław,ul. Łemkowska 93,48424593426,liudmyla.krawczyk@kuba.pl,2016-04-15,2016-12-20,mechanik,52.2000000000001
-11,Patryk,Bójko,82110226433,Kraków,ul. Szkolna 89/50,48535770913,patryk.bojko@kuba.pl,2016-07-22,,mechanik,49.80000000000007
-12,Irena,Kuklińska,70100957681,Starogard Gdański,ul. Leopolda Labora 96/37,48395706042,irena.kuklinska@kuba.pl,2017-01-31,,pomocnik mechanika,44.20000000000013
-13,Yan,Kupczak,83062232910,Wrocław,ul. Podgórna 31,48892949644,yan.kupczak@kuba.pl,2017-03-15,,diagnosta samochodowy,49.60000000000004
-14,Paweł,Kolczyński,85061784856,Wrocław,ul. Wspólna 59/18,48462450507,pawel.kolczynski@kuba.pl,2017-03-30,,sprzątający,39.90000000000007
-15,Iwona,Spyra,71100484023,Wrocław,ul. Bolesława Prusa 3/40,48907472697,iwona.spyra@kuba.pl,2017-04-02,,sprzątający,35.2
-16,Tatiana,Wieczorek,68012726284,Wrocław,ul. Xawerego Dunikowskiego 34/10,48743063329,tatiana.wieczorek@kuba.pl,2017-11-10,,informatyk,44.40000000000006
+1,Mirosław,Kaźmierkiewicz,62053019019,Wrocław,ul. Wiosenna 95/8,48011819213,miroslaw.kazmierkiewicz@kuba.pl,2014-01-01,,menadżer,72.70000000000019
+2,Văn Tân,Musiałowski,60101120917,Wrocław,ul. Kościuszki 85/50,48254632945,van tan.musialowski@kuba.pl,2014-01-01,,sprzedawca,45.2
+3,Łukasz,Wrażeń,73030785616,Lębork,ul. Ignacego Daszyńskiego 7,48947065097,lukasz.wrazen@kuba.pl,2014-01-01,,sprzedawca,46.40000000000002
+4,Marek,Kędzierski,75101487610,Radom,ul. Wspólna 37/15,48318840125,marek.kedzierski@kuba.pl,2014-01-01,,mechanik,56.20000000000016
+5,Grażyna,Jeruszka,80100568785,Wrocław,ul. Józefa Chełmońskiego 5/34,48784303015,grazyna.jeruszka@kuba.pl,2014-01-01,,informatyk,58.40000000000026
+6,Jerzy,Galeano,87091073799,Wrocław,ul. Wiosenna 74/50,48529519180,jerzy.galeano@kuba.pl,2016-02-03,2017-07-29,mechanik,58.60000000000019
+7,Tytus,Lekki,86111248414,Wrocław,ul. Łagiewnicka 94/42,48657437391,tytus.lekki@kuba.pl,2016-02-23,,mechanik,53.30000000000012
+8,Rafał,Ignasiak,92111051912,Wrocław,ul. Morelowa 39/11,48179202440,rafal.ignasiak@kuba.pl,2016-03-01,,mechanik,56.10000000000016
+9,Bartosz,Nowak,75120654936,Wrocław,ul. Sąsiedzka 83/4,48730531393,bartosz.nowak@kuba.pl,2016-09-20,,pomocnik mechanika,38.70000000000005
+10,Dominika,Marszałek,79041959860,Wrocław,ul. Truskawkowa 62/44,48773223243,dominika.marszalek@kuba.pl,2016-10-02,,pomocnik mechanika,35.400000000000006
+11,Aleksander,Nowak,70080533251,Wrocław,ul. Kościuszki 97/41,48894697053,aleksander.nowak@kuba.pl,2016-10-30,,diagnosta samochodowy,53.50000000000009
+12,Stanisława,Czarnecka,87121334627,Wrocław,ul. Piaskowa 55/13,48674068722,stanislawa.czarnecka@kuba.pl,2017-06-14,,diagnosta samochodowy,54.300000000000104
+13,Bernadeta,Kuta,60051945602,Wrocław,ul. Szkolna 83,48841533696,bernadeta.kuta@kuba.pl,2017-08-10,,sprzątający,38.00000000000004
+14,Danuta,Nanowska,90112627688,Wrocław,ul. Słonecznikowa 70/1,48814231851,danuta.nanowska@kuba.pl,2017-11-04,,księgowy,44.10000000000006
