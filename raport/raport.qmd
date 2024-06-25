@@ -1,6 +1,6 @@
 ---
 title: "Pimp My Ride"
-format: html
+format: pdf
 editor: visual
 ---
 
@@ -11,8 +11,15 @@ library("RMariaDB")
 You can add options to executable code like this
 
 ```{r}
-#| echo: false
-2 * 2
+con <- dbConnect(RMariaDB::MariaDB(),
+                 dbname = "team07",
+                 username = "team07",
+                 password = "te@m24ot",
+                 host = "giniewicz.it")
+query <- "SELECT * FROM klienci"
+
+df <- dbGetQuery(con, query)
+head(df)
 ```
 
 The `echo: false` option disables the printing of code (only output is displayed).
