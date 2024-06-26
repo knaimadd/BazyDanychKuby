@@ -1,16 +1,15 @@
-id,imię,nazwisko,pesel,miasto,adres,telefon,email,data_zatrudnienia,data_zwolnienia,stanowisko,płaca
-1,Jacek,Lewandowski,74040603857,Wrocław,ul. Kwiatowa 49/41,48067696842,jacek.lewandowski@kuba.pl,2014-01-01,,menadżer,66.00000000000009
-2,Anna,Michalska,93070866948,Wąbrzeźno,ul. Kwiatowa 82,48061212194,anna.michalska@kuba.pl,2014-01-01,,sprzedawca,51.20000000000009
-3,Anna,Wójciak,94030190907,Wrocław,ul. Światopełka 35/23,48467985886,anna.wojciak@kuba.pl,2014-01-01,,sprzedawca,49.80000000000007
-4,Andrzej,Koryakin,84011306052,Wołczyn,ul. Brzozowa 24/26,48441075006,andrzej.koryakin@kuba.pl,2014-01-01,2017-06-21,mechanik,57.60000000000018
-5,Jan,Mikalaichyk,70010107794,Gdynia,ul. Oleśnickich 96,48235515352,jan.mikalaichyk@kuba.pl,2014-01-01,,informatyk,46.000000000000085
-6,Alexandra,Kołek,71100577822,Wrocław,ul. Słoneczna 36/47,48405863327,alexandra.kolek@kuba.pl,2014-08-09,,mechanik,52.70000000000011
-7,Nataniel,Ostrowski,79070493254,Wrocław,ul. Lotnicza 81/1,48465662238,nataniel.ostrowski@kuba.pl,2015-02-14,2015-07-02,mechanik,46.20000000000002
-8,Mark,Cieśliński,91020187251,Wrocław,ul. Przechodnia 8,48825512454,mark.cieslinski@kuba.pl,2015-04-26,,mechanik,50.70000000000008
-9,Oliwia,Piotrkowska,95111464603,Wrocław,ul. Z. Wł. Wyszyńskich 56,48885753569,oliwia.piotrkowska@kuba.pl,2015-09-12,,mechanik,56.20000000000016
-10,Anna,Sieńko,61060555040,Wrocław,ul. Stanisława Moniuszki 90/1,48522881115,anna.sienko@kuba.pl,2015-12-31,,pomocnik mechanika,43.50000000000012
-11,Jadwiga,Onipko,94122803360,Wrocław,ul. Miodowa 30,48183886281,jadwiga.onipko@kuba.pl,2016-08-02,,pomocnik mechanika,37.10000000000003
-12,Elżbieta,Bryk,60062375043,Wrocław,ul. Spacerowa 96/37,48926795423,elzbieta.bryk@kuba.pl,2016-08-26,,diagnosta samochodowy,54.300000000000104
-13,Jacek,Alshammari,81031163436,Wrocław,ul. Bednarska 75/44,48389753195,jacek.alshammari@kuba.pl,2016-12-29,2017-05-14,sprzątający,35.50000000000001
-14,Maciej,Sząszor,85082532153,Elbląg,ul. Zygmunta Chmielewskiego 58/16,48383771133,maciej.szaszor@kuba.pl,2017-03-11,,sprzątający,39.10000000000006
-15,Wojciech,Ludwiczak,65010605571,Wrocław,ul. Wiosenna 69,48899128910,wojciech.ludwiczak@kuba.pl,2017-08-24,,informatyk,56.90000000000024
+id,imię,nazwisko,PESEL,miasto,adres,telefon,email,data_zatrudnienia,data_zwolnienia,stanowisko,płaca
+1,Ewelina,Czarnowska,76052471848,Poznań,ul. Wapienna 94/9,48488382693,ewelina.czarnowska@kuba.pl,2014-01-01,,menadżer,64.30000000000007
+2,Janusz,Grygorowicz,83010511713,Wrocław,ul. Świerkowa 80/16,48461290165,janusz.grygorowicz@kuba.pl,2014-01-01,,sprzedawca,45.90000000000001
+3,Paulina,Zygmuntowicz,60012154948,Międzyrzecz,ul. Awaryjna 86/44,48952391475,paulina.zygmuntowicz@kuba.pl,2014-01-01,2015-05-31,sprzedawca,56.30000000000016
+4,Justyna,Winiarska,62040740065,Wrocław,ul. Żegiestowska 1/2,48050219288,justyna.winiarska@kuba.pl,2014-01-01,,mechanik,55.40000000000015
+5,Urszula,Kiedrowicz,88091426181,Opole,ul. Stefana Batorego 69/19,48494955528,urszula.kiedrowicz@kuba.pl,2014-01-01,,informatyk,46.50000000000009
+6,Marlena,Szustakiewicz,68032329441,Wrocław,ul. Ogrodowa 59,48397033321,marlena.szustakiewicz@kuba.pl,2014-09-09,,sprzedawca,53.000000000000114
+7,Urszula,Kosalewicz,88021233920,Wrocław,ul. Kościuszki 49,48429164546,urszula.kosalewicz@kuba.pl,2015-07-29,,mechanik,53.100000000000115
+8,Justyna,Miller,94100604985,Prudnik,ul. Mostowa 26,48258199186,justyna.miller@kuba.pl,2015-11-19,,mechanik,48.900000000000055
+9,Krystian,Ekiert,72123075739,Wrocław,ul. Okrężna 82/39,48954231107,krystian.ekiert@kuba.pl,2016-02-17,,pomocnik mechanika,35.300000000000004
+10,Jacek,Kuczer,86092064256,Wrocław,ul. ks. Ignacego Skorupki 63/23,48256549226,jacek.kuczer@kuba.pl,2016-05-02,,pomocnik mechanika,38.30000000000005
+11,Magdalena,Langen,67072842886,Wrocław,ul. Lipowa 43/48,48572347309,magdalena.langen@kuba.pl,2016-08-28,,diagnosta samochodowy,58.50000000000016
+12,Maria,Khomiakova,77032521524,Wrocław,ul. Miodowa 83/44,48015288561,maria.khomiakova@kuba.pl,2016-11-03,,diagnosta samochodowy,59.80000000000018
+13,Barbara,Lisowska,64011339483,Stalowa Wola,ul. Graniczna 52/46,48769150292,barbara.lisowska@kuba.pl,2017-09-19,,sprzątający,36.60000000000002
+14,Maciej,Płóciennik,87050599410,Wrocław,ul. Zielona 31/22,48931765576,maciej.plociennik@kuba.pl,2017-12-14,,informatyk,57.60000000000025
