@@ -67,45 +67,85 @@
 
 
 
-\section{Liczba naprawianych pojazdów w każdym miesiącu pracy warsztatu}
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-2-1} 
-\end{knitrout}
-
 Można powiedzieć, że to fajny raport :)).
 Cyfry: 1, 2, 3.
 
+\section{Liczba naprawianych pojazdów w każdym miesiącu pracy warsztatu}
+
+{\color{red}[jakiś wstęp do tego]}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[h]
+\includegraphics[width=\maxwidth]{figure/fig_naprawy_miesiecznie-1} \caption[Wykres liczba naprawianych pojazdów w każdym miesiącu pracy warsztatu]{Wykres liczba naprawianych pojazdów w każdym miesiącu pracy warsztatu}\label{fig:fig_naprawy_miesiecznie}
+\end{figure}
+
+\end{knitrout}
+
+Wykres \ref{fig:fig_naprawy_miesiecznie} przedstawia liczbę naprawionych pojazdów w każdym miesiącu pracy warsztatu. Najwięcej pojazdów zostało naprawionych w miesiącach: 
+listopad 2016,
+a było ich 18. Natomiast najmniej przeprowadzonych napraw było w miesiącach:
+styczeń 2014, lipiec 2017,
+było ich 4. Średnia liczba napraw miesięcznie wynosi 
+10.125. 
+
 \section{Profil klienta}
 
+W następnej koljeności zostaną przeanalizawani klienci warsztatu. Zostaną sprawdzone liczności klientów ze względu na różne ich cechy. {\color{red}[Czy warto pisać, że może nam to pomóc stwierdzić, do jakich klientów moglibyśmy spróbować jeszcze dotrzeć.]}
+
 \subsection{Płeć}
+
+Pierwszą cechą jaka zostanie wzięta pod uwagę jest płeć klienta.
+
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-3-1} 
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
+\includegraphics[width=\maxwidth]{figure/fig_plec-1} \caption[Wykres liczby klientów przy podziale ze względu na płeć]{Wykres liczby klientów przy podziale ze względu na płeć}\label{fig:fig_plec}
+\end{figure}
+
 \end{knitrout}
+
+Na wykresie słupkowym \ref{fig:fig_plec} są zaprezentowane liczności klientów przy podziale ze względu na płeć. Więcej klientów warsztatu należy do grupy kobiet. Grupa kobiet jest około 1.024
+razy większa od grupy mężczyzn, a zatem różnica jest niewielka.
 
 \subsection{Wiek}
 
+Zostanie również przeanalizowany rozkład wieku klientów warsztatu.
+
+
+
+
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-5-1} 
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
+\includegraphics[width=\maxwidth]{figure/fig_wiek-1} \caption[Wykres pudełkowy wieku klientów]{Wykres pudełkowy wieku klientów}\label{fig:fig_wiek}
+\end{figure}
+
 \end{knitrout}
 
-[tabelka miar]
+Rysunek \ref{fig:fig_wiek} przedstawia wykres pudełkowy wieku klientów warsztatu. Widać, że mediana wynosi [mediana], natomiast pierwszy kwartyl wynosi {\color{red}[Q1]}, trzeci kwartyl natomiast {\color{red}[Q3]}. {\color{red}[Mogłabym coś napisać, który jest bardziej oddalony od mediany]}. Najmłodszy klient warsztatu ma {\color{red}[najmniejszy wiek]}, natomiast najstarszy klient ma {\color{red}[najwyższy wiek]}.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|} \hline
+średnia & odchylenie standardowe \\ \hline
+45.15 & 10.9 \\ \hline
+\end{tabular}
+\caption{Tabela z ...}
+\label{tab_wiek}
+\end{table}
+
+Kilka miar, których nie da się odczytać z wykresu, zostało przedstawionych w tabli \ref{tab_wiek}. Można zatem odczytać, że średnio klieci mają 45.15, a odchylenie standardowe wieku wynoski 10.9. {\color{red}[Zdanie że średnia jest mniejsza/podobna/większa a zatem jakaś skośność, co potwierdza współczynnik skośności]}
 
 \subsection{Miasto}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{verbatim}
-##     miasto liczność
-## 1  Wrocław      736
-## 2     Łódź       25
-## 3 Warszawa       22
-## 4 Szczecin       18
-## 5   Kraków       18
-## 6   Poznań       17
+##      miasto liczność
+## 1   Wrocław      719
+## 2      Łódź       27
+## 3    Poznań       23
+## 4    Kraków       20
+## 5     Opole       19
+## 6 Bydgoszcz       17
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -115,8 +155,13 @@ Cyfry: 1, 2, 3.
 \subsection{Karta lojalnościowa}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-7-1} 
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-5-1} 
 \end{knitrout}
+
+\section{Jak różne cechy pojazdów wpływają na ich sprzedaż / nasz zarobek?}
+
+[tabelka z miarami ???]
+
 
 
 

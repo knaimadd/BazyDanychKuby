@@ -29,9 +29,14 @@ con <- dbConnect(RMariaDB::MariaDB(),
                  host = "giniewicz.it")
 @
 
+Można powiedzieć, że to \Sexpr{"fajny raport :))"}.
+Cyfry: \Sexpr{c(1, 2, 3)}.
+
 \section{Liczba naprawianych pojazdów w każdym miesiącu pracy warsztatu}
 
-<<warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=9>>=
+{\color{red}[jakiś wstęp do tego]}
+
+<<fig_naprawy_miesiecznie,warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=9,fig.pos="h", fig.cap="Wykres liczba naprawianych pojazdów w każdym miesiącu pracy warsztatu">>=
 query <- "SELECT CONCAT(DATE_FORMAT(data_zaksięgowania, '%Y-%m'), '-01') AS data, COUNT(id) AS liczność FROM usługi GROUP BY YEAR(data_zaksięgowania), MONTH(data_zaksięgowania);"
 
 naprawiane_pojazdy <- dbGetQuery(con, query)
@@ -47,22 +52,44 @@ naprawiane_pojazdy |> ggplot(aes(x=data, y=liczność, , fill=format(data, "%m")
   scale_fill_manual(name="Miesiąc",labels=unique(format(naprawiane_pojazdy$data, "%B")), values=hue_pal()(12))
 @
 
-Można powiedzieć, że to \Sexpr{"fajny raport :))"}.
-Cyfry: \Sexpr{c(1, 2, 3)}.
+Wykres \ref{fig:fig_naprawy_miesiecznie} przedstawia liczbę naprawionych pojazdów w każdym miesiącu pracy warsztatu. Najwięcej pojazdów zostało naprawionych w miesiącach: 
+\Sexpr{format(naprawiane_pojazdy$data[naprawiane_pojazdy$liczność == max(naprawiane_pojazdy$liczność)], "%B %Y")},
+a było ich \Sexpr{max(naprawiane_pojazdy$liczność)}. Natomiast najmniej przeprowadzonych napraw było w miesiącach:
+\Sexpr{format(naprawiane_pojazdy$data[naprawiane_pojazdy$liczność == min(naprawiane_pojazdy$liczność)], "%B %Y")},
+było ich \Sexpr{min(naprawiane_pojazdy$liczność)}. Średnia liczba napraw miesięcznie wynosi 
+\Sexpr{round(mean(naprawiane_pojazdy$liczność), 3)}. 
 
 \section{Profil klienta}
 
+W następnej koljeności zostaną przeanalizawani klienci warsztatu. Zostaną sprawdzone liczności klientów ze względu na różne ich cechy. {\color{red}[Czy warto pisać, że może nam to pomóc stwierdzić, do jakich klientów moglibyśmy spróbować jeszcze dotrzeć.]}
+
 \subsection{Płeć}
-<<warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=5>>=
+
+Pierwszą cechą jaka zostanie wzięta pod uwagę jest płeć klienta.
+
+<<fig_plec, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=5, fig.cap="Wykres liczby klientów przy podziale ze względu na płeć">>=
 query <- "SELECT płeć, COUNT(id) AS liczność FROM klienci GROUP BY płeć;"
 
 płeć_count <- dbGetQuery(con, query)
 płeć_count[, 2] <- as.numeric(płeć_count[, 2])
 
 płeć_count |> ggplot(aes(x=płeć, y=liczność, fill=płeć)) + geom_bar(stat = "identity")
+
+więcej <- płeć_count$płeć[płeć_count$licznoś == max(płeć_count$liczność)]
+więcej <- if_else(więcej == "K", "kobiet", "mężczyzn")
+mniej <- if_else(więcej == "kobiet", "mężczyzn", "kobiet")
+iloraz <- max(płeć_count$liczność) / min(płeć_count$liczność)
+wniosek <- if_else(iloraz <= 1.15, "niewielka", 
+                   if_else(iloraz <= 2, "średniej wielkości", "duża"))
 @
 
+Na wykresie słupkowym \ref{fig:fig_plec} są zaprezentowane liczności klientów przy podziale ze względu na płeć. Więcej klientów warsztatu należy do grupy \Sexpr{więcej}. Grupa \Sexpr{więcej} jest około \Sexpr{round(iloraz, 3)}
+razy większa od grupy \Sexpr{mniej}, a zatem różnica jest \Sexpr{wniosek}.
+
 \subsection{Wiek}
+
+Zostanie również przeanalizowany rozkład wieku klientów warsztatu.
+
 <<warning=FALSE,message=FALSE,echo=FALSE>>=
 age_from_pesel <- function(pesel) {
   y <- as.numeric(substr(pesel, 1, 2))
@@ -87,11 +114,25 @@ wiek_df <- dbGetQuery(con, query)
 
 wiek_df <- data.frame(age_from_pesel(wiek_df$pesel))
 colnames(wiek_df) <- c("wiek")
+@
 
+<<fig_wiek, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=4, fig.cap="Wykres pudełkowy wieku klientów">>=
 wiek_df |> ggplot(aes(y=wiek)) + geom_boxplot()
 @
 
-[tabelka miar]
+Rysunek \ref{fig:fig_wiek} przedstawia wykres pudełkowy wieku klientów warsztatu. Widać, że mediana wynosi [mediana], natomiast pierwszy kwartyl wynosi {\color{red}[Q1]}, trzeci kwartyl natomiast {\color{red}[Q3]}. {\color{red}[Mogłabym coś napisać, który jest bardziej oddalony od mediany]}. Najmłodszy klient warsztatu ma {\color{red}[najmniejszy wiek]}, natomiast najstarszy klient ma {\color{red}[najwyższy wiek]}.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|} \hline
+średnia & odchylenie standardowe \\ \hline
+\Sexpr{round(mean(wiek_df$wiek), 2)} & \Sexpr{round(sd(wiek_df$wiek), 2)} \\ \hline
+\end{tabular}
+\caption{Tabela z ...}
+\label{tab_wiek}
+\end{table}
+
+Kilka miar, których nie da się odczytać z wykresu, zostało przedstawionych w tabli \ref{tab_wiek}. Można zatem odczytać, że średnio klieci mają \Sexpr{round(mean(wiek_df$wiek), 2)}, a odchylenie standardowe wieku wynoski \Sexpr{round(sd(wiek_df$wiek), 2)}. {\color{red}[Zdanie że średnia jest mniejsza/podobna/większa a zatem jakaś skośność, co potwierdza współczynnik skośności]}
 
 \subsection{Miasto}
 <<warning=FALSE,message=FALSE,echo=FALSE>>=
@@ -116,9 +157,22 @@ karta_lojalnościowa_count |> ggplot(aes(x=karta_lojalnościowa, y=liczność, f
   geom_bar(stat = "identity")
 @
 
+\section{Jak różne cechy pojazdów wpływają na ich sprzedaż / nasz zarobek?}
+
+[tabelka z miarami ???]
+
+<<warning=FALSE,message=FALSE,echo=FALSE>>=
+#query <- "SELECT rok_produkcji, sprzedaż_samochodu.cena - zakup_samochodu.cena AS zysk, liczba_drzwi FROM sprzedaż_samochodu LEFT JOIN samochody ON sprzedaż_samochodu.id_samochodu = samochody.id LEFT JOIN zakup_samochodu ON sprzedaż_samochodu.id_samochodu = zakup_samochodu.id_samochodu;"
+
+#query <- "SELECT zakup_samochodu.cena AS cena_zakupu, sprzedaż_samochodu.cena AS cena_sprzedaży, liczba_drzwi FROM sprzedaż_samochodu LEFT JOIN samochody ON sprzedaż_samochodu.id_samochodu = samochody.id LEFT JOIN zakup_samochodu ON sprzedaż_samochodu.id_samochodu = zakup_samochodu.id_samochodu;"
+
+#pojazdy_df <- dbGetQuery(con, query)
+
+#pojazdy_df |> ggplot(aes(x=cena_zakupu*0.1^5, y=cena_sprzedaży*0.1^5, color=liczba_drzwi)) + geom_point()
+@
+
 <<warning=FALSE,message=FALSE,echo=FALSE>>=
 dbDisconnect(con)
 @
-
 
 \end{document}
