@@ -67,26 +67,28 @@
 
 
 
-Można powiedzieć, że to fajny raport :)).
-Cyfry: 1, 2, 3.
-
 \section{Liczba naprawianych pojazdów w każdym miesiącu pracy warsztatu}
 
 {\color{red}[jakiś wstęp do tego]}
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[h]
-\includegraphics[width=\maxwidth]{figure/fig_naprawy_miesiecznie-1} \caption[Wykres liczba naprawianych pojazdów w każdym miesiącu pracy warsztatu]{Wykres liczba naprawianych pojazdów w każdym miesiącu pracy warsztatu}\label{fig:fig_naprawy_miesiecznie}
+
+{\centering \includegraphics[width=\maxwidth]{figure/fig_naprawy_miesiecznie-1} 
+
+}
+
+\caption[Wykres liczba naprawianych pojazdów w każdym miesiącu pracy warsztatu]{Wykres liczba naprawianych pojazdów w każdym miesiącu pracy warsztatu}\label{fig:fig_naprawy_miesiecznie}
 \end{figure}
 
 \end{knitrout}
 
 Wykres \ref{fig:fig_naprawy_miesiecznie} przedstawia liczbę naprawionych pojazdów w każdym miesiącu pracy warsztatu. Najwięcej pojazdów zostało naprawionych w miesiącach: 
-listopad 2016,
+maj 2017,
 a było ich 18. Natomiast najmniej przeprowadzonych napraw było w miesiącach:
-styczeń 2014, lipiec 2017,
-było ich 4. Średnia liczba napraw miesięcznie wynosi 
-10.125. 
+styczeń 2014,
+było ich 2. Średnia liczba napraw miesięcznie wynosi 
+9.188. 
 
 \section{Profil klienta}
 
@@ -98,13 +100,18 @@ Pierwszą cechą jaka zostanie wzięta pod uwagę jest płeć klienta.
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
-\includegraphics[width=\maxwidth]{figure/fig_plec-1} \caption[Wykres liczby klientów przy podziale ze względu na płeć]{Wykres liczby klientów przy podziale ze względu na płeć}\label{fig:fig_plec}
+
+{\centering \includegraphics[width=\maxwidth]{figure/fig_plec-1} 
+
+}
+
+\caption[Wykres liczby klientów przy podziale ze względu na płeć]{Wykres liczby klientów przy podziale ze względu na płeć}\label{fig:fig_plec}
 \end{figure}
 
 \end{knitrout}
 
-Na wykresie słupkowym \ref{fig:fig_plec} są zaprezentowane liczności klientów przy podziale ze względu na płeć. Więcej klientów warsztatu należy do grupy kobiet. Grupa kobiet jest około 1.024
-razy większa od grupy mężczyzn, a zatem różnica jest niewielka.
+Na wykresie słupkowym \ref{fig:fig_plec} są zaprezentowane liczności klientów przy podziale ze względu na płeć. Więcej klientów warsztatu należy do grupy kobiet. Grupa kobiet jest około 1.102
+razy większa od grupy mężczyzn, a zatem różnica jest nie duża.
 
 \subsection{Wiek}
 
@@ -116,7 +123,12 @@ Zostanie również przeanalizowany rozkład wieku klientów warsztatu.
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
-\includegraphics[width=\maxwidth]{figure/fig_wiek-1} \caption[Wykres pudełkowy wieku klientów]{Wykres pudełkowy wieku klientów}\label{fig:fig_wiek}
+
+{\centering \includegraphics[width=\maxwidth]{figure/fig_wiek-1} 
+
+}
+
+\caption[Wykres pudełkowy wieku klientów]{Wykres pudełkowy wieku klientów}\label{fig:fig_wiek}
 \end{figure}
 
 \end{knitrout}
@@ -125,27 +137,30 @@ Rysunek \ref{fig:fig_wiek} przedstawia wykres pudełkowy wieku klientów warszta
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|c|c|} \hline
-średnia & odchylenie standardowe \\ \hline
-45.15 & 10.9 \\ \hline
+\begin{tabular}{c|c} \hline
+Miara & Wartość \\ \hline
+Średnia & 45.17 \\ 
+Odchylenie standardowe & 10.73 \\
+Skośność & 0.02  \\ 
+Kurtoza & 1.86 \\ \hline
 \end{tabular}
-\caption{Tabela z ...}
+\caption{Wybrane miary wieku klientów}
 \label{tab_wiek}
 \end{table}
 
-Kilka miar, których nie da się odczytać z wykresu, zostało przedstawionych w tabli \ref{tab_wiek}. Można zatem odczytać, że średnio klieci mają 45.15, a odchylenie standardowe wieku wynoski 10.9. {\color{red}[Zdanie że średnia jest mniejsza/podobna/większa a zatem jakaś skośność, co potwierdza współczynnik skośności]}
+Kilka miar, których nie da się odczytać z wykresu, zostało przedstawionych w tabli \ref{tab_wiek}. Można zatem odczytać, że średnio klieci mają 45.17, a odchylenie standardowe wieku wynoski 10.73. {\color{red}[Zdanie że średnia jest mniejsza/podobna/większa a zatem jakaś skośność, co potwierdza współczynnik skośności]}
 
 \subsection{Miasto}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{verbatim}
-##      miasto liczność
-## 1   Wrocław      719
-## 2      Łódź       27
-## 3    Poznań       23
-## 4    Kraków       20
-## 5     Opole       19
-## 6 Bydgoszcz       17
+##         miasto liczność
+## 1      Wrocław      708
+## 2    Bydgoszcz       22
+## 3         Łódź       20
+## 4 Zielona Góra       16
+## 5       Poznań       16
+## 6        Opole       16
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -154,14 +169,86 @@ Kilka miar, których nie da się odczytać z wykresu, zostało przedstawionych w
 
 \subsection{Karta lojalnościowa}
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-\includegraphics[width=\maxwidth]{figure/unnamed-chunk-5-1} 
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
+
+{\centering \includegraphics[width=\maxwidth]{figure/fig_karta-1} 
+
+}
+
+\caption[Wykres liczby klientów ze względu na posiadanie karty lojalnościowej]{Wykres liczby klientów ze względu na posiadanie karty lojalnościowej}\label{fig:fig_karta}
+\end{figure}
+
 \end{knitrout}
 
-\section{Jak różne cechy pojazdów wpływają na ich sprzedaż / nasz zarobek?}
+\section{Tabela najlepszych okazji}
+
+
+
+
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+##     id_samochodu         marka    model   zysk
+## 636          742 Mercedes-Benz E 63 AMG 126558
+## 497          592       Porsche Panamera  99182
+## 175          221 Mercedes-Benz    E 300  98044
+## 805          779        Jaguar      XKR  87200
+## 881          969       Porsche Panamera  82355
+## 716          817          Audi      RS3  76412
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+\section{Jak wybrane cechy pojazdów wpływają na zysk warsztatu? (zastanowić się nad tytułem !!!)}
+
+\subsection{Rodzaj pojazdu}
+
+{\color{red}[Skupimy się, czy to samochód czy motocykl]}
 
 [tabelka z miarami ???]
 
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
+
+{\centering \includegraphics[width=\maxwidth]{figure/fig_typ-1} 
+
+}
+
+\caption[Wykresy pudełkowe zysku ze względu na rodzaj pojazdu]{Wykresy pudełkowe zysku ze względu na rodzaj pojazdu}\label{fig:fig_typ}
+\end{figure}
+
+\end{knitrout}
+
+\subsection{Czy powypadkowy}
+
+[tabelka z miarami ???]
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
+
+{\centering \includegraphics[width=\maxwidth]{figure/fig_wypadkowy-1} 
+
+}
+
+\caption[Wykresy pudełkowe zysku ze względu na to czy pojazd jest powypadkowy]{Wykresy pudełkowe zysku ze względu na to czy pojazd jest powypadkowy}\label{fig:fig_wypadkowy}
+\end{figure}
+
+\end{knitrout}
+
+\subsection{skrzynia biegów / pojemność silnika}
+
+[tabelka z miarami ???]
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=\maxwidth]{figure/unnamed-chunk-8-1} 
+
+}
+
+
+\end{knitrout}
 
 
 

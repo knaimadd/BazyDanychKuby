@@ -21,6 +21,9 @@ library(tidyverse)
 library(ggplot2)
 library(eeptools)
 library(scales)
+library(moments) # dla skośności i kurtozy
+pdf.options(encoding='ISOLatin2')
+opts_chunk$set(fig.align='center')
 
 con <- dbConnect(RMariaDB::MariaDB(),
                  dbname = "team07",
@@ -28,9 +31,6 @@ con <- dbConnect(RMariaDB::MariaDB(),
                  password = "te@m24ot",
                  host = "giniewicz.it")
 @
-
-Można powiedzieć, że to \Sexpr{"fajny raport :))"}.
-Cyfry: \Sexpr{c(1, 2, 3)}.
 
 \section{Liczba naprawianych pojazdów w każdym miesiącu pracy warsztatu}
 
@@ -67,19 +67,20 @@ W następnej koljeności zostaną przeanalizawani klienci warsztatu. Zostaną sp
 
 Pierwszą cechą jaka zostanie wzięta pod uwagę jest płeć klienta.
 
-<<fig_plec, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=5, fig.cap="Wykres liczby klientów przy podziale ze względu na płeć">>=
-query <- "SELECT płeć, COUNT(id) AS liczność FROM klienci GROUP BY płeć;"
+<<fig_plec, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=4, fig.cap="Wykres liczby klientów przy podziale ze względu na płeć">>=
+query <- "SELECT płeć, COUNT(id) AS liczność FROM klienci WHERE id > 0 GROUP BY płeć;"
 
 płeć_count <- dbGetQuery(con, query)
 płeć_count[, 2] <- as.numeric(płeć_count[, 2])
+płeć_count <- płeć_count |> mutate(płeć = if_else(płeć=="K", "Kobieta", "Mężczyzna"))
 
-płeć_count |> ggplot(aes(x=płeć, y=liczność, fill=płeć)) + geom_bar(stat = "identity")
+płeć_count |> ggplot(aes(x=płeć, y=liczność, fill=płeć)) + geom_bar(stat = "identity") + guides(fill="none")
 
 więcej <- płeć_count$płeć[płeć_count$licznoś == max(płeć_count$liczność)]
-więcej <- if_else(więcej == "K", "kobiet", "mężczyzn")
+więcej <- if_else(więcej == "Kobieta", "kobiet", "mężczyzn")
 mniej <- if_else(więcej == "kobiet", "mężczyzn", "kobiet")
 iloraz <- max(płeć_count$liczność) / min(płeć_count$liczność)
-wniosek <- if_else(iloraz <= 1.15, "niewielka", 
+wniosek <- if_else(iloraz <= 1.15, "nie duża", 
                    if_else(iloraz <= 2, "średniej wielkości", "duża"))
 @
 
@@ -108,7 +109,7 @@ age_from_pesel <- function(pesel) {
 @
 
 <<warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=4>>=
-query <- "SELECT pesel FROM klienci;"
+query <- "SELECT pesel FROM klienci WHERE id > 0;"
 
 wiek_df <- dbGetQuery(con, query)
 
@@ -116,19 +117,22 @@ wiek_df <- data.frame(age_from_pesel(wiek_df$pesel))
 colnames(wiek_df) <- c("wiek")
 @
 
-<<fig_wiek, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=4, fig.cap="Wykres pudełkowy wieku klientów">>=
-wiek_df |> ggplot(aes(y=wiek)) + geom_boxplot()
+<<fig_wiek, warning=FALSE,message=FALSE,echo=FALSE,fig.height=3,fig.width=5, fig.cap="Wykres pudełkowy wieku klientów">>=
+wiek_df |> ggplot(aes(x=wiek)) + geom_boxplot()
 @
 
 Rysunek \ref{fig:fig_wiek} przedstawia wykres pudełkowy wieku klientów warsztatu. Widać, że mediana wynosi [mediana], natomiast pierwszy kwartyl wynosi {\color{red}[Q1]}, trzeci kwartyl natomiast {\color{red}[Q3]}. {\color{red}[Mogłabym coś napisać, który jest bardziej oddalony od mediany]}. Najmłodszy klient warsztatu ma {\color{red}[najmniejszy wiek]}, natomiast najstarszy klient ma {\color{red}[najwyższy wiek]}.
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|c|c|} \hline
-średnia & odchylenie standardowe \\ \hline
-\Sexpr{round(mean(wiek_df$wiek), 2)} & \Sexpr{round(sd(wiek_df$wiek), 2)} \\ \hline
+\begin{tabular}{c|c} \hline
+Miara & Wartość \\ \hline
+Średnia & \Sexpr{round(mean(wiek_df$wiek), 2)} \\ 
+Odchylenie standardowe & \Sexpr{round(sd(wiek_df$wiek), 2)} \\
+Skośność & \Sexpr{round(skewness(wiek_df$wiek), 2)}  \\ 
+Kurtoza & \Sexpr{round(kurtosis(wiek_df$wiek), 2)} \\ \hline
 \end{tabular}
-\caption{Tabela z ...}
+\caption{Wybrane miary wieku klientów}
 \label{tab_wiek}
 \end{table}
 
@@ -136,7 +140,7 @@ Kilka miar, których nie da się odczytać z wykresu, zostało przedstawionych w
 
 \subsection{Miasto}
 <<warning=FALSE,message=FALSE,echo=FALSE>>=
-query <- "SELECT miasto, COUNT(id) AS liczność FROM klienci GROUP BY miasto ORDER BY liczność DESC;"
+query <- "SELECT miasto, COUNT(id) AS liczność FROM klienci WHERE id > 0 GROUP BY miasto ORDER BY liczność DESC;"
 
 miasto_count <- dbGetQuery(con, query)
 miasto_count[, 2] <- as.numeric(miasto_count[, 2])
@@ -147,29 +151,73 @@ head(miasto_count)
 [opis tabelki]
 
 \subsection{Karta lojalnościowa}
-<<warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=6>>=
-query <- "SELECT karta_lojalnościowa, COUNT(id) AS liczność FROM klienci GROUP BY karta_lojalnościowa;"
+<<fig_karta, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=4, fig.cap="Wykres liczby klientów ze względu na posiadanie karty lojalnościowej">>=
+query <- "SELECT karta_lojalnościowa, COUNT(id) AS liczność FROM klienci WHERE id > 0 GROUP BY karta_lojalnościowa;"
 
 karta_lojalnościowa_count <- dbGetQuery(con, query)
 karta_lojalnościowa_count[, 2] <- as.numeric(karta_lojalnościowa_count[, 2])
 
+karta_lojalnościowa_count <- karta_lojalnościowa_count |> 
+  mutate(karta_lojalnościowa = if_else(karta_lojalnościowa, "Tak", "Nie"))
+
 karta_lojalnościowa_count |> ggplot(aes(x=karta_lojalnościowa, y=liczność, fill=karta_lojalnościowa)) + 
-  geom_bar(stat = "identity")
+  geom_bar(stat = "identity") + guides(fill="none") + labs(x = "karta lojalnościowa")
 @
 
-\section{Jak różne cechy pojazdów wpływają na ich sprzedaż / nasz zarobek?}
+\section{Tabela najlepszych okazji}
+
+<<warning=FALSE,message=FALSE,echo=FALSE>>=
+query1 <- "SELECT zakup_samochodu.data_zaksięgowania AS data_zakupu, samochody.id AS id_samochodu, marka, model, liczba_kół, czy_powypadkowy, typ_nadwozia, typ_paliwa, skrzynia_biegów, sprzedaż_samochodu.cena - zakup_samochodu.cena AS zysk FROM sprzedaż_samochodu JOIN samochody ON sprzedaż_samochodu.id_samochodu = samochody.id JOIN zakup_samochodu ON sprzedaż_samochodu.id_samochodu = zakup_samochodu.id_samochodu;"
+
+pojazdy_df <- dbGetQuery(con, query1)
+
+query2 <- "SELECT usługi.id_samochodu, zakup_samochodu.data_zaksięgowania AS data_zakupu, SUM(użyte_części.ilość * użyte_części.cena) AS koszt FROM usługi JOIN użyte_części ON usługi.id = użyte_części.id_usługi JOIN samochody ON usługi.id_samochodu = samochody.id JOIN sprzedaż_samochodu ON sprzedaż_samochodu.id_samochodu = samochody.id JOIN zakup_samochodu ON sprzedaż_samochodu.id_samochodu = zakup_samochodu.id_samochodu WHERE ((usługi.id_klienta = 0) & (usługi.data_zaksięgowania BETWEEN zakup_samochodu.data_zaksięgowania AND sprzedaż_samochodu.data_zaksięgowania)) GROUP BY użyte_części.id_usługi;"
+
+koszty_części <- dbGetQuery(con, query2)
+@
+
+<<warning=FALSE,message=FALSE,echo=FALSE>>=
+pojazdy_df <- left_join(pojazdy_df, koszty_części, join_by(data_zakupu, id_samochodu))
+pojazdy_df$koszt[is.na(pojazdy_df$koszt)] <- 0
+
+pojazdy_df$zysk <- pojazdy_df$zysk - pojazdy_df$koszt
+pojazdy_df <- subset(pojazdy_df, select = -koszt)
+@
+
+<<warning=FALSE,message=FALSE,echo=FALSE>>=
+pojazdy_df[order(pojazdy_df$zysk, decreasing = TRUE),] |> select(id_samochodu, marka, model, zysk) |> head()
+@
+
+\section{Jak wybrane cechy pojazdów wpływają na zysk warsztatu? (zastanowić się nad tytułem !!!)}
+
+\subsection{Rodzaj pojazdu}
+
+{\color{red}[Skupimy się, czy to samochód czy motocykl]}
 
 [tabelka z miarami ???]
 
-<<warning=FALSE,message=FALSE,echo=FALSE>>=
-#query <- "SELECT rok_produkcji, sprzedaż_samochodu.cena - zakup_samochodu.cena AS zysk, liczba_drzwi FROM sprzedaż_samochodu LEFT JOIN samochody ON sprzedaż_samochodu.id_samochodu = samochody.id LEFT JOIN zakup_samochodu ON sprzedaż_samochodu.id_samochodu = zakup_samochodu.id_samochodu;"
-
-#query <- "SELECT zakup_samochodu.cena AS cena_zakupu, sprzedaż_samochodu.cena AS cena_sprzedaży, liczba_drzwi FROM sprzedaż_samochodu LEFT JOIN samochody ON sprzedaż_samochodu.id_samochodu = samochody.id LEFT JOIN zakup_samochodu ON sprzedaż_samochodu.id_samochodu = zakup_samochodu.id_samochodu;"
-
-#pojazdy_df <- dbGetQuery(con, query)
-
-#pojazdy_df |> ggplot(aes(x=cena_zakupu*0.1^5, y=cena_sprzedaży*0.1^5, color=liczba_drzwi)) + geom_point()
+<<fig_typ, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=5, fig.cap="Wykresy pudełkowe zysku ze względu na rodzaj pojazdu">>=
+pojazdy_df |> mutate(liczba_kół = if_else(liczba_kół==4, "samochód", "motocykl")) |> 
+  ggplot(aes(x=zysk, y=liczba_kół)) + geom_boxplot() + labs(y= "rodzaj pojazdu")
 @
+
+\subsection{Czy powypadkowy}
+
+[tabelka z miarami ???]
+
+<<fig_wypadkowy, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=5, fig.cap="Wykresy pudełkowe zysku ze względu na to czy pojazd jest powypadkowy">>=
+pojazdy_df |> mutate(czy_powypadkowy = if_else(czy_powypadkowy, "Tak", "Nie")) |> 
+  ggplot(aes(x=zysk, y=czy_powypadkowy)) + geom_boxplot() + labs(y= "czy powypadkowy")
+@
+
+\subsection{skrzynia biegów / pojemność silnika}
+
+[tabelka z miarami ???]
+
+<<warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=5>>=
+pojazdy_df |> ggplot(aes(x=zysk, y=skrzynia_biegów)) + geom_boxplot() + labs(y= "skrzynia biegów")
+@
+
 
 <<warning=FALSE,message=FALSE,echo=FALSE>>=
 dbDisconnect(con)
