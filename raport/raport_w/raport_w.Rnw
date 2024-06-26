@@ -1,0 +1,124 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{tgpagella}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{polski}
+\renewcommand*{\figurename}{Rysunek}
+\usepackage{nicefrac, xfrac}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage[bottom]{footmisc}
+\usepackage{float}
+
+\begin{document}
+
+<<warning=FALSE,message=FALSE,echo=FALSE>>=
+library("RMariaDB")
+library(tidyverse)
+library(ggplot2)
+library(eeptools)
+library(scales)
+
+con <- dbConnect(RMariaDB::MariaDB(),
+                 dbname = "team07",
+                 username = "team07",
+                 password = "te@m24ot",
+                 host = "giniewicz.it")
+@
+
+\section{Liczba naprawianych pojazdów w każdym miesiącu pracy warsztatu}
+
+<<warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=9>>=
+query <- "SELECT CONCAT(DATE_FORMAT(data_zaksięgowania, '%Y-%m'), '-01') AS data, COUNT(id) AS liczność FROM usługi GROUP BY YEAR(data_zaksięgowania), MONTH(data_zaksięgowania);"
+
+naprawiane_pojazdy <- dbGetQuery(con, query)
+naprawiane_pojazdy[,1] <- as.Date(naprawiane_pojazdy[,1])
+naprawiane_pojazdy[,2] <- as.numeric(naprawiane_pojazdy[,2])
+
+wszystkie_daty <- expand.grid(1:12, 2014:2017) |> reframe(data = make_date(Var2, Var1, 1))
+naprawiane_pojazdy <- merge(x=naprawiane_pojazdy, y=wszystkie_daty, by="data", all.y=T)
+naprawiane_pojazdy$liczność[is.na(naprawiane_pojazdy$liczność)] <- 0
+
+naprawiane_pojazdy |> ggplot(aes(x=data, y=liczność, , fill=format(data, "%m"))) + 
+  geom_bar(stat = "identity") + 
+  scale_fill_manual(name="Miesiąc",labels=unique(format(naprawiane_pojazdy$data, "%B")), values=hue_pal()(12))
+@
+
+Można powiedzieć, że to \Sexpr{"fajny raport :))"}.
+Cyfry: \Sexpr{c(1, 2, 3)}.
+
+\section{Profil klienta}
+
+\subsection{Płeć}
+<<warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=5>>=
+query <- "SELECT płeć, COUNT(id) AS liczność FROM klienci GROUP BY płeć;"
+
+płeć_count <- dbGetQuery(con, query)
+płeć_count[, 2] <- as.numeric(płeć_count[, 2])
+
+płeć_count |> ggplot(aes(x=płeć, y=liczność, fill=płeć)) + geom_bar(stat = "identity")
+@
+
+\subsection{Wiek}
+<<warning=FALSE,message=FALSE,echo=FALSE>>=
+age_from_pesel <- function(pesel) {
+  y <- as.numeric(substr(pesel, 1, 2))
+  m <- as.numeric(substr(pesel, 3, 4))
+  d <- as.numeric(substr(pesel, 5, 6))
+  birth_date <- data.frame(d, m, y)
+  
+  birth_date <- birth_date |> mutate(y = if_else(m <= 12, 1900+y, 
+                                   if_else(m <= 32, 2000+y, 1800+y)),
+                       m = if_else(m <= 12, m, 
+                                   if_else(m <= 32, m-20, m-80)))
+  
+  birth_date <- make_date(birth_date$y, birth_date$m, birth_date$d)
+  return(floor(age_calc(na.omit(birth_date), units = "years")))
+}
+@
+
+<<warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=4>>=
+query <- "SELECT pesel FROM klienci;"
+
+wiek_df <- dbGetQuery(con, query)
+
+wiek_df <- data.frame(age_from_pesel(wiek_df$pesel))
+colnames(wiek_df) <- c("wiek")
+
+wiek_df |> ggplot(aes(y=wiek)) + geom_boxplot()
+@
+
+[tabelka miar]
+
+\subsection{Miasto}
+<<warning=FALSE,message=FALSE,echo=FALSE>>=
+query <- "SELECT miasto, COUNT(id) AS liczność FROM klienci GROUP BY miasto ORDER BY liczność DESC;"
+
+miasto_count <- dbGetQuery(con, query)
+miasto_count[, 2] <- as.numeric(miasto_count[, 2])
+
+head(miasto_count)
+@
+
+[opis tabelki]
+
+\subsection{Karta lojalnościowa}
+<<warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=6>>=
+query <- "SELECT karta_lojalnościowa, COUNT(id) AS liczność FROM klienci GROUP BY karta_lojalnościowa;"
+
+karta_lojalnościowa_count <- dbGetQuery(con, query)
+karta_lojalnościowa_count[, 2] <- as.numeric(karta_lojalnościowa_count[, 2])
+
+karta_lojalnościowa_count |> ggplot(aes(x=karta_lojalnościowa, y=liczność, fill=karta_lojalnościowa)) + 
+  geom_bar(stat = "identity")
+@
+
+<<warning=FALSE,message=FALSE,echo=FALSE>>=
+dbDisconnect(con)
+@
+
+
+\end{document}
