@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.4.5)  27 JUN 2024 03:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.4.5)  27 JUN 2024 19:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -501,1171 +501,134 @@ LaTeX Info: Redefining \nameref on input line 66.
 \openout3 = `raport_m.out'.
 
 LaTeX Font Info:    Trying to load font information for OT4+cmtt on input line 
-70.
+79.
 
 (d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/polski/ot4cmtt.fd
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 71.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT4/cmtt/m/n' tried instead on input line 71.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 72.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 73.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 74.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 75.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 77.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 77.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 101.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 102.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 104.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 104.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 105.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 105.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 107.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 107.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 107.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 107.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 107.
-
-
-Overfull \hbox (438.48706pt too wide) in paragraph at lines 107--107
-[][]\OT4/cmtt/m/n/10 minimalne_tekst[] []<-[] []if_else[][]([][]length[][](mini
-malne[,[][]1[][]])[][]>[][]1[][],[] []paste[][]([][]paste0[][](minimalne[,[][]1
-[][]][[][]2[][]:[][]length[][](minimalne[,[][]1[][]])],[] []collapse[] []=[] []
-", "[][]),[] []" i "[][],minimalne[,[][]1[][]][[][]1[][]],[] []sep[][]=[][]""[]
-[]), minimalne[,[][]1[][]][[][]1[][]])[][] 
- []
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 109.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 109.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 109.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 109.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 109.
-
-
-Overfull \hbox (469.98679pt too wide) in paragraph at lines 109--109
-[][]\OT4/cmtt/m/n/10 maksymalne_tekst[] []<-[] []if_else[][]([][]length[][](mak
-symalne[,[][]1[][]])[][]>[][]1[][],[] []paste[][]([][]paste0[][](maksymalne[,[]
-[]1[][]][[][]2[][]:[][]length[][](maksymalne[,[][]1[][]])],[] []collapse[] []=[
-] []", "[][]),[] []" i "[][],maksymalne[,[][]1[][]][[][]1[][]],[] []sep[][]=[][
-]""[][]), maksymalne[,[][]1[][]][[][]1[][]])[][] 
- []
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 111.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 111.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 111.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 111.
-
-LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
-111.
-(c:/Program Files/R/R-4.3.1/share/texmf/tex/latex/omscmtt.fd
-File: omscmtt.fd 
-)
-LaTeX Font Info:    Font shape `OMS/cmtt/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 111.
-
-Overfull \hbox (86.49019pt too wide) in paragraph at lines 111--111
-[][]\OT4/cmtt/m/n/10 ranking[] []<-[] []paste0[][]([][]seq_len[][]([][]nrow[][]
-(df)),[] []". "[][], df[][]$[][]marka,[] []": "[][],[] []paste[][](df[][]$[][]p
-rocent,[][]"%"[][],[] []sep[][]=[][]""[][]),[] []collapse[] []=[] []"\OMS/cmsy/
-m/n/10 n\OT4/cmtt/m/n/10 n"[][])[][] 
  []
 
 [1
 
 {d:/Technologie/Latex/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 }]
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
 
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
-173.
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/base/ts1cmtt.fd
-File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
 
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 175.
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
 
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 176.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 178.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 178.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 179.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 179.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 181.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 181.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 181.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 181.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 181.
-
-
-Overfull \hbox (438.48706pt too wide) in paragraph at lines 181--181
-[][]\OT4/cmtt/m/n/10 minimalne_tekst[] []<-[] []if_else[][]([][]length[][](mini
-malne[,[][]1[][]])[][]>[][]1[][],[] []paste[][]([][]paste0[][](minimalne[,[][]1
-[][]][[][]2[][]:[][]length[][](minimalne[,[][]1[][]])],[] []collapse[] []=[] []
-", "[][]),[] []" i "[][],minimalne[,[][]1[][]][[][]1[][]],[] []sep[][]=[][]""[]
-[]), minimalne[,[][]1[][]][[][]1[][]])[][] 
  []
 
 
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 183.
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
 
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 183.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 183.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 183.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 183.
-
-
-Overfull \hbox (469.98679pt too wide) in paragraph at lines 183--183
-[][]\OT4/cmtt/m/n/10 maksymalne_tekst[] []<-[] []if_else[][]([][]length[][](mak
-symalne[,[][]1[][]])[][]>[][]1[][],[] []paste[][]([][]paste0[][](maksymalne[,[]
-[]1[][]][[][]2[][]:[][]length[][](maksymalne[,[][]1[][]])],[] []collapse[] []=[
-] []", "[][]),[] []" i "[][],maksymalne[,[][]1[][]][[][]1[][]],[] []sep[][]=[][
-]""[][]), maksymalne[,[][]1[][]][[][]1[][]])[][] 
  []
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 185.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 186.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 186.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 186.
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 226--227
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--229
-
- []
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 241.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 242.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 244.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 244.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 245.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 245.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 247.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 247.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 247.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 247.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 247.
-
-
-Overfull \hbox (438.48706pt too wide) in paragraph at lines 247--247
-[][]\OT4/cmtt/m/n/10 minimalne_tekst[] []<-[] []if_else[][]([][]length[][](mini
-malne[,[][]1[][]])[][]>[][]1[][],[] []paste[][]([][]paste0[][](minimalne[,[][]1
-[][]][[][]2[][]:[][]length[][](minimalne[,[][]1[][]])],[] []collapse[] []=[] []
-", "[][]),[] []" i "[][],minimalne[,[][]1[][]][[][]1[][]],[] []sep[][]=[][]""[]
-[]), minimalne[,[][]1[][]][[][]1[][]])[][] 
- []
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 249.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 249.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 249.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 249.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 249.
-
-
-Overfull \hbox (469.98679pt too wide) in paragraph at lines 249--249
-[][]\OT4/cmtt/m/n/10 maksymalne_tekst[] []<-[] []if_else[][]([][]length[][](mak
-symalne[,[][]1[][]])[][]>[][]1[][],[] []paste[][]([][]paste0[][](maksymalne[,[]
-[]1[][]][[][]2[][]:[][]length[][](maksymalne[,[][]1[][]])],[] []collapse[] []=[
-] []", "[][]),[] []" i "[][],maksymalne[,[][]1[][]][[][]1[][]],[] []sep[][]=[][
-]""[][]), maksymalne[,[][]1[][]][[][]1[][]])[][] 
- []
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 251.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 252.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 252.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 252.
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 271--272
-
- []
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 287.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 288.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 289.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 291.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 291.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 291.
-
-
-Overfull \hbox (2.74086pt too wide) in paragraph at lines 291--291
-[][]\OT4/cmtt/m/n/10 wszystkie_daty[] []<-[] []expand.grid[][]([][]1[][]:[][]12
-[][],[] []2014[][]:[][]2017[][]) |>[] []reframe[][]([][]data[] []=[] []make_dat
-e[][](Var2, Var1,[] []1[][]))[][] 
- []
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 292.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 293.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 295.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 295.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 295.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 296.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 297.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 297.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 297.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 297.
-
-
-Overfull \hbox (23.74068pt too wide) in paragraph at lines 297--297
-[]  []\OT4/cmtt/m/n/10 scale_fill_manual[][]([][]name[][]=[][]"Miesi¡c"[][],[][
-]labels[][]=[][]unique[][]([][]format[][](df[][]$[][]data,[] []"%B"[][])),[] []
-values[][]=[][]hue_pal[][]()([][]12[][]))[][] 
- []
-
-<figure/unnamed-chunk-5-1.pdf, id=50, 505.89pt x 505.89pt>
+<figure/unnamed-chunk-5-1.pdf, id=52, 505.89pt x 505.89pt>
 File: figure/unnamed-chunk-5-1.pdf Graphic file (type pdf)
 <use figure/unnamed-chunk-5-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-5-1.pdf  used on input line 300.
+Package pdftex.def Info: figure/unnamed-chunk-5-1.pdf  used on input line 200.
 (pdftex.def)             Requested size: 469.75502pt x 469.76265pt.
-
-Overfull \hbox (15.0pt too wide) in paragraph at lines 300--302
-[][]
- []
-
-[4]
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 315.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 316.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 317.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 319.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 319.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 319.
-
-
-Overfull \hbox (2.74086pt too wide) in paragraph at lines 319--319
-[][]\OT4/cmtt/m/n/10 wszystkie_daty[] []<-[] []expand.grid[][]([][]1[][]:[][]12
-[][],[] []2014[][]:[][]2017[][]) |>[] []reframe[][]([][]data[] []=[] []make_dat
-e[][](Var2, Var1,[] []1[][]))[][] 
- []
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 320.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 321.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 323.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 323.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 323.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 324.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 325.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 325.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 325.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 325.
-
-
-Overfull \hbox (23.74068pt too wide) in paragraph at lines 325--325
-[]  []\OT4/cmtt/m/n/10 scale_fill_manual[][]([][]name[][]=[][]"Miesi¡c"[][],[][
-]labels[][]=[][]unique[][]([][]format[][](df[][]$[][]data,[] []"%B"[][])),[] []
-values[][]=[][]hue_pal[][]()([][]12[][]))[][] 
- []
-
-[5 <./figure/unnamed-chunk-5-1.pdf>]
-<figure/unnamed-chunk-6-1.pdf, id=64, 505.89pt x 505.89pt>
+<figure/unnamed-chunk-6-1.pdf, id=53, 505.89pt x 505.89pt>
 File: figure/unnamed-chunk-6-1.pdf Graphic file (type pdf)
 <use figure/unnamed-chunk-6-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-6-1.pdf  used on input line 328.
+Package pdftex.def Info: figure/unnamed-chunk-6-1.pdf  used on input line 208.
 (pdftex.def)             Requested size: 469.75502pt x 469.76265pt.
-
-Overfull \hbox (15.0pt too wide) in paragraph at lines 328--330
-[][]
+ [3 <./figure/unnamed-chunk-5-1.pdf>]
+Overfull \hbox (0.79445pt too wide) in paragraph at lines 213--214
+\OT4/qpl/m/n/10 Chcieliby±my spraw-dzi¢, jak wy-gl¡-da-j¡ mie-si¦cz-ne przy-cho
+-dy (lub stra-ty) wy-ni-ka-j¡-ce z pro-wa-dze-nia warsz-
  []
 
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 342.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 343.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 344.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 346.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 346.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 346.
-
-
-Overfull \hbox (2.74086pt too wide) in paragraph at lines 346--346
-[][]\OT4/cmtt/m/n/10 wszystkie_daty[] []<-[] []expand.grid[][]([][]1[][]:[][]12
-[][],[] []2014[][]:[][]2017[][]) |>[] []reframe[][]([][]data[] []=[] []make_dat
-e[][](Var2, Var1,[] []1[][]))[][] 
- []
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 347.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 348.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 350.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 350.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 350.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 351.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 352.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 352.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 352.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 352.
-
-
-Overfull \hbox (23.74068pt too wide) in paragraph at lines 352--352
-[]  []\OT4/cmtt/m/n/10 scale_fill_manual[][]([][]name[][]=[][]"Miesi¡c"[][],[][
-]labels[][]=[][]unique[][]([][]format[][](df[][]$[][]data,[] []"%B"[][])),[] []
-values[][]=[][]hue_pal[][]()([][]12[][]))[][] 
- []
-
-[6 <./figure/unnamed-chunk-6-1.pdf>]
-<figure/unnamed-chunk-7-1.pdf, id=74, 505.89pt x 505.89pt>
+<figure/unnamed-chunk-7-1.pdf, id=63, 505.89pt x 505.89pt>
 File: figure/unnamed-chunk-7-1.pdf Graphic file (type pdf)
 <use figure/unnamed-chunk-7-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-7-1.pdf  used on input line 355.
+Package pdftex.def Info: figure/unnamed-chunk-7-1.pdf  used on input line 217.
 (pdftex.def)             Requested size: 469.75502pt x 469.76265pt.
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 355--357
+Overfull \hbox (15.0pt too wide) in paragraph at lines 217--219
 [][]
  []
 
-[7]
-Overfull \hbox (34.23811pt too wide) in paragraph at lines 369--373
-[][]\OT4/cmtt/m/n/10 query[] []<-[] []"SELECT CONCAT(imi¦, \TS1/cmtt/m/n/10 ' '
-\OT4/cmtt/m/n/10 ,nazwisko) as sprzedawca, SUM(sprzeda»_samochodu.cena) as suma
-,[] 
+[4 <./figure/unnamed-chunk-6-1.pdf>]
+<figure/unnamed-chunk-8-1.pdf, id=73, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-8-1.pdf Graphic file (type pdf)
+<use figure/unnamed-chunk-8-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-8-1.pdf  used on input line 224.
+(pdftex.def)             Requested size: 469.75502pt x 469.76265pt.
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 224--226
+[][]
+ []
+
+[5 <./figure/unnamed-chunk-7-1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
+
+ []
+
+[6 <./figure/unnamed-chunk-8-1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
+
  []
 
 
 LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 375.
+(Font)              using `OT4/cmtt/bx/n' instead on input line 257.
+
+
+LaTeX Font Warning: Font shape `OT4/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT4/cmtt/m/n' tried instead on input line 257.
 
 
 LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 377.
+(Font)              using `OT4/cmtt/bx/n' instead on input line 259.
 
 
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 377.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 378.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 378.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 380.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 381.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 382.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 387.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 392.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 394.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 394.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 394.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 394.
-
-
-Overfull \hbox (69.99051pt too wide) in paragraph at lines 394--394
-[][]\OT4/cmtt/m/n/10 if[] [](najwiecej_sprzeda»y[,[][]5[][]][] []==[] []najwiec
-ej_zarobiª[,[][]5[][]])\OMS/cmsy/m/n/10 f\OT4/cmtt/m/n/10 ten_sam[][]=[][]c[][]
-([][]"ponownie "[][])\OMS/cmsy/m/n/10 g[] []\OT4/cmtt/m/n/10 else[] []\OMS/cmsy
-/m/n/10 f\OT4/cmtt/m/n/10 ten_sam[][]=[][]rep[][]([][]""[][],[] []1[][])\OMS/cm
-sy/m/n/10 g[][] 
+Overfull \hbox (15.55072pt too wide) in paragraph at lines 259--260
+[]\OT4/cmtt/m/n/10 ## Error in round(najwiecej[]sprzeda»y$ile[]sprzedanych, 2):
+ argument nieliczbowy przekazany do
  []
 
 
 LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 397.
+(Font)              using `OT4/cmtt/bx/n' instead on input line 261.
 
 
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 397.
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
 
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 398.
-
-
-Overfull \hbox (207.48907pt too wide) in paragraph at lines 398--398
-[]  []\OT4/cmtt/m/n/10 tekst_sprzeda»1[][]=[][]paste[][]([][]"Osoby, które sprz
-edaªy w firmie najwi¦cej pojazdów to "[][],, najwiecej_zarobiª[,[][]1[][]] ,[][
-]". Te osoby sprzedaªy"[][])[][] 
  []
 
 
 LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 399.
+(Font)              using `OT4/cmtt/bx/n' instead on input line 273.
 
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 399.
-
-
-Overfull \hbox (196.48929pt too wide) in paragraph at lines 399--399
-[]  []\OMS/cmsy/m/n/10 g[] []\OT4/cmtt/m/n/10 else[] []\OMS/cmsy/m/n/10 f \OT4/
-cmtt/m/n/10 tekst_sprzeda»1[][]=[] []paste[][]([][]"Osoba, która sprzedaªa w fi
-rmie najbardziej warto±ciowe pojazdy to "[][], najwiecej_zarobiª[,[][]1[][]],[]
-[] 
- []
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 400.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 400.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 400.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 400.
-
-
-Overfull \hbox (469.98679pt too wide) in paragraph at lines 400--400
-[][]\OT4/cmtt/m/n/10 ". Ta osoba zarobiªa dla firmy "[][],[] []format[][]([][]r
-ound[][](najwiecej_zarobiª[][]$[][]suma,[][]2[][]),[] []nsmall[] []=[] []2[][])
-,[] []" zª na sprzeda»y pojazdów, co stanowi "[][],[] []format[][]([][]round[][
-](procent_suma_zarobiª,[][]2[][]),[] []nsmall[] []=[] []2[][]),[][] 
- []
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 401.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 401.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 401.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 401.
-
-
-Overfull \hbox (1104.23149pt too wide) in paragraph at lines 401--401
-[][]\OT4/cmtt/m/n/10 "\OMS/cmsy/m/n/10 nn\OT4/cmtt/m/n/10 % ±redniej kwoty zaro
-bionej dla warsztatu przez caªy okres pracy. W porównaniu, zarabiana przez tego
- pracownika kwota za godzin¦ pracy ("[][],[] []format[][]([][]round[][](najwiec
-ej_zarobiª[][]$[][]pªaca,[][]2[][]),[] []nsmall[] []=[] []2[][]),[] []" zª) sta
-nowi "[][],[] []format[][]([][]round[][](procent_placa_zarobiª,[][]2[][]),[] []
-nsmall[] []=[] []2[][]),[] []" \OMS/cmsy/m/n/10 nn\OT4/cmtt/m/n/10 % ±redniej p
-ªacy sprzedawcy ("[][],[][] 
- []
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 402.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 402.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 403.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 403.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 404.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 404.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 404.
-
-
-Overfull \hbox (1582.97708pt too wide) in paragraph at lines 404--404
-[][]\OT4/cmtt/m/n/10 if_else[][](ró»nica_zarobiª[] []<[] []0[]  [],[] []" na ko
-rzy±¢ pracownika, czyli warsztat nie musi koniecznie zwi¦ksza¢ stawki godzinowe
-j tego sprzedawcy."[][],[] []if_else[][](ró»nica_zarobiª[] []<[] []2[][],[] []"
-, czyli warsztat nie musi koniecznie zwi¦ksza¢ stawki godzinowej tego sprzedawc
-y, jako »e ró»nica jest niewielka. Mo»na jednak nad tym pomy±le¢, by zach¦ci¢ p
-racownika do dalszej pracy i jeszcze lepszych wyników."[][],[] []if_else[][]([]
-[] 
- []
-
-
-Overfull \hbox (1052.7317pt too wide) in paragraph at lines 405--405
-[]  []\OT4/cmtt/m/n/10 ró»nica_zarobiª[] []<[] []5[][],[] []", czyli warsztat p
-owinien rozwa»y¢ podwy»k¦ dla tego pracownika, by zach¦ci¢ go do dalszej pracy 
-i jeszcze lepszych wyników."[][],[] []", czyli warsztat zdecydowanie powinien r
-ozwa»y¢ podwy»k¦ dla tego pracownika, by lepiej wyró»ni¢ jego wpªyw na dochody 
-firmy."[][]))),[] []sep[][]=[][]""[][])[][] 
- []
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 408.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 408.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 409.
-
-
-Overfull \hbox (212.73903pt too wide) in paragraph at lines 409--409
-[]  []\OT4/cmtt/m/n/10 tekst_sprzeda»2[][]=[][]paste[][]([][]"Osoby, które sprz
-edaªy w firmie najwi¦cej pojazdów to "[][], najwiecej_sprzeda»y[,[][]1[][]] ,[]
-[]". Te osoby sprzedaªy"[][])[][] 
- []
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 410.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 411.
-
-
-Overfull \hbox (118.23985pt too wide) in paragraph at lines 411--411
-[][]\OT4/cmtt/m/n/10 tekst_sprzeda»2[] []=[] []paste[][]([][]"Pracownik, który 
-sprzedaª najwi¦cej pojazdów to "[][], ten_sam[[][]1[][]], najwiecej_sprzeda»y[,
-[][]1[][]],[][] 
- []
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 412.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 412.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 412.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 412.
-
-
-Overfull \hbox (433.2371pt too wide) in paragraph at lines 412--412
-[][]\OT4/cmtt/m/n/10 ". Ta osoba sprzedaªa a» "[][],[] []format[][]([][]round[]
-[](najwiecej_sprzeda»y[][]$[][]ile_sprzedanych,[][]2[][]),[] []nsmall[] []=[] [
-]2[][]),[] []" pojazdów, co stanowi "[][],[] []format[][]([][]round[][](procent
-_suma_sprzeda»y,[][]2[][]),[] []nsmall[] []=[] []2[][]),[][] 
- []
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 413.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 413.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 413.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 413.
-
-
-Overfull \hbox (1083.23167pt too wide) in paragraph at lines 413--413
-[][]\OT4/cmtt/m/n/10 "\OMS/cmsy/m/n/10 nn\OT4/cmtt/m/n/10 % ±rednich sprzeda»y 
-przypadaj¡cych na pracownika. Patrz¡c na zarobki pracownika mo»na zauwa»y¢, »e 
-zarabia on za godzin¦ pracy ("[][],[] []format[][]([][]round[][](najwiecej_sprz
-eda»y[][]$[][]pªaca,[][]2[][]),[] []nsmall[] []=[] []2[][]),[] []" zª), czyli "
-[][],[] []format[][]([][]round[][](procent_placa_sprzeda»y,[][]2[][]),[] []nsma
-ll[] []=[] []2[][]),[] []" \OMS/cmsy/m/n/10 nn\OT4/cmtt/m/n/10 % ±redniej pªacy
- sprzedawcy ("[][],[][] 
- []
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 414.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 414.
-
-
-Overfull \hbox (7.99081pt too wide) in paragraph at lines 414--414
-[][]\OT4/cmtt/m/n/10 format[][]([][]round[][](±rednia_pªaca,[][]2[][]),[] []nsm
-all[] []=[] []2[][]) ,[] []" zª). Mi¦dzy tymi dwoma warto±ciami wynosi "[][],[]
-[] 
- []
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 415.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 415.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 416.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 416.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 416.
-
-
-Overfull \hbox (1346.72914pt too wide) in paragraph at lines 416--416
-[][]\OT4/cmtt/m/n/10 if_else[][](ró»nica_sprzeda»[] []<[] []0[]  [],[] []" na k
-orzy±¢ pracownika, czyli zwi¦kszenie stawki tego sprzedawcy nie jest niezb¦dne.
-"[][],[] []if_else[][](ró»nica_sprzeda»[] []<[] []2[][],[] []", czyli zwi¦kszen
-ie stawki tego sprzedawcy nie jest niezb¦dne, z powodu niewielkiej ró»nicy. Dro
-bna podwy»ka mogªaby za to pozytywnie wpªyn¡¢ na ilo±¢ sprzeda»y i motywacj¦ pr
-acownika,"[][],[] []if_else[][]([][] 
- []
-
-
-Overfull \hbox (1120.98111pt too wide) in paragraph at lines 417--417
-[]  []\OT4/cmtt/m/n/10 ró»nica_sprzeda»[] []<[] []5[][],[] []", wobec czego pod
-wy»ka dla tego sprzedawcy powinna zosta¢ rozwa»ona, poniewa» mogªaby pozytywnie
- wpªyn¡¢ na ilo±¢ sprzeda»y i motywacj¦ pracownika"[][],[] []", czyli stawka go
-dzinowa pracownika powinna zdecydowanie zosta¢ podniesiona, aby poczuª si¦ wyró
-»niony i doceniony."[][]))),[] []sep[][]=[][]""[][])[][] 
- []
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 420.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 420.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 420.
-
-
-Overfull \hbox (111.99014pt too wide) in paragraph at lines 420--420
-[][]\OT4/cmtt/m/n/10 if[] [](najwiecej_sprzeda»y[,[][]5[][]][] []==[] []najwiec
-ej_zarobiª[,[][]5[][]])\OMS/cmsy/m/n/10 f\OT4/cmtt/m/n/10 tekst_sprzeda»3[][]=[
-][]c[][]([][]"ponownie "[][])\OMS/cmsy/m/n/10 g[] []\OT4/cmtt/m/n/10 else[] []\
-OMS/cmsy/m/n/10 f\OT4/cmtt/m/n/10 tekst_sprzeda»3[][]=[][]""[][]\OMS/cmsy/m/n/1
-0 g[][] 
- []
-
-[8 <./figure/unnamed-chunk-7-1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 425--426
-
- []
-
-[9]
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 440.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 442.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 446.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 447.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 447.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 449.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 450.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 456.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 461.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 466.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 472.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 476.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 477.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 477.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 481.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 482.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 482.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 486.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 487.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 493.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 499.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 499.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 505.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 505.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 511.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 511.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 512.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 513.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 514.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 519.
-
-[10]
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 529.
-
-[11] (./raport_m.aux)
+[7] (./raport_m.aux)
 Package rerunfilecheck Info: File `raport_m.out' has not changed.
-(rerunfilecheck)             Checksum: 3DBA29875FA52F5F45F6D9A84180783C;1633.
+(rerunfilecheck)             Checksum: 3C1316B793C90515D268D2F82B400BE8;1922.
  ) 
 Here is how much of TeX's memory you used:
- 10322 strings out of 478994
- 159315 string characters out of 5853154
- 491471 words of memory out of 5000000
- 27611 multiletter control sequences out of 15000+600000
- 418699 words of font info for 35 fonts, out of 8000000 for 9000
+ 10290 strings out of 478994
+ 158607 string characters out of 5853154
+ 471599 words of memory out of 5000000
+ 27589 multiletter control sequences out of 15000+600000
+ 418105 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,5n,75p,638b,463s stack positions out of 5000i,500n,10000p,200000b,80000s
-{d:/Technologie/Latex/texlive/2021/texmf-dist/fonts/enc/dvips/pl/plitt.enc}{d
-:/Technologie/Latex/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t
-s1.enc}{d:/Technologie/Latex/texlive/2021/texmf-dist/fonts/enc/dvips/tex-gyre/q
--rm.enc}{d:/Technologie/Latex/texlive/2021/texmf-dist/fonts/enc/dvips/pl/pltt.e
-nc}<d:/Technologie/Latex/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb><d:/Technologie/Latex/texlive/2021/texmf-dist/fonts/type1/public/pl
-/plitt10.pfb><d:/Technologie/Latex/texlive/2021/texmf-dist/fonts/type1/public/p
-l/pltt10.pfb><d:/Technologie/Latex/texlive/2021/texmf-dist/fonts/type1/public/t
-ex-gyre/qplb.pfb><d:/Technologie/Latex/texlive/2021/texmf-dist/fonts/type1/publ
-ic/tex-gyre/qplr.pfb><d:/Technologie/Latex/texlive/2021/texmf-dist/fonts/type1/
-public/cm-super/sftt1000.pfb>
-Output written on raport_m.pdf (11 pages, 188582 bytes).
+ 71i,6n,75p,608b,462s stack positions out of 5000i,500n,10000p,200000b,80000s
+{d:/Technologie/Latex/texlive/2021/texmf-dist/fonts/enc/dvips/pl/pltt.enc}{d:
+/Technologie/Latex/texlive/2021/texmf-dist/fonts/enc/dvips/tex-gyre/q-rm.enc}<d
+:/Technologie/Latex/texlive/2021/texmf-dist/fonts/type1/public/pl/pltt10.pfb><d
+:/Technologie/Latex/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/qplb.pf
+b><d:/Technologie/Latex/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/qpl
+r.pfb>
+Output written on raport_m.pdf (7 pages, 151718 bytes).
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
- 108 compressed objects within 2 object streams
- 19 named destinations out of 1000 (max. 500000)
- 72 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 117 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
+ 17 named destinations out of 1000 (max. 500000)
+ 93 words of extra memory for PDF output out of 10000 (max. 10000000)
 
