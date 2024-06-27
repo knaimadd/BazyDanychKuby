@@ -135,6 +135,7 @@ def random_pesel_date_woman(years_lims, date_format = "/"):
 
 
 # Miasta
+# https://stat.gov.pl/obszary-tematyczne/ludnosc/ludnosc/powierzchnia-i-ludnosc-w-przekroju-terytorialnym-w-2021-roku,7,18.html
 
 cities = pd.read_excel(os.path.dirname(__file__) + "/inputs/miasta_ludnosc.xlsx", sheet_name = "tabl. 22")
 # partisioning data based no voivoidship
