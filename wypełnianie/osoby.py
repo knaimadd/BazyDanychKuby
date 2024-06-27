@@ -7,12 +7,14 @@ from unidecode import unidecode
 
 # Name
 
+# https://dane.gov.pl/pl/dataset/1681,nazwiska-osob-zyjacych-wystepujace-w-rejestrze-pesel
 data_l_m = pd.read_csv(os.path.dirname(__file__) + "/inputs/nazwiska_meskie.csv")
 last_names_m = data_l_m["Nazwisko aktualne"].to_numpy()
 weights_l_m = data_l_m["Liczba"].to_numpy() 
 
 weights_l_m = weights_l_m/np.sum(weights_l_m) # normalization (sum of all man is 20976785 so the date seems to be good)
 
+# https://dane.gov.pl/pl/dataset/1667,lista-imion-wystepujacych-w-rejestrze-pesel-osoby-zyjace
 data_f_m = pd.read_csv(os.path.dirname(__file__) + "/inputs/imiona_meskie.csv")
 first_names_m = data_f_m["IMIĘ_PIERWSZE"].to_numpy()
 weights_f_m = data_f_m["LICZBA_WYSTĄPIEŃ"].to_numpy()
@@ -239,14 +241,14 @@ def employee_email(first_name, last_name):
 if __name__ == "__main__":
     mname = random_name_man()
     print(f"\nrandom man name: {mname}")
-    print(f"random email: {random_email(mname[0], mname[1])}")
     pdm = random_pesel_date_man([1980, 2010])
     print(f"random man pesel and date: {pdm[0]}, {pdm[1]}")
+    print(f"random email: {random_email(mname[0], mname[1], pdm[1][-4:])}")
     wname = random_name_woman()
     print(f"random woman name: {wname}")
-    print(f"random email: {random_email(wname[0], wname[1])}")
     pdw = random_pesel_date_woman([1980, 2010])
     print(f"random woman pesel and date: {pdw[0]}, {pdw[1]}")
+    print(f"random email: {random_email(wname[0], wname[1], pdw[1][-4:])}")
     print(f"random address: {random_city()}, {random_street()}")
     print(f"random phone number: {random_phone()}")
     
@@ -259,11 +261,8 @@ if __name__ == "__main__":
     print(f"\n1000 random addresses generated time: {tc.timeit(number=1000) + ts.timeit(number=1000)} [s]")
     tn = timeit.Timer(random_phone)
     print(f"\n1000 random phone numbers generated time: {tn.timeit(number=1000)} [s]")
-    te = timeit.Timer(lambda: random_email("Adrian", "Galik"))
+    te = timeit.Timer(lambda: random_email("Aleksander", "Rzyhak", "2002"))
     print(f"\n1000 random email generated time: {te.timeit(number=1000)} [s]")
 
-    AG = person_probability("ADRIAN", "GALIK", "M")
-    print(f"\nAdrian probabilit: {AG[0]}\nGalik probability: {AG[1]}\nAdrian Galik probability: {AG[2]}")
-
-    TS = person_probability("TOMASZ", "STROIŃSKI", "M")
-    print(f"\nTomasz probabilit: {TS[0]}\nStroiński probability: {TS[1]}\nTomasz Stroiński probability: {TS[2]}\n")
+    AG = person_probability("ALEKSANDER", "RZYHAK", "M")
+    print(f"\nAleksander probabilit: {AG[0]}\nRzyhak probability: {AG[1]}\nAleksander Rzyhak probability: {AG[2]}")
