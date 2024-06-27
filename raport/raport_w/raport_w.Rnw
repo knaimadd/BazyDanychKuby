@@ -98,7 +98,7 @@ Ogólnie każdy pojazd znajdujący się w top 5 najlepszych okazji przyniósł z
 
 \section{Profil klienta}
 
-W następnej kolejności zostaną przeanalizawani klienci warsztatu. Zostaną sprawdzone liczności klientów ze względu na różne ich cechy. {\color{red}[Czy warto pisać, że może nam to pomóc stwierdzić, do jakich klientów moglibyśmy spróbować jeszcze dotrzeć.]}
+W następnej kolejności zostaną przeanalizawani klienci warsztatu. Zostaną sprawdzone liczności klientów ze względu na różne ich cechy.
 
 \subsection{Płeć}
 
@@ -387,6 +387,171 @@ Największy pierwszy kwartyl występuje w grupie pojazdów o pojemności \Sexpr{
 Największa wartość trzeciego kwartylu występuje dla pojazdów o pojemności \Sexpr{Q3_max_grupa} litra i wynosi \Sexpr{max(miary$Q3)} tyś. zł. Dla pojazdów \Sexpr{Q3_min_grupa} litra wynosi on \Sexpr{min(miary$Q3)} tyś. zł i jest to najmnijesza wartość w tych grupach.
 Największy zysk przyniósł pojazd o pojemności silnika \Sexpr{max_max_grupa} litra i wyniósł on \Sexpr{max(miary$max_wartość)} tyś. zł. 
 Najmniejszy zysk natomiast przyniósł pojazd z pojemnością silnika \Sexpr{min_min_grupa} litra i wyniósł on \Sexpr{min(miary$min_wartość)} tyś. zł.\Sexpr{zdanie_dod_max}\Sexpr{zdanie_dod_min}
+
+\section{Od tego miejsca bierz Martyna}
+
+\section{Analiza bilansu}
+
+\subsection{Analiza wydatków na zakup pojazdów}
+
+Sprawdziliśmy, jak wyglądają miesięczne wydatki na zakup pojazdów, które w razie potrzeby warsztat naprawia, a następnie sprzedaje.
+
+<<fig_zakup_pojazdu, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=9,fig.pos="H", fig.cap="Miesięczne wydatki na zakup pojazdów">>=
+
+query <- "SELECT CONCAT(DATE_FORMAT(data_zaksięgowania, '%Y-%m'), '-01') AS data, SUM(cena) as suma FROM zakup_samochodu GROUP BY data ORDER BY data"
+
+df <- dbGetQuery(con, query)
+df[,1] <- as.Date(df[,1])
+df[,2] <- as.numeric(df[,2])
+
+wszystkie_daty <- expand.grid(1:12, 2014:2017) |> reframe(data = make_date(Var2, Var1, 1))
+df <- merge(x=df, y=wszystkie_daty, by="data", all.y=T)
+df$suma[is.na(df$suma)] <- 0
+
+df |> ggplot(aes(x=data, y=suma, , fill=format(data, "%m"))) + 
+  geom_bar(stat = "identity") + 
+  scale_fill_manual(name="Miesiąc",labels=unique(format(df$data, "%B")), values=hue_pal()(12))
+
+miesiąc_odmiana <- function(m) {
+  return(if_else(length(m) > 1, "miesiącach", "miesiącu"))
+}
+
+max_p <- max(df$suma)
+max_p2 <- sort(df$suma,decreasing = T)[2]
+
+max_m <- format(df$data[df$suma == max_p], "%B %Y")
+max_m2 <- format(df$data[df$suma == max_p2], "%B %Y")
+
+min_p <- min(df$suma)
+min_p2 <- sort(df$suma,decreasing = F)[2]
+
+min_m <- format(df$data[df$suma == min_p], "%B %Y")
+min_m2 <- format(df$data[df$suma == min_p2], "%B %Y")
+@
+
+Wykres \ref{fig:fig_zakup_pojazdu} przedstawia miesięczne wydatki na zakup pojazdów. 
+Największe wydatki warsztat miał w \Sexpr{miesiąc_odmiana(max_m)} \Sexpr{max_m}. Były one w wysokości \Sexpr{round(max_p*0.1^3, 2)} tyś. zł. 
+Wydatki wielkości \Sexpr{round(max_p2*0.1^3, 2)} tyś. zł były drugimi najwyższymi i były \Sexpr{round(max_p/max_p2, 2)} razy mniejsze od tych największych. Wystąpiły one w \Sexpr{miesiąc_odmiana(max_m2)} \Sexpr{max_m2}.
+Najmniejsze wydatki warsztat zaobserwował w \Sexpr{miesiąc_odmiana(min_m)} \Sexpr{min_m} i wyniosły one \Sexpr{round(min_p*0.1^3, 2)} tyś. zł. 
+Drugie co do wielkości najniższe wydatki na zakup pojazdów wystąpiły \Sexpr{miesiąc_odmiana(min_m2)} \Sexpr{min_m2}, a wyniosły one \Sexpr{round(min_p2*0.1^3, 2)} tyś. zł.
+W każdym miesiącu działania warsztatu wydatki na zakup pojazdów wyniosły przynajmnej \Sexpr{signif(min_p, digits = 1) * 0.1^3} tyś. zł.
+
+\subsection{Analiza wydatków na zakup części}
+
+Następnie zostało sprawdzone, jak wyglądają miesięczne wydatki na zakup części potrzebnych do napraw pojazdów.
+
+<<fig_zakup_czesci, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=9,fig.pos="H", fig.cap="Miesięczne wydatki na zakup części">>=
+
+query <- "SELECT CONCAT(DATE_FORMAT(data_zaksięgowania, '%Y-%m'), '-01') as data, SUM(użyte_części.cena*użyte_części.ilość) as suma FROM usługi JOIN użyte_części ON usługi.id = użyte_części.id_usługi GROUP BY data ORDER BY data"
+
+df <- dbGetQuery(con, query)
+df[,1] <- as.Date(df[,1])
+df[,2] <- as.numeric(df[,2])
+
+wszystkie_daty <- expand.grid(1:12, 2014:2017) |> reframe(data = make_date(Var2, Var1, 1))
+df <- merge(x=df, y=wszystkie_daty, by="data", all.y=T)
+df$suma[is.na(df$suma)] <- 0
+
+df |> ggplot(aes(x=data, y=suma, , fill=format(data, "%m"))) + 
+  geom_bar(stat = "identity") + 
+  scale_fill_manual(name="Miesiąc",labels=unique(format(df$data, "%B")), values=hue_pal()(12))
+
+max_p <- max(df$suma)
+max_p2 <- sort(df$suma,decreasing = T)[2]
+
+max_m <- format(df$data[df$suma == max_p], "%B %Y")
+max_m2 <- format(df$data[df$suma == max_p2], "%B %Y")
+
+min_p <- min(df$suma)
+min_p2 <- sort(df$suma,decreasing = F)[2]
+
+min_m <- format(df$data[df$suma == min_p], "%B %Y")
+min_m2 <- format(df$data[df$suma == min_p2], "%B %Y")
+@
+
+Wykres \ref{fig:fig_zakup_czesci} przedstawia miesięczne wydatki na zakup części do naprawy pojazdów.
+Największe wydatki warsztat miał w \Sexpr{miesiąc_odmiana(max_m)} \Sexpr{max_m} i wyniosły one \Sexpr{round(max_p*0.1^3, 2)} tyś. zł. 
+Drugie najwyższye wydatkami były wielkości \Sexpr{round(max_p2*0.1^3, 2)} tyś. zł i były \Sexpr{round(max_p/max_p2, 2)} razy mniejsze od tych największych. Wystąpiły one w \Sexpr{miesiąc_odmiana(max_m2)} \Sexpr{max_m2}.
+Najmniejsze wydatki na części zostały odnotowane w \Sexpr{miesiąc_odmiana(min_m)} \Sexpr{min_m} i wyniosły \Sexpr{round(min_p*0.1^3, 2)} tyś. zł. 
+Drugie najmniejsze wydatki wyniosły \Sexpr{round(min_p2*0.1^3, 2)} tyś. zł. Wystąpił on w \Sexpr{miesiąc_odmiana(min_m2)} \Sexpr{min_m2}.
+Ogólnie w każdym miesiącu działania warsztatu wydatki na zakup części wyniosły przynajmnej \Sexpr{signif(min_p, digits = 1) * 0.1^3} tyś. zł.
+
+\subsection{Analiza przychodów z usług warsztatu}
+
+Chcielibyśmy sprawdzić, jak wyglądają miesięczne przychody (lub straty) wynikające z prowadzenia warsztatu. Przez przychód za pojedyńczą usługę uważamy różnicę ceny, którą zapłacił klient i kwoty zapłaconej za części. Przeanaliowane zostaną przychody z uwzględnieniem kosztu własnych napraw oraz bez nich.
+
+<<fig_uslugi, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=9,fig.pos="H", fig.cap="Miesięczny przychód wynikający z prowadzenia warsztatu z wliczonymi kosztami napraw własnych">>=
+
+query <- "SELECT CONCAT(DATE_FORMAT(data_zaksięgowania, '%Y-%m'), '-01') as data, SUM(usługi.cena - użyte_części.cena*użyte_części.ilość) as suma FROM usługi JOIN użyte_części ON usługi.id = użyte_części.id_usługi GROUP BY data ORDER BY data"
+
+df <- dbGetQuery(con, query)
+df[,1] <- as.Date(df[,1])
+df[,2] <- as.numeric(df[,2])
+
+wszystkie_daty <- expand.grid(1:12, 2014:2017) |> reframe(data = make_date(Var2, Var1, 1))
+df <- merge(x=df, y=wszystkie_daty, by="data", all.y=T)
+df$suma[is.na(df$suma)] <- 0
+
+df |> ggplot(aes(x=data, y=suma, , fill=format(data, "%m"))) + 
+  geom_bar(stat = "identity") + 
+  scale_fill_manual(name="Miesiąc",labels=unique(format(df$data, "%B")), values=hue_pal()(12))
+
+max_p <- max(df$suma)
+max_p2 <- sort(df$suma,decreasing = T)[2]
+
+max_m <- format(df$data[df$suma == max_p], "%B %Y")
+max_m2 <- format(df$data[df$suma == max_p2], "%B %Y")
+
+min_p <- min(df$suma)
+min_p2 <- sort(df$suma,decreasing = F)[2]
+
+min_m <- format(df$data[df$suma == min_p], "%B %Y")
+min_m2 <- format(df$data[df$suma == min_p2], "%B %Y")
+
+@
+
+Na wykresie \ref{fig:fig_uslugi} przedstawiony jest miesięczny przychód wynikający z prowadzenia warsztatu. Zostały na nim uwzględnione koszty napraw własnych. 
+Największy przychód był zaobserwowany w \Sexpr{miesiąc_odmiana(max_m)} \Sexpr{max_m} i wyniósł on wtedy \Sexpr{round(max_p*0.1^3, 2)} tyś. zł.
+Następny co do wielkości przychód wystąpił w \Sexpr{miesiąc_odmiana(max_m2)} \Sexpr{max_m2}, wyniósł on \Sexpr{round(max_p2*0.1^3, 2)} tyś. zł. Jest on \Sexpr{round(max_p/max_p2, 2)} razy mniejszy niż najwyższy przychód.
+Najmniejszy przychód warsztat odnotował w \Sexpr{miesiąc_odmiana(min_m)} \Sexpr{min_m}, który wyniósł \Sexpr{round(min_p*0.1^3, 2)} tyś. zł. 
+Drugi najmniejszy przychód wyniósł \Sexpr{round(min_p2*0.1^3, 2)} tyś. zł i wystąpił w \Sexpr{miesiąc_odmiana(min_m2)} \Sexpr{min_m2}.
+
+<<fig_uslugi2, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=9,fig.pos="H", fig.cap="Miesięczny przychód wynikający z prowadzenia warsztatu bez wliczonych kosztów napraw własnych">>=
+
+query <- "SELECT CONCAT(DATE_FORMAT(data_zaksięgowania, '%Y-%m'), '-01') as data, SUM(GREATEST(usługi.cena - użyte_części.cena*użyte_części.ilość,0)) as suma FROM usługi JOIN użyte_części ON usługi.id = użyte_części.id_usługi GROUP BY data ORDER BY data;"
+
+df <- dbGetQuery(con, query)
+df[,1] <- as.Date(df[,1])
+df[,2] <- as.numeric(df[,2])
+
+wszystkie_daty <- expand.grid(1:12, 2014:2017) |> reframe(data = make_date(Var2, Var1, 1))
+df <- merge(x=df, y=wszystkie_daty, by="data", all.y=T)
+df$suma[is.na(df$suma)] <- 0
+
+df |> ggplot(aes(x=data, y=suma, , fill=format(data, "%m"))) + 
+  geom_bar(stat = "identity") + 
+  scale_fill_manual(name="Miesiąc",labels=unique(format(df$data, "%B")), values=hue_pal()(12))
+
+max_p <- max(df$suma)
+max_p2 <- sort(df$suma,decreasing = T)[2]
+
+max_m <- format(df$data[df$suma == max_p], "%B %Y")
+max_m2 <- format(df$data[df$suma == max_p2], "%B %Y")
+
+min_p <- min(df$suma)
+min_p2 <- sort(df$suma,decreasing = F)[2]
+
+min_m <- format(df$data[df$suma == min_p], "%B %Y")
+min_m2 <- format(df$data[df$suma == min_p2], "%B %Y")
+
+@
+
+Na wykresie \ref{fig:fig_uslugi2} przedstawiony jest miesięczny przychód wynikający z prowadzenia warsztatu, ale tym razem bez uwzględnienia kosztów własnych. 
+Największy przychód warsztat zaobserwował w \Sexpr{miesiąc_odmiana(max_m)} \Sexpr{max_m}, który wyniósł \Sexpr{round(max_p*0.1^3, 2)} tyś. zł.
+Drugi zaś co do wielkości przychód wsytąpił w \Sexpr{miesiąc_odmiana(max_m2)} \Sexpr{max_m2}, wyniósł on \Sexpr{round(max_p2*0.1^3, 2)} tyś. zł, czyli jest \Sexpr{round(max_p/max_p2, 2)} razy mniejszy niż ten najwyższy zaobserwowany.
+Najmniejszy przychód został odnotowany w \Sexpr{miesiąc_odmiana(min_m)} \Sexpr{min_m} i wyniósł \Sexpr{round(min_p*0.1^3, 2)} tyś. zł. 
+Drugi najmniejszy przychód wyniósł \Sexpr{round(min_p2*0.1^3, 2)} tyś. zł. Wystąpił on w \Sexpr{miesiąc_odmiana(min_m2)} \Sexpr{min_m2}.
+
 
 <<warning=FALSE,message=FALSE,echo=FALSE>>=
 dbDisconnect(con)

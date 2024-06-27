@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.4.13)  27 JUN 2024 16:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.4.13)  27 JUN 2024 21:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -486,7 +486,7 @@ LaTeX Info: Redefining \nameref on input line 66.
 \@outlinefile=\write3
 \openout3 = `raport_w.out'.
 
-<figure/fig_naprawy_miesiecznie-1.pdf, id=48, 650.43pt x 289.08pt>
+<figure/fig_naprawy_miesiecznie-1.pdf, id=68, 650.43pt x 289.08pt>
 File: figure/fig_naprawy_miesiecznie-1.pdf Graphic file (type pdf)
 <use figure/fig_naprawy_miesiecznie-1.pdf>
 Package pdftex.def Info: figure/fig_naprawy_miesiecznie-1.pdf  used on input li
@@ -498,7 +498,7 @@ LaTeX Font Info:    Trying to load font information for OT4+cmtt on input line
 (d:/texlive/2021/texmf-dist/tex/latex/polski/ot4cmtt.fd
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-<figure/fig_plec-1.pdf, id=50, 289.08pt x 289.08pt>
+<figure/fig_plec-1.pdf, id=70, 289.08pt x 289.08pt>
 File: figure/fig_plec-1.pdf Graphic file (type pdf)
 <use figure/fig_plec-1.pdf>
 Package pdftex.def Info: figure/fig_plec-1.pdf  used on input line 128.
@@ -512,7 +512,7 @@ ed, duplicate ignored
                                                   
 l.133 \end{figure}
                    <./figure/fig_naprawy_miesiecznie-1.pdf>]
-<figure/fig_wiek-1.pdf, id=66, 361.35pt x 216.81pt>
+<figure/fig_wiek-1.pdf, id=86, 361.35pt x 216.81pt>
 File: figure/fig_wiek-1.pdf Graphic file (type pdf)
 <use figure/fig_wiek-1.pdf>
 Package pdftex.def Info: figure/fig_wiek-1.pdf  used on input line 151.
@@ -569,12 +569,12 @@ l.197
                                                   
 l.197 
        <./figure/fig_wiek-1.pdf>]
-<figure/fig_karta-1.pdf, id=90, 289.08pt x 289.08pt>
+<figure/fig_karta-1.pdf, id=110, 289.08pt x 289.08pt>
 File: figure/fig_karta-1.pdf Graphic file (type pdf)
 <use figure/fig_karta-1.pdf>
 Package pdftex.def Info: figure/fig_karta-1.pdf  used on input line 205.
 (pdftex.def)             Requested size: 289.07928pt x 289.09251pt.
-<figure/fig_typ-1.pdf, id=91, 361.35pt x 289.08pt>
+<figure/fig_typ-1.pdf, id=111, 361.35pt x 289.08pt>
 File: figure/fig_typ-1.pdf Graphic file (type pdf)
 <use figure/fig_typ-1.pdf>
 Package pdftex.def Info: figure/fig_typ-1.pdf  used on input line 227.
@@ -585,7 +585,7 @@ Package pdftex.def Info: figure/fig_typ-1.pdf  used on input line 227.
                                                   
 l.233 
        <./figure/fig_karta-1.pdf>]
-<figure/fig_wypadkowy-1.pdf, id=103, 361.35pt x 289.08pt>
+<figure/fig_wypadkowy-1.pdf, id=123, 361.35pt x 289.08pt>
 File: figure/fig_wypadkowy-1.pdf Graphic file (type pdf)
 <use figure/fig_wypadkowy-1.pdf>
 Package pdftex.def Info: figure/fig_wypadkowy-1.pdf  used on input line 249.
@@ -596,7 +596,7 @@ Package pdftex.def Info: figure/fig_wypadkowy-1.pdf  used on input line 249.
                                                   
 l.255 
        <./figure/fig_typ-1.pdf>]
-<figure/fig_pojemnosc-1.pdf, id=115, 361.35pt x 289.08pt>
+<figure/fig_pojemnosc-1.pdf, id=135, 361.35pt x 289.08pt>
 File: figure/fig_pojemnosc-1.pdf Graphic file (type pdf)
 <use figure/fig_pojemnosc-1.pdf>
 Package pdftex.def Info: figure/fig_pojemnosc-1.pdf  used on input line 271.
@@ -606,21 +606,70 @@ Package pdftex.def Info: figure/fig_pojemnosc-1.pdf  used on input line 271.
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.277 
-       <./figure/fig_wypadkowy-1.pdf>] [7pdfTeX warning (ext4): destination wit
-h the same identifier (name{figure.7}) has been already used, duplicate ignored
-
+       <./figure/fig_wypadkowy-1.pdf>]
+<figure/fig_zakup_pojazdu-1.pdf, id=147, 650.43pt x 289.08pt>
+File: figure/fig_zakup_pojazdu-1.pdf Graphic file (type pdf)
+<use figure/fig_zakup_pojazdu-1.pdf>
+Package pdftex.def Info: figure/fig_zakup_pojazdu-1.pdf  used on input line 297
+.
+(pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
+ [7pdfTeX warning (ext4): destination with the same identifier (name{figure.7})
+ has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.288 \end{document}
-                     <./figure/fig_pojemnosc-1.pdf>] (./raport_w.aux)
+l.303 
+       <./figure/fig_pojemnosc-1.pdf>]
+<figure/fig_zakup_czesci-1.pdf, id=161, 650.43pt x 289.08pt>
+File: figure/fig_zakup_czesci-1.pdf Graphic file (type pdf)
+<use figure/fig_zakup_czesci-1.pdf>
+Package pdftex.def Info: figure/fig_zakup_czesci-1.pdf  used on input line 320.
+
+(pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
+ [8pdfTeX warning (ext4): destination with the same identifier (name{figure.8})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.335 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+9}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.335 
+       <./figure/fig_zakup_pojazdu-1.pdf> <./figure/fig_zakup_czesci-1.pdf>]
+Overfull \hbox (0.79445pt too wide) in paragraph at lines 338--339
+\OT4/qpl/m/n/10 Chcieliby±my spraw-dzi¢, jak wy-gl¡-da-j¡ mie-si¦cz-ne przy-cho
+-dy (lub stra-ty) wy-ni-ka-j¡-ce z pro-wa-dze-nia warsz-
+ []
+
+<figure/fig_uslugi-1.pdf, id=179, 650.43pt x 289.08pt>
+File: figure/fig_uslugi-1.pdf Graphic file (type pdf)
+<use figure/fig_uslugi-1.pdf>
+Package pdftex.def Info: figure/fig_uslugi-1.pdf  used on input line 343.
+(pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
+<figure/fig_uslugi2-1.pdf, id=181, 650.43pt x 289.08pt>
+File: figure/fig_uslugi2-1.pdf Graphic file (type pdf)
+<use figure/fig_uslugi2-1.pdf>
+Package pdftex.def Info: figure/fig_uslugi2-1.pdf  used on input line 361.
+(pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
+[9pdfTeX warning (ext4): destination with the same identifier (name{figure.10})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.367 
+       <./figure/fig_uslugi-1.pdf>] [10pdfTeX warning (ext4): destination with 
+the same identifier (name{figure.11}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.379 \end{document}
+                     <./figure/fig_uslugi2-1.pdf>] (./raport_w.aux)
 Package rerunfilecheck Info: File `raport_w.out' has not changed.
-(rerunfilecheck)             Checksum: 40975021807A08997D73AED95A8BCC3E;1839.
+(rerunfilecheck)             Checksum: FD3DBA65A6BB533C181F00CD2C2D9906;2903.
  ) 
 Here is how much of TeX's memory you used:
- 10406 strings out of 478994
- 157435 string characters out of 5862207
- 471229 words of memory out of 5000000
- 27661 multiletter control sequences out of 15000+600000
+ 10455 strings out of 478994
+ 158566 string characters out of 5862207
+ 471596 words of memory out of 5000000
+ 27694 multiletter control sequences out of 15000+600000
  423023 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,8n,75p,500b,371s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -628,10 +677,10 @@ Here is how much of TeX's memory you used:
 f-dist/fonts/enc/dvips/tex-gyre/q-rm.enc}<d:/texlive/2021/texmf-dist/fonts/type
 1/public/pl/pltt10.pfb><d:/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/
 qplb.pfb><d:/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb>
-Output written on raport_w.pdf (7 pages, 169182 bytes).
+Output written on raport_w.pdf (10 pages, 195785 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
- 133 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
- 124 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 229 PDF objects out of 1000 (max. 8388607)
+ 190 compressed objects within 2 object streams
+ 39 named destinations out of 1000 (max. 500000)
+ 184 words of extra memory for PDF output out of 10000 (max. 10000000)
 
