@@ -1,13 +1,17 @@
 id,imię,nazwisko,PESEL,miasto,adres,telefon,email,data_zatrudnienia,data_zwolnienia,stanowisko,płaca
-1,Kazimierz,Opałka,64012501434,Wrocław,ul. Wspólna 9/32,48747679678,kazimierz.opalka@kuba.pl,2014-01-01,,menadżer,69.50000000000014
-2,Genowefa,Nefediuk,92021653402,Wrocław,ul. rtm. Zbigniewa Dunin-Wąsowicza 89/35,48638163323,genowefa.nefediuk@kuba.pl,2014-01-01,,sprzedawca,45.0
-3,Małgorzata,Selina,92041845285,Pieszyce,ul. Janisława Grondysa 49/7,48782294598,malgorzata.selina@kuba.pl,2014-01-01,,sprzedawca,47.500000000000036
-4,Julian,Kokoulin,62102027491,Wrocław,ul. Wesoła 25,48530214480,julian.kokoulin@kuba.pl,2014-01-01,2016-11-09,mechanik,55.00000000000014
-5,Andrei,Durło,68051549352,Kołobrzeg,ul. Miechowicka 7/21,48495462869,andrei.durlo@kuba.pl,2014-01-01,,informatyk,45.300000000000075
-6,Maciej,Słowiński,90032171230,Wrocław,ul. Wiejska 8/48,48940262319,maciej.slowinski@kuba.pl,2015-06-25,2016-12-27,sprzedawca,51.8000000000001
-7,Yury,Wesołowski,70120128672,Wrocław,ul. Jesionowa 4,48242422052,yury.wesolowski@kuba.pl,2015-12-04,,mechanik,48.50000000000005
-8,Monika,Iskrzycka,76012587666,Wrocław,ul. Poprzeczna 39/33,48615203987,monika.iskrzycka@kuba.pl,2016-04-14,,mechanik,50.80000000000008
-9,Ignacy,Chojnacki,68020255778,Wrocław,ul. Jęczmienna 84,48403925943,ignacy.chojnacki@kuba.pl,2016-08-06,,pomocnik mechanika,41.40000000000009
-10,Andrzej,Zalewski,89032285733,Wrocław,ul. Stanisława Chudoby 71/18,48672480613,andrzej.zalewski@kuba.pl,2016-09-10,,diagnosta samochodowy,58.20000000000016
-11,Andrzej,Bartnicki,95080280514,Wrocław,ul. Wolska 34/2,48621764612,andrzej.bartnicki@kuba.pl,2017-04-06,,sprzątający,38.70000000000005
-12,Stefan,Jóźwiak,94042537217,Łódź,ul. Kasztanowa 21,48881378238,stefan.jozwiak@kuba.pl,2017-05-17,2017-07-30,sprzątający,38.800000000000054
+1,Aleksandra,Kiełbowicz,64010269127,Wrocław,ul. Grunwaldzka 10/1,48474832414,aleksandra.kielbowicz@kuba.pl,2014-01-01,,menadżer,74.1000000000002
+2,Jarosław,Andrzejewski,66012008416,Wrocław,ul. Lipowa 81/12,48743035851,jaroslaw.andrzejewski@kuba.pl,2014-01-01,,sprzedawca,50.10000000000007
+3,Janusz,Woźniak,82062824372,Wrocław,ul. Pałacowa 29/33,48597466475,janusz.wozniak@kuba.pl,2014-01-01,,sprzedawca,56.90000000000017
+4,Dmytro,Leanovich,87010622477,Wrocław,ul. Topolowa 55/32,48560428902,dmytro.leanovich@kuba.pl,2014-01-01,,mechanik,54.00000000000013
+5,Sławomir,Pabiański,86081264854,Opole,ul. Bączkowiec 15/17,48522777456,slawomir.pabianski@kuba.pl,2014-01-01,,informatyk,42.00000000000003
+6,Zofia,Fornalak,60102314225,Białystok,ul. Sportowa 29/42,48217505442,zofia.fornalak@kuba.pl,2014-12-05,,sprzedawca,50.50000000000008
+7,Ewa,Trybunska,91112826923,Wrocław,ul. Cienista 66,48899882364,ewa.trybunska@kuba.pl,2015-05-22,,mechanik,54.500000000000135
+8,Sylwia,Szczypka,64062119548,Wrocław,ul. Bukowa 25/2,48041994711,sylwia.szczypka@kuba.pl,2015-06-26,,mechanik,50.50000000000008
+9,Ewelina,Glapa,68121338422,Gorzów Wielkopolski,pl. Skwer Andrzeja Wajdy 5/44,48358183421,ewelina.glapa@kuba.pl,2015-09-15,,mechanik,56.20000000000016
+10,Danuta,Dembna,69010575702,Wrocław,ul. Żyzna 62/35,48800197973,danuta.dembna@kuba.pl,2015-10-27,,pomocnik mechanika,39.600000000000065
+11,Janina,Niezabitowska,70053080160,Wrocław,ul. Rybacka 28/35,48293681583,janina.niezabitowska@kuba.pl,2015-12-01,,pomocnik mechanika,37.20000000000003
+12,Krzysztof,Merkiewicz,95081607033,Wrocław,ul. Krystyny Osińskiej 84,48751489350,krzysztof.merkiewicz@kuba.pl,2015-12-09,,diagnosta samochodowy,54.0000000000001
+13,Eryk,Wroniewicz,74011462450,Wrocław,ul. Parkowa 66/37,48126226002,eryk.wroniewicz@kuba.pl,2016-10-12,,diagnosta samochodowy,57.200000000000145
+14,Tomasz,Dunajewski,77042275394,Wrocław,ul. Stanisława Trembeckiego 23/4,48494156124,tomasz.dunajewski@kuba.pl,2017-01-21,,sprzątający,39.70000000000007
+15,Norbert,Krasnodębski,80071803175,Wrocław,ul. Krzywa 53/28,48358870050,norbert.krasnodebski@kuba.pl,2017-06-14,,sprzątający,38.200000000000045
+16,Sylwester,Błajszczak,60042204271,Wrocław,ul. Zacisze 38,48131944220,sylwester.blajszczak@kuba.pl,2017-07-12,,księgowy,42.30000000000003
