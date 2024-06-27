@@ -1,13 +1,13 @@
 id,imię,nazwisko,PESEL,miasto,adres,telefon,email,data_zatrudnienia,data_zwolnienia,stanowisko,płaca
-1,Aleksandra,Norell,86051107828,Piła,ul. Malinowa 87/30,48008966774,aleksandra.norell@kuba.pl,2014-01-01,,menadżer,64.30000000000007
-2,Janusz,Kończal,64122738414,Wrocław,ul. Winna 45/11,48001146548,janusz.konczal@kuba.pl,2014-01-01,2014-03-30,sprzedawca,59.500000000000206
-3,Dorota,Drewniak,81011601743,Wrocław,ul. Skrajna 14/6,48318168917,dorota.drewniak@kuba.pl,2014-01-01,,sprzedawca,53.800000000000125
-4,Józef,Stępień,69021768317,Łódź,ul. Jerzyka 84/40,48721849833,jozef.stepien@kuba.pl,2014-01-01,,mechanik,53.000000000000114
-5,Andrzej,Derlatka,66042806116,Olsztyn,ul. Kwiatowa 12,48145043922,andrzej.derlatka@kuba.pl,2014-01-01,,informatyk,43.70000000000005
-6,Wojciech,Raźny,91060884374,Wrocław,ul. Leśna 88/24,48354206498,wojciech.razny@kuba.pl,2016-01-14,2016-07-02,mechanik,59.1000000000002
-7,Dariusz,Kuraś,91042664974,Wrocław,ul. Irysowa 44,48331844912,dariusz.kuras@kuba.pl,2016-03-05,,mechanik,45.400000000000006
-8,Adriana,Porwolik,82012754782,Wrocław,ul. Młyny 94/1,48866416902,adriana.porwolik@kuba.pl,2016-04-23,,pomocnik mechanika,41.50000000000009
-9,Piotr,Melnychuk,72041346115,Barlinek,ul. Jarzębinowa 2/20,48172252621,piotr.melnychuk@kuba.pl,2016-10-29,,diagnosta samochodowy,49.20000000000003
-10,Robert,Wilk,77100184413,Kalisz,ul. płk. Dyplomowanego Ludwika Bociańskiego 88/14,48047920512,robert.wilk@kuba.pl,2017-04-02,,diagnosta samochodowy,48.700000000000024
-11,Mikołaj,Czurak,81021011035,Wrocław,ul. Rędzińska 87,48248207524,mikolaj.czurak@kuba.pl,2017-10-21,,sprzątający,38.00000000000004
-12,Eligiusz,Pachołek,74082529359,Wrocław,ul. Adama Mickiewicza 23,48831308086,eligiusz.pacholek@kuba.pl,2017-12-27,,informatyk,46.50000000000009
+1,Kazimierz,Opałka,64012501434,Wrocław,ul. Wspólna 9/32,48747679678,kazimierz.opalka@kuba.pl,2014-01-01,,menadżer,69.50000000000014
+2,Genowefa,Nefediuk,92021653402,Wrocław,ul. rtm. Zbigniewa Dunin-Wąsowicza 89/35,48638163323,genowefa.nefediuk@kuba.pl,2014-01-01,,sprzedawca,45.0
+3,Małgorzata,Selina,92041845285,Pieszyce,ul. Janisława Grondysa 49/7,48782294598,malgorzata.selina@kuba.pl,2014-01-01,,sprzedawca,47.500000000000036
+4,Julian,Kokoulin,62102027491,Wrocław,ul. Wesoła 25,48530214480,julian.kokoulin@kuba.pl,2014-01-01,2016-11-09,mechanik,55.00000000000014
+5,Andrei,Durło,68051549352,Kołobrzeg,ul. Miechowicka 7/21,48495462869,andrei.durlo@kuba.pl,2014-01-01,,informatyk,45.300000000000075
+6,Maciej,Słowiński,90032171230,Wrocław,ul. Wiejska 8/48,48940262319,maciej.slowinski@kuba.pl,2015-06-25,2016-12-27,sprzedawca,51.8000000000001
+7,Yury,Wesołowski,70120128672,Wrocław,ul. Jesionowa 4,48242422052,yury.wesolowski@kuba.pl,2015-12-04,,mechanik,48.50000000000005
+8,Monika,Iskrzycka,76012587666,Wrocław,ul. Poprzeczna 39/33,48615203987,monika.iskrzycka@kuba.pl,2016-04-14,,mechanik,50.80000000000008
+9,Ignacy,Chojnacki,68020255778,Wrocław,ul. Jęczmienna 84,48403925943,ignacy.chojnacki@kuba.pl,2016-08-06,,pomocnik mechanika,41.40000000000009
+10,Andrzej,Zalewski,89032285733,Wrocław,ul. Stanisława Chudoby 71/18,48672480613,andrzej.zalewski@kuba.pl,2016-09-10,,diagnosta samochodowy,58.20000000000016
+11,Andrzej,Bartnicki,95080280514,Wrocław,ul. Wolska 34/2,48621764612,andrzej.bartnicki@kuba.pl,2017-04-06,,sprzątający,38.70000000000005
+12,Stefan,Jóźwiak,94042537217,Łódź,ul. Kasztanowa 21,48881378238,stefan.jozwiak@kuba.pl,2017-05-17,2017-07-30,sprzątający,38.800000000000054

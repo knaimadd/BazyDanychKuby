@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-import os
 import datetime as dt
 
 #https://www.portalkadrowy.pl/czas-pracy/ustawa-z-18-stycznia-1951-r.-o-dniach-wolnych-od-pracy-tekst-jedn.-dz.u.-z-2020-r.-poz.-1920-6882.html
@@ -46,7 +45,7 @@ def calculate_easterA(year):
     o = (h + l - 7*m + 114) % 31
     return dt.date(year, n, o + 1)
 
-def calculate_easter_monday(year, algorithm = calculate_easterA):
+def calculate_easter_monday(year, algorithm = calculate_easterG):
     easter = algorithm(year)
     if easter.day == 31:
         return dt.date(year, 4, 1)
