@@ -34,9 +34,7 @@ con <- dbConnect(RMariaDB::MariaDB(),
 
 \section{Liczba naprawianych pojazdów w każdym miesiącu pracy warsztatu}
 
-{\color{red}[jakiś wstęp do tego]}
-
-<<fig_naprawy_miesiecznie,warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=9,fig.pos="h", fig.cap="Wykres liczba naprawianych pojazdów w każdym miesiącu pracy warsztatu">>=
+<<fig_naprawy_miesiecznie,warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=9,fig.pos="H", fig.cap="Wykres liczba naprawianych pojazdów w każdym miesiącu pracy warsztatu">>=
 query <- "SELECT CONCAT(DATE_FORMAT(data_zaksięgowania, '%Y-%m'), '-01') AS data, COUNT(id) AS liczność FROM usługi GROUP BY YEAR(data_zaksięgowania), MONTH(data_zaksięgowania);"
 
 naprawiane_pojazdy <- dbGetQuery(con, query)
@@ -59,15 +57,54 @@ a było ich \Sexpr{max(naprawiane_pojazdy$liczność)}. Natomiast najmniej przep
 było ich \Sexpr{min(naprawiane_pojazdy$liczność)}. Średnia liczba napraw miesięcznie wynosi 
 \Sexpr{round(mean(naprawiane_pojazdy$liczność), 3)}. 
 
+\section{Tabela najlepszych okazji}
+
+Zostanie teraz omówiona tabela najlepszych okazji, czyli pojazdów skupionych i sprzedanych, które przyniosły najwięcej zysku. Został uwzględniony także koszt naprawy pojazdu, gdy była ona potrzebna.
+
+<<warning=FALSE,message=FALSE,echo=FALSE>>=
+query1 <- "SELECT zakup_samochodu.data_zaksięgowania AS data_zakupu, samochody.id AS id_samochodu, marka, model, liczba_kół, czy_powypadkowy, skrzynia_biegów, pojemność_silnika, sprzedaż_samochodu.cena - zakup_samochodu.cena AS zysk FROM sprzedaż_samochodu JOIN samochody ON sprzedaż_samochodu.id_samochodu = samochody.id JOIN zakup_samochodu ON sprzedaż_samochodu.id_samochodu = zakup_samochodu.id_samochodu;"
+
+pojazdy_df <- dbGetQuery(con, query1)
+
+query2 <- "SELECT usługi.id_samochodu, zakup_samochodu.data_zaksięgowania AS data_zakupu, SUM(użyte_części.ilość * użyte_części.cena) AS koszt FROM usługi JOIN użyte_części ON usługi.id = użyte_części.id_usługi JOIN samochody ON usługi.id_samochodu = samochody.id JOIN sprzedaż_samochodu ON sprzedaż_samochodu.id_samochodu = samochody.id JOIN zakup_samochodu ON sprzedaż_samochodu.id_samochodu = zakup_samochodu.id_samochodu WHERE ((usługi.id_klienta = 0) & (usługi.data_zaksięgowania BETWEEN zakup_samochodu.data_zaksięgowania AND sprzedaż_samochodu.data_zaksięgowania)) GROUP BY użyte_części.id_usługi;"
+
+koszty_części <- dbGetQuery(con, query2)
+@
+
+<<warning=FALSE,message=FALSE,echo=FALSE>>=
+pojazdy_df <- left_join(pojazdy_df, koszty_części, join_by(data_zakupu, id_samochodu))
+pojazdy_df$koszt[is.na(pojazdy_df$koszt)] <- 0
+
+pojazdy_df$zysk <- pojazdy_df$zysk - pojazdy_df$koszt
+pojazdy_df <- subset(pojazdy_df, select = -koszt)
+@
+
+<<warning=FALSE,message=FALSE,echo=FALSE>>=
+najlepsze_okazje <- pojazdy_df[order(pojazdy_df$zysk, decreasing = TRUE),] |> 
+  select(id_samochodu, marka, model, zysk) |> head(n=5)
+
+najlepsze_okazje
+
+różnica_1_2 <- round(najlepsze_okazje[1,]$zysk * 0.1^3, 2) - round(najlepsze_okazje[2,]$zysk * 0.1^3, 2)
+wniosek_1_2 <- if_else(różnica_1_2 < 4, "niewielka", if_else(różnica_1_2 < 10, "średniej wielkości", "duża"))
+różnica_2_3 <- round(najlepsze_okazje[2,]$zysk * 0.1^3, 2) - round(najlepsze_okazje[3,]$zysk * 0.1^3, 2)
+wniosek_2_3 <- if_else(różnica_2_3 < 4, "niewielka", if_else(różnica_2_3 < 10, "średniej wielkości", "duża"))
+@
+
+Największy zysk ze sprzedaży pojazdu warsztat odniósł dla pojazdu o id \Sexpr{najlepsze_okazje[1,]$id_samochodu}. Jest nim \Sexpr{najlepsze_okazje[1,]$marka} o modelu \Sexpr{najlepsze_okazje[1,]$model}. Warsztat zarobił on na nim około \Sexpr{round(najlepsze_okazje[1,]$zysk * 0.1^3, 2)} tys. zł. 
+Na drugim miejscu znajduje się \Sexpr{najlepsze_okazje[2,]$marka} o modelu \Sexpr{najlepsze_okazje[2,]$model}. Zysk z tego pojazdu wyniósł około \Sexpr{round(najlepsze_okazje[2,]$zysk * 0.1^3, 2)} tys. zł, czyli o około \Sexpr{różnica_1_2} tys. zł mniej niż dla pojazdu znajdującego się na pierwszym miejscu, czyli różnica w cenie jest \Sexpr{wniosek_1_2}.
+W trzeciej kolejności najwięcej zarobił pojazd \Sexpr{najlepsze_okazje[3,]$marka} o modelu \Sexpr{najlepsze_okazje[3,]$model}, na którym warsztat zarobił około \Sexpr{round(najlepsze_okazje[3,]$zysk * 0.1^3, 2)} tys. zł. Jest to mniej od poprzedniego pojazdu o około \Sexpr{różnica_2_3} tys. zł, czyli różnica w cenie jest \Sexpr{wniosek_2_3}. 
+Ogólnie każdy pojazd znajdujący się w top 5 najlepszych okazji przyniósł zysk wielkości przynajmnej \Sexpr{signif(najlepsze_okazje[5,]$zysk, digits = 1) * 0.1^3} tyś. zł.
+
 \section{Profil klienta}
 
-W następnej koljeności zostaną przeanalizawani klienci warsztatu. Zostaną sprawdzone liczności klientów ze względu na różne ich cechy. {\color{red}[Czy warto pisać, że może nam to pomóc stwierdzić, do jakich klientów moglibyśmy spróbować jeszcze dotrzeć.]}
+W następnej kolejności zostaną przeanalizawani klienci warsztatu. Zostaną sprawdzone liczności klientów ze względu na różne ich cechy. {\color{red}[Czy warto pisać, że może nam to pomóc stwierdzić, do jakich klientów moglibyśmy spróbować jeszcze dotrzeć.]}
 
 \subsection{Płeć}
 
-Pierwszą cechą jaka zostanie wzięta pod uwagę jest płeć klienta.
+Pierwszą cechą wziętą pod uwagę jest płeć klienta. Zostanie sprawdzone, ile jest kobiet i mężczyzn wśród naszych klientów oraz jak duża jest różnica w licznościach tych grup.
 
-<<fig_plec, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=4, fig.cap="Wykres liczby klientów przy podziale ze względu na płeć">>=
+<<fig_plec, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=4,fig.pos="H", fig.cap="Wykres liczby klientów przy podziale ze względu na płeć">>=
 query <- "SELECT płeć, COUNT(id) AS liczność FROM klienci WHERE id > 0 GROUP BY płeć;"
 
 płeć_count <- dbGetQuery(con, query)
@@ -80,12 +117,12 @@ więcej <- płeć_count$płeć[płeć_count$licznoś == max(płeć_count$liczno�
 więcej <- if_else(więcej == "Kobieta", "kobiet", "mężczyzn")
 mniej <- if_else(więcej == "kobiet", "mężczyzn", "kobiet")
 iloraz <- max(płeć_count$liczność) / min(płeć_count$liczność)
-wniosek <- if_else(iloraz <= 1.15, "nie duża", 
+wniosek <- if_else(iloraz <= 1.15, "nieduża", 
                    if_else(iloraz <= 2, "średniej wielkości", "duża"))
 @
 
-Na wykresie słupkowym \ref{fig:fig_plec} są zaprezentowane liczności klientów przy podziale ze względu na płeć. Więcej klientów warsztatu należy do grupy \Sexpr{więcej}. Grupa \Sexpr{więcej} jest około \Sexpr{round(iloraz, 3)}
-razy większa od grupy \Sexpr{mniej}, a zatem różnica jest \Sexpr{wniosek}.
+Na wykresie słupkowym \ref{fig:fig_plec} są zaprezentowane liczności klientów przy podziale ze względu na płeć. Więcej klientów warsztatu należy do grupy \Sexpr{więcej}, jest ich \Sexpr{max(płeć_count$liczność)}. Grupa \Sexpr{więcej} jest około \Sexpr{round(iloraz, 3)}
+razy większa od grupy \Sexpr{mniej} (jest ich \Sexpr{min(płeć_count$liczność)}), a zatem różnica jest \Sexpr{wniosek}.
 
 \subsection{Wiek}
 
@@ -117,26 +154,52 @@ wiek_df <- data.frame(age_from_pesel(wiek_df$pesel))
 colnames(wiek_df) <- c("wiek")
 @
 
-<<fig_wiek, warning=FALSE,message=FALSE,echo=FALSE,fig.height=3,fig.width=5, fig.cap="Wykres pudełkowy wieku klientów">>=
+<<fig_wiek, warning=FALSE,message=FALSE,echo=FALSE,fig.height=3,fig.width=5,fig.pos="H", fig.cap="Wykres pudełkowy wieku klientów">>=
 wiek_df |> ggplot(aes(x=wiek)) + geom_boxplot()
+
+Q1 <- quantile(wiek_df$wiek, probs = 0.25)
+Q2 <- median(wiek_df$wiek)
+Q3 <- quantile(wiek_df$wiek, probs = 0.75)
+
+odmiana_wieku <- function(wiek) {
+  ostatnia_cyfra <- as.numeric(substr(wiek, nchar(wiek[1]), nchar(wiek[1])))
+  return(if_else(ostatnia_cyfra < 5 & ostatnia_cyfra > 1, "lata", "lat"))
+}
 @
 
-Rysunek \ref{fig:fig_wiek} przedstawia wykres pudełkowy wieku klientów warsztatu. Widać, że mediana wynosi [mediana], natomiast pierwszy kwartyl wynosi {\color{red}[Q1]}, trzeci kwartyl natomiast {\color{red}[Q3]}. {\color{red}[Mogłabym coś napisać, który jest bardziej oddalony od mediany]}. Najmłodszy klient warsztatu ma {\color{red}[najmniejszy wiek]}, natomiast najstarszy klient ma {\color{red}[najwyższy wiek]}.
+Rysunek \ref{fig:fig_wiek} przedstawia wykres pudełkowy wieku klientów warsztatu. Widać, że mediana wieku wynosi \Sexpr{Q2} \Sexpr{odmiana_wieku(Q2)}, natomiast pierwszy kwartyl wynosi \Sexpr{Q1} \Sexpr{odmiana_wieku(Q1)}, trzeci kwartyl natomiast \Sexpr{Q3} \Sexpr{odmiana_wieku(Q3)}. Zatem połowa klientów warsztatu jest wieku między \Sexpr{Q1} \Sexpr{odmiana_wieku(Q1)} a \Sexpr{Q3} \Sexpr{odmiana_wieku(Q3)}.
+Najmłodszy klient warsztatu ma \Sexpr{min(wiek_df$wiek)} \Sexpr{odmiana_wieku(min(wiek_df$wiek))}, natomiast najstarszy jest w wieku \Sexpr{max(wiek_df$wiek)} lat.
+
+<<warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=4>>=
+średnia <- round(mean(wiek_df$wiek), 2)
+std <- round(sd(wiek_df$wiek), 2)
+skośność <- round(skewness(wiek_df$wiek), 2)
+kurtoza <- round(kurtosis(wiek_df$wiek), 2)
+
+skośność_wniosek <- if_else(skośność <= -0.1, "mniejsza od 0, a zatem rozkład wieku jest lewostronnie skośny",
+                            if_else(skośność < 0.1, "bliska 0, a zatem rozkład wieku można uznać za symetryczny",
+                                    "większa od 0, a zatem rozkład wieku jest prawostronnie skośny"))
+
+kurtoza_wniosek <- if_else(kurtoza <= -0.1, 
+      "mniejszą od 0, a zatem rozkład wieku jest platykurtyczny, czyli jest mniej wysmukły niż rozkład normalny",
+      if_else(kurtoza < 0.1, "bliską 0, a zatem rozkład wieku jest mezokurtyczny",
+          "większą od 0, a zatem rozkład wieku jest leptokurtyczny, czyli jest bardziej wysmukły niż normalny"))
+@
 
 \begin{table}[H]
 \centering
 \begin{tabular}{c|c} \hline
 Miara & Wartość \\ \hline
-Średnia & \Sexpr{round(mean(wiek_df$wiek), 2)} \\ 
-Odchylenie standardowe & \Sexpr{round(sd(wiek_df$wiek), 2)} \\
-Skośność & \Sexpr{round(skewness(wiek_df$wiek), 2)}  \\ 
-Kurtoza & \Sexpr{round(kurtosis(wiek_df$wiek), 2)} \\ \hline
+Średnia & \Sexpr{średnia} \\ 
+Odchylenie standardowe & \Sexpr{std} \\
+Skośność & \Sexpr{skośność}  \\ 
+Kurtoza & \Sexpr{kurtoza} \\ \hline
 \end{tabular}
 \caption{Wybrane miary wieku klientów}
 \label{tab_wiek}
 \end{table}
 
-Kilka miar, których nie da się odczytać z wykresu, zostało przedstawionych w tabli \ref{tab_wiek}. Można zatem odczytać, że średnio klieci mają \Sexpr{round(mean(wiek_df$wiek), 2)}, a odchylenie standardowe wieku wynoski \Sexpr{round(sd(wiek_df$wiek), 2)}. {\color{red}[Zdanie że średnia jest mniejsza/podobna/większa a zatem jakaś skośność, co potwierdza współczynnik skośności]}
+Kilka miar, których nie da się odczytać z wykresu pudełkowego, zostało przedstawionych w tabeli \ref{tab_wiek}. Można zatem odczytać, że średnio klieci mają \Sexpr{średnia} \Sexpr{odmiana_wieku(średnia)}, a odchylenie standardowe wieku wynosi \Sexpr{std} \Sexpr{odmiana_wieku(std)}. Wartość współczynnika skośności jest \Sexpr{skośność_wniosek}. Kurtoza przyjmuje wartość \Sexpr{kurtoza_wniosek}.
 
 \subsection{Miasto}
 <<warning=FALSE,message=FALSE,echo=FALSE>>=
@@ -145,13 +208,46 @@ query <- "SELECT miasto, COUNT(id) AS liczność FROM klienci WHERE id > 0 GROUP
 miasto_count <- dbGetQuery(con, query)
 miasto_count[, 2] <- as.numeric(miasto_count[, 2])
 
-head(miasto_count)
+miasto_count$miejsce <- rank(1/miasto_count$liczność)
+
+top_miejsca <- head(unique(miasto_count$miejsce), n=4)
+
+miasto_count |> filter(miejsce <= top_miejsca[4]) |> 
+  select(miejsce, miasto, liczność)
+
+zdanie_miasta <- function(i, wersja=1) {
+  miasta <- miasto_count$miasto[miasto_count$miejsce == top_miejsca[i]]
+  
+  if (wersja == 1){
+    return(if_else(length(miasta) == 1, paste("miasta", paste(miasta, collapse = ', ')), 
+                 paste("miast", paste(miasta, collapse = ', ') )))
+  }
+  return(if_else(length(miasta) == 1, paste("miasto", paste(miasta, collapse = ', ')), 
+                 paste("miasta", paste(miasta, collapse = ', ') )))
+}
+
+zdanie_odmiana_być <- function(i) {
+  miasta <- miasto_count$miasto[miasto_count$miejsce == top_miejsca[i]]
+  return(if_else(length(miasta) == 1, "jest", "są"))
+}
+
+zdanie_odmiana_nim <- function(i) {
+  miasta <- miasto_count$miasto[miasto_count$miejsce == top_miejsca[i]]
+  return(if_else(length(miasta) == 1, "nim", "nich"))
+}
+  
+liczność1 <- miasto_count$liczność[miasto_count$miejsce == top_miejsca[1]][1]
+liczność2 <- miasto_count$liczność[miasto_count$miejsce == top_miejsca[2]][1]
+
 @
 
-[opis tabelki]
+Najwięcej klientów warsztatu pochodzi z \Sexpr{zdanie_miasta(1)}. Liczniść w \Sexpr{zdanie_odmiana_nim(1)} wynosi \Sexpr{liczność1} klientów. W następnej kolejności najwięcej klientów pochodzi z \Sexpr{zdanie_miasta(2)}, z czego liczność w \Sexpr{zdanie_odmiana_nim(2)} wynosi \Sexpr{liczność2} klientów, czyli jest ich \Sexpr{round(liczność1/liczność2, 2)} mniej niż klientów z \Sexpr{zdanie_miasta(1)}. Na miejscu \Sexpr{top_miejsca[3]} \Sexpr{zdanie_odmiana_być(3)} \Sexpr{zdanie_miasta(3, 2)}, mieszka w \Sexpr{zdanie_odmiana_nim(3)} \Sexpr{miasto_count$liczność[miasto_count$miejsce == top_miejsca[3]][1]} klientów. Natomiast na ostatnim miejscu przedstawionym w tabeli \Sexpr{zdanie_odmiana_być(4)} \Sexpr{zdanie_miasta(4, 2)}, mieszka w \Sexpr{zdanie_odmiana_nim(4)} \Sexpr{miasto_count$liczność[miasto_count$miejsce == top_miejsca[4]][1]} klientów.
 
 \subsection{Karta lojalnościowa}
-<<fig_karta, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=4, fig.cap="Wykres liczby klientów ze względu na posiadanie karty lojalnościowej">>=
+
+W tej części zostanie sprawdzone, ilu klientów posiada kartę lojalnościową. Klient zdobywa ją po skorzystaniu z usług warsztatu (naprawa, zakup lub sprzedaż pojazdu) przynajmniej trzy razy. Klient posiadający tę katrę może kupować samochody ze zniżką w wysokości 3\%.
+
+<<fig_karta, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=4,fig.pos="H", fig.cap="Wykres liczby klientów ze względu na posiadanie karty lojalnościowej">>=
 query <- "SELECT karta_lojalnościowa, COUNT(id) AS liczność FROM klienci WHERE id > 0 GROUP BY karta_lojalnościowa;"
 
 karta_lojalnościowa_count <- dbGetQuery(con, query)
@@ -162,62 +258,135 @@ karta_lojalnościowa_count <- karta_lojalnościowa_count |>
 
 karta_lojalnościowa_count |> ggplot(aes(x=karta_lojalnościowa, y=liczność, fill=karta_lojalnościowa)) + 
   geom_bar(stat = "identity") + guides(fill="none") + labs(x = "karta lojalnościowa")
+
+więcej_liczność <- max(karta_lojalnościowa_count$liczność)
+mniej_liczność <- min(karta_lojalnościowa_count$liczność)
+
+więcej_procent <- round(więcej_liczność / (więcej_liczność + mniej_liczność) * 100, 0)
+mniej_procent <- round(mniej_liczność / (więcej_liczność + mniej_liczność) * 100, 0)
+
+więcej <- karta_lojalnościowa_count$karta_lojalnościowa[karta_lojalnościowa_count$liczność == więcej_liczność]
+mniej <- karta_lojalnościowa_count$karta_lojalnościowa[karta_lojalnościowa_count$liczność == mniej_liczność]
+
+więcej <- if_else(więcej == "Tak", "posiadają kartę lojalnoścową", "nie posiadają karty lojalnoścowej")
+mniej <- if_else(mniej == "Tak", "posiadają kartę lojalnoścową", "nie posiadają karty lojalnoścowej")
+
+
 @
 
-\section{Tabela najlepszych okazji}
+Bardzej liczną grupą są klienci, którzy \Sexpr{więcej}, jest ich \Sexpr{więcej_liczność} (\Sexpr{więcej_procent}\% wszystkich klientów). W grupie klientów, którzy \Sexpr{mniej}, jest \Sexpr{mniej_liczność} osób i stanowią oni \Sexpr{mniej_procent}\% klientów warsztatu.
 
-<<warning=FALSE,message=FALSE,echo=FALSE>>=
-query1 <- "SELECT zakup_samochodu.data_zaksięgowania AS data_zakupu, samochody.id AS id_samochodu, marka, model, liczba_kół, czy_powypadkowy, typ_nadwozia, typ_paliwa, skrzynia_biegów, sprzedaż_samochodu.cena - zakup_samochodu.cena AS zysk FROM sprzedaż_samochodu JOIN samochody ON sprzedaż_samochodu.id_samochodu = samochody.id JOIN zakup_samochodu ON sprzedaż_samochodu.id_samochodu = zakup_samochodu.id_samochodu;"
+\section{Jak wybrane cechy pojazdów wpływają na zysk warsztatu?}
 
-pojazdy_df <- dbGetQuery(con, query1)
-
-query2 <- "SELECT usługi.id_samochodu, zakup_samochodu.data_zaksięgowania AS data_zakupu, SUM(użyte_części.ilość * użyte_części.cena) AS koszt FROM usługi JOIN użyte_części ON usługi.id = użyte_części.id_usługi JOIN samochody ON usługi.id_samochodu = samochody.id JOIN sprzedaż_samochodu ON sprzedaż_samochodu.id_samochodu = samochody.id JOIN zakup_samochodu ON sprzedaż_samochodu.id_samochodu = zakup_samochodu.id_samochodu WHERE ((usługi.id_klienta = 0) & (usługi.data_zaksięgowania BETWEEN zakup_samochodu.data_zaksięgowania AND sprzedaż_samochodu.data_zaksięgowania)) GROUP BY użyte_części.id_usługi;"
-
-koszty_części <- dbGetQuery(con, query2)
-@
-
-<<warning=FALSE,message=FALSE,echo=FALSE>>=
-pojazdy_df <- left_join(pojazdy_df, koszty_części, join_by(data_zakupu, id_samochodu))
-pojazdy_df$koszt[is.na(pojazdy_df$koszt)] <- 0
-
-pojazdy_df$zysk <- pojazdy_df$zysk - pojazdy_df$koszt
-pojazdy_df <- subset(pojazdy_df, select = -koszt)
-@
-
-<<warning=FALSE,message=FALSE,echo=FALSE>>=
-pojazdy_df[order(pojazdy_df$zysk, decreasing = TRUE),] |> select(id_samochodu, marka, model, zysk) |> head()
-@
-
-\section{Jak wybrane cechy pojazdów wpływają na zysk warsztatu? (zastanowić się nad tytułem !!!)}
+W tym paragrafie zostaną opisane zależności między zyskiem ze sprzedaży pojazdów, skupionych i w razie potrzeby naprawionych przez warsztat, a cechami: rodzaj pojazdu, czy jest powypadkowy i pojemność silnika.
 
 \subsection{Rodzaj pojazdu}
 
-{\color{red}[Skupimy się, czy to samochód czy motocykl]}
+Pierwszą cechą braną pod uwagę jest rodzaj pojazdu, czyli czy jest to samochód czy motocykl.
 
-[tabelka z miarami ???]
-
-<<fig_typ, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=5, fig.cap="Wykresy pudełkowe zysku ze względu na rodzaj pojazdu">>=
+<<fig_typ, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=5,fig.pos="H", fig.cap="Wykresy pudełkowe zysku ze względu na rodzaj pojazdu">>=
 pojazdy_df |> mutate(liczba_kół = if_else(liczba_kół==4, "samochód", "motocykl")) |> 
-  ggplot(aes(x=zysk, y=liczba_kół)) + geom_boxplot() + labs(y= "rodzaj pojazdu")
+  ggplot(aes(x=zysk*0.1^3, y=liczba_kół)) + geom_boxplot() + 
+  labs(x = "zysk (tyś. zł)", y= "rodzaj pojazdu")
+
+miary <- pojazdy_df |> mutate(typ = if_else(liczba_kół==4, "samochód", "motocykl")) |> 
+  group_by(typ) |> summarise(Q1 = quantile(zysk * 0.1^3, probs = 0.25),
+                             Q2 = median(zysk * 0.1^3),
+                             Q3 = quantile(zysk * 0.1^3, probs = 0.75),
+                             max_wartość = max(zysk * 0.1^3),
+                             min_wartość = min(zysk * 0.1^3))
+
+Q1_max_grupa <- miary$typ[miary$Q1==max(miary$Q1)]
+Q2_max_grupa <- miary$typ[miary$Q2==max(miary$Q2)]
+Q3_max_grupa <- miary$typ[miary$Q3==max(miary$Q3)]
+max_max_grupa <- miary$typ[miary$max_wartość==max(miary$max_wartość)]
+min_min_grupa <- miary$typ[miary$min_wartość==min(miary$min_wartość)]
+
+zdanie_dod <- if_else(Q1_max_grupa == Q2_max_grupa & Q1_max_grupa == Q3_max_grupa, paste(". Zatem częściej większy zysk dla warsztatu przynosi sprzedaż pojazdów typu", Q1_max_grupa), "")
+
 @
+
+Na rysunku \ref{fig:fig_typ} przedstawione są dwa wykresy pudełkowe zysków, jeden dla samochodów, drugi dla motocykli. Większa mediana, wynosząca \Sexpr{max(miary$Q2)} tyś. zł, jest dla pojazdów typu \Sexpr{Q2_max_grupa}. W drugiej grupie wynosi ona \Sexpr{min(miary$Q2)} tyś. zł. 
+Większy pierwszy kwartyl występuje w grupie typu \Sexpr{Q1_max_grupa}, wynosi on \Sexpr{max(miary$Q1)} tyś. zł, w porównaniu dla grupy typu \Sexpr{miary$typ[miary$Q1==min(miary$Q1)]} jego wartość wynosi \Sexpr{min(miary$Q1)} tyś. zł.
+W przypadku kwartyla trzeciego większa wartość występuje w grupie typu \Sexpr{Q3_max_grupa} (wynosi \Sexpr{max(miary$Q3)} tyś. zł). W drugiej grupie wynosi on \Sexpr{min(miary$Q3)} tyś. zł.
+Największy zysk przyniósł \Sexpr{max_max_grupa}, a wyniósł on \Sexpr{max(miary$max_wartość)} tyś. zł. 
+Najmniejszy zysk natomiast przyniósł \Sexpr{min_min_grupa} i wyniósł on \Sexpr{min(miary$min_wartość)} tyś. zł\Sexpr{zdanie_dod}. 
 
 \subsection{Czy powypadkowy}
 
-[tabelka z miarami ???]
+Następną badaną cechą jest to, czy pojazd jest powypadkowy.
 
-<<fig_wypadkowy, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=5, fig.cap="Wykresy pudełkowe zysku ze względu na to czy pojazd jest powypadkowy">>=
+<<fig_wypadkowy, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=5,fig.pos="H", fig.cap="Wykresy pudełkowe zysku ze względu na to czy pojazd jest powypadkowy">>=
 pojazdy_df |> mutate(czy_powypadkowy = if_else(czy_powypadkowy, "Tak", "Nie")) |> 
-  ggplot(aes(x=zysk, y=czy_powypadkowy)) + geom_boxplot() + labs(y= "czy powypadkowy")
+  ggplot(aes(x=zysk*0.1^3, y=czy_powypadkowy)) + geom_boxplot() + 
+  labs(x = "zysk (tyś. zł)", y = "czy powypadkowy")
+
+miary <- pojazdy_df |> mutate(czy_powypadkowy = if_else(czy_powypadkowy, "powypadkowych", "niepowypadkowych")) |> 
+  group_by(czy_powypadkowy) |> summarise(Q1 = quantile(zysk * 0.1^3, probs = 0.25),
+                                         Q2 = median(zysk * 0.1^3),
+                                         Q3 = quantile(zysk * 0.1^3, probs = 0.75),
+                                         max_wartość = max(zysk * 0.1^3),
+                                         min_wartość = min(zysk * 0.1^3))
+
+Q1_max_grupa <- miary$czy_powypadkowy[miary$Q1==max(miary$Q1)]
+Q2_max_grupa <- miary$czy_powypadkowy[miary$Q2==max(miary$Q2)]
+Q3_max_grupa <- miary$czy_powypadkowy[miary$Q3==max(miary$Q3)]
+max_max_grupa <- miary$czy_powypadkowy[miary$max_wartość==max(miary$max_wartość)]
+min_min_grupa <- miary$czy_powypadkowy[miary$min_wartość==min(miary$min_wartość)]
+
+zdanie_dod <- if_else(Q1_max_grupa == Q2_max_grupa & Q1_max_grupa == Q3_max_grupa, paste(". Zatem częściej większy zysk dla warsztatu przynosi sprzedaż pojazdów", Q1_max_grupa), "")
+
 @
 
-\subsection{skrzynia biegów / pojemność silnika}
+Na rysunku \ref{fig:fig_wypadkowy} przedstawione są dwa wykresy pudełkowe zysków dla pojazdów powypadkowych i niepowypadkowych. Większa mediana, wynosząca \Sexpr{max(miary$Q2)} tyś. zł, jest dla pojazdów \Sexpr{Q2_max_grupa}. W drugiej grupie wynosi ona \Sexpr{min(miary$Q2)} tyś. zł. 
+Większy pierwszy kwartyl występuje w grupie pojazdów \Sexpr{Q1_max_grupa}, wynosi on \Sexpr{max(miary$Q1)} tyś. zł, w porównaniu dla grupy pojazdów \Sexpr{miary$czy_powypadkowy[miary$Q1==min(miary$Q1)]} jego wartość wynosi \Sexpr{min(miary$Q1)} tyś. zł.
+Większa wartość trzeciego kwartylu występuje dla pojazdów \Sexpr{Q3_max_grupa} i wynosi \Sexpr{max(miary$Q3)} tyś. zł. Dla pojazdów \Sexpr{miary$czy_powypadkowy[miary$Q3==min(miary$Q3)]} wynosi on \Sexpr{min(miary$Q3)} tyś. zł.
+Największy zysk przyniósł pojazd z grupy \Sexpr{max_max_grupa} i wyniósł on \Sexpr{max(miary$max_wartość)} tyś. zł. 
+Najmniejszy zysk natomiast przyniósł pojazd z grupy \Sexpr{min_min_grupa} i wyniósł on \Sexpr{min(miary$min_wartość)} tyś. zł\Sexpr{zdanie_dod}. 
 
-[tabelka z miarami ???]
+\subsection{Pojemność silnika}
 
-<<warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=5>>=
-pojazdy_df |> ggplot(aes(x=zysk, y=skrzynia_biegów)) + geom_boxplot() + labs(y= "skrzynia biegów")
+Ostatnią cechą braną pod uwagę jest pojemność silnika pojazdu.
+
+<<fig_pojemnosc, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=5,fig.pos="H", fig.cap="Wykresy pudełkowe zysku ze względu na pojemność silnika">>=
+
+pojazdy_df <- pojazdy_df |> mutate(pojemność_silnika = 
+                       if_else(pojemność_silnika <= 1.2, "poniżej 1.3", 
+                               if_else(pojemność_silnika <= 1.8, "pomiędzy 1.3 i 1.8", "powyżej 1.8")))
+
+pojazdy_df$pojemność_silnika <- factor(pojazdy_df$pojemność_silnika, 
+                                       levels = c("poniżej 1.3", "pomiędzy 1.3 i 1.8", "powyżej 1.8"))
+
+pojazdy_df |> ggplot(aes(x=zysk*0.1^3, y=pojemność_silnika)) + geom_boxplot() + 
+  labs(x = "zysk (tyś. zł)", y= "pojemność silnika (litry)")
+
+miary <- pojazdy_df |> group_by(pojemność_silnika) |> summarise(Q1 = quantile(zysk * 0.1^3, probs = 0.25),
+                                                                Q2 = median(zysk * 0.1^3),
+                                                                Q3 = quantile(zysk * 0.1^3, probs = 0.75),
+                                                                max_wartość = max(zysk * 0.1^3),
+                                                                min_wartość = min(zysk * 0.1^3))
+
+Q1_max_grupa <- miary$pojemność_silnika[miary$Q1==max(miary$Q1)]
+Q2_max_grupa <- miary$pojemność_silnika[miary$Q2==max(miary$Q2)]
+Q3_max_grupa <- miary$pojemność_silnika[miary$Q3==max(miary$Q3)]
+
+Q1_min_grupa <- miary$pojemność_silnika[miary$Q1==min(miary$Q1)]
+Q2_min_grupa <- miary$pojemność_silnika[miary$Q2==min(miary$Q2)]
+Q3_min_grupa <- miary$pojemność_silnika[miary$Q3==min(miary$Q3)]
+
+max_max_grupa <- miary$pojemność_silnika[miary$max_wartość==max(miary$max_wartość)]
+min_min_grupa <- miary$pojemność_silnika[miary$min_wartość==min(miary$min_wartość)]
+
+zdanie_dod_max <- if_else(Q1_max_grupa == Q2_max_grupa & Q1_max_grupa == Q3_max_grupa, paste(" Zatem przeważnie największy zysk dla warsztatu przynosi sprzedaż pojazdów o pojemności silnika", Q1_max_grupa, "litra."), "")
+
+zdanie_dod_min <- if_else(Q1_min_grupa == Q2_min_grupa & Q1_min_grupa == Q3_min_grupa, paste(" Najczęściej najmniejszy zysk przynosi sprzedaż pojazdów z pojemnością silnika", Q1_min_grupa, "litra."), "")
 @
 
+Na rysunku \ref{fig:fig_wypadkowy} przedstawione są wykresy pudełkowe zysków ze względu na pojemność silnika. Największa mediana, wynosząca \Sexpr{max(miary$Q2)} tyś. zł, jest dla pojazdów o pojemności silnika \Sexpr{Q2_max_grupa} litra. Natomiast najmniej ona wynosi \Sexpr{min(miary$Q2)} tyś. zł w grupie pojazdów o pojemności \Sexpr{Q2_min_grupa} litra. 
+Największy pierwszy kwartyl występuje w grupie pojazdów o pojemności \Sexpr{Q1_max_grupa} litra, wynosi on \Sexpr{max(miary$Q1)} tyś. zł, w porównaniu z pojazdami o pojemności \Sexpr{Q1_min_grupa} litra, dla których jego wartość jest najmniejsza i wynosi \Sexpr{min(miary$Q1)} tyś. zł.
+Największa wartość trzeciego kwartylu występuje dla pojazdów o pojemności \Sexpr{Q3_max_grupa} litra i wynosi \Sexpr{max(miary$Q3)} tyś. zł. Dla pojazdów \Sexpr{Q3_min_grupa} litra wynosi on \Sexpr{min(miary$Q3)} tyś. zł i jest to najmnijesza wartość w tych grupach.
+Największy zysk przyniósł pojazd o pojemności silnika \Sexpr{max_max_grupa} litra i wyniósł on \Sexpr{max(miary$max_wartość)} tyś. zł. 
+Najmniejszy zysk natomiast przyniósł pojazd z pojemnością silnika \Sexpr{min_min_grupa} litra i wyniósł on \Sexpr{min(miary$min_wartość)} tyś. zł.\Sexpr{zdanie_dod_max}\Sexpr{zdanie_dod_min}
 
 <<warning=FALSE,message=FALSE,echo=FALSE>>=
 dbDisconnect(con)

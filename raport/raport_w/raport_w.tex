@@ -69,10 +69,8 @@
 
 \section{Liczba naprawianych pojazdów w każdym miesiącu pracy warsztatu}
 
-{\color{red}[jakiś wstęp do tego]}
-
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[h]
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
 
 {\centering \includegraphics[width=\maxwidth]{figure/fig_naprawy_miesiecznie-1} 
 
@@ -90,97 +88,9 @@ styczeń 2014,
 było ich 2. Średnia liczba napraw miesięcznie wynosi 
 9.188. 
 
-\section{Profil klienta}
-
-W następnej koljeności zostaną przeanalizawani klienci warsztatu. Zostaną sprawdzone liczności klientów ze względu na różne ich cechy. {\color{red}[Czy warto pisać, że może nam to pomóc stwierdzić, do jakich klientów moglibyśmy spróbować jeszcze dotrzeć.]}
-
-\subsection{Płeć}
-
-Pierwszą cechą jaka zostanie wzięta pod uwagę jest płeć klienta.
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
-
-{\centering \includegraphics[width=\maxwidth]{figure/fig_plec-1} 
-
-}
-
-\caption[Wykres liczby klientów przy podziale ze względu na płeć]{Wykres liczby klientów przy podziale ze względu na płeć}\label{fig:fig_plec}
-\end{figure}
-
-\end{knitrout}
-
-Na wykresie słupkowym \ref{fig:fig_plec} są zaprezentowane liczności klientów przy podziale ze względu na płeć. Więcej klientów warsztatu należy do grupy kobiet. Grupa kobiet jest około 1.102
-razy większa od grupy mężczyzn, a zatem różnica jest nie duża.
-
-\subsection{Wiek}
-
-Zostanie również przeanalizowany rozkład wieku klientów warsztatu.
-
-
-
-
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
-
-{\centering \includegraphics[width=\maxwidth]{figure/fig_wiek-1} 
-
-}
-
-\caption[Wykres pudełkowy wieku klientów]{Wykres pudełkowy wieku klientów}\label{fig:fig_wiek}
-\end{figure}
-
-\end{knitrout}
-
-Rysunek \ref{fig:fig_wiek} przedstawia wykres pudełkowy wieku klientów warsztatu. Widać, że mediana wynosi [mediana], natomiast pierwszy kwartyl wynosi {\color{red}[Q1]}, trzeci kwartyl natomiast {\color{red}[Q3]}. {\color{red}[Mogłabym coś napisać, który jest bardziej oddalony od mediany]}. Najmłodszy klient warsztatu ma {\color{red}[najmniejszy wiek]}, natomiast najstarszy klient ma {\color{red}[najwyższy wiek]}.
-
-\begin{table}[H]
-\centering
-\begin{tabular}{c|c} \hline
-Miara & Wartość \\ \hline
-Średnia & 45.17 \\ 
-Odchylenie standardowe & 10.73 \\
-Skośność & 0.02  \\ 
-Kurtoza & 1.86 \\ \hline
-\end{tabular}
-\caption{Wybrane miary wieku klientów}
-\label{tab_wiek}
-\end{table}
-
-Kilka miar, których nie da się odczytać z wykresu, zostało przedstawionych w tabli \ref{tab_wiek}. Można zatem odczytać, że średnio klieci mają 45.17, a odchylenie standardowe wieku wynoski 10.73. {\color{red}[Zdanie że średnia jest mniejsza/podobna/większa a zatem jakaś skośność, co potwierdza współczynnik skośności]}
-
-\subsection{Miasto}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{verbatim}
-##         miasto liczność
-## 1      Wrocław      708
-## 2    Bydgoszcz       22
-## 3         Łódź       20
-## 4 Zielona Góra       16
-## 5       Poznań       16
-## 6        Opole       16
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-
-[opis tabelki]
-
-\subsection{Karta lojalnościowa}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
-
-{\centering \includegraphics[width=\maxwidth]{figure/fig_karta-1} 
-
-}
-
-\caption[Wykres liczby klientów ze względu na posiadanie karty lojalnościowej]{Wykres liczby klientów ze względu na posiadanie karty lojalnościowej}\label{fig:fig_karta}
-\end{figure}
-
-\end{knitrout}
-
 \section{Tabela najlepszych okazji}
+
+Zostanie teraz omówiona tabela najlepszych okazji, czyli pojazdów skupionych i sprzedanych, które przyniosły najwięcej zysku. Został uwzględniony także koszt naprawy pojazdu, gdy była ona potrzebna.
 
 
 
@@ -195,21 +105,124 @@ Kilka miar, których nie da się odczytać z wykresu, zostało przedstawionych w
 ## 175          221 Mercedes-Benz    E 300  98044
 ## 805          779        Jaguar      XKR  87200
 ## 881          969       Porsche Panamera  82355
-## 716          817          Audi      RS3  76412
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
 
-\section{Jak wybrane cechy pojazdów wpływają na zysk warsztatu? (zastanowić się nad tytułem !!!)}
+Największy zysk ze sprzedaży pojazdu warsztat odniósł dla pojazdu o id 742. Jest nim Mercedes-Benz o modelu E 63 AMG. Warsztat zarobił on na nim około 126.56 tys. zł. 
+Na drugim miejscu znajduje się Porsche o modelu Panamera. Zysk z tego pojazdu wyniósł około 99.18 tys. zł, czyli o około 27.38 tys. zł mniej niż dla pojazdu znajdującego się na pierwszym miejscu, czyli różnica w cenie jest duża.
+W trzeciej kolejności najwięcej zarobił pojazd Mercedes-Benz o modelu E 300, na którym warsztat zarobił około 98.04 tys. zł. Jest to mniej od poprzedniego pojazdu o około 1.14 tys. zł, czyli różnica w cenie jest niewielka. 
+Ogólnie każdy pojazd znajdujący się w top 5 najlepszych okazji przyniósł zysk wielkości przynajmnej 80 tyś. zł.
+
+\section{Profil klienta}
+
+W następnej kolejności zostaną przeanalizawani klienci warsztatu. Zostaną sprawdzone liczności klientów ze względu na różne ich cechy. {\color{red}[Czy warto pisać, że może nam to pomóc stwierdzić, do jakich klientów moglibyśmy spróbować jeszcze dotrzeć.]}
+
+\subsection{Płeć}
+
+Pierwszą cechą wziętą pod uwagę jest płeć klienta. Zostanie sprawdzone, ile jest kobiet i mężczyzn wśród naszych klientów oraz jak duża jest różnica w licznościach tych grup.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
+
+{\centering \includegraphics[width=\maxwidth]{figure/fig_plec-1} 
+
+}
+
+\caption[Wykres liczby klientów przy podziale ze względu na płeć]{Wykres liczby klientów przy podziale ze względu na płeć}\label{fig:fig_plec}
+\end{figure}
+
+\end{knitrout}
+
+Na wykresie słupkowym \ref{fig:fig_plec} są zaprezentowane liczności klientów przy podziale ze względu na płeć. Więcej klientów warsztatu należy do grupy kobiet, jest ich 714. Grupa kobiet jest około 1.102
+razy większa od grupy mężczyzn (jest ich 648), a zatem różnica jest nieduża.
+
+\subsection{Wiek}
+
+Zostanie również przeanalizowany rozkład wieku klientów warsztatu.
+
+
+
+
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
+
+{\centering \includegraphics[width=\maxwidth]{figure/fig_wiek-1} 
+
+}
+
+\caption[Wykres pudełkowy wieku klientów]{Wykres pudełkowy wieku klientów}\label{fig:fig_wiek}
+\end{figure}
+
+\end{knitrout}
+
+Rysunek \ref{fig:fig_wiek} przedstawia wykres pudełkowy wieku klientów warsztatu. Widać, że mediana wieku wynosi 45 lat, natomiast pierwszy kwartyl wynosi 36 lat, trzeci kwartyl natomiast 54 lata. Zatem połowa klientów warsztatu jest wieku między 36 lat a 54 lata.
+Najmłodszy klient warsztatu ma 25 lat, natomiast najstarszy jest w wieku 64 lat.
+
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c} \hline
+Miara & Wartość \\ \hline
+Średnia & 45.17 \\ 
+Odchylenie standardowe & 10.73 \\
+Skośność & 0.02  \\ 
+Kurtoza & 1.86 \\ \hline
+\end{tabular}
+\caption{Wybrane miary wieku klientów}
+\label{tab_wiek}
+\end{table}
+
+Kilka miar, których nie da się odczytać z wykresu pudełkowego, zostało przedstawionych w tabeli \ref{tab_wiek}. Można zatem odczytać, że średnio klieci mają 45.17 lat, a odchylenie standardowe wieku wynosi 10.73 lata. Wartość współczynnika skośności jest bliska 0, a zatem rozkład wieku można uznać za symetryczny. Kurtoza przyjmuje wartość większą od 0, a zatem rozkład wieku jest leptokurtyczny, czyli jest bardziej wysmukły niż normalny.
+
+\subsection{Miasto}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+##   miejsce       miasto liczność
+## 1     1.0      Wrocław      708
+## 2     2.0    Bydgoszcz       22
+## 3     3.0         Łódź       20
+## 4     5.5 Zielona Góra       16
+## 5     5.5       Poznań       16
+## 6     5.5        Opole       16
+## 7     5.5       Gdańsk       16
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+Najwięcej klientów warsztatu pochodzi z miasta Wrocław. Liczniść w nim wynosi 708 klientów. W następnej kolejności najwięcej klientów pochodzi z miasta Bydgoszcz, z czego liczność w nim wynosi 22 klientów, czyli jest ich 32.18 mniej niż klientów z miasta Wrocław. Na miejscu 3 jest miasto Łódź, mieszka w nim 20 klientów. Natomiast na ostatnim miejscu przedstawionym w tabeli są miasta Zielona Góra, Poznań, Opole, Gdańsk, mieszka w nich 16 klientów.
+
+\subsection{Karta lojalnościowa}
+
+W tej części zostanie sprawdzone, ilu klientów posiada kartę lojalnościową. Klient zdobywa ją po skorzystaniu z usług warsztatu (naprawa, zakup lub sprzedaż pojazdu) przynajmniej trzy razy. Klient posiadający tę katrę może kupować samochody ze zniżką w wysokości 3\%.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
+
+{\centering \includegraphics[width=\maxwidth]{figure/fig_karta-1} 
+
+}
+
+\caption[Wykres liczby klientów ze względu na posiadanie karty lojalnościowej]{Wykres liczby klientów ze względu na posiadanie karty lojalnościowej}\label{fig:fig_karta}
+\end{figure}
+
+\end{knitrout}
+
+Bardzej liczną grupą są klienci, którzy nie posiadają karty lojalnoścowej, jest ich 1274 (94\% wszystkich klientów). W grupie klientów, którzy posiadają kartę lojalnoścową, jest 88 osób i stanowią oni 6\% klientów warsztatu.
+
+\section{Jak wybrane cechy pojazdów wpływają na zysk warsztatu?}
+
+W tym paragrafie zostaną opisane zależności między zyskiem ze sprzedaży pojazdów, skupionych i w razie potrzeby naprawionych przez warsztat, a cechami: rodzaj pojazdu, czy jest powypadkowy i pojemność silnika.
 
 \subsection{Rodzaj pojazdu}
 
-{\color{red}[Skupimy się, czy to samochód czy motocykl]}
-
-[tabelka z miarami ???]
+Pierwszą cechą braną pod uwagę jest rodzaj pojazdu, czyli czy jest to samochód czy motocykl.
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
 
 {\centering \includegraphics[width=\maxwidth]{figure/fig_typ-1} 
 
@@ -220,12 +233,18 @@ Kilka miar, których nie da się odczytać z wykresu, zostało przedstawionych w
 
 \end{knitrout}
 
+Na rysunku \ref{fig:fig_typ} przedstawione są dwa wykresy pudełkowe zysków, jeden dla samochodów, drugi dla motocykli. Większa mediana, wynosząca 13.332 tyś. zł, jest dla pojazdów typu samochód. W drugiej grupie wynosi ona 7.8 tyś. zł. 
+Większy pierwszy kwartyl występuje w grupie typu samochód, wynosi on 8.896 tyś. zł, w porównaniu dla grupy typu motocykl jego wartość wynosi 4.488 tyś. zł.
+W przypadku kwartyla trzeciego większa wartość występuje w grupie typu samochód (wynosi 20.164 tyś. zł). W drugiej grupie wynosi on 11.5 tyś. zł.
+Największy zysk przyniósł samochód, a wyniósł on 126.558 tyś. zł. 
+Najmniejszy zysk natomiast przyniósł samochód i wyniósł on 0.72 tyś. zł. Zatem częściej większy zysk dla warsztatu przynosi sprzedaż pojazdów typu samochód. 
+
 \subsection{Czy powypadkowy}
 
-[tabelka z miarami ???]
+Następną badaną cechą jest to, czy pojazd jest powypadkowy.
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
 
 {\centering \includegraphics[width=\maxwidth]{figure/fig_wypadkowy-1} 
 
@@ -236,20 +255,33 @@ Kilka miar, których nie da się odczytać z wykresu, zostało przedstawionych w
 
 \end{knitrout}
 
-\subsection{skrzynia biegów / pojemność silnika}
+Na rysunku \ref{fig:fig_wypadkowy} przedstawione są dwa wykresy pudełkowe zysków dla pojazdów powypadkowych i niepowypadkowych. Większa mediana, wynosząca 13.206 tyś. zł, jest dla pojazdów niepowypadkowych. W drugiej grupie wynosi ona 9.908 tyś. zł. 
+Większy pierwszy kwartyl występuje w grupie pojazdów niepowypadkowych, wynosi on 8.83 tyś. zł, w porównaniu dla grupy pojazdów powypadkowych jego wartość wynosi 6.58725 tyś. zł.
+Większa wartość trzeciego kwartylu występuje dla pojazdów niepowypadkowych i wynosi 20.154 tyś. zł. Dla pojazdów powypadkowych wynosi on 14.954 tyś. zł.
+Największy zysk przyniósł pojazd z grupy niepowypadkowych i wyniósł on 126.558 tyś. zł. 
+Najmniejszy zysk natomiast przyniósł pojazd z grupy niepowypadkowych i wyniósł on 0.72 tyś. zł. Zatem częściej większy zysk dla warsztatu przynosi sprzedaż pojazdów niepowypadkowych. 
 
-[tabelka z miarami ???]
+\subsection{Pojemność silnika}
+
+Ostatnią cechą braną pod uwagę jest pojemność silnika pojazdu.
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
 
-{\centering \includegraphics[width=\maxwidth]{figure/unnamed-chunk-8-1} 
+{\centering \includegraphics[width=\maxwidth]{figure/fig_pojemnosc-1} 
 
 }
 
+\caption[Wykresy pudełkowe zysku ze względu na pojemność silnika]{Wykresy pudełkowe zysku ze względu na pojemność silnika}\label{fig:fig_pojemnosc}
+\end{figure}
 
 \end{knitrout}
 
+Na rysunku \ref{fig:fig_wypadkowy} przedstawione są wykresy pudełkowe zysków ze względu na pojemność silnika. Największa mediana, wynosząca 19.293 tyś. zł, jest dla pojazdów o pojemności silnika powyżej 1.8 litra. Natomiast najmniej ona wynosi 8.347 tyś. zł w grupie pojazdów o pojemności poniżej 1.3 litra. 
+Największy pierwszy kwartyl występuje w grupie pojazdów o pojemności powyżej 1.8 litra, wynosi on 13.9385 tyś. zł, w porównaniu z pojazdami o pojemności poniżej 1.3 litra, dla których jego wartość jest najmniejsza i wynosi 6.19725 tyś. zł.
+Największa wartość trzeciego kwartylu występuje dla pojazdów o pojemności powyżej 1.8 litra i wynosi 29.845 tyś. zł. Dla pojazdów poniżej 1.3 litra wynosi on 11.076 tyś. zł i jest to najmnijesza wartość w tych grupach.
+Największy zysk przyniósł pojazd o pojemności silnika powyżej 1.8 litra i wyniósł on 126.558 tyś. zł. 
+Najmniejszy zysk natomiast przyniósł pojazd z pojemnością silnika poniżej 1.3 litra i wyniósł on 0.72 tyś. zł. Zatem przeważnie największy zysk dla warsztatu przynosi sprzedaż pojazdów o pojemności silnika powyżej 1.8 litra. Najczęściej najmniejszy zysk przynosi sprzedaż pojazdów z pojemnością silnika poniżej 1.3 litra.
 
 
 
