@@ -255,7 +255,7 @@ Przez czas działania warsztatu „Pimp My Wheels” osoba zarządzająca warszt
 Warsztatowi zależy na tym by sprzedawca zarobił dla firmy dużą kwotę (Może to osiągnąć sprzedając bardzo dużo pojazdów albo sprzedając wartościowe pojazdy), ale także by był charyzmatyczny i był w stanie przekonać wiele osób do zakupu. Rozważone wobec tego zostanie to który obecnie pracujący sprzedawca przekonał klientów do kupna największej liczby pojazdów, a który odpowiada za najwięcej środków pochodzących ze sprzedaży. \\
 
 
-Tabela, w której dane o sprzedawcach  pracujących w dowolnym momencie w warsztacie wygląda następująco:
+Tabela, w której są dane o sprzedawcach  pracujących w dowolnym momencie w warsztacie wygląda następująco:
 
 <<warning=FALSE,message=FALSE,echo=FALSE>>=
 
@@ -265,6 +265,8 @@ JOIN pracownicy ON sprzedaż_samochodu.id_pracownika=pracownicy.id
 GROUP BY sprzedaż_samochodu.id_pracownika ORDER BY suma"
 
 df <- dbGetQuery(con, query)
+
+df
 
 średnia_płaca <- mean(df$płaca)
 średnia_suma <- mean(df$suma)

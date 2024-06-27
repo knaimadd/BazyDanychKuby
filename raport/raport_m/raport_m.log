@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.4.5)  27 JUN 2024 21:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.4.5)  27 JUN 2024 21:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -577,38 +577,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 244--245
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 264--265
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--267
+Underfull \hbox (badness 10000) in paragraph at lines 274--275
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 282--283
+Underfull \hbox (badness 10000) in paragraph at lines 290--291
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 296--297
+Underfull \hbox (badness 10000) in paragraph at lines 304--305
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 298--299
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 306--307
 
  []
 
-[7] [8] (./raport_m.aux)
+[8] (./raport_m.aux)
 Package rerunfilecheck Info: File `raport_m.out' has not changed.
 (rerunfilecheck)             Checksum: 3C1316B793C90515D268D2F82B400BE8;1922.
  ) 
 Here is how much of TeX's memory you used:
  10289 strings out of 478994
  158579 string characters out of 5853154
- 478599 words of memory out of 5000000
+ 479599 words of memory out of 5000000
  27587 multiletter control sequences out of 15000+600000
  418105 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -619,7 +619,7 @@ Here is how much of TeX's memory you used:
 :/Technologie/Latex/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/qplb.pf
 b><d:/Technologie/Latex/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/qpl
 r.pfb>
-Output written on raport_m.pdf (8 pages, 153236 bytes).
+Output written on raport_m.pdf (8 pages, 153384 bytes).
 PDF statistics:
  121 PDF objects out of 1000 (max. 8388607)
  99 compressed objects within 1 object stream
