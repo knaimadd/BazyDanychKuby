@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.4.5)  27 JUN 2024 19:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.4.5)  27 JUN 2024 21:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -506,7 +506,7 @@ LaTeX Font Info:    Trying to load font information for OT4+cmtt on input line
 (d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/polski/ot4cmtt.fd
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
 
  []
 
@@ -514,17 +514,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
 {d:/Technologie/Latex/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 }]
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 164--165
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
@@ -532,15 +532,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 188--189
 <figure/unnamed-chunk-5-1.pdf, id=52, 505.89pt x 505.89pt>
 File: figure/unnamed-chunk-5-1.pdf Graphic file (type pdf)
 <use figure/unnamed-chunk-5-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-5-1.pdf  used on input line 200.
+Package pdftex.def Info: figure/unnamed-chunk-5-1.pdf  used on input line 198.
 (pdftex.def)             Requested size: 469.75502pt x 469.76265pt.
 <figure/unnamed-chunk-6-1.pdf, id=53, 505.89pt x 505.89pt>
 File: figure/unnamed-chunk-6-1.pdf Graphic file (type pdf)
 <use figure/unnamed-chunk-6-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-6-1.pdf  used on input line 208.
+Package pdftex.def Info: figure/unnamed-chunk-6-1.pdf  used on input line 206.
 (pdftex.def)             Requested size: 469.75502pt x 469.76265pt.
  [3 <./figure/unnamed-chunk-5-1.pdf>]
-Overfull \hbox (0.79445pt too wide) in paragraph at lines 213--214
+Overfull \hbox (0.79445pt too wide) in paragraph at lines 211--212
 \OT4/qpl/m/n/10 Chcieliby±my spraw-dzi¢, jak wy-gl¡-da-j¡ mie-si¦cz-ne przy-cho
 -dy (lub stra-ty) wy-ni-ka-j¡-ce z pro-wa-dze-nia warsz-
  []
@@ -548,10 +548,10 @@ Overfull \hbox (0.79445pt too wide) in paragraph at lines 213--214
 <figure/unnamed-chunk-7-1.pdf, id=63, 505.89pt x 505.89pt>
 File: figure/unnamed-chunk-7-1.pdf Graphic file (type pdf)
 <use figure/unnamed-chunk-7-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-7-1.pdf  used on input line 217.
+Package pdftex.def Info: figure/unnamed-chunk-7-1.pdf  used on input line 215.
 (pdftex.def)             Requested size: 469.75502pt x 469.76265pt.
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 217--219
+Overfull \hbox (15.0pt too wide) in paragraph at lines 215--217
 [][]
  []
 
@@ -559,76 +559,70 @@ Overfull \hbox (15.0pt too wide) in paragraph at lines 217--219
 <figure/unnamed-chunk-8-1.pdf, id=73, 505.89pt x 505.89pt>
 File: figure/unnamed-chunk-8-1.pdf Graphic file (type pdf)
 <use figure/unnamed-chunk-8-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-8-1.pdf  used on input line 224.
+Package pdftex.def Info: figure/unnamed-chunk-8-1.pdf  used on input line 222.
 (pdftex.def)             Requested size: 469.75502pt x 469.76265pt.
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 224--226
+Overfull \hbox (15.0pt too wide) in paragraph at lines 222--224
 [][]
  []
 
 [5 <./figure/unnamed-chunk-7-1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 244--245
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
 
  []
 
 [6 <./figure/unnamed-chunk-8-1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
 
  []
 
 
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 257.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT4/cmtt/m/n' tried instead on input line 257.
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 259.
-
-
-Overfull \hbox (15.55072pt too wide) in paragraph at lines 259--260
-[]\OT4/cmtt/m/n/10 ## Error in round(najwiecej[]sprzeda»y$ile[]sprzedanych, 2):
- argument nieliczbowy przekazany do
- []
-
-
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 261.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 265--266
+Underfull \hbox (badness 10000) in paragraph at lines 264--265
 
  []
 
 
-LaTeX Font Warning: Font shape `OT4/cmtt/b/n' undefined
-(Font)              using `OT4/cmtt/bx/n' instead on input line 273.
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
 
-[7] (./raport_m.aux)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--283
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
+
+ []
+
+[7] [8] (./raport_m.aux)
 Package rerunfilecheck Info: File `raport_m.out' has not changed.
 (rerunfilecheck)             Checksum: 3C1316B793C90515D268D2F82B400BE8;1922.
  ) 
 Here is how much of TeX's memory you used:
- 10290 strings out of 478994
- 158607 string characters out of 5853154
- 471599 words of memory out of 5000000
- 27589 multiletter control sequences out of 15000+600000
+ 10289 strings out of 478994
+ 158579 string characters out of 5853154
+ 478599 words of memory out of 5000000
+ 27587 multiletter control sequences out of 15000+600000
  418105 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,6n,75p,608b,462s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,6n,75p,738b,462s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/Technologie/Latex/texlive/2021/texmf-dist/fonts/enc/dvips/pl/pltt.enc}{d:
 /Technologie/Latex/texlive/2021/texmf-dist/fonts/enc/dvips/tex-gyre/q-rm.enc}<d
 :/Technologie/Latex/texlive/2021/texmf-dist/fonts/type1/public/pl/pltt10.pfb><d
 :/Technologie/Latex/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/qplb.pf
 b><d:/Technologie/Latex/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/qpl
 r.pfb>
-Output written on raport_m.pdf (7 pages, 151718 bytes).
+Output written on raport_m.pdf (8 pages, 153236 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 96 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 500000)
+ 121 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
+ 18 named destinations out of 1000 (max. 500000)
  93 words of extra memory for PDF output out of 10000 (max. 10000000)
 
