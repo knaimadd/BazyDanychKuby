@@ -1,5 +1,3 @@
-import faker.providers
-import faker.providers.phone_number
 import numpy as np
 import pandas as pd
 import os
