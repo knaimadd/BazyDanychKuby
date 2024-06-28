@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.4.13)  28 JUN 2024 18:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.4.13)  28 JUN 2024 19:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -700,22 +700,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 507--508
 <figure/fig_zakup_pojazdu-1.pdf, id=199, 650.43pt x 289.08pt>
 File: figure/fig_zakup_pojazdu-1.pdf Graphic file (type pdf)
 <use figure/fig_zakup_pojazdu-1.pdf>
-Package pdftex.def Info: figure/fig_zakup_pojazdu-1.pdf  used on input line 520
+Package pdftex.def Info: figure/fig_zakup_pojazdu-1.pdf  used on input line 522
 .
 (pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
 <figure/fig_zakup_czesci-1.pdf, id=201, 650.43pt x 289.08pt>
 File: figure/fig_zakup_czesci-1.pdf Graphic file (type pdf)
 <use figure/fig_zakup_czesci-1.pdf>
-Package pdftex.def Info: figure/fig_zakup_czesci-1.pdf  used on input line 543.
+Package pdftex.def Info: figure/fig_zakup_czesci-1.pdf  used on input line 545.
 
 (pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
  [12pdfTeX warning (ext4): destination with the same identifier (name{figure.8}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.549 
+l.551 
        <./figure/fig_zakup_pojazdu-1.pdf>]
-Overfull \hbox (0.79529pt too wide) in paragraph at lines 561--562
+Overfull \hbox (0.79529pt too wide) in paragraph at lines 563--564
 \OT4/qpl/m/n/10 Chcieliby±my spraw-dzi¢, jak wy-gl¡-da-j¡ mie-si¦cz-ne przy-cho
 -dy (lub stra-ty) wy-ni-ka-j¡-ce z pro-wa-dze-nia warsz-
  []
@@ -723,75 +723,75 @@ Overfull \hbox (0.79529pt too wide) in paragraph at lines 561--562
 <figure/fig_uslugi-1.pdf, id=213, 650.43pt x 289.08pt>
 File: figure/fig_uslugi-1.pdf Graphic file (type pdf)
 <use figure/fig_uslugi-1.pdf>
-Package pdftex.def Info: figure/fig_uslugi-1.pdf  used on input line 566.
+Package pdftex.def Info: figure/fig_uslugi-1.pdf  used on input line 568.
 (pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
 [13pdfTeX warning (ext4): destination with the same identifier (name{figure.9})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.575 N
+l.577 N
        a wykresie \ref{fig:fig_uslugi} przedstawiony jest miesiÄ™czny przych...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.575 N
+l.577 N
        a wykresie \ref{fig:fig_uslugi} przedstawiony jest miesiÄ™czny przych...
  <./figure/fig_zakup_czesci-1.pdf> <./figure/fig_uslugi-1.pdf>]
 <figure/fig_uslugi2-1.pdf, id=232, 650.43pt x 289.08pt>
 File: figure/fig_uslugi2-1.pdf Graphic file (type pdf)
 <use figure/fig_uslugi2-1.pdf>
-Package pdftex.def Info: figure/fig_uslugi2-1.pdf  used on input line 584.
+Package pdftex.def Info: figure/fig_uslugi2-1.pdf  used on input line 586.
 (pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
 <figure/fig_pracownicy-1.pdf, id=234, 650.43pt x 289.08pt>
 File: figure/fig_pracownicy-1.pdf Graphic file (type pdf)
 <use figure/fig_pracownicy-1.pdf>
-Package pdftex.def Info: figure/fig_pracownicy-1.pdf  used on input line 608.
+Package pdftex.def Info: figure/fig_pracownicy-1.pdf  used on input line 610.
 (pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
  [14pdfTeX warning (ext4): destination with the same identifier (name{figure.11
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.614 
+l.616 
        <./figure/fig_uslugi2-1.pdf>]
 <figure/fig_samochody_wplywy-1.pdf, id=246, 650.43pt x 289.08pt>
 File: figure/fig_samochody_wplywy-1.pdf Graphic file (type pdf)
 <use figure/fig_samochody_wplywy-1.pdf>
 Package pdftex.def Info: figure/fig_samochody_wplywy-1.pdf  used on input line 
-627.
+629.
 (pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
  [15pdfTeX warning (ext4): destination with the same identifier (name{figure.12
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.641 
+l.643 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 13}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.641 
+l.643 
        <./figure/fig_pracownicy-1.pdf> <./figure/fig_samochody_wplywy-1.pdf>]
 <figure/fig_bilans-1.pdf, id=264, 650.43pt x 289.08pt>
 File: figure/fig_bilans-1.pdf Graphic file (type pdf)
 <use figure/fig_bilans-1.pdf>
-Package pdftex.def Info: figure/fig_bilans-1.pdf  used on input line 650.
+Package pdftex.def Info: figure/fig_bilans-1.pdf  used on input line 652.
 (pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
 <figure/fig_bilans_suma-1.pdf, id=266, 650.43pt x 361.35pt>
 File: figure/fig_bilans_suma-1.pdf Graphic file (type pdf)
 <use figure/fig_bilans_suma-1.pdf>
-Package pdftex.def Info: figure/fig_bilans_suma-1.pdf  used on input line 668.
+Package pdftex.def Info: figure/fig_bilans_suma-1.pdf  used on input line 670.
 (pdftex.def)             Requested size: 469.75502pt x 260.98232pt.
 
 [16pdfTeX warning (ext4): destination with the same identifier (name{figure.14}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.674 
+l.676 
        <./figure/fig_bilans-1.pdf>] [17pdfTeX warning (ext4): destination with 
 the same identifier (name{figure.15}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.687 \end{document}
+l.689 \end{document}
                      <./figure/fig_bilans_suma-1.pdf>] (./raport.aux)
 Package rerunfilecheck Info: File `raport.out' has not changed.
 (rerunfilecheck)             Checksum: 65BE5BBB26C7AB6C77339A10918D5A69;4020.
@@ -799,7 +799,7 @@ Package rerunfilecheck Info: File `raport.out' has not changed.
 Here is how much of TeX's memory you used:
  11076 strings out of 478994
  166142 string characters out of 5862207
- 494447 words of memory out of 5000000
+ 493447 words of memory out of 5000000
  28285 multiletter control sequences out of 15000+600000
  434461 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -808,7 +808,7 @@ Here is how much of TeX's memory you used:
 f-dist/fonts/enc/dvips/tex-gyre/q-rm.enc}<d:/texlive/2021/texmf-dist/fonts/type
 1/public/pl/pltt10.pfb><d:/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/
 qplb.pfb><d:/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb>
-Output written on raport.pdf (17 pages, 235515 bytes).
+Output written on raport.pdf (17 pages, 235497 bytes).
 PDF statistics:
  318 PDF objects out of 1000 (max. 8388607)
  263 compressed objects within 3 object streams
