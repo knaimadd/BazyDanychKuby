@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.4.5)  27 JUN 2024 21:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.4.5)  28 JUN 2024 05:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -510,16 +510,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 119--120
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
+
+ []
+
+LaTeX Font Info:    Trying to load font information for OML+plm on input line 1
+23.
+(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/polski/omlplm.fd
+File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
+)
+LaTeX Font Info:    Trying to load font information for OMS+plsy on input line 
+123.
+
+(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/polski/omsplsy.fd
+File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
+)
+LaTeX Font Info:    Trying to load font information for OMX+plex on input line 
+123.
+
+(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/polski/omxplex.fd
+File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
+)
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <10> on input line 123.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <7> on input line 123.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <5> on input line 123.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 123
+.
+
+(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 123
+.
+
+(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 [1
 
 {d:/Technologie/Latex/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 }]
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
 
  []
 
@@ -528,101 +568,142 @@ Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
+<figure/fig_zakup_pojazdu-1.pdf, id=53, 650.43pt x 289.08pt>
+File: figure/fig_zakup_pojazdu-1.pdf Graphic file (type pdf)
+<use figure/fig_zakup_pojazdu-1.pdf>
+Package pdftex.def Info: figure/fig_zakup_pojazdu-1.pdf  used on input line 199
+.
+(pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
 [2]
-<figure/unnamed-chunk-5-1.pdf, id=52, 505.89pt x 505.89pt>
-File: figure/unnamed-chunk-5-1.pdf Graphic file (type pdf)
-<use figure/unnamed-chunk-5-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-5-1.pdf  used on input line 198.
-(pdftex.def)             Requested size: 469.75502pt x 469.76265pt.
-<figure/unnamed-chunk-6-1.pdf, id=53, 505.89pt x 505.89pt>
-File: figure/unnamed-chunk-6-1.pdf Graphic file (type pdf)
-<use figure/unnamed-chunk-6-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-6-1.pdf  used on input line 206.
-(pdftex.def)             Requested size: 469.75502pt x 469.76265pt.
- [3 <./figure/unnamed-chunk-5-1.pdf>]
-Overfull \hbox (0.79445pt too wide) in paragraph at lines 211--212
+<figure/fig_zakup_czesci-1.pdf, id=59, 650.43pt x 289.08pt>
+File: figure/fig_zakup_czesci-1.pdf Graphic file (type pdf)
+<use figure/fig_zakup_czesci-1.pdf>
+Package pdftex.def Info: figure/fig_zakup_czesci-1.pdf  used on input line 222.
+
+(pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
+ [3pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.228 
+       <./figure/fig_zakup_pojazdu-1.pdf>]
+Overfull \hbox (0.79445pt too wide) in paragraph at lines 240--241
 \OT4/qpl/m/n/10 Chcieliby±my spraw-dzi¢, jak wy-gl¡-da-j¡ mie-si¦cz-ne przy-cho
 -dy (lub stra-ty) wy-ni-ka-j¡-ce z pro-wa-dze-nia warsz-
  []
 
-<figure/unnamed-chunk-7-1.pdf, id=63, 505.89pt x 505.89pt>
+<figure/fig_uslugi-1.pdf, id=71, 650.43pt x 289.08pt>
+File: figure/fig_uslugi-1.pdf Graphic file (type pdf)
+<use figure/fig_uslugi-1.pdf>
+Package pdftex.def Info: figure/fig_uslugi-1.pdf  used on input line 245.
+(pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
+[4pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.254 N
+       a wykresie \ref{fig:fig_uslugi} przedstawiony jest miesiÄ™czny przych...
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.254 N
+       a wykresie \ref{fig:fig_uslugi} przedstawiony jest miesiÄ™czny przych...
+ <./figure/fig_zakup_czesci-1.pdf> <./figure/fig_uslugi-1.pdf>]
+<figure/fig_uslugi2-1.pdf, id=89, 650.43pt x 289.08pt>
+File: figure/fig_uslugi2-1.pdf Graphic file (type pdf)
+<use figure/fig_uslugi2-1.pdf>
+Package pdftex.def Info: figure/fig_uslugi2-1.pdf  used on input line 263.
+(pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
+<figure/unnamed-chunk-5-1.pdf, id=91, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-5-1.pdf Graphic file (type pdf)
+<use figure/unnamed-chunk-5-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-5-1.pdf  used on input line 283.
+(pdftex.def)             Requested size: 469.75502pt x 469.76265pt.
+ [5pdfTeX warning (ext4): destination with the same identifier (name{figure.4})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.290 Z
+       akÅ‚adamy, Å¼e pÅ‚aca w miesiÄ…cu to 160*pÅ‚aca (przy zatrudnieniu/zw...
+ <./figure/fig_uslugi2-1.pdf>]
+Overfull \hbox (24.28444pt too wide) in paragraph at lines 290--291
+\OT4/qpl/m/n/10 w mie-sia-cu pra-cow-nik pra-co-wal i ro-bie ula-mek, np. jak z
+a-trud-ni-li go 3 mar-ca to do-sta-je ro-und(pªaca*160*29/31,2))
+ []
+
+<figure/unnamed-chunk-6-1.pdf, id=102, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-6-1.pdf Graphic file (type pdf)
+<use figure/unnamed-chunk-6-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-6-1.pdf  used on input line 299.
+(pdftex.def)             Requested size: 469.75502pt x 469.76265pt.
+[6 <./figure/unnamed-chunk-5-1.pdf>]
+<figure/unnamed-chunk-7-1.pdf, id=112, 505.89pt x 505.89pt>
 File: figure/unnamed-chunk-7-1.pdf Graphic file (type pdf)
 <use figure/unnamed-chunk-7-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-7-1.pdf  used on input line 215.
+Package pdftex.def Info: figure/unnamed-chunk-7-1.pdf  used on input line 316.
 (pdftex.def)             Requested size: 469.75502pt x 469.76265pt.
-
-Overfull \hbox (15.0pt too wide) in paragraph at lines 215--217
-[][]
- []
-
-[4 <./figure/unnamed-chunk-6-1.pdf>]
-<figure/unnamed-chunk-8-1.pdf, id=73, 505.89pt x 505.89pt>
+ [7 <./figure/unnamed-chunk-6-1.pdf>]
+<figure/unnamed-chunk-8-1.pdf, id=123, 505.89pt x 505.89pt>
 File: figure/unnamed-chunk-8-1.pdf Graphic file (type pdf)
 <use figure/unnamed-chunk-8-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-8-1.pdf  used on input line 222.
+Package pdftex.def Info: figure/unnamed-chunk-8-1.pdf  used on input line 328.
 (pdftex.def)             Requested size: 469.75502pt x 469.76265pt.
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 222--224
-[][]
- []
-
-[5 <./figure/unnamed-chunk-7-1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 242--243
-
- []
-
-[6 <./figure/unnamed-chunk-8-1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 244--245
+[8 <./figure/unnamed-chunk-7-1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 340--341
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--273
+Underfull \hbox (badness 10000) in paragraph at lines 342--343
+
+ []
+
+[9 <./figure/unnamed-chunk-8-1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 370--371
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--275
+Underfull \hbox (badness 10000) in paragraph at lines 386--387
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
+Underfull \hbox (badness 10000) in paragraph at lines 400--401
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 304--305
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 306--307
-
- []
-
-[8] (./raport_m.aux)
+[10] (./raport_m.aux)
 Package rerunfilecheck Info: File `raport_m.out' has not changed.
-(rerunfilecheck)             Checksum: 3C1316B793C90515D268D2F82B400BE8;1922.
+(rerunfilecheck)             Checksum: E2CCFDDDE4B3E5458720EEA72195C843;1924.
  ) 
 Here is how much of TeX's memory you used:
- 10289 strings out of 478994
- 158579 string characters out of 5853154
- 479599 words of memory out of 5000000
- 27587 multiletter control sequences out of 15000+600000
- 418105 words of font info for 33 fonts, out of 8000000 for 9000
+ 10402 strings out of 478994
+ 161087 string characters out of 5853154
+ 478958 words of memory out of 5000000
+ 27659 multiletter control sequences out of 15000+600000
+ 423023 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,6n,75p,738b,462s stack positions out of 5000i,500n,10000p,200000b,80000s
-{d:/Technologie/Latex/texlive/2021/texmf-dist/fonts/enc/dvips/pl/pltt.enc}{d:
-/Technologie/Latex/texlive/2021/texmf-dist/fonts/enc/dvips/tex-gyre/q-rm.enc}<d
-:/Technologie/Latex/texlive/2021/texmf-dist/fonts/type1/public/pl/pltt10.pfb><d
-:/Technologie/Latex/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/qplb.pf
-b><d:/Technologie/Latex/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/qpl
-r.pfb>
-Output written on raport_m.pdf (8 pages, 153384 bytes).
+ 71i,6n,75p,757b,462s stack positions out of 5000i,500n,10000p,200000b,80000s
+{d:/Technologie/Latex/texlive/2021/texmf-dist/fonts/enc/dvips/pl/plrm.enc}{d:
+/Technologie/Latex/texlive/2021/texmf-dist/fonts/enc/dvips/pl/plms.enc}{d:/Tech
+nologie/Latex/texlive/2021/texmf-dist/fonts/enc/dvips/pl/plmi.enc}{d:/Technolog
+ie/Latex/texlive/2021/texmf-dist/fonts/enc/dvips/pl/pltt.enc}{d:/Technologie/La
+tex/texlive/2021/texmf-dist/fonts/enc/dvips/tex-gyre/q-rm.enc}<d:/Technologie/L
+atex/texlive/2021/texmf-dist/fonts/type1/public/pl/plmi10.pfb><d:/Technologie/L
+atex/texlive/2021/texmf-dist/fonts/type1/public/pl/plr10.pfb><d:/Technologie/La
+tex/texlive/2021/texmf-dist/fonts/type1/public/pl/plr7.pfb><d:/Technologie/Late
+x/texlive/2021/texmf-dist/fonts/type1/public/pl/plsy10.pfb><d:/Technologie/Late
+x/texlive/2021/texmf-dist/fonts/type1/public/pl/plsy7.pfb><d:/Technologie/Latex
+/texlive/2021/texmf-dist/fonts/type1/public/pl/pltt10.pfb><d:/Technologie/Latex
+/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/qplb.pfb><d:/Technologie/L
+atex/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb>
+Output written on raport_m.pdf (10 pages, 198451 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
- 99 compressed objects within 1 object stream
- 18 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 186 PDF objects out of 1000 (max. 8388607)
+ 148 compressed objects within 2 object streams
+ 24 named destinations out of 1000 (max. 500000)
+ 113 words of extra memory for PDF output out of 10000 (max. 10000000)
 
