@@ -3,8 +3,8 @@
     "version": "2.2.13",
     "width": 2000,
     "height": 2000,
-    "scrollTop": 0,
-    "scrollLeft": 0,
+    "scrollTop": -164,
+    "scrollLeft": -52,
     "zoomLevel": 1,
     "show": {
       "tableComment": true,
@@ -281,7 +281,7 @@
             "id": "036af50b-fdb5-4831-98de-e2f688aec6de",
             "name": "stanowisko",
             "comment": "da się długośc jak ustalimy stanowiska",
-            "dataType": "VARCHAR(69)",
+            "dataType": "VARCHAR(30)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -328,7 +328,7 @@
           "active": false,
           "left": 600.3896,
           "top": 215.5,
-          "zIndex": 73,
+          "zIndex": 19,
           "widthName": 67.025390625,
           "widthComment": 60
         },
@@ -574,7 +574,7 @@
           "active": false,
           "left": 12.8906,
           "top": 0,
-          "zIndex": 71,
+          "zIndex": 1,
           "widthName": 60,
           "widthComment": 60
         },
@@ -932,10 +932,10 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 87.5,
           "top": 1352.6077,
-          "zIndex": 89,
+          "zIndex": 8,
           "widthName": 68.47900390625,
           "widthComment": 60
         },
@@ -973,7 +973,7 @@
             "id": "9ea37e83-9736-4e55-b119-bcbc42d47d01",
             "name": "nazwa",
             "comment": "da się długośc jak ustalimy typy rzeczy",
-            "dataType": "VARCHAR(69)",
+            "dataType": "VARCHAR(100)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -988,7 +988,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 120,
-              "widthDataType": 87.71875,
+              "widthDataType": 94.94873046875,
               "widthDefault": 60
             }
           },
@@ -996,7 +996,7 @@
             "id": "8c02f63b-b09d-4113-88f5-a70e064ec30e",
             "name": "atrybut",
             "comment": "",
-            "dataType": "VARCHAR(50)",
+            "dataType": "VARCHAR(100)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -1011,7 +1011,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 87.71875,
+              "widthDataType": 94.94873046875,
               "widthDefault": 60
             }
           }
@@ -1020,7 +1020,7 @@
           "active": false,
           "left": 1098.9989,
           "top": 13.5557,
-          "zIndex": 75,
+          "zIndex": 16,
           "widthName": 77.15625,
           "widthComment": 60
         },
@@ -1151,7 +1151,7 @@
           "active": false,
           "left": 1034.4454,
           "top": 556.7773,
-          "zIndex": 77,
+          "zIndex": 4,
           "widthName": 76.419921875,
           "widthComment": 60
         },
@@ -1305,7 +1305,7 @@
           "active": false,
           "left": 873.9989,
           "top": 987.3317,
-          "zIndex": 83,
+          "zIndex": 5,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1459,7 +1459,7 @@
           "active": false,
           "left": 0,
           "top": 602.5557,
-          "zIndex": 87,
+          "zIndex": 7,
           "widthName": 111.12890625,
           "widthComment": 60
         },
@@ -1636,7 +1636,7 @@
           "active": false,
           "left": 304.8884,
           "top": 906.7764,
-          "zIndex": 85,
+          "zIndex": 6,
           "widthName": 129.18798828125,
           "widthComment": 60
         },
@@ -1694,7 +1694,7 @@
           "columnIds": [
             "dedc7225-b6dd-45cf-9de9-5cc3a62db872"
           ],
-          "x": 1339.858275,
+          "x": 1343.473265234375,
           "y": 144.0557,
           "direction": "bottom"
         },

@@ -1,17 +1,15 @@
 id,imię,nazwisko,PESEL,miasto,adres,telefon,email,data_zatrudnienia,data_zwolnienia,stanowisko,płaca
-1,Aleksandra,Kiełbowicz,64010269127,Wrocław,ul. Grunwaldzka 10/1,48474832414,aleksandra.kielbowicz@kuba.pl,2014-01-01,,menadżer,74.1000000000002
-2,Jarosław,Andrzejewski,66012008416,Wrocław,ul. Lipowa 81/12,48743035851,jaroslaw.andrzejewski@kuba.pl,2014-01-01,,sprzedawca,50.10000000000007
-3,Janusz,Woźniak,82062824372,Wrocław,ul. Pałacowa 29/33,48597466475,janusz.wozniak@kuba.pl,2014-01-01,,sprzedawca,56.90000000000017
-4,Dmytro,Leanovich,87010622477,Wrocław,ul. Topolowa 55/32,48560428902,dmytro.leanovich@kuba.pl,2014-01-01,,mechanik,54.00000000000013
-5,Sławomir,Pabiański,86081264854,Opole,ul. Bączkowiec 15/17,48522777456,slawomir.pabianski@kuba.pl,2014-01-01,,informatyk,42.00000000000003
-6,Zofia,Fornalak,60102314225,Białystok,ul. Sportowa 29/42,48217505442,zofia.fornalak@kuba.pl,2014-12-05,,sprzedawca,50.50000000000008
-7,Ewa,Trybunska,91112826923,Wrocław,ul. Cienista 66,48899882364,ewa.trybunska@kuba.pl,2015-05-22,,mechanik,54.500000000000135
-8,Sylwia,Szczypka,64062119548,Wrocław,ul. Bukowa 25/2,48041994711,sylwia.szczypka@kuba.pl,2015-06-26,,mechanik,50.50000000000008
-9,Ewelina,Glapa,68121338422,Gorzów Wielkopolski,pl. Skwer Andrzeja Wajdy 5/44,48358183421,ewelina.glapa@kuba.pl,2015-09-15,,mechanik,56.20000000000016
-10,Danuta,Dembna,69010575702,Wrocław,ul. Żyzna 62/35,48800197973,danuta.dembna@kuba.pl,2015-10-27,,pomocnik mechanika,39.600000000000065
-11,Janina,Niezabitowska,70053080160,Wrocław,ul. Rybacka 28/35,48293681583,janina.niezabitowska@kuba.pl,2015-12-01,,pomocnik mechanika,37.20000000000003
-12,Krzysztof,Merkiewicz,95081607033,Wrocław,ul. Krystyny Osińskiej 84,48751489350,krzysztof.merkiewicz@kuba.pl,2015-12-09,,diagnosta samochodowy,54.0000000000001
-13,Eryk,Wroniewicz,74011462450,Wrocław,ul. Parkowa 66/37,48126226002,eryk.wroniewicz@kuba.pl,2016-10-12,,diagnosta samochodowy,57.200000000000145
-14,Tomasz,Dunajewski,77042275394,Wrocław,ul. Stanisława Trembeckiego 23/4,48494156124,tomasz.dunajewski@kuba.pl,2017-01-21,,sprzątający,39.70000000000007
-15,Norbert,Krasnodębski,80071803175,Wrocław,ul. Krzywa 53/28,48358870050,norbert.krasnodebski@kuba.pl,2017-06-14,,sprzątający,38.200000000000045
-16,Sylwester,Błajszczak,60042204271,Wrocław,ul. Zacisze 38,48131944220,sylwester.blajszczak@kuba.pl,2017-07-12,,księgowy,42.30000000000003
+1,Sebastian,Ślesicki,74022464650,Szczecin,ul. Miodowa 78/27,48687303954,sebastian.slesicki@kuba.pl,2014-01-01,,menadżer,64.30000000000007
+2,Wiesław,Trần,94012709112,Wrocław,ul. Cmentarna 74,48649433059,wieslaw.tran@kuba.pl,2014-01-01,,sprzedawca,52.80000000000011
+3,Barbara,Kosowska,60032137046,Kielce,ul. Kozienicka 57/18,48575701641,barbara.kosowska@kuba.pl,2014-01-01,,sprzedawca,56.40000000000016
+4,Bożena,Wencka,64012383504,Wrocław,ul. Walcowników 55/34,48003487800,bozena.wencka@kuba.pl,2014-01-01,2017-02-24,mechanik,45.90000000000001
+5,Anna,Kosobucka,62101631026,Wrocław,ul. Złotopolska 2/17,48196414849,anna.kosobucka@kuba.pl,2014-01-01,,informatyk,55.800000000000225
+6,Małgorzata,Beliak,76060151943,Wrocław,ul. Długa 17/24,48191553611,malgorzata.beliak@kuba.pl,2014-12-30,,mechanik,49.70000000000007
+7,Sabina,Naguschewska,69112373905,Wrocław,ul. Owocowa 11,48112334660,sabina.naguschewska@kuba.pl,2015-08-19,,mechanik,46.30000000000002
+8,Lena,Olejnik,85082378805,Wrocław,ul. Fiołkowa 42,48939102145,lena.olejnik@kuba.pl,2015-10-21,2016-10-20,mechanik,47.70000000000004
+9,Ewa,Sobel,67020910223,Warszawa,ul. Gwiezdna 48,48652438860,ewa.sobel@kuba.pl,2016-01-07,,pomocnik mechanika,43.700000000000124
+10,Magdalena,Jabłońska,66072400566,Wrocław,ul. Konieczyńskich 13,48064170528,magdalena.jablonska@kuba.pl,2016-03-10,,pomocnik mechanika,39.20000000000006
+11,Jan,Kudzielka,60101122230,Wrocław,ul. Różana 41/16,48129207714,jan.kudzielka@kuba.pl,2016-03-13,,diagnosta samochodowy,57.80000000000015
+12,Andrzej,Pątek,74080579752,Wrocław,ul. Jana Pawła II 95/34,48866560123,andrzej.patek@kuba.pl,2016-05-14,,diagnosta samochodowy,51.20000000000006
+13,Jakub,Maj,80060860255,Wrocław,ul. Przytycka 27/29,48121261117,jakub.maj@kuba.pl,2016-09-06,,sprzątający,35.70000000000001
+14,Żaneta,Smagała,72061891884,Wrocław,ul. Rumiankowa 69/23,48501008662,zaneta.smagala@kuba.pl,2017-05-25,,księgowy,49.70000000000014
