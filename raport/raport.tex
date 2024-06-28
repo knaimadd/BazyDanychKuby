@@ -62,12 +62,50 @@
 \usepackage{amssymb}
 \usepackage[bottom]{footmisc}
 \usepackage{float}
+
+\date{\now}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
+
+\begin{titlepage}
+\end{titlepage}
+\begin{center}
+ {\LARGE\bfseries Projekt\\}
+ \vspace{0.5cm}
+ {\Huge\bfseries \color{magenta} Pimp My Wheels\\}
+ \vspace{0.5cm}
+ {\LARGE\bfseries Bazy danych\\}
+ {\Large Prowadzący kurs: dr Tomasz Stroiński\\}
+ % ----------------------------------------------------------------
+ \vspace{1cm}
+ {\Large\bfseries Autorzy:\\[4pt]}
+ \vspace{1.5cm}
+  {\Large\bfseries Weronika Kuzara\\[3pt]}
+  \vspace{0.5cm}
+ 
+ {\Large\bfseries Martyna Maciaszek\\[3pt]}
+ \vspace{0.5cm}
+ 
+ {\Large\bfseries Aleksander Rzyhak\\[3pt]}
+ \vspace{0.5cm}
+ 
+ {\Large\bfseries Oskar Matysik\\[3pt]}
+ \vspace{0.5cm}
+ 
+ {\Large\bfseries Aleksandra Palka\\[5pt]}
+  % ----------------------------------------------------------------
+
+ \vfill
+{\Large \today}
+\end{center}
+\newpage
 
 
 
 \section{Wstęp}
+Raport jest przedostatnią częścią projektu polagającego na stworzeniu bazy danych warsztatu „Pimp My Wheels”. Został zaprojektowany schemat bazy danych, na podstawie którego została stworzona już właściwa baza. Następnie została ona wypełniona losowymi danymi.
+
+Raport ma na celu przeanalizowanie działalności warsztatu „Pimp My Wheels” znajdującego się we Wrocławiu. Na moment, dla którego pisany był raport, warsztat działa od początku 2014 roku do końca 2017 roku. Firma zajmuje się prowadzeniem klasycznego warsztatu oraz skupem, renowacją i sprzedażą samochodów i motocykli. 
 
 \section{Odsetek naprawianych marek pojazdów}
 %Odsetek naprawianych marek pojazdów.
@@ -99,33 +137,33 @@ Można przedstawić procentowy udział marek pojazdów klientów salonu, zaczyna
 18. Honda: 1.6%
 19. Dacia: 1.4%
 20. Suzuki: 1.4%
-21. Yamaha: 1.2%
-22. Nissan: 1.2%
-23. Citroen: 1.2%
+21. Nissan: 1.2%
+22. Citroen: 1.2%
+23. Yamaha: 1.2%
 24. Mazda: 1%
-25. Royal: 0.8%
-26. Porsche: 0.8%
-27. MINI: 0.8%
-28. Jaguar: 0.6%
-29. KTM: 0.6%
-30. Volvo: 0.6%
-31. Jeep: 0.4%
-32. Cupra: 0.4%
-33. Lexus: 0.4%
-34. Land: 0.4%
-35. Mitsubishi: 0.2%
-36. Subaru: 0.2%
-37. Alpina: 0.2%
-38. TVS: 0.2%
-39. Kawasaki: 0.2%
-40. Aprilia: 0.2%
-41. Harley-Davidson: 0.2%
-42. Chevrolet: 0.2%
+25. MINI: 0.8%
+26. Royal: 0.8%
+27. Porsche: 0.8%
+28. Volvo: 0.6%
+29. Jaguar: 0.6%
+30. KTM: 0.6%
+31. Lexus: 0.4%
+32. Land: 0.4%
+33. Jeep: 0.4%
+34. Cupra: 0.4%
+35. Harley-Davidson: 0.2%
+36. Chevrolet: 0.2%
+37. Mitsubishi: 0.2%
+38. Subaru: 0.2%
+39. Alpina: 0.2%
+40. TVS: 0.2%
+41. Kawasaki: 0.2%
+42. Aprilia: 0.2%
 \end{verbatim}
 
 Jak widać, najpopularniejsze są pojazdy marki Volkswagen. Pojazdy tej marki stanowią 14.57\% wszystkich. \\
 
-Najmniej popularne są marki Subaru, Alpina, TVS, Kawasaki, Aprilia, Harley-Davidson, Chevrolet i Mitsubishi. Każdą z nich reprezentowało 0.20\% pojazdów, które się pojawiły w warsztacie. Ilość pojazdów, które były w warsztacie to 501. Było więcej samochodów niż motorów. Różnica między ilością obu typów pojazdu wynosiła 399, a samochodów było 450.
+Najmniej popularne są marki Chevrolet, Mitsubishi, Subaru, Alpina, TVS, Kawasaki, Aprilia i Harley-Davidson. Każdą z nich reprezentowało 0.20\% pojazdów, które się pojawiły w warsztacie. Ilość pojazdów, które były w warsztacie to 501. Było więcej samochodów niż motorów. Różnica między ilością obu typów pojazdu wynosiła 399, a samochodów było 450.
 
 Sprawdzono także, jak prezentowałyby się rozkład marek, gdyby brano pod uwagę jedynie samochody
 
@@ -150,25 +188,25 @@ Można przedstawić ranking marek, zaczynając od najczęściej się pojawiając
 14. Peugeot: 2.67%
 15. Kia: 1.78%
 16. Dacia: 1.56%
-17. Nissan: 1.33%
-18. Citroen: 1.33%
+17. Citroen: 1.33%
+18. Nissan: 1.33%
 19. Mazda: 1.11%
-20. MINI: 0.89%
-21. Porsche: 0.89%
-22. Suzuki: 0.67%
-23. Volvo: 0.67%
-24. Jaguar: 0.67%
-25. Land: 0.44%
-26. Cupra: 0.44%
-27. Jeep: 0.44%
-28. Lexus: 0.44%
-29. Alpina: 0.22%
-30. Subaru: 0.22%
-31. Mitsubishi: 0.22%
-32. Chevrolet: 0.22%
+20. Porsche: 0.89%
+21. MINI: 0.89%
+22. Volvo: 0.67%
+23. Jaguar: 0.67%
+24. Suzuki: 0.67%
+25. Jeep: 0.44%
+26. Lexus: 0.44%
+27. Land: 0.44%
+28. Cupra: 0.44%
+29. Mitsubishi: 0.22%
+30. Chevrolet: 0.22%
+31. Alpina: 0.22%
+32. Subaru: 0.22%
 \end{verbatim}
 
-Wśród aut prym wiedzie Volkswagen, reprezentując  16.22\% naprawianych samochodów. Najmniej było samochodów marek Subaru, Mitsubishi, Chevrolet i Alpina. Było ich 0.22\% dla każdej. \\
+Wśród aut prym wiedzie Volkswagen, reprezentując  16.22\% naprawianych samochodów. Najmniej było samochodów marek Chevrolet, Alpina, Subaru i Mitsubishi. Było ich 0.22\% dla każdej. \\
 
 Pozostały do sprawdzenia motory.
 
@@ -184,13 +222,13 @@ Udział procentowy poszczególnych marek wśród nich prezentuje się następuj�
 5. Royal: 7.84%
 6. Suzuki: 7.84%
 7. KTM: 5.88%
-8. TVS: 1.96%
-9. Kawasaki: 1.96%
-10. Harley-Davidson: 1.96%
-11. Aprilia: 1.96%
+8. Aprilia: 1.96%
+9. TVS: 1.96%
+10. Kawasaki: 1.96%
+11. Harley-Davidson: 1.96%
 \end{verbatim}
 
-Wśród nich najczęściej naprawiano motory marki Hero. Pojazdy tej marki stanowią 23.53\% wszystkich. Najmniej popularnymi motorami są z kolei modele marek Kawasaki, Harley-Davidson, Aprilia i TVS. W warsztacie było zaledwie 1.96\% motorów każdej z wymienionych marek.
+Wśród nich najczęściej naprawiano motory marki Hero. Pojazdy tej marki stanowią 23.53\% wszystkich. Najmniej popularnymi motorami są z kolei modele marek TVS, Kawasaki, Harley-Davidson i Aprilia. W warsztacie było zaledwie 1.96\% motorów każdej z wymienionych marek.
 
 \section{Liczba naprawianych pojazdów w każdym miesiącu pracy warsztatu}
 
@@ -282,7 +320,7 @@ Zostanie również przeanalizowany rozkład wieku klientów warsztatu.
 
 \end{knitrout}
 
-Rysunek \ref{fig:fig_wiek} przedstawia wykres pudełkowy wieku klientów warsztatu. Widać, że mediana wieku wynosi 46 lat, natomiast pierwszy kwartyl wynosi 37 lat, trzeci kwartyl natomiast 56 lat. Zatem połowa klientów warsztatu jest wieku między 37 lat a 56 lat.
+Rysunek \ref{fig:fig_wiek} przedstawia wykres pudełkowy wieku klientów warsztatu. Widać, że mediana wieku wynosi 46 lat, natomiast pierwszy kwartyl wynosi 37 lat, a trzeci kwartyl 56 lat. Zatem połowa klientów warsztatu jest wieku między 37 lat a 56 lat.
 Najmłodszy klient warsztatu ma 25 lat, natomiast najstarszy jest w wieku 64 lat.
 
 
@@ -320,7 +358,7 @@ Najwięcej klientów warsztatu pochodzi z miasta Wrocław. Liczniść w nim wyno
 
 \subsection{Karta lojalnościowa}
 
-W tej części zostanie sprawdzone, ilu klientów posiada kartę lojalnościową. Klient zdobywa ją po skorzystaniu z usług warsztatu (naprawa, zakup lub sprzedaż pojazdu) przynajmniej trzy razy. Klient posiadający tę katrę może kupować samochody ze zniżką w wysokości 3\%.
+W tej części zostanie sprawdzone ilu klientów posiada kartę lojalnościową. Klient zdobywa ją po skorzystaniu z usług warsztatu (naprawa, zakup lub sprzedaż pojazdu) przynajmniej trzy razy. Klient posiadający tę kartę może kupować samochody ze zniżką w wysokości 3\%.
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
@@ -334,7 +372,7 @@ W tej części zostanie sprawdzone, ilu klientów posiada kartę lojalnościową
 
 \end{knitrout}
 
-Bardzej liczną grupą są klienci, którzy nie posiadają karty lojalnoścowej, jest ich 1385 (95\% wszystkich klientów). W grupie klientów, którzy posiadają kartę lojalnoścową, jest 74 osób i stanowią oni 5\% klientów warsztatu.
+Bardziej liczną grupą są klienci, którzy nie posiadają karty lojalnościowej, jest ich 1385 (95\% wszystkich klientów). W grupie klientów, którzy posiadają kartę lojalnościową, jest 74 osób i stanowią oni 5\% klientów warsztatu.
 
 \section{Jak wybrane cechy pojazdów wpływają na zysk warsztatu?}
 
@@ -356,11 +394,11 @@ Pierwszą cechą braną pod uwagę jest rodzaj pojazdu, czyli czy jest to samoch
 
 \end{knitrout}
 
-Na rysunku \ref{fig:fig_typ} przedstawione są dwa wykresy pudełkowe zysków, jeden dla samochodów, drugi dla motocykli. Większa mediana, wynosząca 14.22 tyś. zł, jest dla pojazdów typu samochód. W drugiej grupie wynosi ona 8.853 tyś. zł. 
-Większy pierwszy kwartyl występuje w grupie typu samochód, wynosi on 9.625 tyś. zł, w porównaniu dla grupy typu motocykl jego wartość wynosi 5.15 tyś. zł.
-W przypadku kwartyla trzeciego większa wartość występuje w grupie typu samochód (wynosi 22.18 tyś. zł). W drugiej grupie wynosi on 13.0095 tyś. zł.
-Największy zysk przyniósł samochód, a wyniósł on 143.474 tyś. zł. 
-Najmniejszy zysk natomiast przyniósł samochód i wyniósł on -3.2 tyś. zł. Zatem częściej większy zysk dla warsztatu przynosi sprzedaż pojazdów typu samochód. 
+Na rysunku \ref{fig:fig_typ} przedstawione są dwa wykresy pudełkowe zysków, jeden dla samochodów, drugi dla motocykli. Większa mediana, wynosząca 14.22, jest dla pojazdów typu samochód. W drugiej grupie wynosi ona 8.85 tyś. zł. 
+Większy pierwszy kwartyl występuje w grupie typu samochód, wynosi on 9.63 tyś. zł, w porównaniu dla grupy typu motocykl jego wartość wynosi 5.15 tyś. zł.
+W przypadku kwartyla trzeciego większa wartość występuje w grupie typu samochód (wynosi 22.18 tyś. zł). W drugiej grupie wynosi on 13.01 tyś. zł.
+Największy zysk przyniósł samochód, a wyniósł on 143 tyś. zł. 
+Najmniejszy zysk natomiast przyniósł samochód i wyniósł on -3 tyś. zł. Zatem częściej większy zysk dla warsztatu przynosi sprzedaż pojazdów typu samochód. 
 
 \subsection{Czy powypadkowy}
 
@@ -378,10 +416,10 @@ Następną badaną cechą jest to, czy pojazd jest powypadkowy.
 
 \end{knitrout}
 
-Na rysunku \ref{fig:fig_wypadkowy} przedstawione są dwa wykresy pudełkowe zysków dla pojazdów powypadkowych i niepowypadkowych. Większa mediana, wynosząca 14.221 tyś. zł, jest dla pojazdów niepowypadkowych. W drugiej grupie wynosi ona 11.556 tyś. zł. 
-Większy pierwszy kwartyl występuje w grupie pojazdów niepowypadkowych, wynosi on 9.687 tyś. zł, w porównaniu dla grupy pojazdów powypadkowych jego wartość wynosi 7.9 tyś. zł.
-Większa wartość trzeciego kwartylu występuje dla pojazdów niepowypadkowych i wynosi 22.8745 tyś. zł. Dla pojazdów powypadkowych wynosi on 17.042 tyś. zł.
-Największy zysk przyniósł pojazd z grupy niepowypadkowych i wyniósł on 143.474 tyś. zł. 
+Na rysunku \ref{fig:fig_wypadkowy} przedstawione są dwa wykresy pudełkowe zysków dla pojazdów powypadkowych i niepowypadkowych. Większa mediana, wynosząca 14.22 tyś. zł, jest dla pojazdów niepowypadkowych. W drugiej grupie wynosi ona 11.56 tyś. zł. 
+Większy pierwszy kwartyl występuje w grupie pojazdów niepowypadkowych, wynosi on 9.69 tyś. zł, w porównaniu dla grupy pojazdów powypadkowych jego wartość wynosi 8 tyś. zł.
+Większa wartość trzeciego kwartylu występuje dla pojazdów niepowypadkowych i wynosi 22.87 tyś. zł. Dla pojazdów powypadkowych wynosi on 17.04 tyś. zł.
+Największy zysk przyniósł pojazd z grupy niepowypadkowych i wyniósł on 143.47 tyś. zł. 
 Najmniejszy zysk natomiast przyniósł pojazd z grupy niepowypadkowych i wyniósł on -3.2 tyś. zł. Zatem częściej większy zysk dla warsztatu przynosi sprzedaż pojazdów niepowypadkowych. 
 
 \subsection{Pojemność silnika}
@@ -400,10 +438,10 @@ Ostatnią cechą braną pod uwagę jest pojemność silnika pojazdu.
 
 \end{knitrout}
 
-Na rysunku \ref{fig:fig_wypadkowy} przedstawione są wykresy pudełkowe zysków ze względu na pojemność silnika. Największa mediana, wynosząca 19.9 tyś. zł, jest dla pojazdów o pojemności silnika powyżej 1.8 litra. Natomiast najmniej ona wynosi 8.8615 tyś. zł w grupie pojazdów o pojemności poniżej 1.3 litra. 
-Największy pierwszy kwartyl występuje w grupie pojazdów o pojemności powyżej 1.8 litra, wynosi on 14.222 tyś. zł, w porównaniu z pojazdami o pojemności poniżej 1.3 litra, dla których jego wartość jest najmniejsza i wynosi 6.604 tyś. zł.
-Największa wartość trzeciego kwartylu występuje dla pojazdów o pojemności powyżej 1.8 litra i wynosi 32.7 tyś. zł. Dla pojazdów poniżej 1.3 litra wynosi on 11.7715 tyś. zł i jest to najmnijesza wartość w tych grupach.
-Największy zysk przyniósł pojazd o pojemności silnika powyżej 1.8 litra i wyniósł on 143.474 tyś. zł. 
+Na rysunku \ref{fig:fig_wypadkowy} przedstawione są wykresy pudełkowe zysków ze względu na pojemność silnika. Największa mediana, wynosząca 19.9 tyś. zł, jest dla pojazdów o pojemności silnika powyżej 1.8 litra. Natomiast najmniej ona wynosi 8.86 tyś. zł w grupie pojazdów o pojemności poniżej 1.3 litra. 
+Największy pierwszy kwartyl występuje w grupie pojazdów o pojemności powyżej 1.8 litra, wynosi on 14.22 tyś. zł, w porównaniu z pojazdami o pojemności poniżej 1.3 litra, dla których jego wartość jest najmniejsza i wynosi 6.6 tyś. zł.
+Największa wartość trzeciego kwartylu występuje dla pojazdów o pojemności powyżej 1.8 litra i wynosi 32.7 tyś. zł. Dla pojazdów poniżej 1.3 litra wynosi on 11.77 tyś. zł i jest to najmnijesza wartość w tych grupach.
+Największy zysk przyniósł pojazd o pojemności silnika powyżej 1.8 litra i wyniósł on 143.47 tyś. zł. 
 Najmniejszy zysk natomiast przyniósł pojazd z pojemnością silnika powyżej 1.8 litra i wyniósł on -3.2 tyś. zł. Zatem przeważnie największy zysk dla warsztatu przynosi sprzedaż pojazdów o pojemności silnika powyżej 1.8 litra. Najczęściej najmniejszy zysk przynosi sprzedaż pojazdów z pojemnością silnika poniżej 1.3 litra.
 
 \section{Kim są najlepszy mechanik i sprzedawca w warsztacie?}
@@ -415,33 +453,7 @@ Warsztatowi zależy na tym by sprzedawca zarobił dla firmy dużą kwotę (Może
 
 Tabela, w której są dane o sprzedawcach  pracujących w dowolnym momencie w warsztacie wygląda następująco:
 
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{verbatim}
-##         sprzedawca     suma ile_sprzedanych płaca id_pracownika status
-## 1 Barbara Kosowska 22645332             363  56.4             3      1
-## 2     Wiesław Trần 24300319             378  52.8             2      1
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-
-Jeżeli pracownik odszedł z warsztatu, to nielogicznym jest, by rozważać danie mu podwyżki.
-
-Po usunięciu pracowników, którzy już nie pracują otrzymujemy taką tabelę:
-
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{verbatim}
-##         sprzedawca     suma ile_sprzedanych płaca id_pracownika status
-## 1 Barbara Kosowska 22645332             363  56.4             3      1
-## 2     Wiesław Trần 24300319             378  52.8             2      1
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-
-Osoba, która sprzedała pojazdy łącznie warte największą kwotę to Wiesław Trần. Zostały one zakupione przez klientów za 24300318.96 zł, co stanowi 103.53\% średniej sumy całej kwoty, którą wynegocjował z klientami sprzedawca przez cały okres pracy. Zarabiana przez tego pracownika kwota za godzinę pracy (52.80 zł) stanowi 96.70\% średniej płacy sprzedawcy (54.60 zł). Różnica procentowa wynosi 6.82\%, czyli warsztat zdecydowanie powinien rozważyć podwyżkę dla tego pracownika, by lepiej wyróżnić jego wpływ na dochody firmy. \\
-
-Pracownik, który sprzedał najwięcej pojazdów to ponownie Wiesław Trần. Ten sprzedawca namówił klientów do kupna pojazdów w liczbie 378, co stanowi 102.16\% średnich sprzedaży przypadających na pracownika. Patrząc na zarobki pracownika można zauważyć, że zarabia on za godzinę pracy (52.80 zł), czyli 96.70\% średniej płacy sprzedawcy (54.60 zł). Różnica między tymi dwoma wartościami wynosi 5.46\%, czyli stawka godzinowa pracownika powinna zdecydowanie zostać podniesiona, aby poczuł się wyróżniony i doceniony. 
+{\color{red}[tu wstaw tamto]} 
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
