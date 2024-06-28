@@ -31,6 +31,10 @@ con <- dbConnect(RMariaDB::MariaDB(),
                  username = "team07",
                  password = "te@m24ot",
                  host = "giniewicz.it")
+
+miesiąc_odmiana <- function(m) {
+  return(if_else(length(m) > 1, "miesiącach", "miesiącu"))
+}
 @
 
 \section{Wstęp}
@@ -167,14 +171,20 @@ naprawiane_pojazdy$liczność[is.na(naprawiane_pojazdy$liczność)] <- 0
 naprawiane_pojazdy |> ggplot(aes(x=data, y=liczność, , fill=format(data, "%m"))) + 
   geom_bar(stat = "identity") + 
   scale_fill_manual(name="Miesiąc",labels=unique(format(naprawiane_pojazdy$data, "%B")), values=hue_pal()(12))
+
+max_p <- max(naprawiane_pojazdy$liczność)
+max_m <- format(naprawiane_pojazdy$data[naprawiane_pojazdy$liczność == max_p], "%B %Y")
+
+min_p <- min(naprawiane_pojazdy$liczność)
+min_m <- format(naprawiane_pojazdy$data[naprawiane_pojazdy$liczność == min_p], "%B %Y")
 @
 
-Wykres \ref{fig:fig_naprawy_miesiecznie} przedstawia liczbę naprawionych pojazdów w każdym miesiącu pracy warsztatu. Najwięcej pojazdów zostało naprawionych w miesiącach: 
-\Sexpr{format(naprawiane_pojazdy$data[naprawiane_pojazdy$liczność == max(naprawiane_pojazdy$liczność)], "%B %Y")},
-a było ich \Sexpr{max(naprawiane_pojazdy$liczność)}. Natomiast najmniej przeprowadzonych napraw było w miesiącach:
-\Sexpr{format(naprawiane_pojazdy$data[naprawiane_pojazdy$liczność == min(naprawiane_pojazdy$liczność)], "%B %Y")},
-było ich \Sexpr{min(naprawiane_pojazdy$liczność)}. Średnia liczba napraw miesięcznie wynosi 
-\Sexpr{round(mean(naprawiane_pojazdy$liczność), 3)}. 
+Wykres \ref{fig:fig_naprawy_miesiecznie} przedstawia liczbę naprawionych pojazdów w każdym miesiącu pracy warsztatu. Najwięcej pojazdów zostało naprawionych w \Sexpr{miesiąc_odmiana(max_m)} 
+\Sexpr{max_m},
+a było ich \Sexpr{max_p}. Natomiast najmniej przeprowadzonych napraw było w \Sexpr{miesiąc_odmiana(min_m)}
+\Sexpr{min_m},
+było ich \Sexpr{min_p}. Średnia liczba napraw miesięcznie wynosi 
+\Sexpr{round(mean(naprawiane_pojazdy$liczność), 2)}. 
 
 \section{Tabela najlepszych okazji}
 
@@ -732,10 +742,6 @@ kupno_samochodów <- df$suma
 df |> ggplot(aes(x=data, y=suma, , fill=format(data, "%m"))) + 
   geom_bar(stat = "identity") + 
   scale_fill_manual(name="Miesiąc",labels=unique(format(df$data, "%B")), values=hue_pal()(12))
-
-miesiąc_odmiana <- function(m) {
-  return(if_else(length(m) > 1, "miesiącach", "miesiącu"))
-}
 
 max_p <- max(df$suma)
 max_p2 <- sort(df$suma,decreasing = T)[2]
