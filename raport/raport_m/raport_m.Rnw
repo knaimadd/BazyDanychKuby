@@ -318,17 +318,13 @@ Drugi najmniejszy przychód wyniósł \Sexpr{round(min_p2*0.1^3, 2)} tyś. zł. 
 
 \subsection{Koszty wypłat dla pracowników}
 
-<<warning=FALSE,message=FALSE,echo=FALSE>>=
+Zostanie sprawdzone, jakie miesięczne koszty ponosi warsztat na wypłaty pensji dla pracowników.
 
-query <- "SELECT płaca, DATE_FORMAT(data_zatrudnienia, '%m') as pierwszy_m, DATE_FORMAT(data_zatrudnienia, '%Y') as pierwszy_y,
--TIMESTAMPDIFF(DAY, data_zatrudnienia, CONCAT(DATE_FORMAT(data_zatrudnienia, '%Y-%m'), '-01')) as nieprzepracowane_pierwszego,
-DATEDIFF(DATE_ADD(CONCAT(DATE_FORMAT(data_zatrudnienia, '%Y-%m'), '-01'), INTERVAL 1 MONTH),
-CONCAT(DATE_FORMAT(data_zatrudnienia, '%Y-%m'), '-01')) as dni_miesiąca_zatrudnienia,
-DATE_FORMAT(data_zwolnienia, '%m') as ostatni_m, DATE_FORMAT(data_zwolnienia, '%Y') as ostatni_y,
-1+TIMESTAMPDIFF(DAY, CONCAT(DATE_FORMAT(data_zwolnienia, '%Y-%m'), '-01'), data_zwolnienia) as przepracowane_ostatniego,
-DATEDIFF(DATE_ADD(CONCAT(DATE_FORMAT(data_zwolnienia, '%Y-%m'), '-01'), INTERVAL 1 MONTH),
-CONCAT(DATE_FORMAT(data_zwolnienia, '%Y-%m'), '-01')) as dni_miesiąca_zwolnienia
-FROM pracownicy"
+%Zakładamy, że płaca w miesiącu to 160*płaca (przy zatrudnieniu/zwolnieniu pracownika patrze ile dni w miesiacu pracownik pracowal i robie ulamek, np. jak zatrudnili go 3 marca to dostaje round(płaca*160*29/31,2)) i podobnie ostatni to by byl round(płaca*160*3/31,2), wypłacamy pieniądze 1 dnia kolejnego miesiąca (np za styczeń wypłacamy 1 lutego)
+
+<<fig_pracownicy, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=9,fig.pos="H", fig.cap="Miesięczne koszty wynikające z wypłacania pensji pracownikom">>=
+
+query <- "SELECT płaca, DATE_FORMAT(data_zatrudnienia, '%m') as pierwszy_m, DATE_FORMAT(data_zatrudnienia, '%Y') as pierwszy_y,-TIMESTAMPDIFF(DAY, data_zatrudnienia, CONCAT(DATE_FORMAT(data_zatrudnienia, '%Y-%m'), '-01')) as nieprzepracowane_pierwszego, DATEDIFF(DATE_ADD(CONCAT(DATE_FORMAT(data_zatrudnienia, '%Y-%m'), '-01'), INTERVAL 1 MONTH), CONCAT(DATE_FORMAT(data_zatrudnienia, '%Y-%m'), '-01')) as dni_miesiąca_zatrudnienia, DATE_FORMAT(data_zwolnienia, '%m') as ostatni_m, DATE_FORMAT(data_zwolnienia, '%Y') as ostatni_y, 1+TIMESTAMPDIFF(DAY, CONCAT(DATE_FORMAT(data_zwolnienia, '%Y-%m'), '-01'), data_zwolnienia) as przepracowane_ostatniego, DATEDIFF(DATE_ADD(CONCAT(DATE_FORMAT(data_zwolnienia, '%Y-%m'), '-01'), INTERVAL 1 MONTH), CONCAT(DATE_FORMAT(data_zwolnienia, '%Y-%m'), '-01')) as dni_miesiąca_zwolnienia FROM pracownicy"
 
 df <- dbGetQuery(con, query)
 df[,2] <- as.numeric(df[,2])
@@ -369,20 +365,33 @@ miesiące |> ggplot(aes(x=data, y=suma, , fill=format(data, "%m"))) +
   geom_bar(stat = "identity") + 
   scale_fill_manual(name="Miesiąc",labels=unique(format(miesiące$data, "%B")), values=hue_pal()(12))
 
+max_p <- max(miesiące$suma)
+
+max_m <- format(miesiące$data[miesiące$suma == max_p], "%B %Y")
+
+min_p <- min(miesiące$suma)
+min_p_zdanie <- if_else(min_p < 100, paste(min_p, 'zł'), paste(round(min_p*0.1^3, 2), 'tyś. zł'))
+
+min_m <- format(miesiące$data[miesiące$suma == min_p], "%B %Y")
+
+wniosek_max <- if_else(miesiące$data[miesiące$suma == max_p] == miesiące$data[dim(miesiące)[1]], 
+                       " Zatem widać, że aktualnie warsztat ponosi największe koszty wynikające z wypłat dla pracowników.", "")
+
+wniosek_min <- if_else(miesiące$data[miesiące$suma == 0] == miesiące$data[1], 
+                       " Wynika to z tego, że jest to pierwszy miesiąc działania warsztatu, a pensje wypłacamy pracownikom pierwszego dnia następnego miesiąca.", "")
+
 @
 
-Zakładamy, że płaca w miesiącu to 160*płaca (przy zatrudnieniu/zwolnieniu pracownika patrze ile dni w miesiacu pracownik pracowal i robie ulamek, np. jak zatrudnili go 3 marca to dostaje round(płaca*160*29/31,2)) i podobnie ostatni to by byl round(płaca*160*3/31,2), wypłacamy pieniądze 1 dnia kolejnego miesiąca (np za styczeń wypłacamy 1 lutego)
+Wykres \ref{fig:fig_pracownicy} przedstawia miesięczne koszty wypłat pensji pracowników. Największy koszt warsztat odnotował w \Sexpr{miesiąc_odmiana(max_m)} \Sexpr{max_m} i wyniósł on \Sexpr{round(max_p*0.1^3, 2)} tyś. zł.\Sexpr{wniosek_max} 
+Natomiast najmniejsze koszty wystąpiły w \Sexpr{miesiąc_odmiana(min_m)} \Sexpr{min_m}. Wyniosły one \Sexpr{min_p_zdanie}.\Sexpr{wniosek_min}
 
-{\color{red} To opisz proszę}
+\subsection{Wpływy ze sprzedaży pojazdów}
 
-\subsection{Samochody wpływy}
+Następnie zostaną sprawdzone miesięczne wpływy finansowe ze sprzedaży pojazdów, które zostały zakupione i w razie potrzeby naprawione przez warsztat. Pojazdy są sprzedawane na dwa sposoby: klient może zapłacić całą kwotę na raz lub spłacać w ratach. {\color{red}Jeśli klient zdecyduje się na pierwszą opcję, to przysługuje mu zniżka w wysokości (???).} {\color{red}Opisać: Jak są wpłaty to robimy dla wszystkich oprócz ostatniej floor z dzielenia, a ostatnia to cena zakupu - te raty co juz splacono}
 
-<<warning=FALSE,message=FALSE,echo=FALSE>>=
+<<fig_samochody_wplywy, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=9,fig.pos="H", fig.cap="Miesięczne wpływy finansowe ze sprzedaży pojazdów">>=
 
-query <- "SELECT DATE_FORMAT(data_zaksięgowania, '%Y') as rok,
-DATE_FORMAT(data_zaksięgowania, '%m') as miesiąc,
-cena, liczba_rat 
-FROM sprzedaż_samochodu"
+query <- "SELECT DATE_FORMAT(data_zaksięgowania, '%Y') as rok, DATE_FORMAT(data_zaksięgowania, '%m') as miesiąc, cena, liczba_rat FROM sprzedaż_samochodu"
 
 df <- dbGetQuery(con, query)
 df[,1] <- as.numeric(df[,1])
@@ -417,16 +426,32 @@ miesiące |> ggplot(aes(x=data, y=suma, , fill=format(data, "%m"))) +
   geom_bar(stat = "identity") + 
   scale_fill_manual(name="Miesiąc",labels=unique(format(miesiące$data, "%B")), values=hue_pal()(12))
 
+max_p <- max(miesiące$suma)
+max_p2 <- sort(miesiące$suma,decreasing = T)[2]
+
+max_m <- format(miesiące$data[miesiące$suma == max_p], "%B %Y")
+max_m2 <- format(miesiące$data[miesiące$suma == max_p2], "%B %Y")
+
+min_p <- min(miesiące$suma)
+min_p_zdanie <- if_else(min_p < 100, paste(min_p, 'zł'), paste(round(min_p*0.1^3, 2), 'tyś. zł'))
+min_p2 <- sort(miesiące$suma,decreasing = F)[2]
+
+min_m <- format(miesiące$data[miesiące$suma == min_p], "%B %Y")
+min_m2 <- format(miesiące$data[miesiące$suma == min_p2], "%B %Y")
+
 @
 
-
-Jak są wpłaty to robimy dla wszystkich oprócz ostatniej floor z dzielenia, a ostatnia to cena zakupu - te raty co juz splacono
-{\color{red} to do opisu}
+Na wykresie \ref{fig:fig_samochody_wplywy} przedstawione są wpływy finansowe ze sprzedaży pojazdów. 
+Największe miesięczne wpływy warsztatu ze sprzedaży pojazdów wynosiły \Sexpr{round(max_p*0.1^6, 2)} mln. zł. Wystąpiły one w \Sexpr{miesiąc_odmiana(max_m)} \Sexpr{max_m}. 
+Drugie co do wielkości wpływy (w wysokości \Sexpr{round(max_p2*0.1^6, 2)} mln. zł) zostały odnotowane w \Sexpr{miesiąc_odmiana(max_m2)} \Sexpr{max_m2}. Są one \Sexpr{round(max_p / max_p2, 2)} razy mniejsze niż te największe zaobserwowane.
+Najmniejsze miesięczne wpływy wyniosły \Sexpr{round(min_p*0.1^6, 2)} mln. zł, a wystąpiły one w \Sexpr{miesiąc_odmiana(min_m)} \Sexpr{min_m}.
+Kolejnymi najmniejszymi są wpływy z \Sexpr{miesiąc_odmiana(min_m2)} \Sexpr{min_m2}. Są one wysokości \Sexpr{round(min_p2*0.1^6, 2)} mln. zł.
 
 \subsection{Bilans miesięczny}
 
+Teraz zostanie sprawdzoby miesięczny bilans warsztatu. Zostaną sprawdzone miesięczne przychody warsztaty przez cały okres jego działania oraz comiesięczny stan środków finansowych firmy, gdyby warsztat zaczynał bez posiadania żadnych średków pienięznych.
 
-<<warning=FALSE,message=FALSE, echo=FALSE>>=
+<<fig_bilans, warning=FALSE,message=FALSE, echo=FALSE,fig.height=4,fig.width=9,fig.pos="H", fig.cap="Miesięczne przychody warsztatu">>=
 miesięczne_przychody <- sprzedaż_samochodów-kupno_samochodów-wypłaty+prowadzenie_warsztatu
 miesiące <- expand.grid(1:12, first_year:last_year) |> reframe(data = make_date(Var2, Var1, 1), suma = 0)
 miesiące[,2] <- miesięczne_przychody
@@ -434,11 +459,38 @@ miesiące[,2] <- miesięczne_przychody
 miesiące |> ggplot(aes(x=data, y=miesięczne_przychody, , fill=format(data, "%m"))) + 
   geom_bar(stat = "identity") + 
   scale_fill_manual(name="Miesiąc",labels=unique(format(miesiące$data, "%B")), values=hue_pal()(12))
+
+max_p <- max(miesiące$suma)
+max_p2 <- sort(miesiące$suma,decreasing = T)[2]
+
+max_m <- format(miesiące$data[miesiące$suma == max_p], "%B %Y")
+max_m2 <- format(miesiące$data[miesiące$suma == max_p2], "%B %Y")
+
+min_p <- min(miesiące$suma)
+min_p2 <- sort(miesiące$suma,decreasing = F)[2]
+
+min_m <- format(miesiące$data[miesiące$suma == min_p], "%B %Y")
+min_m2 <- format(miesiące$data[miesiące$suma == min_p2], "%B %Y")
+
+pierwsze_ujemne_ilość <- (miesiące$suma < 0)
+pierwsze_ujemne_ilość[!pierwsze_ujemne_ilość] <- NA
+pierwsze_ujemne_ilość <- is.na(cumsum(pierwsze_ujemne_ilość))
+pierwsze_ujemne_ilość <- length(pierwsze_ujemne_ilość[!pierwsze_ujemne_ilość])
+
+wniosek <- if_else(pierwsze_ujemne_ilość == 1, " Pierwszy miesiąc działalności przyniósł straty dla warsztatu.", 
+                   if_else(pierwsze_ujemne_ilość > 1, 
+                           paste(" Przez pierwsze", pierwsze_ujemne_ilość, 
+                                 "miesięcy pracy warsztat nie przynosił żadnych zysków."), ""))
+
 @
 
-złączenie: na miesiąc = naprawy(te z minusami, bo mają razem części) + sprzedaż pojazdu -zakup pojazdu - wypłaty (czy ja coś pominęłam?)
+%złączenie: na miesiąc = naprawy(te z minusami, bo mają razem części) + sprzedaż pojazdu -zakup pojazdu - wypłaty (czy ja coś pominęłam?)
 
-<<warning=FALSE,message=FALSE, echo=FALSE>>=
+Wykres \ref{fig:fig_bilans} przedstawia miesięczne przychody firmy od początku jej działalności. 
+Najwięcej warsztat zarobił (\Sexpr{round(max_p*0.1^3, 2)} tyś. zł) w \Sexpr{miesiąc_odmiana(max_m)} \Sexpr{max_m}.
+Natomiast najmniej w \Sexpr{miesiąc_odmiana(min_m)} \Sexpr{min_m}. Zyski wyniosły wtedy \Sexpr{round(min_p*0.1^3, 2)} tyś. zł.\Sexpr{wniosek}
+
+<<fig_bilans_suma, warning=FALSE,message=FALSE, echo=FALSE,fig.height=5,fig.width=9,fig.pos="H", fig.cap="Miesięczny stan finansowy warsztatu, gdyby zaczynał działalność bez żadnych środków pieniężnych">>=
 miesięczne_przychody <- sprzedaż_samochodów-kupno_samochodów-wypłaty+prowadzenie_warsztatu
 miesiące <- expand.grid(1:12, first_year:last_year) |> reframe(data = make_date(Var2, Var1, 1), suma = 0)
 miesiące[,2] <- miesięczne_przychody
@@ -450,10 +502,32 @@ miesiące |> ggplot(aes(x=data, y=bilans, color=format(data, "%m"))) +
   geom_line( color="gray", size=1.2)+
   geom_point(size=2.5) + scale_colour_discrete("Miesiąc", ,labels=unique(format(miesiące$data, "%B")), ) +
   scale_fill_manual(name="Miesiąc",labels=unique(format(miesiące$data, "%B")), values=hue_pal()(12)) 
+
+stan_początkowy <- miesiące$bilans[1]
+stan_końcowy <- miesiące$bilans[length(miesiące$bilans)]
+
+pierwsze_ujemne_ilość <- (miesiące$bilans < 0)
+pierwsze_ujemne_ilość[!pierwsze_ujemne_ilość] <- NA
+pierwsze_ujemne_ilość <- is.na(cumsum(pierwsze_ujemne_ilość))
+pierwsze_ujemne_ilość <- length(pierwsze_ujemne_ilość[!pierwsze_ujemne_ilość])
+
+wniosek <- if_else(pierwsze_ujemne_ilość == 1, 
+                   " Przez pierwszy miesiąc działalności stan finansowy warsztatu był ujemny.", 
+                   if_else(pierwsze_ujemne_ilość > 1, 
+                           paste(" Przez pierwsze", pierwsze_ujemne_ilość, 
+                                 "miesięcy pracy warsztatu jego stan finansowy był ujemny."), ""))
+
+max_p <- max(miesiące$bilans)
+max_m <- format(miesiące$data[miesiące$bilans == max_p], "%B %Y")
+
+min_p <- min(miesiące$bilans)
+min_m <- format(miesiące$data[miesiące$bilans == min_p], "%B %Y")
+
 @
 
-{\color{red} to też do opisu}
-
+Wykres \ref{fig:fig_bilans_suma} przedstawia miesięczny stan finansowy warsztatu, gdyby zaczynał działalność bez środków pieniężnych. W pierwszym miesiącu działalności stan finansowy wyniósł \Sexpr{round(stan_początkowy*0.1^6, 2)} mln. zł, natomiast aktualnie wynosi on \Sexpr{round(stan_końcowy*0.1^6, 2)} mln. zł.\Sexpr{wniosek}
+Największą ilością pieniędzy warsztat operował w \Sexpr{miesiąc_odmiana(max_m)} \Sexpr{max_m}, było to \Sexpr{round(max_p*0.1^6, 2)} mln. zł.
+Natomiast najmniejszą w \Sexpr{miesiąc_odmiana(min_m)} \Sexpr{min_m}, a było to \Sexpr{round(min_p*0.1^6, 2)} mln. zł.
 
 \section{Kim są najlepszy mechanik i sprzedawca w warsztacie?}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.4.5)  28 JUN 2024 05:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.4.13)  28 JUN 2024 11:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,9 +6,9 @@ entering extended mode
 (./raport_m.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18>
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/base/article.cls
+(d:/texlive/2021/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/base/size10.clo
+(d:/texlive/2021/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
 \c@part=\count179
@@ -23,34 +23,34 @@ File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+(d:/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+(d:/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+(d:/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+(d:/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.c
-fg
+(d:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
+(d:/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen139
 \Gin@req@width=\dimen140
-) (d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
+)
+(d:/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(d:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -63,7 +63,8 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-) (d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/framed/framed.sty
+)
+(d:/texlive/2021/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip49
 \fb@frw=\dimen141
@@ -71,15 +72,15 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameRule=\dimen143
 \FrameSep=\dimen144
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/base/alltt.sty
+(d:/texlive/2021/texmf-dist/tex/latex/base/alltt.sty
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/base/inputenc.sty
+(d:/texlive/2021/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2020/08/01 v1.3d Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(d:/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks18
 \symAMSa=\mathgroup4
@@ -88,22 +89,24 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/tex-gyre/tgpagella.sty
+(d:/texlive/2021/texmf-dist/tex/latex/tex-gyre/tgpagella.sty
 Package: tgpagella 2009/09/27 v1.2 TeX Gyre Pagella as default roman family
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(d:/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+
+(d:/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.s
-ty
+(d:/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-))) (d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/polski/polski.sty
+)))
+(d:/texlive/2021/texmf-dist/tex/latex/polski/polski.sty
 Package: polski 2017/05/04 v1.3.4 Polish language package
+
    Inputenc package detected. Catcodes not changed.
    Switching to Polish text encoding and Polish maths fonts.
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/base/ot4enc.def
+(d:/texlive/2021/texmf-dist/tex/latex/base/ot4enc.def
 File: ot4enc.def 2020/08/10 v2.0s Standard LaTeX file
 Now handling font encoding OT4 ...
 ... no UTF-8 mapping file for font encoding OT4
@@ -111,7 +114,7 @@ Now handling font encoding OT4 ...
 LaTeX Font Info:    Trying to load font information for OT4+qpl on input line 3
 60.
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/tex-gyre/ot4qpl.fd
+(d:/texlive/2021/texmf-dist/tex/latex/tex-gyre/ot4qpl.fd
 File: ot4qpl.fd 2009/09/25 v1.2 font definition file for OT4/qpl
 )
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
@@ -146,48 +149,42 @@ LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/cmsy/b/n --> OMS/plsy/b/n on input line 360.
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/units/nicefrac.sty
+(d:/texlive/2021/texmf-dist/tex/latex/units/nicefrac.sty
 Package: nicefrac 1998/08/04 v0.9b Nice fractions
 \L@UnitsRaiseDisplaystyle=\skip50
 \L@UnitsRaiseTextstyle=\skip51
 \L@UnitsRaiseScriptstyle=\skip52
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
+(d:/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ))
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/l3packages/xfrac/xfrac.
-sty (d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
+(d:/texlive/2021/texmf-dist/tex/latex/l3packages/xfrac/xfrac.sty
+(d:/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2021-02-18 L3 programming layer (loader) 
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdf
-tex.def
+(d:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count187
 \l__pdf_internal_box=\box47
 ))
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+(d:/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+(d:/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks19
 \ex@=\dimen145
 ))
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/l3packages/l3keys2e/l3k
-eys2e.sty
+(d:/texlive/2021/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/base/textcomp.sty
+(d:/texlive/2021/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xpars
-e.sty
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xpars
-e-2020-10-01.sty
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xpars
-e-generic.tex)))
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/l3packages/xtemplate/xt
-emplate.sty
+(d:/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(d:/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-01.sty
+(d:/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex)))
+(d:/texlive/2021/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
 Package: xtemplate 2021-03-12 L3 Experimental prototype document functions
 \l__xtemplate_tmp_dim=\dimen146
 \l__xtemplate_tmp_int=\count188
@@ -209,13 +206,13 @@ Package xtemplate Info: Declaring object type 'xfrac' taking 3 argument(s) on
 (xtemplate)             line 80.
 
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
+(d:/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
+(d:/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+(d:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
 \Gm@cnth=\count189
@@ -231,61 +228,57 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \Gm@layoutvoffset=\dimen159
 \Gm@dimlist=\toks20
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
+(d:/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds
-.sty
+(d:/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.s
-ty
+(d:/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefine
-keys.sty
+(d:/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.s
-ty
+(d:/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-) (d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty
+)
+(d:/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro
-.sty
+(d:/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty
+(d:/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen160
 \Hy@linkcounter=\count192
 \Hy@pagecounter=\count193
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def
+(d:/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref-langp
-atches.def
+(d:/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
 File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel la
 nguages
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty
+(d:/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+(d:/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count194
- (d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def
+
+(d:/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -299,18 +292,17 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
 \c@Hy@tempcnt=\count195
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/url/url.sty
+(d:/texlive/2021/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip19
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4804.
 \XeTeXLinkMargin=\dimen161
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+(d:/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc
-.sty
+(d:/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
@@ -327,7 +319,7 @@ Package hyperref Info: PDF/A mode OFF on input line 6105.
 LaTeX Info: Redefining \ref on input line 6145.
 LaTeX Info: Redefining \pageref on input line 6149.
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+(d:/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
 ge
 with kernel methods
@@ -337,10 +329,11 @@ with kernel methods
 \c@Hfootnote=\count199
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/hyperref/hpdftex.def
+
+(d:/texlive/2021/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2021-02-27 v7.00k Hyperref driver for pdfTeX
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/base/atveryend-ltx.sty
+(d:/texlive/2021/texmf-dist/tex/latex/base/atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
 e
 with kernel methods
@@ -348,12 +341,10 @@ with kernel methods
 \Fld@listcount=\count266
 \c@bookmark@seq@number=\count267
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfil
-echeck.sty
+(d:/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquec
-ounter.sty
+(d:/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
@@ -361,10 +352,10 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip54
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(d:/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/footmisc/footmisc.sty
+(d:/texlive/2021/texmf-dist/tex/latex/footmisc/footmisc.sty
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
 \FN@temptoken=\toks21
 \footnotemargin=\dimen164
@@ -378,7 +369,7 @@ Package footmisc Info: Declaring symbol style lamport* on input line 903.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
 .
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/float/float.sty
+(d:/texlive/2021/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count269
 \float@exts=\toks22
@@ -386,11 +377,10 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks23
 \@floatcapt=\box51
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/upquote/upquote.sty
+(d:/texlive/2021/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
-)
-(./raport_m.aux)
+) (./raport_m.aux)
 \openout1 = `raport_m.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
@@ -411,7 +401,7 @@ LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 66.
 LaTeX Font Info:    Trying to load font information for OT4+cmr on input line 6
 6.
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/polski/ot4cmr.fd
+(d:/texlive/2021/texmf-dist/tex/latex/polski/ot4cmr.fd
 File: ot4cmr.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    ... okay on input line 66.
@@ -420,8 +410,7 @@ LaTeX Font Info:    ... okay on input line 66.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 66.
 LaTeX Font Info:    ... okay on input line 66.
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mk
-ii
+(d:/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count270
 \scratchdimen=\dimen165
@@ -434,15 +423,12 @@ ii
 \MPnumerator=\count274
 \makeMPintoPDFobject=\count275
 \everyMPtoPDFconversion=\toks25
-)
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-b
-ase.sty
+) (d:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sy
-s.cfg
+(d:/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
@@ -481,14 +467,13 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring OFF on input line 66.
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+(d:/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
+(d:/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettit
-lestring.sty
+(d:/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count276
@@ -496,98 +481,97 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 66.
 LaTeX Info: Redefining \pageref on input line 66.
 LaTeX Info: Redefining \nameref on input line 66.
- (./raport_m.out) (./raport_m.out)
+
+(./raport_m.out) (./raport_m.out)
 \@outlinefile=\write3
 \openout3 = `raport_m.out'.
 
 LaTeX Font Info:    Trying to load font information for OT4+cmtt on input line 
 79.
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/polski/ot4cmtt.fd
+(d:/texlive/2021/texmf-dist/tex/latex/polski/ot4cmtt.fd
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
 LaTeX Font Info:    Trying to load font information for OML+plm on input line 1
-23.
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/polski/omlplm.fd
+27.
+(d:/texlive/2021/texmf-dist/tex/latex/polski/omlplm.fd
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    Trying to load font information for OMS+plsy on input line 
-123.
+127.
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/polski/omsplsy.fd
+(d:/texlive/2021/texmf-dist/tex/latex/polski/omsplsy.fd
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    Trying to load font information for OMX+plex on input line 
-123.
+127.
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/polski/omxplex.fd
+(d:/texlive/2021/texmf-dist/tex/latex/polski/omxplex.fd
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 123.
+(Font)              <10> on input line 127.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 123.
+(Font)              <7> on input line 127.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 123.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 123
+(Font)              <5> on input line 127.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 127
 .
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+(d:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 123
+LaTeX Font Info:    Trying to load font information for U+msb on input line 127
 .
 
-(d:/Technologie/Latex/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+(d:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-[1
+) [1
 
-{d:/Technologie/Latex/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-}]
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
+{d:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--187
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
 
  []
 
-<figure/fig_zakup_pojazdu-1.pdf, id=53, 650.43pt x 289.08pt>
+[2]
+<figure/fig_zakup_pojazdu-1.pdf, id=57, 650.43pt x 289.08pt>
 File: figure/fig_zakup_pojazdu-1.pdf Graphic file (type pdf)
 <use figure/fig_zakup_pojazdu-1.pdf>
-Package pdftex.def Info: figure/fig_zakup_pojazdu-1.pdf  used on input line 199
+Package pdftex.def Info: figure/fig_zakup_pojazdu-1.pdf  used on input line 207
 .
 (pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
-[2]
 <figure/fig_zakup_czesci-1.pdf, id=59, 650.43pt x 289.08pt>
 File: figure/fig_zakup_czesci-1.pdf Graphic file (type pdf)
 <use figure/fig_zakup_czesci-1.pdf>
-Package pdftex.def Info: figure/fig_zakup_czesci-1.pdf  used on input line 222.
+Package pdftex.def Info: figure/fig_zakup_czesci-1.pdf  used on input line 230.
 
 (pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
  [3pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.228 
+l.236 
        <./figure/fig_zakup_pojazdu-1.pdf>]
-Overfull \hbox (0.79445pt too wide) in paragraph at lines 240--241
+Overfull \hbox (0.79445pt too wide) in paragraph at lines 248--249
 \OT4/qpl/m/n/10 Chcieliby±my spraw-dzi¢, jak wy-gl¡-da-j¡ mie-si¦cz-ne przy-cho
 -dy (lub stra-ty) wy-ni-ka-j¡-ce z pro-wa-dze-nia warsz-
  []
@@ -595,115 +579,127 @@ Overfull \hbox (0.79445pt too wide) in paragraph at lines 240--241
 <figure/fig_uslugi-1.pdf, id=71, 650.43pt x 289.08pt>
 File: figure/fig_uslugi-1.pdf Graphic file (type pdf)
 <use figure/fig_uslugi-1.pdf>
-Package pdftex.def Info: figure/fig_uslugi-1.pdf  used on input line 245.
+Package pdftex.def Info: figure/fig_uslugi-1.pdf  used on input line 253.
 (pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
 [4pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.254 N
+l.262 N
        a wykresie \ref{fig:fig_uslugi} przedstawiony jest miesiÄ™czny przych...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.254 N
+l.262 N
        a wykresie \ref{fig:fig_uslugi} przedstawiony jest miesiÄ™czny przych...
  <./figure/fig_zakup_czesci-1.pdf> <./figure/fig_uslugi-1.pdf>]
 <figure/fig_uslugi2-1.pdf, id=89, 650.43pt x 289.08pt>
 File: figure/fig_uslugi2-1.pdf Graphic file (type pdf)
 <use figure/fig_uslugi2-1.pdf>
-Package pdftex.def Info: figure/fig_uslugi2-1.pdf  used on input line 263.
+Package pdftex.def Info: figure/fig_uslugi2-1.pdf  used on input line 271.
 (pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
-<figure/unnamed-chunk-5-1.pdf, id=91, 505.89pt x 505.89pt>
-File: figure/unnamed-chunk-5-1.pdf Graphic file (type pdf)
-<use figure/unnamed-chunk-5-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-5-1.pdf  used on input line 283.
-(pdftex.def)             Requested size: 469.75502pt x 469.76265pt.
+<figure/fig_pracownicy-1.pdf, id=91, 650.43pt x 289.08pt>
+File: figure/fig_pracownicy-1.pdf Graphic file (type pdf)
+<use figure/fig_pracownicy-1.pdf>
+Package pdftex.def Info: figure/fig_pracownicy-1.pdf  used on input line 295.
+(pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
  [5pdfTeX warning (ext4): destination with the same identifier (name{figure.4})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.290 Z
-       akÅ‚adamy, Å¼e pÅ‚aca w miesiÄ…cu to 160*pÅ‚aca (przy zatrudnieniu/zw...
- <./figure/fig_uslugi2-1.pdf>]
-Overfull \hbox (24.28444pt too wide) in paragraph at lines 290--291
-\OT4/qpl/m/n/10 w mie-sia-cu pra-cow-nik pra-co-wal i ro-bie ula-mek, np. jak z
-a-trud-ni-li go 3 mar-ca to do-sta-je ro-und(pªaca*160*29/31,2))
- []
+l.301 
+       <./figure/fig_uslugi2-1.pdf>]
+<figure/fig_samochody_wplywy-1.pdf, id=103, 650.43pt x 289.08pt>
+File: figure/fig_samochody_wplywy-1.pdf Graphic file (type pdf)
+<use figure/fig_samochody_wplywy-1.pdf>
+Package pdftex.def Info: figure/fig_samochody_wplywy-1.pdf  used on input line 
+314.
+(pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
+ [6pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.328 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.328 
+       <./figure/fig_pracownicy-1.pdf> <./figure/fig_samochody_wplywy-1.pdf>]
+<figure/fig_bilans-1.pdf, id=121, 650.43pt x 289.08pt>
+File: figure/fig_bilans-1.pdf Graphic file (type pdf)
+<use figure/fig_bilans-1.pdf>
+Package pdftex.def Info: figure/fig_bilans-1.pdf  used on input line 336.
+(pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
+<figure/fig_bilans_suma-1.pdf, id=123, 650.43pt x 361.35pt>
+File: figure/fig_bilans_suma-1.pdf Graphic file (type pdf)
+<use figure/fig_bilans_suma-1.pdf>
+Package pdftex.def Info: figure/fig_bilans_suma-1.pdf  used on input line 354.
+(pdftex.def)             Requested size: 469.75502pt x 260.98232pt.
 
-<figure/unnamed-chunk-6-1.pdf, id=102, 505.89pt x 505.89pt>
-File: figure/unnamed-chunk-6-1.pdf Graphic file (type pdf)
-<use figure/unnamed-chunk-6-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-6-1.pdf  used on input line 299.
-(pdftex.def)             Requested size: 469.75502pt x 469.76265pt.
-[6 <./figure/unnamed-chunk-5-1.pdf>]
-<figure/unnamed-chunk-7-1.pdf, id=112, 505.89pt x 505.89pt>
-File: figure/unnamed-chunk-7-1.pdf Graphic file (type pdf)
-<use figure/unnamed-chunk-7-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-7-1.pdf  used on input line 316.
-(pdftex.def)             Requested size: 469.75502pt x 469.76265pt.
- [7 <./figure/unnamed-chunk-6-1.pdf>]
-<figure/unnamed-chunk-8-1.pdf, id=123, 505.89pt x 505.89pt>
-File: figure/unnamed-chunk-8-1.pdf Graphic file (type pdf)
-<use figure/unnamed-chunk-8-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-8-1.pdf  used on input line 328.
-(pdftex.def)             Requested size: 469.75502pt x 469.76265pt.
-
-[8 <./figure/unnamed-chunk-7-1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 340--341
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 342--343
-
- []
-
-[9 <./figure/unnamed-chunk-8-1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 370--371
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 386--387
+[7pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.360 
+       <./figure/fig_bilans-1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 400--401
+Underfull \hbox (badness 10000) in paragraph at lines 371--372
 
  []
 
-[10] (./raport_m.aux)
+[8pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.393 ....969, 0.969}\color{fgcolor}\begin{kframe}
+                                                   <./figure/fig_bilans_suma-1.
+pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 403--404
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 419--420
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 433--434
+
+ []
+
+[9] (./raport_m.aux)
 Package rerunfilecheck Info: File `raport_m.out' has not changed.
-(rerunfilecheck)             Checksum: E2CCFDDDE4B3E5458720EEA72195C843;1924.
+(rerunfilecheck)             Checksum: 6B1C0EE74E74F6198DB5B12F76EB0845;1996.
  ) 
 Here is how much of TeX's memory you used:
- 10402 strings out of 478994
- 161087 string characters out of 5853154
- 478958 words of memory out of 5000000
- 27659 multiletter control sequences out of 15000+600000
+ 10409 strings out of 478994
+ 157750 string characters out of 5862207
+ 477296 words of memory out of 5000000
+ 27663 multiletter control sequences out of 15000+600000
  423023 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,6n,75p,757b,462s stack positions out of 5000i,500n,10000p,200000b,80000s
-{d:/Technologie/Latex/texlive/2021/texmf-dist/fonts/enc/dvips/pl/plrm.enc}{d:
-/Technologie/Latex/texlive/2021/texmf-dist/fonts/enc/dvips/pl/plms.enc}{d:/Tech
-nologie/Latex/texlive/2021/texmf-dist/fonts/enc/dvips/pl/plmi.enc}{d:/Technolog
-ie/Latex/texlive/2021/texmf-dist/fonts/enc/dvips/pl/pltt.enc}{d:/Technologie/La
-tex/texlive/2021/texmf-dist/fonts/enc/dvips/tex-gyre/q-rm.enc}<d:/Technologie/L
-atex/texlive/2021/texmf-dist/fonts/type1/public/pl/plmi10.pfb><d:/Technologie/L
-atex/texlive/2021/texmf-dist/fonts/type1/public/pl/plr10.pfb><d:/Technologie/La
-tex/texlive/2021/texmf-dist/fonts/type1/public/pl/plr7.pfb><d:/Technologie/Late
-x/texlive/2021/texmf-dist/fonts/type1/public/pl/plsy10.pfb><d:/Technologie/Late
-x/texlive/2021/texmf-dist/fonts/type1/public/pl/plsy7.pfb><d:/Technologie/Latex
-/texlive/2021/texmf-dist/fonts/type1/public/pl/pltt10.pfb><d:/Technologie/Latex
-/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/qplb.pfb><d:/Technologie/L
-atex/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb>
-Output written on raport_m.pdf (10 pages, 198451 bytes).
+ 71i,6n,75p,588b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
+{d:/texlive/2021/texmf-dist/fonts/enc/dvips/pl/plrm.enc}{d:/texlive/2021/texm
+f-dist/fonts/enc/dvips/pl/plms.enc}{d:/texlive/2021/texmf-dist/fonts/enc/dvips/
+pl/plmi.enc}{d:/texlive/2021/texmf-dist/fonts/enc/dvips/pl/pltt.enc}{d:/texlive
+/2021/texmf-dist/fonts/enc/dvips/tex-gyre/q-rm.enc}<d:/texlive/2021/texmf-dist/
+fonts/type1/public/pl/plmi10.pfb><d:/texlive/2021/texmf-dist/fonts/type1/public
+/pl/plr10.pfb><d:/texlive/2021/texmf-dist/fonts/type1/public/pl/plr7.pfb><d:/te
+xlive/2021/texmf-dist/fonts/type1/public/pl/plsy10.pfb><d:/texlive/2021/texmf-d
+ist/fonts/type1/public/pl/plsy7.pfb><d:/texlive/2021/texmf-dist/fonts/type1/pub
+lic/pl/pltt10.pfb><d:/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/qplb.
+pfb><d:/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb>
+Output written on raport_m.pdf (9 pages, 195277 bytes).
 PDF statistics:
- 186 PDF objects out of 1000 (max. 8388607)
- 148 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 500000)
+ 191 PDF objects out of 1000 (max. 8388607)
+ 154 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
  113 words of extra memory for PDF output out of 10000 (max. 10000000)
 
