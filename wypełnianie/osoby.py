@@ -236,8 +236,19 @@ def random_email(first_name, last_name, year):
     if p == 5:
         return last_name[0:min(len(last_name) - 1, np.random.randint(1, 10))] + symbol + first_name[:min(len(last_name) - 1, np.random.randint(10))] + num + "@" + domain
 
+used_emplyee_email = []
+
 def employee_email(first_name, last_name):
-    return unidecode(first_name.lower()) + "." + unidecode(last_name.lower()) + "@kuba.pl"
+    email = unidecode(first_name.lower()) + "." + unidecode(last_name.lower()) + "@kuba.pl"
+    cnt_email = np.sum(np.array([used_emplyee_email]) == email)
+    if cnt_email == 0:
+        used_emplyee_email.append(email)
+        return email
+    elif cnt_email >= 1:
+        email = unidecode(first_name.lower()) + "." + unidecode(last_name.lower()) + str(cnt_email + 1) + "@kuba.pl"
+        used_emplyee_email.append(email)
+        return email
+
 
 if __name__ == "__main__":
     mname = random_name_man()
