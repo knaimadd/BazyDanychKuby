@@ -3,8 +3,8 @@
     "version": "2.2.13",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -164,
-    "scrollLeft": -52,
+    "scrollTop": 0,
+    "scrollLeft": 0,
     "zoomLevel": 1,
     "show": {
       "tableComment": true,
@@ -18,7 +18,7 @@
       "relationship": true
     },
     "database": "MySQL",
-    "databaseName": "",
+    "databaseName": "PimpMyWheels",
     "canvasType": "ERD",
     "language": "GraphQL",
     "tableCase": "pascalCase",
@@ -143,7 +143,7 @@
             "id": "d5f68a18-8b0c-4108-b76d-76c3464fe0f9",
             "name": "miasto",
             "comment": "",
-            "dataType": "VARCHAR(255)",
+            "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -158,7 +158,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 94.94873046875,
+              "widthDataType": 87.71875,
               "widthDefault": 60
             }
           },
@@ -278,29 +278,6 @@
             }
           },
           {
-            "id": "036af50b-fdb5-4831-98de-e2f688aec6de",
-            "name": "stanowisko",
-            "comment": "da się długośc jak ustalimy stanowiska",
-            "dataType": "VARCHAR(30)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 66.30810546875,
-              "widthComment": 120,
-              "widthDataType": 87.71875,
-              "widthDefault": 60
-            }
-          },
-          {
             "id": "a81bea5a-a074-4a99-a5b8-b11139d00676",
             "name": "płaca",
             "comment": "zł/h",
@@ -325,10 +302,10 @@
           }
         ],
         "ui": {
-          "active": false,
-          "left": 600.3896,
-          "top": 215.5,
-          "zIndex": 19,
+          "active": true,
+          "left": 628.3896,
+          "top": 80.5,
+          "zIndex": 32,
           "widthName": 67.025390625,
           "widthComment": 60
         },
@@ -458,7 +435,7 @@
             "id": "30221fb5-0cb7-4b70-a92a-10b916868f82",
             "name": "miasto",
             "comment": "",
-            "dataType": "VARCHAR(255)",
+            "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -473,7 +450,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 94.94873046875,
+              "widthDataType": 87.71875,
               "widthDefault": 60
             }
           },
@@ -574,7 +551,7 @@
           "active": false,
           "left": 12.8906,
           "top": 0,
-          "zIndex": 1,
+          "zIndex": 30,
           "widthName": 60,
           "widthComment": 60
         },
@@ -933,9 +910,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 87.5,
-          "top": 1352.6077,
-          "zIndex": 8,
+          "left": 101.5,
+          "top": 858.6077,
+          "zIndex": 16,
           "widthName": 68.47900390625,
           "widthComment": 60
         },
@@ -970,16 +947,16 @@
             }
           },
           {
-            "id": "9ea37e83-9736-4e55-b119-bcbc42d47d01",
+            "id": "f444bc6c-19e3-44ed-a0c5-167b56488f43",
             "name": "nazwa",
-            "comment": "da się długośc jak ustalimy typy rzeczy",
-            "dataType": "VARCHAR(100)",
+            "comment": "",
+            "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": true
+              "notNull": false
             },
             "ui": {
               "active": false,
@@ -987,8 +964,8 @@
               "fk": false,
               "pfk": false,
               "widthName": 60,
-              "widthComment": 120,
-              "widthDataType": 94.94873046875,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
               "widthDefault": 60
             }
           },
@@ -1018,9 +995,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1098.9989,
-          "top": 13.5557,
-          "zIndex": 16,
+          "left": 1346.9989,
+          "top": 71.5557,
+          "zIndex": 27,
           "widthName": 77.15625,
           "widthComment": 60
         },
@@ -1149,9 +1126,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1034.4454,
-          "top": 556.7773,
-          "zIndex": 4,
+          "left": 1314.4454,
+          "top": 326.7773,
+          "zIndex": 21,
           "widthName": 76.419921875,
           "widthComment": 60
         },
@@ -1303,9 +1280,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 873.9989,
-          "top": 987.3317,
-          "zIndex": 5,
+          "left": 1304.9989,
+          "top": 660.3317,
+          "zIndex": 14,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1458,8 +1435,8 @@
         "ui": {
           "active": false,
           "left": 0,
-          "top": 602.5557,
-          "zIndex": 7,
+          "top": 473.5557,
+          "zIndex": 12,
           "widthName": 111.12890625,
           "widthComment": 60
         },
@@ -1634,9 +1611,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 304.8884,
-          "top": 906.7764,
-          "zIndex": 6,
+          "left": 583.8884,
+          "top": 583.7764,
+          "zIndex": 13,
           "widthName": 129.18798828125,
           "widthComment": 60
         },
@@ -1668,8 +1645,8 @@
           "columnIds": [
             "0d99fa16-6a70-4cfd-86c4-a9a3ad29ab81"
           ],
-          "x": 1239.6652818359375,
-          "y": 987.3317,
+          "x": 1548.776487890625,
+          "y": 660.3317,
           "direction": "top"
         },
         "end": {
@@ -1677,8 +1654,8 @@
           "columnIds": [
             "02baac05-6613-40b1-abf8-9af0e2fcab7a"
           ],
-          "x": 1250.125819921875,
-          "y": 728.2773,
+          "x": 1530.125819921875,
+          "y": 498.2773,
           "direction": "bottom"
         },
         "constraintName": "fk_naprawy_to_użyte_części",
@@ -1694,8 +1671,8 @@
           "columnIds": [
             "dedc7225-b6dd-45cf-9de9-5cc3a62db872"
           ],
-          "x": 1343.473265234375,
-          "y": 144.0557,
+          "x": 1561.473265234375,
+          "y": 202.0557,
           "direction": "bottom"
         },
         "end": {
@@ -1703,8 +1680,8 @@
           "columnIds": [
             "506062d8-3d35-4d59-97ce-f58cda5ca40d"
           ],
-          "x": 1250.125819921875,
-          "y": 556.7773,
+          "x": 1530.125819921875,
+          "y": 326.7773,
           "direction": "top"
         },
         "constraintName": "fk_części_to_użyte_części",
@@ -1720,8 +1697,8 @@
           "columnIds": [
             "9452bfbf-a3de-4e2a-b141-a66d1bd392ea"
           ],
-          "x": 785.740234375,
-          "y": 1540.8577,
+          "x": 799.740234375,
+          "y": 1046.8577,
           "direction": "right"
         },
         "end": {
@@ -1729,8 +1706,8 @@
           "columnIds": [
             "01d5b6b5-e53d-42a2-bb13-c6b56461e2ed"
           ],
-          "x": 873.9989,
-          "y": 1131.3317,
+          "x": 1304.9989,
+          "y": 820.3317,
           "direction": "left"
         },
         "constraintName": "fk_samochody_to_naprawy",
@@ -1746,8 +1723,8 @@
           "columnIds": [
             "9452bfbf-a3de-4e2a-b141-a66d1bd392ea"
           ],
-          "x": 262.06005859375,
-          "y": 1352.6077,
+          "x": 276.06005859375,
+          "y": 858.6077,
           "direction": "top"
         },
         "end": {
@@ -1756,7 +1733,7 @@
             "9f05b130-1317-49be-8ead-807820a4025b"
           ],
           "x": 243.777587890625,
-          "y": 794.5557,
+          "y": 665.5557,
           "direction": "bottom"
         },
         "constraintName": "fk_samochody_to_zakup_samochodu",
@@ -1772,8 +1749,8 @@
           "columnIds": [
             "9452bfbf-a3de-4e2a-b141-a66d1bd392ea"
           ],
-          "x": 611.18017578125,
-          "y": 1352.6077,
+          "x": 625.18017578125,
+          "y": 858.6077,
           "direction": "top"
         },
         "end": {
@@ -1781,9 +1758,9 @@
           "columnIds": [
             "97555960-3540-4049-a684-ca627f903e67"
           ],
-          "x": 572.126925390625,
-          "y": 1119.2764,
-          "direction": "bottom"
+          "x": 583.8884,
+          "y": 743.1514,
+          "direction": "left"
         },
         "constraintName": "fk_samochody_to_sprzedaż_samochodu",
         "visible": true
@@ -1798,8 +1775,8 @@
           "columnIds": [
             "1ac9be49-f50c-4804-a11b-36bb8bc9d513"
           ],
-          "x": 600.3896,
-          "y": 373,
+          "x": 628.3896,
+          "y": 227.75,
           "direction": "left"
         },
         "end": {
@@ -1808,7 +1785,7 @@
             "cfe329e9-fa6a-49f0-b02f-ea2f4717d304"
           ],
           "x": 487.55517578125,
-          "y": 698.5557,
+          "y": 569.5557,
           "direction": "right"
         },
         "constraintName": "fk_pracownicy_to_zakup_samochodu",
@@ -1833,9 +1810,9 @@
           "columnIds": [
             "6024e341-7ad1-4a59-bd98-6c3cd351b8cf"
           ],
-          "x": 438.5076626953125,
-          "y": 906.7764,
-          "direction": "top"
+          "x": 583.8884,
+          "y": 636.9014,
+          "direction": "left"
         },
         "constraintName": "fk_klienci_to_sprzedaż_samochodu",
         "visible": true
@@ -1859,8 +1836,8 @@
           "columnIds": [
             "e7141d1c-59d5-4c03-8e5d-cad709ca588f"
           ],
-          "x": 873.9989,
-          "y": 1035.3317,
+          "x": 1304.9989,
+          "y": 692.3317,
           "direction": "left"
         },
         "constraintName": "fk_klienci_to_naprawy",
@@ -1876,8 +1853,8 @@
           "columnIds": [
             "1ac9be49-f50c-4804-a11b-36bb8bc9d513"
           ],
-          "x": 733.966504296875,
-          "y": 530.5,
+          "x": 865.54340859375,
+          "y": 375,
           "direction": "bottom"
         },
         "end": {
@@ -1885,8 +1862,8 @@
           "columnIds": [
             "eb68070c-3346-48e8-a8e1-9cd50fb9e4ac"
           ],
-          "x": 705.7461880859375,
-          "y": 906.7764,
+          "x": 851.126925390625,
+          "y": 583.7764,
           "direction": "top"
         },
         "constraintName": "fk_pracownicy_to_sprzedaż_samochodu",
@@ -1902,18 +1879,18 @@
           "columnIds": [
             "1ac9be49-f50c-4804-a11b-36bb8bc9d513"
           ],
-          "x": 1001.120312890625,
-          "y": 530.5,
-          "direction": "bottom"
+          "x": 1102.6972171875,
+          "y": 227.75,
+          "direction": "right"
         },
         "end": {
           "tableId": "6bc7c728-c582-4a62-ae79-2e1e515d7352",
           "columnIds": [
             "a62e38f6-fe88-45a9-a894-7f1c6516b648"
           ],
-          "x": 995.8876939453125,
-          "y": 987.3317,
-          "direction": "top"
+          "x": 1304.9989,
+          "y": 756.3317,
+          "direction": "left"
         },
         "constraintName": "fk_pracownicy_to_naprawy",
         "visible": true
@@ -1938,7 +1915,7 @@
             "c85e80b8-d61e-4f75-9544-a86792dcb6fe"
           ],
           "x": 243.777587890625,
-          "y": 602.5557,
+          "y": 473.5557,
           "direction": "top"
         },
         "constraintName": "fk_klienci_to_zakup_samochodu",
