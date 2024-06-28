@@ -15,21 +15,1084 @@
 
 \begin{document}
 
-<<warning=FALSE,message=FALSE>>=
+<<warning=FALSE,message=FALSE, echo=FALSE>>=
 library("RMariaDB")
+library(tidyverse)
+library(ggplot2)
+library(eeptools)
+library(scales)
+library(moments)
+library(DescTools)
+pdf.options(encoding='ISOLatin2')
+opts_chunk$set(fig.align='center')
 
 con <- dbConnect(RMariaDB::MariaDB(),
                  dbname = "team07",
                  username = "team07",
                  password = "te@m24ot",
                  host = "giniewicz.it")
-query <- "SELECT * FROM klienci"
-
-df <- dbGetQuery(con, query)
-head(df)
 @
 
-<<warning=FALSE,message=FALSE>>=
+\section{Wstęp}
+
+\section{Odsetek naprawianych marek pojazdów}
+%Odsetek naprawianych marek pojazdów.
+
+Przeprowadzono analizę, aby sprawdzić jakich marek pojazdy najczęściej pojawiają się w warsztacie do naprawy. 
+
+<<warning=FALSE,message=FALSE,echo=FALSE>>=
+
+query <- "SELECT marka,
+ROUND(100*count(marka)/SUM(COUNT(id_samochodu)) OVER (), 2) as procent
+FROM usługi JOIN samochody
+ON usługi.id_samochodu = samochody.id
+GROUP BY marka ORDER BY count(marka) DESC"
+
+query2 <- "SELECT liczba_kół,
+count(marka) as ile
+FROM usługi JOIN samochody
+ON usługi.id_samochodu = samochody.id
+GROUP BY liczba_kół ORDER BY liczba_kół DESC;"
+
+df <- dbGetQuery(con, query)
+df[,2] <- as.numeric(df[,2])
+
+df2 <- dbGetQuery(con, query2)[,2]
+pojazd <- ifelse(df2[1]>df2[2], "samochodów", "motorów")
+pojazd2 <- ifelse(df2[1]>df2[2], "motorów", "samochodów")
+
+minimalne <- df %>% filter(procent == min(procent))
+maksymalne <- df %>% filter(procent == max(procent))
+
+minimalne_tekst <- if_else(length(minimalne[,1])>1, paste(paste0(minimalne[,1][2:length(minimalne[,1])], collapse = ", "), " i ",minimalne[,1][1], sep=""), minimalne[,1][1])
+
+maksymalne_tekst <- if_else(length(maksymalne[,1])>1, paste(paste0(maksymalne[,1][2:length(maksymalne[,1])], collapse = ", "), " i ",maksymalne[,1][1], sep=""), maksymalne[,1][1])
+
+ranking <- paste0(seq_len(nrow(df)), ". ", df$marka, ": ", paste(df$procent,"%", sep=""), collapse = "\n")
+@
+
+Można przedstawić procentowy udział marek pojazdów klientów salonu, zaczynając od najczęściej się pojawiającej:
+
+\begin{verbatim}
+\Sexpr{ranking}
+\end{verbatim}
+
+Jak widać, najpopularniejsze są pojazdy \Sexpr{if_else(length(maksymalne[,1])>1, "marek", "marki")} \Sexpr{maksymalne_tekst}. \Sexpr{if_else(length(maksymalne[,1])>1, "Dla każdej z nich udział procentowy w ogóle pojazdów stanowi", "Pojazdy tej marki stanowią")} \Sexpr{min(maksymalne$procent)}\% wszystkich. \\
+
+Najmniej popularn\Sexpr{if_else(length(minimalne[,1])>1, "e są marki", "a jest marka")} \Sexpr{minimalne_tekst}. \Sexpr{if_else(length(minimalne[,1])>1, "Każdą z nich reprezentowało ", "")}\Sexpr{format(min(df$procent), nsmall = 2)}\% pojazdów, które się pojawiły w warsztacie\Sexpr{if_else(length(minimalne[,1])>1, "", ", było tej firmy")}. \\
+
+Ilość pojazdów, które były w warsztacie to \Sexpr{sum(df2)}. Było więcej \Sexpr{pojazd} niż \Sexpr{pojazd2}. Różnica między ilością typu pojazdu wynosiła \Sexpr{max(df2)-min(df2)}, a \Sexpr{pojazd} było \Sexpr{max(df2)}).
+
+Sprawdzono także, jak prezentowałyby się rozkład marek, gdyby brano pod uwagę jedynie samochody
+
+<<warning=FALSE,message=FALSE,echo=FALSE>>=
+
+query <- "SELECT marka,
+ROUND(100*count(marka)/SUM(COUNT(id_samochodu)) OVER (), 2) as procent
+FROM usługi JOIN (SELECT id, marka FROM samochody WHERE liczba_kół='4') as samochód
+ON usługi.id_samochodu = samochód.id 
+GROUP BY marka ORDER BY count(marka) DESC"
+
+df <- dbGetQuery(con, query)
+df[,2] <- as.numeric(df[,2])
+
+minimalne <- df %>% filter(procent == min(procent))
+maksymalne <- df %>% filter(procent == max(procent))
+
+minimalne_tekst <- if_else(length(minimalne[,1])>1, paste(paste0(minimalne[,1][2:length(minimalne[,1])], collapse = ", "), " i ",minimalne[,1][1], sep=""), minimalne[,1][1])
+
+maksymalne_tekst <- if_else(length(maksymalne[,1])>1, paste(paste0(maksymalne[,1][2:length(maksymalne[,1])], collapse = ", "), " i ",maksymalne[,1][1], sep=""), maksymalne[,1][1])
+
+df[,2] <- paste(df[,2],"%", sep="")
+ranking <- paste0(seq_len(nrow(df)), ". ", df$marka, ": ", df$procent, collapse = "\n")
+@
+
+Można przedstawić ranking marek, zaczynając od najczęściej się pojawiającej:
+
+\begin{verbatim}
+\Sexpr{ranking}
+\end{verbatim}
+
+Wśród aut prym wi\Sexpr{if_else(length(maksymalne[,1])>1, "odą", "edzie")} \Sexpr{maksymalne_tekst}, \Sexpr{if_else(length(maksymalne[,1])>1, "reprezentując dla każdej marki ", "reprezentując ")} \Sexpr{format(max(maksymalne$procent), nsmall = 2)}\% naprawianych samochodów. \\
+
+Najmniej było samochodów \Sexpr{if_else(length(minimalne[,1])>1, "marek", "marki")} \Sexpr{minimalne_tekst}. Było ich \Sexpr{format(min(minimalne$procent), nsmall = 2)}\% \Sexpr{if_else(length(minimalne[,1])>1, "dla każdej", "")}. \\
+
+Pozostały do sprawdzenia motory.
+
+<<warning=FALSE,message=FALSE,echo=FALSE>>=
+
+query <- "SELECT marka,
+ROUND(100*count(marka)/SUM(COUNT(id_samochodu)) OVER (), 2) as procent
+FROM usługi JOIN (SELECT id, marka FROM samochody WHERE liczba_kół='2') as motor
+ON usługi.id_samochodu = motor.id 
+GROUP BY marka ORDER BY count(marka) DESC"
+
+df <- dbGetQuery(con, query)
+df[,2] <- as.numeric(df[,2])
+
+minimalne <- df %>% filter(procent == min(procent))
+maksymalne <- df %>% filter(procent == max(procent))
+
+minimalne_tekst <- if_else(length(minimalne[,1])>1, paste(paste0(minimalne[,1][2:length(minimalne[,1])], collapse = ", "), " i ",minimalne[,1][1], sep=""), minimalne[,1][1])
+
+maksymalne_tekst <- if_else(length(maksymalne[,1])>1, paste(paste0(maksymalne[,1][2:length(maksymalne[,1])], collapse = ", "), " i ",maksymalne[,1][1], sep=""), maksymalne[,1][1])
+
+df[,2] <- paste(df[,2],"%", sep="")
+ranking <- paste0(seq_len(nrow(df)), ". ", df$marka, ": ", df$procent, collapse = "\n")
+@
+
+Udział procentowy poszczególnych marek wśród nich prezentuje się następująco:
+
+\begin{verbatim}
+\Sexpr{ranking}
+\end{verbatim}
+
+Wśród nich najczęściej naprawiano motory \Sexpr{if_else(length(maksymalne[,1])>1, "marek", "marki")} \Sexpr{maksymalne_tekst}. \Sexpr{if_else(length(maksymalne[,1])>1, "Dla każdej z nich udział procentowy w ogóle pojazdów stanowi", "Pojazdy tej marki stanowią")} \Sexpr{format(max(maksymalne$procent), nsmall = 2)}\% wszystkich. \\
+
+Najmniej popularnymi motorami są z kolei modele\Sexpr{if_else(length(minimalne[,1])>1, " marek", " marki")} \Sexpr{minimalne_tekst}. W warsztacie było zaledwie \Sexpr{format(min(minimalne$procent), nsmall = 2)}\% motorów \Sexpr{if_else(length(minimalne[,1])>1, "każdej z wymienionych marek", "tej marki")}.
+
+\section{Liczba naprawianych pojazdów w każdym miesiącu pracy warsztatu}
+
+<<fig_naprawy_miesiecznie,warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=9,fig.pos="H", fig.cap="Wykres liczba naprawianych pojazdów w każdym miesiącu pracy warsztatu">>=
+query <- "SELECT CONCAT(DATE_FORMAT(data_zaksięgowania, '%Y-%m'), '-01') AS data, COUNT(id) AS liczność FROM usługi GROUP BY YEAR(data_zaksięgowania), MONTH(data_zaksięgowania);"
+
+naprawiane_pojazdy <- dbGetQuery(con, query)
+naprawiane_pojazdy[,1] <- as.Date(naprawiane_pojazdy[,1])
+naprawiane_pojazdy[,2] <- as.numeric(naprawiane_pojazdy[,2])
+
+wszystkie_daty <- expand.grid(1:12, 2014:2017) |> reframe(data = make_date(Var2, Var1, 1))
+naprawiane_pojazdy <- merge(x=naprawiane_pojazdy, y=wszystkie_daty, by="data", all.y=T)
+naprawiane_pojazdy$liczność[is.na(naprawiane_pojazdy$liczność)] <- 0
+
+naprawiane_pojazdy |> ggplot(aes(x=data, y=liczność, , fill=format(data, "%m"))) + 
+  geom_bar(stat = "identity") + 
+  scale_fill_manual(name="Miesiąc",labels=unique(format(naprawiane_pojazdy$data, "%B")), values=hue_pal()(12))
+@
+
+Wykres \ref{fig:fig_naprawy_miesiecznie} przedstawia liczbę naprawionych pojazdów w każdym miesiącu pracy warsztatu. Najwięcej pojazdów zostało naprawionych w miesiącach: 
+\Sexpr{format(naprawiane_pojazdy$data[naprawiane_pojazdy$liczność == max(naprawiane_pojazdy$liczność)], "%B %Y")},
+a było ich \Sexpr{max(naprawiane_pojazdy$liczność)}. Natomiast najmniej przeprowadzonych napraw było w miesiącach:
+\Sexpr{format(naprawiane_pojazdy$data[naprawiane_pojazdy$liczność == min(naprawiane_pojazdy$liczność)], "%B %Y")},
+było ich \Sexpr{min(naprawiane_pojazdy$liczność)}. Średnia liczba napraw miesięcznie wynosi 
+\Sexpr{round(mean(naprawiane_pojazdy$liczność), 3)}. 
+
+\section{Tabela najlepszych okazji}
+
+Zostanie teraz omówiona tabela najlepszych okazji, czyli pojazdów skupionych i sprzedanych, które przyniosły najwięcej zysku. Został uwzględniony także koszt naprawy pojazdu, gdy była ona potrzebna.
+
+<<warning=FALSE,message=FALSE,echo=FALSE>>=
+query1 <- "SELECT zakup_samochodu.data_zaksięgowania AS data_zakupu, samochody.id AS id_samochodu, marka, model, liczba_kół, czy_powypadkowy, skrzynia_biegów, pojemność_silnika, sprzedaż_samochodu.cena - zakup_samochodu.cena AS zysk FROM sprzedaż_samochodu JOIN samochody ON sprzedaż_samochodu.id_samochodu = samochody.id JOIN zakup_samochodu ON sprzedaż_samochodu.id_samochodu = zakup_samochodu.id_samochodu;"
+
+pojazdy_df <- dbGetQuery(con, query1)
+
+query2 <- "SELECT usługi.id_samochodu, zakup_samochodu.data_zaksięgowania AS data_zakupu, SUM(użyte_części.ilość * użyte_części.cena) AS koszt FROM usługi JOIN użyte_części ON usługi.id = użyte_części.id_usługi JOIN samochody ON usługi.id_samochodu = samochody.id JOIN sprzedaż_samochodu ON sprzedaż_samochodu.id_samochodu = samochody.id JOIN zakup_samochodu ON sprzedaż_samochodu.id_samochodu = zakup_samochodu.id_samochodu WHERE ((usługi.id_klienta = 0) & (usługi.data_zaksięgowania BETWEEN zakup_samochodu.data_zaksięgowania AND sprzedaż_samochodu.data_zaksięgowania)) GROUP BY użyte_części.id_usługi;"
+
+koszty_części <- dbGetQuery(con, query2)
+@
+
+<<warning=FALSE,message=FALSE,echo=FALSE>>=
+pojazdy_df <- left_join(pojazdy_df, koszty_części, join_by(data_zakupu, id_samochodu))
+pojazdy_df$koszt[is.na(pojazdy_df$koszt)] <- 0
+
+pojazdy_df$zysk <- pojazdy_df$zysk - pojazdy_df$koszt
+pojazdy_df <- subset(pojazdy_df, select = -koszt)
+@
+
+<<warning=FALSE,message=FALSE,echo=FALSE>>=
+najlepsze_okazje <- pojazdy_df[order(pojazdy_df$zysk, decreasing = TRUE),] |> 
+  select(id_samochodu, marka, model, zysk) |> head(n=5)
+
+najlepsze_okazje
+
+różnica_1_2 <- round(najlepsze_okazje[1,]$zysk * 0.1^3, 2) - round(najlepsze_okazje[2,]$zysk * 0.1^3, 2)
+wniosek_1_2 <- if_else(różnica_1_2 < 4, "niewielka", if_else(różnica_1_2 < 10, "średniej wielkości", "duża"))
+różnica_2_3 <- round(najlepsze_okazje[2,]$zysk * 0.1^3, 2) - round(najlepsze_okazje[3,]$zysk * 0.1^3, 2)
+wniosek_2_3 <- if_else(różnica_2_3 < 4, "niewielka", if_else(różnica_2_3 < 10, "średniej wielkości", "duża"))
+@
+
+Największy zysk ze sprzedaży pojazdu warsztat odniósł dla pojazdu o id \Sexpr{najlepsze_okazje[1,]$id_samochodu}. Jest nim \Sexpr{najlepsze_okazje[1,]$marka} o modelu \Sexpr{najlepsze_okazje[1,]$model}. Warsztat zarobił on na nim około \Sexpr{round(najlepsze_okazje[1,]$zysk * 0.1^3, 2)} tys. zł. 
+Na drugim miejscu znajduje się \Sexpr{najlepsze_okazje[2,]$marka} o modelu \Sexpr{najlepsze_okazje[2,]$model}. Zysk z tego pojazdu wyniósł około \Sexpr{round(najlepsze_okazje[2,]$zysk * 0.1^3, 2)} tys. zł, czyli o około \Sexpr{różnica_1_2} tys. zł mniej niż dla pojazdu znajdującego się na pierwszym miejscu, czyli różnica w cenie jest \Sexpr{wniosek_1_2}.
+W trzeciej kolejności najwięcej zarobił pojazd \Sexpr{najlepsze_okazje[3,]$marka} o modelu \Sexpr{najlepsze_okazje[3,]$model}, na którym warsztat zarobił około \Sexpr{round(najlepsze_okazje[3,]$zysk * 0.1^3, 2)} tys. zł. Jest to mniej od poprzedniego pojazdu o około \Sexpr{różnica_2_3} tys. zł, czyli różnica w cenie jest \Sexpr{wniosek_2_3}. 
+Ogólnie każdy pojazd znajdujący się w top 5 najlepszych okazji przyniósł zysk wielkości przynajmnej \Sexpr{signif(najlepsze_okazje[5,]$zysk, digits = 1) * 0.1^3} tyś. zł.
+
+\section{Profil klienta}
+
+W następnej kolejności zostaną przeanalizawani klienci warsztatu. Zostaną sprawdzone liczności klientów ze względu na różne ich cechy.
+
+\subsection{Płeć}
+
+Pierwszą cechą wziętą pod uwagę jest płeć klienta. Zostanie sprawdzone, ile jest kobiet i mężczyzn wśród naszych klientów oraz jak duża jest różnica w licznościach tych grup.
+
+<<fig_plec, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=4,fig.pos="H", fig.cap="Wykres liczby klientów przy podziale ze względu na płeć">>=
+query <- "SELECT płeć, COUNT(id) AS liczność FROM klienci WHERE id > 0 GROUP BY płeć;"
+
+płeć_count <- dbGetQuery(con, query)
+płeć_count[, 2] <- as.numeric(płeć_count[, 2])
+płeć_count <- płeć_count |> mutate(płeć = if_else(płeć=="K", "Kobieta", "Mężczyzna"))
+
+płeć_count |> ggplot(aes(x=płeć, y=liczność, fill=płeć)) + geom_bar(stat = "identity") + guides(fill="none")
+
+więcej <- płeć_count$płeć[płeć_count$licznoś == max(płeć_count$liczność)]
+więcej <- if_else(więcej == "Kobieta", "kobiet", "mężczyzn")
+mniej <- if_else(więcej == "kobiet", "mężczyzn", "kobiet")
+iloraz <- max(płeć_count$liczność) / min(płeć_count$liczność)
+wniosek <- if_else(iloraz <= 1.15, "nieduża", 
+                   if_else(iloraz <= 2, "średniej wielkości", "duża"))
+@
+
+Na wykresie słupkowym \ref{fig:fig_plec} są zaprezentowane liczności klientów przy podziale ze względu na płeć. Więcej klientów warsztatu należy do grupy \Sexpr{więcej}, jest ich \Sexpr{max(płeć_count$liczność)}. Grupa \Sexpr{więcej} jest około \Sexpr{round(iloraz, 3)}
+razy większa od grupy \Sexpr{mniej} (jest ich \Sexpr{min(płeć_count$liczność)}), a zatem różnica jest \Sexpr{wniosek}.
+
+\subsection{Wiek}
+
+Zostanie również przeanalizowany rozkład wieku klientów warsztatu.
+
+<<warning=FALSE,message=FALSE,echo=FALSE>>=
+age_from_pesel <- function(pesel) {
+  y <- as.numeric(substr(pesel, 1, 2))
+  m <- as.numeric(substr(pesel, 3, 4))
+  d <- as.numeric(substr(pesel, 5, 6))
+  birth_date <- data.frame(d, m, y)
+  
+  birth_date <- birth_date |> mutate(y = if_else(m <= 12, 1900+y, 
+                                   if_else(m <= 32, 2000+y, 1800+y)),
+                       m = if_else(m <= 12, m, 
+                                   if_else(m <= 32, m-20, m-80)))
+  
+  birth_date <- make_date(birth_date$y, birth_date$m, birth_date$d)
+  return(floor(age_calc(na.omit(birth_date), units = "years")))
+}
+@
+
+<<warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=4>>=
+query <- "SELECT pesel FROM klienci WHERE id > 0;"
+
+wiek_df <- dbGetQuery(con, query)
+
+wiek_df <- data.frame(age_from_pesel(wiek_df$pesel))
+colnames(wiek_df) <- c("wiek")
+@
+
+<<fig_wiek, warning=FALSE,message=FALSE,echo=FALSE,fig.height=3,fig.width=5,fig.pos="H", fig.cap="Wykres pudełkowy wieku klientów">>=
+wiek_df |> ggplot(aes(x=wiek)) + geom_boxplot()
+
+Q1 <- quantile(wiek_df$wiek, probs = 0.25)
+Q2 <- median(wiek_df$wiek)
+Q3 <- quantile(wiek_df$wiek, probs = 0.75)
+
+odmiana_wieku <- function(wiek) {
+  ostatnia_cyfra <- as.numeric(substr(wiek, nchar(wiek[1]), nchar(wiek[1])))
+  return(if_else(ostatnia_cyfra < 5 & ostatnia_cyfra > 1, "lata", "lat"))
+}
+@
+
+Rysunek \ref{fig:fig_wiek} przedstawia wykres pudełkowy wieku klientów warsztatu. Widać, że mediana wieku wynosi \Sexpr{Q2} \Sexpr{odmiana_wieku(Q2)}, natomiast pierwszy kwartyl wynosi \Sexpr{Q1} \Sexpr{odmiana_wieku(Q1)}, trzeci kwartyl natomiast \Sexpr{Q3} \Sexpr{odmiana_wieku(Q3)}. Zatem połowa klientów warsztatu jest wieku między \Sexpr{Q1} \Sexpr{odmiana_wieku(Q1)} a \Sexpr{Q3} \Sexpr{odmiana_wieku(Q3)}.
+Najmłodszy klient warsztatu ma \Sexpr{min(wiek_df$wiek)} \Sexpr{odmiana_wieku(min(wiek_df$wiek))}, natomiast najstarszy jest w wieku \Sexpr{max(wiek_df$wiek)} lat.
+
+<<warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=4>>=
+średnia <- round(mean(wiek_df$wiek), 2)
+std <- round(sd(wiek_df$wiek), 2)
+skośność <- round(skewness(wiek_df$wiek), 2)
+kurtoza <- round(kurtosis(wiek_df$wiek), 2)
+
+skośność_wniosek <- if_else(skośność <= -0.1, "mniejsza od 0, a zatem rozkład wieku jest lewostronnie skośny",
+                            if_else(skośność < 0.1, "bliska 0, a zatem rozkład wieku można uznać za symetryczny",
+                                    "większa od 0, a zatem rozkład wieku jest prawostronnie skośny"))
+
+kurtoza_wniosek <- if_else(kurtoza <= -0.1, 
+      "mniejszą od 0, a zatem rozkład wieku jest platykurtyczny, czyli jest mniej wysmukły niż rozkład normalny",
+      if_else(kurtoza < 0.1, "bliską 0, a zatem rozkład wieku jest mezokurtyczny",
+          "większą od 0, a zatem rozkład wieku jest leptokurtyczny, czyli jest bardziej wysmukły niż normalny"))
+@
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c} \hline
+Miara & Wartość \\ \hline
+Średnia & \Sexpr{średnia} \\ 
+Odchylenie standardowe & \Sexpr{std} \\
+Skośność & \Sexpr{skośność}  \\ 
+Kurtoza & \Sexpr{kurtoza} \\ \hline
+\end{tabular}
+\caption{Wybrane miary wieku klientów}
+\label{tab_wiek}
+\end{table}
+
+Kilka miar, których nie da się odczytać z wykresu pudełkowego, zostało przedstawionych w tabeli \ref{tab_wiek}. Można zatem odczytać, że średnio klieci mają \Sexpr{średnia} \Sexpr{odmiana_wieku(średnia)}, a odchylenie standardowe wieku wynosi \Sexpr{std} \Sexpr{odmiana_wieku(std)}. Wartość współczynnika skośności jest \Sexpr{skośność_wniosek}. Kurtoza przyjmuje wartość \Sexpr{kurtoza_wniosek}.
+
+\subsection{Miasto}
+<<warning=FALSE,message=FALSE,echo=FALSE>>=
+query <- "SELECT miasto, COUNT(id) AS liczność FROM klienci WHERE id > 0 GROUP BY miasto ORDER BY liczność DESC;"
+
+miasto_count <- dbGetQuery(con, query)
+miasto_count[, 2] <- as.numeric(miasto_count[, 2])
+
+miasto_count$miejsce <- rank(1/miasto_count$liczność)
+
+top_miejsca <- head(unique(miasto_count$miejsce), n=4)
+
+miasto_count |> filter(miejsce <= top_miejsca[4]) |> 
+  select(miejsce, miasto, liczność)
+
+zdanie_miasta <- function(i, wersja=1) {
+  miasta <- miasto_count$miasto[miasto_count$miejsce == top_miejsca[i]]
+  
+  if (wersja == 1){
+    return(if_else(length(miasta) == 1, paste("miasta", paste(miasta, collapse = ', ')), 
+                 paste("miast", paste(miasta, collapse = ', ') )))
+  }
+  return(if_else(length(miasta) == 1, paste("miasto", paste(miasta, collapse = ', ')), 
+                 paste("miasta", paste(miasta, collapse = ', ') )))
+}
+
+zdanie_odmiana_być <- function(i) {
+  miasta <- miasto_count$miasto[miasto_count$miejsce == top_miejsca[i]]
+  return(if_else(length(miasta) == 1, "jest", "są"))
+}
+
+zdanie_odmiana_nim <- function(i) {
+  miasta <- miasto_count$miasto[miasto_count$miejsce == top_miejsca[i]]
+  return(if_else(length(miasta) == 1, "nim", "nich"))
+}
+  
+liczność1 <- miasto_count$liczność[miasto_count$miejsce == top_miejsca[1]][1]
+liczność2 <- miasto_count$liczność[miasto_count$miejsce == top_miejsca[2]][1]
+
+@
+
+Najwięcej klientów warsztatu pochodzi z \Sexpr{zdanie_miasta(1)}. Liczniść w \Sexpr{zdanie_odmiana_nim(1)} wynosi \Sexpr{liczność1} klientów. W następnej kolejności najwięcej klientów pochodzi z \Sexpr{zdanie_miasta(2)}, z czego liczność w \Sexpr{zdanie_odmiana_nim(2)} wynosi \Sexpr{liczność2} klientów, czyli jest ich \Sexpr{round(liczność1/liczność2, 2)} mniej niż klientów z \Sexpr{zdanie_miasta(1)}. Na miejscu \Sexpr{top_miejsca[3]} \Sexpr{zdanie_odmiana_być(3)} \Sexpr{zdanie_miasta(3, 2)}, mieszka w \Sexpr{zdanie_odmiana_nim(3)} \Sexpr{miasto_count$liczność[miasto_count$miejsce == top_miejsca[3]][1]} klientów. Natomiast na ostatnim miejscu przedstawionym w tabeli \Sexpr{zdanie_odmiana_być(4)} \Sexpr{zdanie_miasta(4, 2)}, mieszka w \Sexpr{zdanie_odmiana_nim(4)} \Sexpr{miasto_count$liczność[miasto_count$miejsce == top_miejsca[4]][1]} klientów.
+
+\subsection{Karta lojalnościowa}
+
+W tej części zostanie sprawdzone, ilu klientów posiada kartę lojalnościową. Klient zdobywa ją po skorzystaniu z usług warsztatu (naprawa, zakup lub sprzedaż pojazdu) przynajmniej trzy razy. Klient posiadający tę katrę może kupować samochody ze zniżką w wysokości 3\%.
+
+<<fig_karta, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=4,fig.pos="H", fig.cap="Wykres liczby klientów ze względu na posiadanie karty lojalnościowej">>=
+query <- "SELECT karta_lojalnościowa, COUNT(id) AS liczność FROM klienci WHERE id > 0 GROUP BY karta_lojalnościowa;"
+
+karta_lojalnościowa_count <- dbGetQuery(con, query)
+karta_lojalnościowa_count[, 2] <- as.numeric(karta_lojalnościowa_count[, 2])
+
+karta_lojalnościowa_count <- karta_lojalnościowa_count |> 
+  mutate(karta_lojalnościowa = if_else(karta_lojalnościowa, "Tak", "Nie"))
+
+karta_lojalnościowa_count |> ggplot(aes(x=karta_lojalnościowa, y=liczność, fill=karta_lojalnościowa)) + 
+  geom_bar(stat = "identity") + guides(fill="none") + labs(x = "karta lojalnościowa")
+
+więcej_liczność <- max(karta_lojalnościowa_count$liczność)
+mniej_liczność <- min(karta_lojalnościowa_count$liczność)
+
+więcej_procent <- round(więcej_liczność / (więcej_liczność + mniej_liczność) * 100, 0)
+mniej_procent <- round(mniej_liczność / (więcej_liczność + mniej_liczność) * 100, 0)
+
+więcej <- karta_lojalnościowa_count$karta_lojalnościowa[karta_lojalnościowa_count$liczność == więcej_liczność]
+mniej <- karta_lojalnościowa_count$karta_lojalnościowa[karta_lojalnościowa_count$liczność == mniej_liczność]
+
+więcej <- if_else(więcej == "Tak", "posiadają kartę lojalnoścową", "nie posiadają karty lojalnoścowej")
+mniej <- if_else(mniej == "Tak", "posiadają kartę lojalnoścową", "nie posiadają karty lojalnoścowej")
+
+
+@
+
+Bardzej liczną grupą są klienci, którzy \Sexpr{więcej}, jest ich \Sexpr{więcej_liczność} (\Sexpr{więcej_procent}\% wszystkich klientów). W grupie klientów, którzy \Sexpr{mniej}, jest \Sexpr{mniej_liczność} osób i stanowią oni \Sexpr{mniej_procent}\% klientów warsztatu.
+
+\section{Jak wybrane cechy pojazdów wpływają na zysk warsztatu?}
+
+W tym paragrafie zostaną opisane zależności między zyskiem ze sprzedaży pojazdów, skupionych i w razie potrzeby naprawionych przez warsztat, a cechami: rodzaj pojazdu, czy jest powypadkowy i pojemność silnika.
+
+\subsection{Rodzaj pojazdu}
+
+Pierwszą cechą braną pod uwagę jest rodzaj pojazdu, czyli czy jest to samochód czy motocykl.
+
+<<fig_typ, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=5,fig.pos="H", fig.cap="Wykresy pudełkowe zysku ze względu na rodzaj pojazdu">>=
+pojazdy_df |> mutate(liczba_kół = if_else(liczba_kół==4, "samochód", "motocykl")) |> 
+  ggplot(aes(x=zysk*0.1^3, y=liczba_kół)) + geom_boxplot() + 
+  labs(x = "zysk (tyś. zł)", y= "rodzaj pojazdu")
+
+miary <- pojazdy_df |> mutate(typ = if_else(liczba_kół==4, "samochód", "motocykl")) |> 
+  group_by(typ) |> summarise(Q1 = quantile(zysk * 0.1^3, probs = 0.25),
+                             Q2 = median(zysk * 0.1^3),
+                             Q3 = quantile(zysk * 0.1^3, probs = 0.75),
+                             max_wartość = max(zysk * 0.1^3),
+                             min_wartość = min(zysk * 0.1^3))
+
+Q1_max_grupa <- miary$typ[miary$Q1==max(miary$Q1)]
+Q2_max_grupa <- miary$typ[miary$Q2==max(miary$Q2)]
+Q3_max_grupa <- miary$typ[miary$Q3==max(miary$Q3)]
+max_max_grupa <- miary$typ[miary$max_wartość==max(miary$max_wartość)]
+min_min_grupa <- miary$typ[miary$min_wartość==min(miary$min_wartość)]
+
+zdanie_dod <- if_else(Q1_max_grupa == Q2_max_grupa & Q1_max_grupa == Q3_max_grupa, paste(". Zatem częściej większy zysk dla warsztatu przynosi sprzedaż pojazdów typu", Q1_max_grupa), "")
+
+@
+
+Na rysunku \ref{fig:fig_typ} przedstawione są dwa wykresy pudełkowe zysków, jeden dla samochodów, drugi dla motocykli. Większa mediana, wynosząca \Sexpr{max(miary$Q2)} tyś. zł, jest dla pojazdów typu \Sexpr{Q2_max_grupa}. W drugiej grupie wynosi ona \Sexpr{min(miary$Q2)} tyś. zł. 
+Większy pierwszy kwartyl występuje w grupie typu \Sexpr{Q1_max_grupa}, wynosi on \Sexpr{max(miary$Q1)} tyś. zł, w porównaniu dla grupy typu \Sexpr{miary$typ[miary$Q1==min(miary$Q1)]} jego wartość wynosi \Sexpr{min(miary$Q1)} tyś. zł.
+W przypadku kwartyla trzeciego większa wartość występuje w grupie typu \Sexpr{Q3_max_grupa} (wynosi \Sexpr{max(miary$Q3)} tyś. zł). W drugiej grupie wynosi on \Sexpr{min(miary$Q3)} tyś. zł.
+Największy zysk przyniósł \Sexpr{max_max_grupa}, a wyniósł on \Sexpr{max(miary$max_wartość)} tyś. zł. 
+Najmniejszy zysk natomiast przyniósł \Sexpr{min_min_grupa} i wyniósł on \Sexpr{min(miary$min_wartość)} tyś. zł\Sexpr{zdanie_dod}. 
+
+\subsection{Czy powypadkowy}
+
+Następną badaną cechą jest to, czy pojazd jest powypadkowy.
+
+<<fig_wypadkowy, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=5,fig.pos="H", fig.cap="Wykresy pudełkowe zysku ze względu na to czy pojazd jest powypadkowy">>=
+pojazdy_df |> mutate(czy_powypadkowy = if_else(czy_powypadkowy, "Tak", "Nie")) |> 
+  ggplot(aes(x=zysk*0.1^3, y=czy_powypadkowy)) + geom_boxplot() + 
+  labs(x = "zysk (tyś. zł)", y = "czy powypadkowy")
+
+miary <- pojazdy_df |> mutate(czy_powypadkowy = if_else(czy_powypadkowy, "powypadkowych", "niepowypadkowych")) |> 
+  group_by(czy_powypadkowy) |> summarise(Q1 = quantile(zysk * 0.1^3, probs = 0.25),
+                                         Q2 = median(zysk * 0.1^3),
+                                         Q3 = quantile(zysk * 0.1^3, probs = 0.75),
+                                         max_wartość = max(zysk * 0.1^3),
+                                         min_wartość = min(zysk * 0.1^3))
+
+Q1_max_grupa <- miary$czy_powypadkowy[miary$Q1==max(miary$Q1)]
+Q2_max_grupa <- miary$czy_powypadkowy[miary$Q2==max(miary$Q2)]
+Q3_max_grupa <- miary$czy_powypadkowy[miary$Q3==max(miary$Q3)]
+max_max_grupa <- miary$czy_powypadkowy[miary$max_wartość==max(miary$max_wartość)]
+min_min_grupa <- miary$czy_powypadkowy[miary$min_wartość==min(miary$min_wartość)]
+
+zdanie_dod <- if_else(Q1_max_grupa == Q2_max_grupa & Q1_max_grupa == Q3_max_grupa, paste(". Zatem częściej większy zysk dla warsztatu przynosi sprzedaż pojazdów", Q1_max_grupa), "")
+
+@
+
+Na rysunku \ref{fig:fig_wypadkowy} przedstawione są dwa wykresy pudełkowe zysków dla pojazdów powypadkowych i niepowypadkowych. Większa mediana, wynosząca \Sexpr{max(miary$Q2)} tyś. zł, jest dla pojazdów \Sexpr{Q2_max_grupa}. W drugiej grupie wynosi ona \Sexpr{min(miary$Q2)} tyś. zł. 
+Większy pierwszy kwartyl występuje w grupie pojazdów \Sexpr{Q1_max_grupa}, wynosi on \Sexpr{max(miary$Q1)} tyś. zł, w porównaniu dla grupy pojazdów \Sexpr{miary$czy_powypadkowy[miary$Q1==min(miary$Q1)]} jego wartość wynosi \Sexpr{min(miary$Q1)} tyś. zł.
+Większa wartość trzeciego kwartylu występuje dla pojazdów \Sexpr{Q3_max_grupa} i wynosi \Sexpr{max(miary$Q3)} tyś. zł. Dla pojazdów \Sexpr{miary$czy_powypadkowy[miary$Q3==min(miary$Q3)]} wynosi on \Sexpr{min(miary$Q3)} tyś. zł.
+Największy zysk przyniósł pojazd z grupy \Sexpr{max_max_grupa} i wyniósł on \Sexpr{max(miary$max_wartość)} tyś. zł. 
+Najmniejszy zysk natomiast przyniósł pojazd z grupy \Sexpr{min_min_grupa} i wyniósł on \Sexpr{min(miary$min_wartość)} tyś. zł\Sexpr{zdanie_dod}. 
+
+\subsection{Pojemność silnika}
+
+Ostatnią cechą braną pod uwagę jest pojemność silnika pojazdu.
+
+<<fig_pojemnosc, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=5,fig.pos="H", fig.cap="Wykresy pudełkowe zysku ze względu na pojemność silnika">>=
+
+pojazdy_df <- pojazdy_df |> mutate(pojemność_silnika = 
+                       if_else(pojemność_silnika <= 1.2, "poniżej 1.3", 
+                               if_else(pojemność_silnika <= 1.8, "pomiędzy 1.3 i 1.8", "powyżej 1.8")))
+
+pojazdy_df$pojemność_silnika <- factor(pojazdy_df$pojemność_silnika, 
+                                       levels = c("poniżej 1.3", "pomiędzy 1.3 i 1.8", "powyżej 1.8"))
+
+pojazdy_df |> ggplot(aes(x=zysk*0.1^3, y=pojemność_silnika)) + geom_boxplot() + 
+  labs(x = "zysk (tyś. zł)", y= "pojemność silnika (litry)")
+
+miary <- pojazdy_df |> group_by(pojemność_silnika) |> summarise(Q1 = quantile(zysk * 0.1^3, probs = 0.25),
+                                                                Q2 = median(zysk * 0.1^3),
+                                                                Q3 = quantile(zysk * 0.1^3, probs = 0.75),
+                                                                max_wartość = max(zysk * 0.1^3),
+                                                                min_wartość = min(zysk * 0.1^3))
+
+Q1_max_grupa <- miary$pojemność_silnika[miary$Q1==max(miary$Q1)]
+Q2_max_grupa <- miary$pojemność_silnika[miary$Q2==max(miary$Q2)]
+Q3_max_grupa <- miary$pojemność_silnika[miary$Q3==max(miary$Q3)]
+
+Q1_min_grupa <- miary$pojemność_silnika[miary$Q1==min(miary$Q1)]
+Q2_min_grupa <- miary$pojemność_silnika[miary$Q2==min(miary$Q2)]
+Q3_min_grupa <- miary$pojemność_silnika[miary$Q3==min(miary$Q3)]
+
+max_max_grupa <- miary$pojemność_silnika[miary$max_wartość==max(miary$max_wartość)]
+min_min_grupa <- miary$pojemność_silnika[miary$min_wartość==min(miary$min_wartość)]
+
+zdanie_dod_max <- if_else(Q1_max_grupa == Q2_max_grupa & Q1_max_grupa == Q3_max_grupa, paste(" Zatem przeważnie największy zysk dla warsztatu przynosi sprzedaż pojazdów o pojemności silnika", Q1_max_grupa, "litra."), "")
+
+zdanie_dod_min <- if_else(Q1_min_grupa == Q2_min_grupa & Q1_min_grupa == Q3_min_grupa, paste(" Najczęściej najmniejszy zysk przynosi sprzedaż pojazdów z pojemnością silnika", Q1_min_grupa, "litra."), "")
+@
+
+Na rysunku \ref{fig:fig_wypadkowy} przedstawione są wykresy pudełkowe zysków ze względu na pojemność silnika. Największa mediana, wynosząca \Sexpr{max(miary$Q2)} tyś. zł, jest dla pojazdów o pojemności silnika \Sexpr{Q2_max_grupa} litra. Natomiast najmniej ona wynosi \Sexpr{min(miary$Q2)} tyś. zł w grupie pojazdów o pojemności \Sexpr{Q2_min_grupa} litra. 
+Największy pierwszy kwartyl występuje w grupie pojazdów o pojemności \Sexpr{Q1_max_grupa} litra, wynosi on \Sexpr{max(miary$Q1)} tyś. zł, w porównaniu z pojazdami o pojemności \Sexpr{Q1_min_grupa} litra, dla których jego wartość jest najmniejsza i wynosi \Sexpr{min(miary$Q1)} tyś. zł.
+Największa wartość trzeciego kwartylu występuje dla pojazdów o pojemności \Sexpr{Q3_max_grupa} litra i wynosi \Sexpr{max(miary$Q3)} tyś. zł. Dla pojazdów \Sexpr{Q3_min_grupa} litra wynosi on \Sexpr{min(miary$Q3)} tyś. zł i jest to najmnijesza wartość w tych grupach.
+Największy zysk przyniósł pojazd o pojemności silnika \Sexpr{max_max_grupa} litra i wyniósł on \Sexpr{max(miary$max_wartość)} tyś. zł. 
+Najmniejszy zysk natomiast przyniósł pojazd z pojemnością silnika \Sexpr{min_min_grupa} litra i wyniósł on \Sexpr{min(miary$min_wartość)} tyś. zł.\Sexpr{zdanie_dod_max}\Sexpr{zdanie_dod_min}
+
+\section{Kim są najlepszy mechanik i sprzedawca w warsztacie?}
+
+Przez czas działania warsztatu „Pimp My Wheels” osoba zarządzająca warsztatem nie była skłonna do dawania podwyżek, jednak postanowiła zlecić informatykowi by przeanalizował bazę danych i znalazł pracowników, którzy zasługują na większe wynagrodzenie. \\
+
+Warsztatowi zależy na tym by sprzedawca zarobił dla firmy dużą kwotę (Może to osiągnąć sprzedając bardzo dużo pojazdów albo sprzedając wartościowe pojazdy), ale także by był charyzmatyczny i był w stanie przekonać wiele osób do zakupu. Rozważone wobec tego zostanie to który obecnie pracujący sprzedawca przekonał klientów do kupna największej liczby pojazdów, a który odpowiada za najwięcej środków pochodzących ze sprzedaży. \\
+
+
+Tabela, w której są dane o sprzedawcach  pracujących w dowolnym momencie w warsztacie wygląda następująco:
+
+<<warning=FALSE,message=FALSE,echo=FALSE>>=
+
+query <- "SELECT CONCAT(imię, ' ',nazwisko) as sprzedawca, SUM(sprzedaż_samochodu.cena) as suma,
+COUNT(sprzedaż_samochodu.cena) as ile_sprzedanych, płaca, id_pracownika, IF(IsNull(data_zwolnienia),1,0) as status FROM sprzedaż_samochodu
+JOIN pracownicy ON sprzedaż_samochodu.id_pracownika=pracownicy.id
+GROUP BY sprzedaż_samochodu.id_pracownika ORDER BY suma"
+
+df <- dbGetQuery(con, query)
+
+df
+
+średnia_płaca <- mean(df$płaca)
+średnia_suma <- mean(df$suma)
+średnia_ilość <- mean(df$ile_sprzedanych)
+
+df <- df %>% filter(status == 1)
+
+najwiecej_zarobił <- df %>% filter(suma == max(suma)) #za ile pieniędzy pojazdy sprzedał
+najwiecej_sprzedaży <- df %>% filter(ile_sprzedanych == max(ile_sprzedanych)) #ile pojazdów
+
+procent_suma_zarobił <- (najwiecej_zarobił$suma / średnia_suma) * 100
+procent_placa_zarobił <- (najwiecej_zarobił$płaca / średnia_płaca) * 100
+
+różnica_zarobił <- round(procent_suma_zarobił-procent_placa_zarobił,2)
+
+procent_suma_sprzedaży <- (najwiecej_sprzedaży$ile_sprzedanych / średnia_ilość) * 100
+procent_placa_sprzedaży <- (najwiecej_sprzedaży$płaca / średnia_płaca) * 100
+
+różnica_sprzedaż <- round(procent_suma_sprzedaży - procent_placa_sprzedaży, 2)
+
+if (najwiecej_sprzedaży[,5] == najwiecej_zarobił[,5]){ten_sam=c("ponownie ")} else {ten_sam=rep("", 1)}
+
+osoby <- if_else(length(najwiecej_zarobił[,1])>1, paste(paste0(najwiecej_zarobił[,1][2:length(najwiecej_zarobił[,1])], collapse = ", "), " i ",najwiecej_zarobił[,1][1], sep=""), najwiecej_zarobił[,1][1])
+
+if (length(najwiecej_zarobił[,1])>1){
+  tekst_sprzedaż1=paste("Osoby, które sprzedały pojazdy łącznie warte największą kwotę to ", osoby,
+". Te pojazdy zostały one zakupione przez klientów za ", format(round(najwiecej_zarobił$suma,2), nsmall = 2), " zł (dla każdego sprzedawcy), co stanowi ", format(round(procent_suma_zarobił,2), nsmall = 2),
+"\\% średniej sumy całej kwoty, którą wynegocjował z klientami sprzedawca przez cały okres pracy. Warsztat powinien rozważyć podwyżkę dla tych pracowników, by zachęcić ich do dalszej pracy i jeszcze lepszych wyników.", sep="")
+  } else { tekst_sprzedaż1= paste("Osoba, która sprzedała pojazdy łącznie warte największą kwotę to ", najwiecej_zarobił[,1],
+". Zostały one zakupione przez klientów za ", format(round(najwiecej_zarobił$suma,2), nsmall = 2), " zł, co stanowi ", format(round(procent_suma_zarobił,2), nsmall = 2),
+"\\% średniej sumy całej kwoty, którą wynegocjował z klientami sprzedawca przez cały okres pracy. Zarabiana przez tego pracownika kwota za godzinę pracy (", format(round(najwiecej_zarobił$płaca,2), nsmall = 2), " zł) stanowi ", format(round(procent_placa_zarobił,2), nsmall = 2), "\\% średniej płacy sprzedawcy (",
+format(round(średnia_płaca,2), nsmall = 2) , " zł). Różnica procentowa wynosi ",
+format(abs(różnica_zarobił), nsmall = 2), "\\%",
+if_else(różnica_zarobił < 0  , " na korzyść pracownika, czyli warsztat nie musi koniecznie zwiększać stawki godzinowej tego sprzedawcy.", if_else(różnica_zarobił < 2, ", czyli warsztat nie musi koniecznie zwiększać stawki godzinowej tego sprzedawcy, jako że różnica jest niewielka. Można jednak nad tym pomyśleć, by zachęcić pracownika do dalszej pracy i jeszcze lepszych wyników.", if_else(
+  różnica_zarobił < 5, ", czyli warsztat powinien rozważyć podwyżkę dla tego pracownika, by zachęcić go do dalszej pracy i jeszcze lepszych wyników.", ", czyli warsztat zdecydowanie powinien rozważyć podwyżkę dla tego pracownika, by lepiej wyróżnić jego wpływ na dochody firmy."))), sep="")
+  }
+
+osoby <- if_else(length(najwiecej_sprzedaży[,1])>1, paste(paste0(najwiecej_sprzedaży[,1][2:length(najwiecej_sprzedaży[,1])], collapse = ", "), " i ",najwiecej_sprzedaży[,1][1], sep=""), najwiecej_sprzedaży[,1][1])
+
+if (length(najwiecej_sprzedaży[,1])>1){
+  tekst_sprzedaż2=paste("Pracownikami, którzy sprzedali najwięcej pojazdów są ", osoby,
+". Każda z tych osób namówiła klientów do kupna ", format(round(najwiecej_sprzedaży$ile_sprzedanych,2), nsmall = 2), " pojazdów, co stanowi ", format(round(procent_suma_sprzedaży,2), nsmall = 2),
+"\\% średnich sprzedaży przypadających na pracownika. Podwyżka dla tych sprzedawców powinna zostać rozważona, ponieważ mogłaby pozytywnie wpłynąć na ilość sprzedaży i motywację pracowników.", sep="")
+  
+  } else {
+tekst_sprzedaż2 = paste("Pracownik, który sprzedał najwięcej pojazdów to ", ten_sam[1], najwiecej_sprzedaży[,1],
+". Ten sprzedawca namówił klientów do kupna ", format(round(najwiecej_sprzedaży$ile_sprzedanych,2), nsmall = 2), " pojazdów, co stanowi ", format(round(procent_suma_sprzedaży,2), nsmall = 2),
+"\\% średnich sprzedaży przypadających na pracownika. Patrząc na zarobki pracownika można zauważyć, że zarabia on za godzinę pracy (", format(round(najwiecej_sprzedaży$płaca,2), nsmall = 2), " zł), czyli ", format(round(procent_placa_sprzedaży,2), nsmall = 2), "\\% średniej płacy sprzedawcy (",
+format(round(średnia_płaca,2), nsmall = 2) , " zł). Różnica między tymi dwoma wartościami wynosi ",
+format(abs(różnica_sprzedaż), nsmall = 2), "\\%",
+if_else(różnica_sprzedaż < 0  , " na korzyść pracownika, czyli zwiększenie stawki tego sprzedawcy nie jest niezbędne, lecz może go zmotywować.", if_else(różnica_sprzedaż < 2, ", czyli zwiększenie stawki tego sprzedawcy nie jest niezbędne z powodu niewielkiej różnicy. Drobna podwyżka mogłaby za to pozytywnie wpłynąć na ilość sprzedaży i motywację pracownika.", if_else(
+  różnica_sprzedaż < 5, ", wobec czego podwyżka dla tego sprzedawcy powinna zostać rozważona, ponieważ mogłaby pozytywnie wpłynąć na ilość sprzedaży i motywację pracownika.", ", czyli stawka godzinowa pracownika powinna zdecydowanie zostać podniesiona, aby poczuł się wyróżniony i doceniony."))), sep="")
+  }
+
+#jeżeli jest jedna osoba w warsztacie
+if (length(df[,1])==1){
+  tekst_sprzedaż1= tekst_sprzedaż1= paste("Obecnie tylko jedna osoba pracuje w firmie na tym stanowisku i jest to ", najwiecej_zarobił[,1],
+". Ta osoba sprzedała pojazdy łącznie na kwotę wynoszącą łącznie ", format(round(najwiecej_zarobił$suma,2), nsmall = 2), " zł na sprzedaży pojazdów, co stanowi ", format(round(procent_suma_zarobił,2), nsmall = 2),
+"\\% średniej sumy całej kwoty, którą wynegocjował z klientami sprzedawca przez cały okres pracy. Zarabiana przez tego pracownika kwota za godzinę pracy (", format(round(najwiecej_zarobił$płaca,2), nsmall = 2), " zł) stanowi ", format(round(procent_placa_zarobił,2), nsmall = 2), " \\% średniej płacy sprzedawcy (",
+format(round(średnia_płaca,2), nsmall = 2) , " zł). Różnica procentowa wynosi ",
+format(abs(różnica_zarobił), nsmall = 2), "\\%",
+if_else(różnica_zarobił < 0  , " na korzyść pracownika, jednak biorąc pod uwagę, że to jedyna osoba pracująca obecnie jako sprzedawca w warsztacie i była porównywana z byłymi pracownikami, można jej zaoferować podniesienie płacy, by pozytywnie wpłynąć na jej motywację.", if_else(różnica_zarobił < 2, ", czyli warsztat nie musi koniecznie zwiększać stawki godzinowej tego sprzedawcy, jako że różnica jest niewielka. Można jednak nad tym pomyśleć, ponieważ to jedyna osoba pracująca obecnie jako sprzedawca w warsztacie i była porównywana z byłymi pracownikami. Podniesienie stawki może zachęcić pracownika do dalszej pracy i jeszcze lepszych wyników.", if_else(
+  różnica_zarobił < 5, ", czyli warsztat powinien rozważyć podwyżkę dla tego pracownika, by zachęcić go do dalszej pracy i jeszcze lepszych wyników, zwłaszcza, że to jedyna osoba pracująca obecnie jako sprzedawca w warsztacie i była porównywana z byłymi pracownikami.", ", czyli warsztat zdecydowanie powinien rozważyć podwyżkę dla tego pracownika, by lepiej wyróżnić jego wpływ na dochody firmy. Zwłaszcza dlatego, że to jedyna osoba pracująca obecnie jako sprzedawca w warsztacie i była porównywana z byłymi pracownikami"))), sep="")
+  
+tekst_sprzedaż2 = paste("Ten sprzedawca namówił klientów do kupna ", format(round(najwiecej_sprzedaży$ile_sprzedanych,2), nsmall = 2), " pojazdów, co stanowi ", format(round(procent_suma_sprzedaży,2), nsmall = 2),
+"\\% ilości sprzedanych pojazdów dzielonej przez liczbę kiedykolwiek zatrudnionych pracowników. Podobnie jak wcześniej, możemy spróbować porównać zarobki z ilością sprzedaży. różnica między stosunkiem zarobków do średniej płacy i sprzedanych przez obecnego sprzedawcę samochodów do średniej liczby przypadającej na sprzedawcę  wynosi ",
+format(abs(różnica_sprzedaż), nsmall = 2), "\\%. Gdyby jedynie brać pod uwagę ilość sprzedaży przy analizie to",
+if_else(różnica_sprzedaż < 0  , " możnaby było zauważyć, że różnica jest na korzyść pracownika. Drobna podwyżka może jednak okazać się dla niego dobrym motywatorem.", if_else(różnica_sprzedaż < 2, " możnaby było zauważyć, że nie jest to dużo, jednak drobna podwyżka mogłaby zachęcić pracownika do sprzedania jeszcze większej liczby samochodów.", if_else(
+  różnica_sprzedaż < 5, " warsztat powinien zdecydowanie rozważyć podniesienie stawki tego sprzedawcy", ", warsztat powinien zdecydowanie rozważyć podniesienie stawki tego sprzedawcy, by docenić jego zapał i wyniki."))), sep="")
+}
+
+@
+
+Jeżeli pracownik odszedł z warsztatu, to nielogicznym jest, by rozważać danie mu podwyżki.
+
+Po usunięciu pracowników, którzy już nie pracują otrzymujemy taką tabelę:
+
+<<warning=FALSE,message=FALSE, echo=FALSE>>=
+df
+@
+
+\Sexpr{tekst_sprzedaż1} \\
+
+\Sexpr{tekst_sprzedaż2} 
+
+<<warning=FALSE,message=FALSE,echo=FALSE>>=
+
+query <- "SELECT CONCAT(imię, ' ',nazwisko) as mechanik,
+SUM(GREATEST(usługi.cena - użyte_części.cena*użyte_części.ilość,0)) as suma,
+COUNT(usługi.id) as ile_napraw, płaca, id_pracownika, IF(IsNull(data_zwolnienia),1,0) as status
+FROM usługi
+JOIN pracownicy ON usługi.id_pracownika=pracownicy.id
+JOIN użyte_części ON usługi.id = użyte_części.id_usługi
+GROUP BY usługi.id_pracownika ORDER BY suma"
+
+df <- dbGetQuery(con, query)
+
+df
+
+średnia_płaca <- mean(df$płaca)
+średnia_suma <- mean(df$suma)
+średnia_ilość <- mean(df$ile_napraw)
+
+df <- df %>% filter(status == 1)
+
+najwiecej_zarobił <- df %>% filter(suma == max(suma)) #najwięcej zysku na naprawach
+najwiecej_sprzedaży <- df %>% filter(ile_napraw == max(ile_napraw)) #najwięcejnapraw
+
+procent_suma_zarobił <- (najwiecej_zarobił$suma / średnia_suma) * 100
+procent_placa_zarobił <- (najwiecej_zarobił$płaca / średnia_płaca) * 100
+
+różnica_zarobił <- round(procent_suma_zarobił-procent_placa_zarobił,2)
+
+procent_suma_sprzedaży <- (najwiecej_sprzedaży$ile_napraw / średnia_ilość) * 100
+procent_placa_sprzedaży <- (najwiecej_sprzedaży$płaca / średnia_płaca) * 100
+
+różnica_sprzedaż <- round(procent_suma_sprzedaży - procent_placa_sprzedaży, 2)
+
+if (najwiecej_sprzedaży[,5] == najwiecej_zarobił[,5]){ten_sam=c("znów ")} else {ten_sam=rep("", 1)}
+
+osoby <- if_else(length(najwiecej_zarobił[,1])>1, paste(paste0(najwiecej_zarobił[,1][2:length(najwiecej_zarobił[,1])], collapse = ", "), " i ",najwiecej_zarobił[,1][1], sep=""), najwiecej_zarobił[,1][1])
+
+if (length(najwiecej_zarobił[,1])>1){
+  tekst_sprzedaż1=paste("Mechanicy, który wykonali w firmie naprawy, za które klienci (po odliczeniu kosztu części) zapłacili najwięcej to ", osoby,
+" i jest to kwota ", format(round(najwiecej_zarobił$suma,2), nsmall = 2), " zł, co stanowi ", format(round(procent_suma_zarobił,2), nsmall = 2),
+"\\% średniego zysku z napraw na mechanika. Dobrze by było, gdyby firma zauważyła tych pracowników i ich pozytywny wpływ na finanse warsztatu.", sep="")
+  
+  } else { tekst_sprzedaż1= paste("Mechanik, który wykonał w firmie naprawy, za które klienci (po odliczeniu kosztu części) zapłacili najwięcej to ", najwiecej_zarobił[,1],
+" i jest to kwota ", format(round(najwiecej_zarobił$suma,2), nsmall = 2), " zł, co stanowi ", format(round(procent_suma_zarobił,2), nsmall = 2),
+"\\% średniego zysku z napraw na mechanika. Pracownik zarabia kwotę ", format(round(najwiecej_zarobił$płaca,2), nsmall = 2), " zł za godzinę pracy, co stanowi ", format(round(procent_placa_zarobił,2), nsmall = 2), " \\% średniej płacy mechanika (",
+format(round(średnia_płaca,2), nsmall = 2) , " zł). Różnica między tymi wartościami to ",
+format(abs(różnica_zarobił), nsmall = 2), "\\%",
+if_else(różnica_zarobił < 0  , " na korzyść pracownika, wobec czego firma nie musi zwiększać stawki dla pracownika.", if_else(różnica_zarobił < 2, ", czyli firma może nie widzieć powodów do podniesienia wynagrodzenia tego mechanika. Mogłoby to jednak go napełnić zapałem do pracy i zmotywować.", if_else(
+  różnica_zarobił < 5, ", wobec czego dobrze by było, gdyby firma zauważyła tego pracownika i jego pozytywny wpływ na finanse warsztatu.", ", wobec czego dobrze by było, gdyby firma zauważyła świetne wyniki tego pracownika i jego pozytywny wpływ na finanse warsztatu."))), sep="")
+  }
+
+osoby <- if_else(length(najwiecej_sprzedaży[,1])>1, paste(paste0(najwiecej_sprzedaży[,1][2:length(najwiecej_sprzedaży[,1])], collapse = ", "), " i ",najwiecej_sprzedaży[,1][1], sep=""), najwiecej_sprzedaży[,1][1])
+
+if (length(najwiecej_zarobił[,1])>1){
+  tekst_sprzedaż2= paste("Pracownicy, którzy dokonali największej liczby napraw to ", osoby,
+". Liczba napraw dokonana przez każdego z nich wynosi ", format(round(najwiecej_sprzedaży$ile_napraw,2), nsmall = 2), ", co stanowi ", format(round(procent_suma_sprzedaży,2), nsmall = 2),
+"\\% średniej ilości napraw na mechanika.", " Można byłoby rozważyć podwyższenie ich płacy, aby docenić ich pracę.", sep="")
+  } else {
+tekst_sprzedaż2 = paste("Pracownik, który dokonał największej liczby napraw to ", ten_sam[1], najwiecej_sprzedaży[,1],
+". . Liczba napraw dokonana przez niego wynosi ", format(round(najwiecej_sprzedaży$ile_napraw,2), nsmall = 2), ", co stanowi ", format(round(procent_suma_sprzedaży,2), nsmall = 2),
+"\\% średniej ilości napraw na mechanika. Jej zarobki wynoszą ", format(round(najwiecej_sprzedaży$płaca,2), nsmall = 2), " zł na godzinę, co stanowi ", format(round(procent_placa_sprzedaży,2), nsmall = 2), " \\% średniej płacy mechanika (",
+format(round(średnia_płaca,2), nsmall = 2) , " zł). Różnica między tymi dwoma wartościami wynosi ",
+format(abs(różnica_sprzedaż), nsmall = 2), "\\%",
+if_else(różnica_sprzedaż < 0  , " na korzyść pracownika, chociaż zwiększenie stawki może pozytywnie wpłynąć na efekty jego pracy.", if_else(różnica_sprzedaż < 2, ", czyli zwiększenie stawki tego sprzedawcy nie jest niezbędne, z powodu niewielkiej różnicy. Drobna podwyżka mogłaby za to pozytywnie wpłynąć na efekty jego pracy.", if_else(
+  różnica_sprzedaż < 5, ", więc ten mechanik zdecydowanie powinien dostać podwyżkę.", ", więc podwyżka wydaje się rozsądnym rozwiązaniem, aby okazać mechanikowi, że warsztat go docenia."))), sep="")
+  }
+
+#jak jeden tylko
+if (length(df[,1])==1){
+  tekst_sprzedaż1= tekst_sprzedaż1= paste("Teraz w warsztacie pracuje jeden mechanik, ", najwiecej_zarobił[,1],
+". Ta osoba wykonała w firmie naprawy, za które klienci (po odliczeniu kosztu części) zapłacili ", format(round(najwiecej_zarobił$suma,2), nsmall = 2), " zł, co daje ", format(round(procent_suma_zarobił,2), nsmall = 2),
+"\\% średniego zysku z napraw na mechanika. Pracownik zarabia kwotę", format(round(najwiecej_zarobił$płaca,2), nsmall = 2), " zł, co stanowi ", format(round(procent_placa_zarobił,2), nsmall = 2), " \\% średniej płacy mechanika (",
+format(round(średnia_płaca,2), nsmall = 2) , " zł). Różnica między tymi wartościami to ",
+format(abs(różnica_zarobił), nsmall = 2), "\\%",
+if_else(różnica_zarobił < 0  , " na korzyść pracownika, jednak biorąc pod uwagę, że ten pracownik to jedyny mechanik w warsztacie i był porównywany z byłymi mechanikami, zaoferowanie mu podniesienia stawki może go zmotywować. ", if_else(różnica_zarobił < 2, ", czyli firma może nie widzieć powodów do podniesienia wynagrodzenia tego mechanika. Biorąc jednak pod uwagę fakt, że ten pracownik to jedyny mechanik w warsztacie i był porównywany z byłymi mechanikami, zaoferowanie mu podniesienia stawki może go bardziej zachęcić do pracy.", if_else(
+  różnica_zarobił < 5, ", wobec czego dobrze by było, gdyby firma zauważyła tego pracownika i jego pozytywny wpływ na finanse warsztatu. Również dlatego, że ten pracownik to jedyny mechanik w warsztacie i był porównywany z byłymi mechanikami.", ", wobec czego dobrze by było, gdyby firma zauważyła świetne wyniki tego pracownika i jego pozytywny wpływ na finanse warsztatu. Również dlatego, że ten pracownik to jedyny mechanik w warsztacie i był porównywany z byłymi mechanikami."))), sep="")
+  
+tekst_sprzedaż2 = paste("Odnotowano ", format(round(najwiecej_sprzedaży$ile_sprzedanych,2), nsmall = 2), " napraw dokonanych przez tą osobę, co stanowi ", format(round(procent_suma_sprzedaży,2), nsmall = 2),
+"\\% średniej ilości napraw na mechanika. Tutaj również możemy porównać zarobki, jednak rozważając ilość sprzedaży. różnica między stosunkiem zarobków do średniej płacy mechanika i stosunkiem dokonanych napraw do średniej liczby napraw na mechanika wynosi",
+format(abs(różnica_sprzedaż), nsmall = 2), "\\%. Jeżeli tylko to rozważymy przy analizie, to",
+if_else(różnica_sprzedaż < 0  , " można zauważyć, że różnica jest na korzyść pracownika, chociaż zwiększenie stawki może pozytywnie wpłynąć na efekty jego pracy.", if_else(różnica_sprzedaż < 2, " zwiększenie stawki tego sprzedawcy nie jest niezbędne, z powodu niewielkiej różnicy. Drobna podwyżka mogłaby za to pozytywnie wpłynąć na efekty jego pracy.", if_else(
+  różnica_sprzedaż < 5, " ten mechanik zdecydowanie powinien dostać podwyżkę.", " podwyżka wydaje się rozsądnym rozwiązaniem, aby okazać mechanikowi, że warsztat go docenia."))), sep="")}
+
+@
+
+
+Tutaj również należy usunąć z tabeli mechaników, którzy już nie pracują w warsztacie. \\
+
+Pozostali następujący pracownicy:
+
+<<warning=FALSE,message=FALSE, echo=FALSE>>=
+df
+@
+
+\Sexpr{tekst_sprzedaż1} \\
+
+\Sexpr{tekst_sprzedaż2}
+
+\section{Analiza bilansu}
+
+\subsection{Analiza wydatków na zakup pojazdów}
+
+Sprawdziliśmy, jak wyglądają miesięczne wydatki na zakup pojazdów, które w razie potrzeby warsztat naprawia, a następnie sprzedaje.
+
+<<fig_zakup_pojazdu, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=9,fig.pos="H", fig.cap="Miesięczne wydatki na zakup pojazdów">>=
+
+query <- "SELECT CONCAT(DATE_FORMAT(data_zaksięgowania, '%Y-%m'), '-01') AS data, SUM(cena) as suma FROM zakup_samochodu GROUP BY data ORDER BY data"
+
+df <- dbGetQuery(con, query)
+df[,1] <- as.Date(df[,1])
+df[,2] <- as.numeric(df[,2])
+
+wszystkie_daty <- expand.grid(1:12, 2014:2017) |> reframe(data = make_date(Var2, Var1, 1))
+df <- merge(x=df, y=wszystkie_daty, by="data", all.y=T)
+df$suma[is.na(df$suma)] <- 0
+
+kupno_samochodów <- df$suma
+
+df |> ggplot(aes(x=data, y=suma, , fill=format(data, "%m"))) + 
+  geom_bar(stat = "identity") + 
+  scale_fill_manual(name="Miesiąc",labels=unique(format(df$data, "%B")), values=hue_pal()(12))
+
+miesiąc_odmiana <- function(m) {
+  return(if_else(length(m) > 1, "miesiącach", "miesiącu"))
+}
+
+max_p <- max(df$suma)
+max_p2 <- sort(df$suma,decreasing = T)[2]
+
+max_m <- format(df$data[df$suma == max_p], "%B %Y")
+max_m2 <- format(df$data[df$suma == max_p2], "%B %Y")
+
+min_p <- min(df$suma)
+min_p2 <- sort(df$suma,decreasing = F)[2]
+
+min_m <- format(df$data[df$suma == min_p], "%B %Y")
+min_m2 <- format(df$data[df$suma == min_p2], "%B %Y")
+@
+
+Wykres \ref{fig:fig_zakup_pojazdu} przedstawia miesięczne wydatki na zakup pojazdów. 
+Największe wydatki warsztat miał w \Sexpr{miesiąc_odmiana(max_m)} \Sexpr{max_m}. Były one w wysokości \Sexpr{round(max_p*0.1^3, 2)} tyś. zł. 
+Wydatki wielkości \Sexpr{round(max_p2*0.1^3, 2)} tyś. zł były drugimi najwyższymi i były \Sexpr{round(max_p/max_p2, 2)} razy mniejsze od tych największych. Wystąpiły one w \Sexpr{miesiąc_odmiana(max_m2)} \Sexpr{max_m2}.
+Najmniejsze wydatki warsztat zaobserwował w \Sexpr{miesiąc_odmiana(min_m)} \Sexpr{min_m} i wyniosły one \Sexpr{round(min_p*0.1^3, 2)} tyś. zł. 
+Drugie co do wielkości najniższe wydatki na zakup pojazdów wystąpiły \Sexpr{miesiąc_odmiana(min_m2)} \Sexpr{min_m2}, a wyniosły one \Sexpr{round(min_p2*0.1^3, 2)} tyś. zł.
+W każdym miesiącu działania warsztatu wydatki na zakup pojazdów wyniosły przynajmnej \Sexpr{signif(min_p, digits = 1) * 0.1^3} tyś. zł.
+
+\subsection{Analiza wydatków na zakup części}
+
+Następnie zostało sprawdzone, jak wyglądają miesięczne wydatki na zakup części potrzebnych do napraw pojazdów.
+
+<<fig_zakup_czesci, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=9,fig.pos="H", fig.cap="Miesięczne wydatki na zakup części">>=
+
+query <- "SELECT CONCAT(DATE_FORMAT(data_zaksięgowania, '%Y-%m'), '-01') as data, SUM(użyte_części.cena*użyte_części.ilość) as suma FROM usługi JOIN użyte_części ON usługi.id = użyte_części.id_usługi GROUP BY data ORDER BY data"
+
+df <- dbGetQuery(con, query)
+df[,1] <- as.Date(df[,1])
+df[,2] <- as.numeric(df[,2])
+
+wszystkie_daty <- expand.grid(1:12, 2014:2017) |> reframe(data = make_date(Var2, Var1, 1))
+df <- merge(x=df, y=wszystkie_daty, by="data", all.y=T)
+df$suma[is.na(df$suma)] <- 0
+
+df |> ggplot(aes(x=data, y=suma, , fill=format(data, "%m"))) + 
+  geom_bar(stat = "identity") + 
+  scale_fill_manual(name="Miesiąc",labels=unique(format(df$data, "%B")), values=hue_pal()(12))
+
+max_p <- max(df$suma)
+max_p2 <- sort(df$suma,decreasing = T)[2]
+
+max_m <- format(df$data[df$suma == max_p], "%B %Y")
+max_m2 <- format(df$data[df$suma == max_p2], "%B %Y")
+
+min_p <- min(df$suma)
+min_p2 <- sort(df$suma,decreasing = F)[2]
+
+min_m <- format(df$data[df$suma == min_p], "%B %Y")
+min_m2 <- format(df$data[df$suma == min_p2], "%B %Y")
+@
+
+Wykres \ref{fig:fig_zakup_czesci} przedstawia miesięczne wydatki na zakup części do naprawy pojazdów.
+Największe wydatki warsztat miał w \Sexpr{miesiąc_odmiana(max_m)} \Sexpr{max_m} i wyniosły one \Sexpr{round(max_p*0.1^3, 2)} tyś. zł. 
+Drugie najwyższye wydatkami były wielkości \Sexpr{round(max_p2*0.1^3, 2)} tyś. zł i były \Sexpr{round(max_p/max_p2, 2)} razy mniejsze od tych największych. Wystąpiły one w \Sexpr{miesiąc_odmiana(max_m2)} \Sexpr{max_m2}.
+Najmniejsze wydatki na części zostały odnotowane w \Sexpr{miesiąc_odmiana(min_m)} \Sexpr{min_m} i wyniosły \Sexpr{round(min_p*0.1^3, 2)} tyś. zł. 
+Drugie najmniejsze wydatki wyniosły \Sexpr{round(min_p2*0.1^3, 2)} tyś. zł. Wystąpił on w \Sexpr{miesiąc_odmiana(min_m2)} \Sexpr{min_m2}.
+Ogólnie w każdym miesiącu działania warsztatu wydatki na zakup części wyniosły przynajmnej \Sexpr{signif(min_p, digits = 1) * 0.1^3} tyś. zł.
+
+\subsection{Analiza przychodów z usług warsztatu}
+
+Chcielibyśmy sprawdzić, jak wyglądają miesięczne przychody (lub straty) wynikające z prowadzenia warsztatu. Przez przychód za pojedyńczą usługę uważamy różnicę ceny, którą zapłacił klient i kwoty zapłaconej za części. Przeanaliowane zostaną przychody z uwzględnieniem kosztu własnych napraw oraz bez nich.
+
+<<fig_uslugi, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=9,fig.pos="H", fig.cap="Miesięczny przychód wynikający z prowadzenia warsztatu z wliczonymi kosztami napraw własnych">>=
+
+query <- "SELECT CONCAT(DATE_FORMAT(data_zaksięgowania, '%Y-%m'), '-01') as data, SUM(usługi.cena - użyte_części.cena*użyte_części.ilość) as suma FROM usługi JOIN użyte_części ON usługi.id = użyte_części.id_usługi GROUP BY data ORDER BY data"
+
+df <- dbGetQuery(con, query)
+df[,1] <- as.Date(df[,1])
+df[,2] <- as.numeric(df[,2])
+
+wszystkie_daty <- expand.grid(1:12, 2014:2017) |> reframe(data = make_date(Var2, Var1, 1))
+df <- merge(x=df, y=wszystkie_daty, by="data", all.y=T)
+df$suma[is.na(df$suma)] <- 0
+
+df |> ggplot(aes(x=data, y=suma, , fill=format(data, "%m"))) + 
+  geom_bar(stat = "identity") + 
+  scale_fill_manual(name="Miesiąc",labels=unique(format(df$data, "%B")), values=hue_pal()(12))
+
+prowadzenie_warsztatu <- df$suma
+
+max_p <- max(df$suma)
+max_p2 <- sort(df$suma,decreasing = T)[2]
+
+max_m <- format(df$data[df$suma == max_p], "%B %Y")
+max_m2 <- format(df$data[df$suma == max_p2], "%B %Y")
+
+min_p <- min(df$suma)
+min_p2 <- sort(df$suma,decreasing = F)[2]
+
+min_m <- format(df$data[df$suma == min_p], "%B %Y")
+min_m2 <- format(df$data[df$suma == min_p2], "%B %Y")
+
+@
+
+Na wykresie \ref{fig:fig_uslugi} przedstawiony jest miesięczny przychód wynikający z prowadzenia warsztatu. Zostały na nim uwzględnione koszty napraw własnych. 
+Największy przychód był zaobserwowany w \Sexpr{miesiąc_odmiana(max_m)} \Sexpr{max_m} i wyniósł on wtedy \Sexpr{round(max_p*0.1^3, 2)} tyś. zł.
+Następny co do wielkości przychód wystąpił w \Sexpr{miesiąc_odmiana(max_m2)} \Sexpr{max_m2}, wyniósł on \Sexpr{round(max_p2*0.1^3, 2)} tyś. zł. Jest on \Sexpr{round(max_p/max_p2, 2)} razy mniejszy niż najwyższy przychód.
+Najmniejszy przychód warsztat odnotował w \Sexpr{miesiąc_odmiana(min_m)} \Sexpr{min_m}, który wyniósł \Sexpr{round(min_p*0.1^3, 2)} tyś. zł. 
+Drugi najmniejszy przychód wyniósł \Sexpr{round(min_p2*0.1^3, 2)} tyś. zł i wystąpił w \Sexpr{miesiąc_odmiana(min_m2)} \Sexpr{min_m2}.
+
+<<fig_uslugi2, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=9,fig.pos="H", fig.cap="Miesięczny przychód wynikający z prowadzenia warsztatu bez wliczonych kosztów napraw własnych">>=
+
+query <- "SELECT CONCAT(DATE_FORMAT(data_zaksięgowania, '%Y-%m'), '-01') as data, SUM(GREATEST(usługi.cena - użyte_części.cena*użyte_części.ilość,0)) as suma FROM usługi JOIN użyte_części ON usługi.id = użyte_części.id_usługi GROUP BY data ORDER BY data;"
+
+df <- dbGetQuery(con, query)
+df[,1] <- as.Date(df[,1])
+df[,2] <- as.numeric(df[,2])
+
+wszystkie_daty <- expand.grid(1:12, 2014:2017) |> reframe(data = make_date(Var2, Var1, 1))
+df <- merge(x=df, y=wszystkie_daty, by="data", all.y=T)
+df$suma[is.na(df$suma)] <- 0
+
+df |> ggplot(aes(x=data, y=suma, , fill=format(data, "%m"))) + 
+  geom_bar(stat = "identity") + 
+  scale_fill_manual(name="Miesiąc",labels=unique(format(df$data, "%B")), values=hue_pal()(12))
+
+max_p <- max(df$suma)
+max_p2 <- sort(df$suma,decreasing = T)[2]
+
+max_m <- format(df$data[df$suma == max_p], "%B %Y")
+max_m2 <- format(df$data[df$suma == max_p2], "%B %Y")
+
+min_p <- min(df$suma)
+min_p2 <- sort(df$suma,decreasing = F)[2]
+
+min_m <- format(df$data[df$suma == min_p], "%B %Y")
+min_m2 <- format(df$data[df$suma == min_p2], "%B %Y")
+
+@
+
+Na wykresie \ref{fig:fig_uslugi2} przedstawiony jest miesięczny przychód wynikający z prowadzenia warsztatu, ale tym razem bez uwzględnienia kosztów własnych. 
+Największy przychód warsztat zaobserwował w \Sexpr{miesiąc_odmiana(max_m)} \Sexpr{max_m}, który wyniósł \Sexpr{round(max_p*0.1^3, 2)} tyś. zł.
+Drugi zaś co do wielkości przychód wsytąpił w \Sexpr{miesiąc_odmiana(max_m2)} \Sexpr{max_m2}, wyniósł on \Sexpr{round(max_p2*0.1^3, 2)} tyś. zł, czyli jest \Sexpr{round(max_p/max_p2, 2)} razy mniejszy niż ten najwyższy zaobserwowany.
+Najmniejszy przychód został odnotowany w \Sexpr{miesiąc_odmiana(min_m)} \Sexpr{min_m} i wyniósł \Sexpr{round(min_p*0.1^3, 2)} tyś. zł. 
+Drugi najmniejszy przychód wyniósł \Sexpr{round(min_p2*0.1^3, 2)} tyś. zł. Wystąpił on w \Sexpr{miesiąc_odmiana(min_m2)} \Sexpr{min_m2}.
+
+\subsection{Koszty wypłat dla pracowników}
+
+Zostanie sprawdzone, jakie miesięczne koszty ponosi warsztat na wypłaty pensji dla pracowników.
+
+%Zakładamy, że płaca w miesiącu to 160*płaca (przy zatrudnieniu/zwolnieniu pracownika patrze ile dni w miesiacu pracownik pracowal i robie ulamek, np. jak zatrudnili go 3 marca to dostaje round(płaca*160*29/31,2)) i podobnie ostatni to by byl round(płaca*160*3/31,2), wypłacamy pieniądze 1 dnia kolejnego miesiąca (np za styczeń wypłacamy 1 lutego)
+
+<<fig_pracownicy, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=9,fig.pos="H", fig.cap="Miesięczne koszty wynikające z wypłacania pensji pracownikom">>=
+
+query <- "SELECT płaca, DATE_FORMAT(data_zatrudnienia, '%m') as pierwszy_m, DATE_FORMAT(data_zatrudnienia, '%Y') as pierwszy_y,-TIMESTAMPDIFF(DAY, data_zatrudnienia, CONCAT(DATE_FORMAT(data_zatrudnienia, '%Y-%m'), '-01')) as nieprzepracowane_pierwszego, DATEDIFF(DATE_ADD(CONCAT(DATE_FORMAT(data_zatrudnienia, '%Y-%m'), '-01'), INTERVAL 1 MONTH), CONCAT(DATE_FORMAT(data_zatrudnienia, '%Y-%m'), '-01')) as dni_miesiąca_zatrudnienia, DATE_FORMAT(data_zwolnienia, '%m') as ostatni_m, DATE_FORMAT(data_zwolnienia, '%Y') as ostatni_y, 1+TIMESTAMPDIFF(DAY, CONCAT(DATE_FORMAT(data_zwolnienia, '%Y-%m'), '-01'), data_zwolnienia) as przepracowane_ostatniego, DATEDIFF(DATE_ADD(CONCAT(DATE_FORMAT(data_zwolnienia, '%Y-%m'), '-01'), INTERVAL 1 MONTH), CONCAT(DATE_FORMAT(data_zwolnienia, '%Y-%m'), '-01')) as dni_miesiąca_zwolnienia FROM pracownicy"
+
+df <- dbGetQuery(con, query)
+df[,2] <- as.numeric(df[,2])
+df[,3] <- as.numeric(df[,3])
+df[,6] <- as.numeric(df[,6])
+df[,7] <- as.numeric(df[,7])
+
+first_year = min(df$pierwszy_y)
+last_year = 2017
+
+miesiące <- expand.grid(1:12, first_year:last_year) |> reframe(data = AddMonths(make_date(Var2, Var1, 1),1), suma = 0)
+
+for (i in 1:length(df[,1])){
+  m = df[i,2]
+  y = df[i,3]
+  p_p = (df[i,4])/df[i,5]
+  
+  m_o = if_else(is.na(df[i,6]), 12, df[i,6])
+  y_o = if_else(is.na(df[i,7]), last_year, df[i,7])
+  p_o = if_else(is.na(df[i,8]), 0, (df[i,9] - df[i,8])/df[i,9])
+  
+  miesiące[,2][(y-first_year)*12+m]=miesiące[,2][(y-first_year)*12+m]-round(160*df[i,1]*p_p)
+  miesiące[,2][((y-first_year)*12+m):((y_o - first_year)*12+m_o)]=miesiące[,2][((y-first_year)*12+m):((y_o - first_year)*12+m_o)]+round(160*df[i,1],2)
+  if((y_o - first_year)*12+m_o<=(last_year-first_year+1)*12){
+  miesiące[,2][(y_o - first_year)*12+m_o]=miesiące[,2][(y_o - first_year)*12+m_o] - round(160*df[i,1]*p_o,2)}
+  
+}
+
+wszystkie_daty <- expand.grid(1:12, first_year:last_year) |> reframe(data = AddMonths(make_date(Var2, Var1, 1),1),0)
+
+miesiące <- miesiące[1:((last_year-first_year+1)*12-1),]
+miesiące <- rbind(miesiące, list(make_date(first_year, 1, 1),0))
+miesiące <- miesiące %>% arrange((data))
+
+wypłaty <- miesiące$suma
+
+miesiące |> ggplot(aes(x=data, y=suma, , fill=format(data, "%m"))) + 
+  geom_bar(stat = "identity") + 
+  scale_fill_manual(name="Miesiąc",labels=unique(format(miesiące$data, "%B")), values=hue_pal()(12))
+
+max_p <- max(miesiące$suma)
+
+max_m <- format(miesiące$data[miesiące$suma == max_p], "%B %Y")
+
+min_p <- min(miesiące$suma)
+min_p_zdanie <- if_else(min_p < 100, paste(min_p, 'zł'), paste(round(min_p*0.1^3, 2), 'tyś. zł'))
+
+min_m <- format(miesiące$data[miesiące$suma == min_p], "%B %Y")
+
+wniosek_max <- if_else(miesiące$data[miesiące$suma == max_p] == miesiące$data[dim(miesiące)[1]], 
+                       " Zatem widać, że aktualnie warsztat ponosi największe koszty wynikające z wypłat dla pracowników.", "")
+
+wniosek_min <- if_else(miesiące$data[miesiące$suma == 0] == miesiące$data[1], 
+                       " Wynika to z tego, że jest to pierwszy miesiąc działania warsztatu, a pensje wypłacamy pracownikom pierwszego dnia następnego miesiąca.", "")
+
+@
+
+Wykres \ref{fig:fig_pracownicy} przedstawia miesięczne koszty wypłat pensji pracowników. Największy koszt warsztat odnotował w \Sexpr{miesiąc_odmiana(max_m)} \Sexpr{max_m} i wyniósł on \Sexpr{round(max_p*0.1^3, 2)} tyś. zł.\Sexpr{wniosek_max} 
+Natomiast najmniejsze koszty wystąpiły w \Sexpr{miesiąc_odmiana(min_m)} \Sexpr{min_m}. Wyniosły one \Sexpr{min_p_zdanie}.\Sexpr{wniosek_min}
+
+\subsection{Wpływy ze sprzedaży pojazdów}
+
+Następnie zostaną sprawdzone miesięczne wpływy finansowe ze sprzedaży pojazdów, które zostały zakupione i w razie potrzeby naprawione przez warsztat. Pojazdy są sprzedawane na dwa sposoby: klient może zapłacić całą kwotę na raz lub spłacać w ratach. {\color{red}Jeśli klient zdecyduje się na pierwszą opcję, to przysługuje mu zniżka w wysokości (???).} {\color{red}Opisać: Jak są wpłaty to robimy dla wszystkich oprócz ostatniej floor z dzielenia, a ostatnia to cena zakupu - te raty co juz splacono}
+
+<<fig_samochody_wplywy, warning=FALSE,message=FALSE,echo=FALSE,fig.height=4,fig.width=9,fig.pos="H", fig.cap="Miesięczne wpływy finansowe ze sprzedaży pojazdów">>=
+
+query <- "SELECT DATE_FORMAT(data_zaksięgowania, '%Y') as rok, DATE_FORMAT(data_zaksięgowania, '%m') as miesiąc, cena, liczba_rat FROM sprzedaż_samochodu"
+
+df <- dbGetQuery(con, query)
+df[,1] <- as.numeric(df[,1])
+df[,2] <- as.numeric(df[,2])
+
+first_year = 2014
+first_month = df$miesiąc[1]
+last_year = 2017
+last_month = tail(df$miesiąc,1)
+floor_dec <- function(x, level=1) round(x - 5*10^(-level-1), level)
+
+df <- df %>% mutate(min_index=(rok-first_year)*12 + miesiąc, max_index=(rok-first_year)*12+miesiąc+liczba_rat-1)
+
+miesiące <- expand.grid(1:12, first_year:last_year) |> reframe(data = make_date(Var2, Var1, 1), suma = 0)
+
+
+wartości <- numeric(max(df$max_index))
+for (i in 1:length(df[,1])){
+  rata = if_else(df[i,4]==1, 0, floor_dec(df[i,3]/df[i,4], 2))
+  ostatnia_rata = df[i,3] - rata*(df[i,4]-1)
+  wartości[df[i,5]:max(df[i,6]-1, df[i,5])] = wartości[df[i,5]:max(df[i,6]-1, df[i,5])] + rata
+  wartości[df[i,6]] = wartości[df[i,6]] + ostatnia_rata
+}
+
+miesiące[,2] <- wartości[1:((last_year-first_year+1)*12)]
+
+sprzedaż_samochodów <- miesiące$suma
+
+wszystkie_daty <- expand.grid(1:12, first_year:last_year) |> reframe(data = AddMonths(make_date(Var2, Var1, 1),1),0)
+
+miesiące |> ggplot(aes(x=data, y=suma, , fill=format(data, "%m"))) + 
+  geom_bar(stat = "identity") + 
+  scale_fill_manual(name="Miesiąc",labels=unique(format(miesiące$data, "%B")), values=hue_pal()(12))
+
+max_p <- max(miesiące$suma)
+max_p2 <- sort(miesiące$suma,decreasing = T)[2]
+
+max_m <- format(miesiące$data[miesiące$suma == max_p], "%B %Y")
+max_m2 <- format(miesiące$data[miesiące$suma == max_p2], "%B %Y")
+
+min_p <- min(miesiące$suma)
+min_p_zdanie <- if_else(min_p < 100, paste(min_p, 'zł'), paste(round(min_p*0.1^3, 2), 'tyś. zł'))
+min_p2 <- sort(miesiące$suma,decreasing = F)[2]
+
+min_m <- format(miesiące$data[miesiące$suma == min_p], "%B %Y")
+min_m2 <- format(miesiące$data[miesiące$suma == min_p2], "%B %Y")
+
+@
+
+Na wykresie \ref{fig:fig_samochody_wplywy} przedstawione są wpływy finansowe ze sprzedaży pojazdów. 
+Największe miesięczne wpływy warsztatu ze sprzedaży pojazdów wynosiły \Sexpr{round(max_p*0.1^6, 2)} mln. zł. Wystąpiły one w \Sexpr{miesiąc_odmiana(max_m)} \Sexpr{max_m}. 
+Drugie co do wielkości wpływy (w wysokości \Sexpr{round(max_p2*0.1^6, 2)} mln. zł) zostały odnotowane w \Sexpr{miesiąc_odmiana(max_m2)} \Sexpr{max_m2}. Są one \Sexpr{round(max_p / max_p2, 2)} razy mniejsze niż te największe zaobserwowane.
+Najmniejsze miesięczne wpływy wyniosły \Sexpr{round(min_p*0.1^6, 2)} mln. zł, a wystąpiły one w \Sexpr{miesiąc_odmiana(min_m)} \Sexpr{min_m}.
+Kolejnymi najmniejszymi są wpływy z \Sexpr{miesiąc_odmiana(min_m2)} \Sexpr{min_m2}. Są one wysokości \Sexpr{round(min_p2*0.1^6, 2)} mln. zł.
+
+
+\subsection{Bilans miesięczny}
+
+Teraz zostanie sprawdzoby miesięczny bilans warsztatu. Zostaną sprawdzone miesięczne przychody warsztaty przez cały okres jego działania oraz comiesięczny stan środków finansowych firmy, gdyby warsztat zaczynał bez posiadania żadnych średków pienięznych.
+
+<<fig_bilans, warning=FALSE,message=FALSE, echo=FALSE,fig.height=4,fig.width=9,fig.pos="H", fig.cap="Miesięczne przychody warsztatu">>=
+miesięczne_przychody <- sprzedaż_samochodów-kupno_samochodów-wypłaty+prowadzenie_warsztatu
+miesiące <- expand.grid(1:12, first_year:last_year) |> reframe(data = make_date(Var2, Var1, 1), suma = 0)
+miesiące[,2] <- miesięczne_przychody
+
+miesiące |> ggplot(aes(x=data, y=miesięczne_przychody, , fill=format(data, "%m"))) + 
+  geom_bar(stat = "identity") + 
+  scale_fill_manual(name="Miesiąc",labels=unique(format(miesiące$data, "%B")), values=hue_pal()(12))
+
+max_p <- max(miesiące$suma)
+max_p2 <- sort(miesiące$suma,decreasing = T)[2]
+
+max_m <- format(miesiące$data[miesiące$suma == max_p], "%B %Y")
+max_m2 <- format(miesiące$data[miesiące$suma == max_p2], "%B %Y")
+
+min_p <- min(miesiące$suma)
+min_p2 <- sort(miesiące$suma,decreasing = F)[2]
+
+min_m <- format(miesiące$data[miesiące$suma == min_p], "%B %Y")
+min_m2 <- format(miesiące$data[miesiące$suma == min_p2], "%B %Y")
+
+pierwsze_ujemne_ilość <- (miesiące$suma < 0)
+pierwsze_ujemne_ilość[!pierwsze_ujemne_ilość] <- NA
+pierwsze_ujemne_ilość <- is.na(cumsum(pierwsze_ujemne_ilość))
+pierwsze_ujemne_ilość <- length(pierwsze_ujemne_ilość[!pierwsze_ujemne_ilość])
+
+wniosek <- if_else(pierwsze_ujemne_ilość == 1, " Pierwszy miesiąc działalności przyniósł straty dla warsztatu.", 
+                   if_else(pierwsze_ujemne_ilość > 1, 
+                           paste(" Przez pierwsze", pierwsze_ujemne_ilość, 
+                                 "miesięcy pracy warsztat nie przynosił żadnych zysków."), ""))
+
+@
+
+%złączenie: na miesiąc = naprawy(te z minusami, bo mają razem części) + sprzedaż pojazdu -zakup pojazdu - wypłaty (czy ja coś pominęłam?)
+
+Wykres \ref{fig:fig_bilans} przedstawia miesięczne przychody firmy od początku jej działalności. 
+Najwięcej warsztat zarobił (\Sexpr{round(max_p*0.1^3, 2)} tyś. zł) w \Sexpr{miesiąc_odmiana(max_m)} \Sexpr{max_m}.
+Natomiast najmniej w \Sexpr{miesiąc_odmiana(min_m)} \Sexpr{min_m}. Zyski wyniosły wtedy \Sexpr{round(min_p*0.1^3, 2)} tyś. zł.\Sexpr{wniosek}
+
+<<fig_bilans_suma, warning=FALSE,message=FALSE, echo=FALSE,fig.height=5,fig.width=9,fig.pos="H", fig.cap="Miesięczny stan finansowy warsztatu, gdyby zaczynał działalność bez żadnych środków pieniężnych">>=
+miesięczne_przychody <- sprzedaż_samochodów-kupno_samochodów-wypłaty+prowadzenie_warsztatu
+miesiące <- expand.grid(1:12, first_year:last_year) |> reframe(data = make_date(Var2, Var1, 1), suma = 0)
+miesiące[,2] <- miesięczne_przychody
+
+miesiące <- miesiące %>% mutate(bilans = cumsum(suma))
+
+miesiące |> ggplot(aes(x=data, y=bilans, color=format(data, "%m"))) + 
+  geom_hline(yintercept = 0, linetype = "dashed", color = "black", size = 0.65) +
+  geom_line( color="gray", size=1.2)+
+  geom_point(size=2.5) + scale_colour_discrete("Miesiąc", ,labels=unique(format(miesiące$data, "%B")), ) +
+  scale_fill_manual(name="Miesiąc",labels=unique(format(miesiące$data, "%B")), values=hue_pal()(12)) 
+
+stan_początkowy <- miesiące$bilans[1]
+stan_końcowy <- miesiące$bilans[length(miesiące$bilans)]
+
+pierwsze_ujemne_ilość <- (miesiące$bilans < 0)
+pierwsze_ujemne_ilość[!pierwsze_ujemne_ilość] <- NA
+pierwsze_ujemne_ilość <- is.na(cumsum(pierwsze_ujemne_ilość))
+pierwsze_ujemne_ilość <- length(pierwsze_ujemne_ilość[!pierwsze_ujemne_ilość])
+
+wniosek <- if_else(pierwsze_ujemne_ilość == 1, 
+                   " Przez pierwszy miesiąc działalności stan finansowy warsztatu był ujemny.", 
+                   if_else(pierwsze_ujemne_ilość > 1, 
+                           paste(" Przez pierwsze", pierwsze_ujemne_ilość, 
+                                 "miesięcy pracy warsztatu jego stan finansowy był ujemny."), ""))
+
+max_p <- max(miesiące$bilans)
+max_m <- format(miesiące$data[miesiące$bilans == max_p], "%B %Y")
+
+min_p <- min(miesiące$bilans)
+min_m <- format(miesiące$data[miesiące$bilans == min_p], "%B %Y")
+
+@
+
+Wykres \ref{fig:fig_bilans_suma} przedstawia miesięczny stan finansowy warsztatu, gdyby zaczynał działalność bez środków pieniężnych. W pierwszym miesiącu działalności stan finansowy wyniósł \Sexpr{round(stan_początkowy*0.1^6, 2)} mln. zł, natomiast aktualnie wynosi on \Sexpr{round(stan_końcowy*0.1^6, 2)} mln. zł.\Sexpr{wniosek}
+Największą ilością pieniędzy warsztat operował w \Sexpr{miesiąc_odmiana(max_m)} \Sexpr{max_m}, było to \Sexpr{round(max_p*0.1^6, 2)} mln. zł.
+Natomiast najmniejszą w \Sexpr{miesiąc_odmiana(min_m)} \Sexpr{min_m}, a było to \Sexpr{round(min_p*0.1^6, 2)} mln. zł.
+
+\section{Podsumowanie}
+
+
+<<warning=FALSE,message=FALSE, echo=FALSE>>=
 dbDisconnect(con)
 @
 
