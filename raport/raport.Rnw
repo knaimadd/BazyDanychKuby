@@ -844,7 +844,6 @@ Największe wydatki warsztat miał w \Sexpr{miesiąc_odmiana(max_m)} \Sexpr{max_
 Drugie najwyższe wydatkami były wielkości \Sexpr{ładna_kwota(max_p2)} i były \Sexpr{round(max_p/max_p2, 2)} razy mniejsze od tych największych. Wystąpiły one w \Sexpr{miesiąc_odmiana(max_m2)} \Sexpr{max_m2}.
 Najmniejsze wydatki na części zostały odnotowane w \Sexpr{miesiąc_odmiana(min_m)} \Sexpr{min_m} i wyniosły \Sexpr{ładna_kwota(min_p)}. 
 Drugie najmniejsze wydatki wyniosły \Sexpr{ładna_kwota(min_p2)}. Wystąpił on w \Sexpr{miesiąc_odmiana(min_m2)} \Sexpr{min_m2}.
-Ogólnie w każdym miesiącu działania warsztatu wydatki na zakup części wyniosły przynajmnej \Sexpr{ładna_kwota(signif(min_p, digits = 1))}.
 
 \subsection{Analiza przychodów z usług warsztatu}
 
