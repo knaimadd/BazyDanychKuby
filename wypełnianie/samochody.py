@@ -1,8 +1,6 @@
 import pandas as pd
 import numpy as np
 import os
-import matplotlib.pyplot as plt
-import scipy.stats as stats
 
 #https://www.kaggle.com/datasets/ander289386/cars-germany
 #https://www.kaggle.com/datasets/nehalbirla/motorcycle-dataset
