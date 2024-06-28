@@ -48,6 +48,7 @@
 \definecolor{errorcolor}{rgb}{1, 0, 0}
 \newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
 
+\usepackage{amsmath}
 \usepackage{alltt}
 \usepackage[utf8]{inputenc}
 \usepackage{amsfonts}
@@ -117,53 +118,49 @@ Przeprowadzono analizę, aby sprawdzić jakich marek pojazdy najczęściej pojaw
 Można przedstawić procentowy udział marek pojazdów klientów salonu, zaczynając od najczęściej się pojawiającej:
 
 \begin{verbatim}
-1. Volkswagen: 14.57%
-2. Opel: 9.38%
-3. Ford: 8.58%
-4. Renault: 8.38%
-5. Audi: 5.39%
-6. SEAT: 4.59%
-7. Skoda: 4.19%
-8. Fiat: 4.19%
-9. Mercedes-Benz: 3.79%
-10. Hyundai: 3.59%
-11. BMW: 3.39%
-12. Toyota: 2.79%
-13. Hero: 2.4%
-14. Peugeot: 2.4%
-15. smart: 2.4%
-16. Bajaj: 2%
-17. Kia: 1.6%
-18. Honda: 1.6%
-19. Dacia: 1.4%
-20. Suzuki: 1.4%
-21. Nissan: 1.2%
-22. Citroen: 1.2%
-23. Yamaha: 1.2%
-24. Mazda: 1%
-25. MINI: 0.8%
-26. Royal: 0.8%
-27. Porsche: 0.8%
-28. Volvo: 0.6%
-29. Jaguar: 0.6%
-30. KTM: 0.6%
-31. Lexus: 0.4%
-32. Land: 0.4%
-33. Jeep: 0.4%
-34. Cupra: 0.4%
-35. Harley-Davidson: 0.2%
-36. Chevrolet: 0.2%
-37. Mitsubishi: 0.2%
-38. Subaru: 0.2%
-39. Alpina: 0.2%
-40. TVS: 0.2%
-41. Kawasaki: 0.2%
-42. Aprilia: 0.2%
+1. Volkswagen: 12,34%
+2. Ford: 10,25%
+3. Opel: 9,41%
+4. Skoda: 6,49%
+5. Audi: 5,86%
+6. BMW: 5,23%
+7. SEAT: 4,6%
+8. Mercedes-Benz: 4,18%
+9. Renault: 3,77%
+10. Toyota: 3,14%
+11. Hyundai: 2,93%
+12. Peugeot: 2,93%
+13. Hero: 2,72%
+14. Honda: 2,51%
+15. Fiat: 2,51%
+16. Bajaj: 2,3%
+17. Nissan: 2,09%
+18. Mazda: 2,09%
+19. Citroen: 1,88%
+20. Volvo: 1,46%
+21. Kia: 1,46%
+22. smart: 1,26%
+23. TVS: 1,05%
+24. Royal: 1,05%
+25. Suzuki: 1,05%
+26. Yamaha: 0,63%
+27. Mitsubishi: 0,63%
+28. Dacia: 0,63%
+29. Jeep: 0,63%
+30. KTM: 0,42%
+31. Subaru: 0,42%
+32. Porsche: 0,42%
+33. Estrima: 0,42%
+34. MINI: 0,42%
+35. Mahindra: 0,21%
+36. Alfa: 0,21%
+37. Chevrolet: 0,21%
+38. McLaren: 0,21%
 \end{verbatim}
 
-Jak widać, najpopularniejsze są pojazdy marki Volkswagen. Pojazdy tej marki stanowią 14.57\% wszystkich. \\
+Jak widać, najpopularniejsze są pojazdy marki Volkswagen. Pojazdy tej marki stanowią \text{12,34}\% wszystkich. \\
 
-Najmniej popularne są marki Chevrolet, Mitsubishi, Subaru, Alpina, TVS, Kawasaki, Aprilia i Harley-Davidson. Każdą z nich reprezentowało 0.20\% pojazdów, które się pojawiły w warsztacie. Ilość pojazdów, które były w warsztacie to 501. Było więcej samochodów niż motorów. Różnica między ilością obu typów pojazdu wynosiła 399, a samochodów było 450.
+Najmniej popularne są marki Alfa, Chevrolet, McLaren i Mahindra. Każdą z nich reprezentowało 0,21\% pojazdów, które się pojawiły w warsztacie. Ilość pojazdów, które były w warsztacie to \text{478}. Było więcej samochodów niż motorów. Różnica między ilością obu typów pojazdu wynosiła \text{376}, a samochodów było \text{427}.
 
 Sprawdzono także, jak prezentowałyby się rozkład marek, gdyby brano pod uwagę jedynie samochody
 
@@ -172,41 +169,40 @@ Sprawdzono także, jak prezentowałyby się rozkład marek, gdyby brano pod uwag
 Można przedstawić ranking marek, zaczynając od najczęściej się pojawiającej:
 
 \begin{verbatim}
-1. Volkswagen: 16.22%
-2. Opel: 10.44%
-3. Ford: 9.56%
-4. Renault: 9.33%
-5. Audi: 6%
-6. SEAT: 5.11%
-7. Fiat: 4.67%
-8. Skoda: 4.67%
-9. Mercedes-Benz: 4.22%
-10. Hyundai: 4%
-11. BMW: 3.78%
-12. Toyota: 3.11%
-13. smart: 2.67%
-14. Peugeot: 2.67%
-15. Kia: 1.78%
-16. Dacia: 1.56%
-17. Citroen: 1.33%
-18. Nissan: 1.33%
-19. Mazda: 1.11%
-20. Porsche: 0.89%
-21. MINI: 0.89%
-22. Volvo: 0.67%
-23. Jaguar: 0.67%
-24. Suzuki: 0.67%
-25. Jeep: 0.44%
-26. Lexus: 0.44%
-27. Land: 0.44%
-28. Cupra: 0.44%
-29. Mitsubishi: 0.22%
-30. Chevrolet: 0.22%
-31. Alpina: 0.22%
-32. Subaru: 0.22%
+1. Volkswagen: 13,82%
+2. Ford: 11,48%
+3. Opel: 10,54%
+4. Skoda: 7,26%
+5. Audi: 6,56%
+6. BMW: 5,85%
+7. SEAT: 5,15%
+8. Mercedes-Benz: 4,68%
+9. Renault: 4,22%
+10. Toyota: 3,51%
+11. Hyundai: 3,28%
+12. Peugeot: 3,28%
+13. Fiat: 2,81%
+14. Mazda: 2,34%
+15. Nissan: 2,34%
+16. Citroen: 2,11%
+17. Kia: 1,64%
+18. Volvo: 1,64%
+19. smart: 1,41%
+20. Suzuki: 1,17%
+21. Mitsubishi: 0,7%
+22. Jeep: 0,7%
+23. Dacia: 0,7%
+24. Subaru: 0,47%
+25. Porsche: 0,47%
+26. Estrima: 0,47%
+27. MINI: 0,47%
+28. Honda: 0,23%
+29. Alfa: 0,23%
+30. Chevrolet: 0,23%
+31. McLaren: 0,23%
 \end{verbatim}
 
-Wśród aut prym wiedzie Volkswagen, reprezentując  16.22\% naprawianych samochodów. Najmniej było samochodów marek Chevrolet, Alpina, Subaru i Mitsubishi. Było ich 0.22\% dla każdej. \\
+Wśród aut prym wiedzie Volkswagen, reprezentując  13,82\% naprawianych samochodów. Najmniej było samochodów marek Alfa, Chevrolet, McLaren i Honda. Było ich 0,23\% dla każdej. \\
 
 Pozostały do sprawdzenia motory.
 
@@ -215,20 +211,17 @@ Pozostały do sprawdzenia motory.
 Udział procentowy poszczególnych marek wśród nich prezentuje się następująco:
 
 \begin{verbatim}
-1. Hero: 23.53%
-2. Bajaj: 19.61%
-3. Honda: 15.69%
-4. Yamaha: 11.76%
-5. Royal: 7.84%
-6. Suzuki: 7.84%
-7. KTM: 5.88%
-8. Aprilia: 1.96%
-9. TVS: 1.96%
-10. Kawasaki: 1.96%
-11. Harley-Davidson: 1.96%
+1. Hero: 25,49%
+2. Bajaj: 21,57%
+3. Honda: 21,57%
+4. Royal: 9,8%
+5. TVS: 9,8%
+6. Yamaha: 5,88%
+7. KTM: 3,92%
+8. Mahindra: 1,96%
 \end{verbatim}
 
-Wśród nich najczęściej naprawiano motory marki Hero. Pojazdy tej marki stanowią 23.53\% wszystkich. Najmniej popularnymi motorami są z kolei modele marek TVS, Kawasaki, Harley-Davidson i Aprilia. W warsztacie było zaledwie 1.96\% motorów każdej z wymienionych marek.
+Wśród nich najczęściej naprawiano motory marki Hero. Pojazdy tej marki stanowią 25,49\% wszystkich. Najmniej popularnymi motorami są z kolei modele marki Mahindra. W warsztacie było zaledwie 1,96\% motorów tej marki.
 
 \section{Liczba naprawianych pojazdów w każdym miesiącu pracy warsztatu}
 
@@ -244,12 +237,12 @@ Wśród nich najczęściej naprawiano motory marki Hero. Pojazdy tej marki stano
 
 \end{knitrout}
 
-Wykres \ref{fig:fig_naprawy_miesiecznie} przedstawia liczbę naprawionych pojazdów w każdym miesiącu pracy warsztatu. Najwięcej pojazdów zostało naprawionych w miesiącach 
-grudzień 2014, maj 2017,
-a było ich 18. Natomiast najmniej przeprowadzonych napraw było w miesiącu
+Wykres \ref{fig:fig_naprawy_miesiecznie} przedstawia liczbę naprawionych pojazdów w każdym miesiącu pracy warsztatu. Najwięcej pojazdów zostało naprawionych w miesiącu 
+grudzień 2016,
+a było ich \text{18}. Natomiast najmniej przeprowadzonych napraw było w miesiącu
 styczeń 2014,
-było ich 0. Średnia liczba napraw miesięcznie wynosi 
-10.44. 
+było ich \text{0}. Średnia liczba napraw miesięcznie wynosi 
+\text{9,96}. 
 
 \section{Tabela najlepszych okazji}
 
@@ -262,20 +255,20 @@ Zostanie teraz omówiona tabela najlepszych okazji, czyli pojazdów skupionych i
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{verbatim}
-##     id_samochodu         marka    model   zysk
-## 58            65          Audi       S5 143474
-## 679          927 Mercedes-Benz C 63 AMG 130010
-## 452          609           BMW       X3 118888
-## 309          432         Tesla  Model S 114604
-## 507           65          Audi       S5 103300
+##     id_samochodu   marka model   zysk
+## 278          366  Alpina    B5 168512
+## 150          181   Mazda  CX-5  95402
+## 571          181   Mazda  CX-5  93600
+## 470          601 Porsche Macan  78542
+## 609          768   Volvo  XC60  76178
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
 
-Największy zysk ze sprzedaży pojazdu warsztat odniósł dla pojazdu o id 65. Jest nim Audi o modelu S5. Warsztat zarobił on na nim około 143.47 tys. zł. 
-Na drugim miejscu znajduje się Mercedes-Benz o modelu C 63 AMG. Zysk z tego pojazdu wyniósł około 130.01 tys. zł, czyli o około 13.46 tys. zł mniej niż dla pojazdu znajdującego się na pierwszym miejscu, czyli różnica w cenie jest duża.
-W trzeciej kolejności najwięcej zarobił pojazd BMW o modelu X3, na którym warsztat zarobił około 118.89 tys. zł. Jest to mniej od poprzedniego pojazdu o około 11.12 tys. zł, czyli różnica w cenie jest duża. 
-Ogólnie każdy pojazd znajdujący się w top 5 najlepszych okazji przyniósł zysk wielkości przynajmnej 100 tyś. zł.
+Największy zysk ze sprzedaży pojazdu warsztat odniósł dla pojazdu o id \text{366}. Jest nim Alpina o modelu B5. Warsztat zarobił on na nim około 168,51 tyś. zł. 
+Na drugim miejscu znajduje się Mazda o modelu CX-5. Zysk z tego pojazdu wyniósł około 95,4 tyś. zł, czyli o około 73,11 tyś. zł mniej niż dla pojazdu znajdującego się na pierwszym miejscu, czyli różnica w cenie jest duża.
+W trzeciej kolejności najwięcej zarobił pojazd Mazda o modelu CX-5, na którym warsztat zarobił około 93,6 tyś. zł. Jest to mniej od poprzedniego pojazdu o około 1,8 tyś. zł, czyli różnica w cenie jest duża. 
+Ogólnie każdy pojazd znajdujący się w top 5 najlepszych okazji przyniósł zysk wielkości przynajmnej 80 tyś. zł.
 
 \section{Profil klienta}
 
@@ -297,8 +290,8 @@ Pierwszą cechą wziętą pod uwagę jest płeć klienta. Zostanie sprawdzone, i
 
 \end{knitrout}
 
-Na wykresie słupkowym \ref{fig:fig_plec} są zaprezentowane liczności klientów przy podziale ze względu na płeć. Więcej klientów warsztatu należy do grupy mężczyzn, jest ich 749. Grupa mężczyzn jest około 1.055
-razy większa od grupy kobiet (jest ich 710), a zatem różnica jest nieduża.
+Na wykresie słupkowym \ref{fig:fig_plec} są zaprezentowane liczności klientów przy podziale ze względu na płeć. Więcej klientów warsztatu należy do grupy kobiet, jest ich \text{699}. Grupa kobiet jest około \text{1,015}
+razy większa od grupy mężczyzn (jest ich \text{689}), a zatem różnica jest nieduża.
 
 \subsection{Wiek}
 
@@ -320,8 +313,8 @@ Zostanie również przeanalizowany rozkład wieku klientów warsztatu.
 
 \end{knitrout}
 
-Rysunek \ref{fig:fig_wiek} przedstawia wykres pudełkowy wieku klientów warsztatu. Widać, że mediana wieku wynosi 46 lat, natomiast pierwszy kwartyl wynosi 37 lat, a trzeci kwartyl 56 lat. Zatem połowa klientów warsztatu jest wieku między 37 lat a 56 lat.
-Najmłodszy klient warsztatu ma 25 lat, natomiast najstarszy jest w wieku 64 lat.
+Rysunek \ref{fig:fig_wiek} przedstawia wykres pudełkowy wieku klientów warsztatu. Widać, że mediana wieku wynosi \text{45} lat, natomiast pierwszy kwartyl wynosi \text{36} lat, a trzeci kwartyl \text{54} lata. Zatem połowa klientów warsztatu jest wieku między \text{36} lat a \text{54} lata.
+Najmłodszy klient warsztatu ma \text{25} lat, natomiast najstarszy jest w wieku \text{64} lat.
 
 
 
@@ -329,32 +322,33 @@ Najmłodszy klient warsztatu ma 25 lat, natomiast najstarszy jest w wieku 64 lat
 \centering
 \begin{tabular}{c|c} \hline
 Miara & Wartość \\ \hline
-Średnia & 45.86 \\ 
-Odchylenie standardowe & 10.99 \\
-Skośność & -0.06  \\ 
-Kurtoza & 1.79 \\ \hline
+Średnia & \text{44,9} \\ 
+Odchylenie standardowe & \text{10,61} \\
+Skośność & \text{0,02}  \\ 
+Kurtoza & \text{1,88} \\ \hline
 \end{tabular}
 \caption{Wybrane miary wieku klientów}
 \label{tab_wiek}
 \end{table}
 
-Kilka miar, których nie da się odczytać z wykresu pudełkowego, zostało przedstawionych w tabeli \ref{tab_wiek}. Można zatem odczytać, że średnio klieci mają 45.86 lat, a odchylenie standardowe wieku wynosi 10.99 lat. Wartość współczynnika skośności jest bliska 0, a zatem rozkład wieku można uznać za symetryczny. Kurtoza przyjmuje wartość większą od 0, a zatem rozkład wieku jest leptokurtyczny, czyli jest bardziej wysmukły niż normalny.
+Kilka miar, których nie da się odczytać z wykresu pudełkowego, zostało przedstawionych w tabeli \ref{tab_wiek}. Można zatem odczytać, że średnio klieci mają \text{44,9} lat, a odchylenie standardowe wieku wynosi \text{10,61} lat. Wartość współczynnika skośności jest bliska 0, a zatem rozkład wieku można uznać za symetryczny. Kurtoza przyjmuje wartość większą od 0, a zatem rozkład wieku jest leptokurtyczny, czyli jest bardziej wysmukły niż normalny.
 
 \subsection{Miasto}
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{verbatim}
 ##   miejsce              miasto liczność
-## 1     1.0             Wrocław      743
-## 2     2.0        Zielona Góra       23
-## 3     3.5 Gorzów Wielkopolski       20
-## 4     3.5            Warszawa       20
-## 5     5.0              Poznań       18
+## 1     1,0             Wrocław      735
+## 2     2,0            Warszawa       19
+## 3     3,5                Łódź       18
+## 4     3,5               Opole       18
+## 5     5,5 Gorzów Wielkopolski       16
+## 6     5,5              Poznań       16
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
 
-Najwięcej klientów warsztatu pochodzi z miasta Wrocław. Liczniść w nim wynosi 743 klientów. W następnej kolejności najwięcej klientów pochodzi z miasta Zielona Góra, z czego liczność w nim wynosi 23 klientów, czyli jest ich 32.3 mniej niż klientów z miasta Wrocław. Na miejscu 3.5 są miasta Gorzów Wielkopolski, Warszawa, mieszka w nich 20 klientów. Natomiast na ostatnim miejscu przedstawionym w tabeli jest miasto Poznań, mieszka w nim 18 klientów.
+Najwięcej klientów warsztatu pochodzi z miasta Wrocław. Liczniść w nim wynosi \text{735} klientów. W następnej kolejności najwięcej klientów pochodzi z miasta Warszawa, z czego liczność w nim wynosi \text{19} klientów, czyli jest ich \text{38,68} mniej niż klientów z miasta Wrocław. Na miejscu \text{3,5} są miasta Łódź, Opole, mieszka w nich \text{18} klientów. Natomiast na ostatnim miejscu przedstawionym w tabeli są miasta Gorzów Wielkopolski, Poznań, mieszka w nich \text{16} klientów.
 
 \subsection{Karta lojalnościowa}
 
@@ -372,7 +366,7 @@ W tej części zostanie sprawdzone ilu klientów posiada kartę lojalnościową.
 
 \end{knitrout}
 
-Bardziej liczną grupą są klienci, którzy nie posiadają karty lojalnościowej, jest ich 1385 (95\% wszystkich klientów). W grupie klientów, którzy posiadają kartę lojalnościową, jest 74 osób i stanowią oni 5\% klientów warsztatu.
+Bardziej liczną grupą są klienci, którzy nie posiadają karty lojalnościowej, jest ich \text{1311} (\text{94}\% wszystkich klientów). W grupie klientów, którzy posiadają kartę lojalnościową, jest \text{77} osób i stanowią oni \text{6}\% klientów warsztatu.
 
 \section{Jak wybrane cechy pojazdów wpływają na zysk warsztatu?}
 
@@ -394,11 +388,11 @@ Pierwszą cechą braną pod uwagę jest rodzaj pojazdu, czyli czy jest to samoch
 
 \end{knitrout}
 
-Na rysunku \ref{fig:fig_typ} przedstawione są dwa wykresy pudełkowe zysków, jeden dla samochodów, drugi dla motocykli. Większa mediana, wynosząca 14.22, jest dla pojazdów typu samochód. W drugiej grupie wynosi ona 8.85 tyś. zł. 
-Większy pierwszy kwartyl występuje w grupie typu samochód, wynosi on 9.63 tyś. zł, w porównaniu dla grupy typu motocykl jego wartość wynosi 5.15 tyś. zł.
-W przypadku kwartyla trzeciego większa wartość występuje w grupie typu samochód (wynosi 22.18 tyś. zł). W drugiej grupie wynosi on 13.01 tyś. zł.
-Największy zysk przyniósł samochód, a wyniósł on 143 tyś. zł. 
-Najmniejszy zysk natomiast przyniósł samochód i wyniósł on -3 tyś. zł. Zatem częściej większy zysk dla warsztatu przynosi sprzedaż pojazdów typu samochód. 
+Na rysunku \ref{fig:fig_typ} przedstawione są dwa wykresy pudełkowe zysków, jeden dla samochodów, drugi dla motocykli. Większa mediana, wynosząca 13,98 tyś. zł, jest dla pojazdów typu samochód. W drugiej grupie wynosi ona 6,6 tyś. zł. 
+Większy pierwszy kwartyl występuje w grupie typu samochód, wynosi on 9,21 tyś. zł, w porównaniu dla grupy typu motocykl jego wartość wynosi 3,95 tyś. zł.
+W przypadku kwartyla trzeciego większa wartość występuje w grupie typu samochód (wynosi 21,31 tyś. zł). W drugiej grupie wynosi on 10,24 tyś. zł.
+Największy zysk przyniósł samochód, a wyniósł on 168,51 tyś. zł. 
+Najmniejszy zysk natomiast przyniósł samochód i wyniósł on -3,1 tyś. zł. Zatem częściej większy zysk dla warsztatu przynosi sprzedaż pojazdów typu samochód. 
 
 \subsection{Czy powypadkowy}
 
@@ -416,11 +410,11 @@ Następną badaną cechą jest to, czy pojazd jest powypadkowy.
 
 \end{knitrout}
 
-Na rysunku \ref{fig:fig_wypadkowy} przedstawione są dwa wykresy pudełkowe zysków dla pojazdów powypadkowych i niepowypadkowych. Większa mediana, wynosząca 14.22 tyś. zł, jest dla pojazdów niepowypadkowych. W drugiej grupie wynosi ona 11.56 tyś. zł. 
-Większy pierwszy kwartyl występuje w grupie pojazdów niepowypadkowych, wynosi on 9.69 tyś. zł, w porównaniu dla grupy pojazdów powypadkowych jego wartość wynosi 8 tyś. zł.
-Większa wartość trzeciego kwartylu występuje dla pojazdów niepowypadkowych i wynosi 22.87 tyś. zł. Dla pojazdów powypadkowych wynosi on 17.04 tyś. zł.
-Największy zysk przyniósł pojazd z grupy niepowypadkowych i wyniósł on 143.47 tyś. zł. 
-Najmniejszy zysk natomiast przyniósł pojazd z grupy niepowypadkowych i wyniósł on -3.2 tyś. zł. Zatem częściej większy zysk dla warsztatu przynosi sprzedaż pojazdów niepowypadkowych. 
+Na rysunku \ref{fig:fig_wypadkowy} przedstawione są dwa wykresy pudełkowe zysków dla pojazdów powypadkowych i niepowypadkowych. Większa mediana, wynosząca 13,78 tyś. zł, jest dla pojazdów niepowypadkowych. W drugiej grupie wynosi ona 10,1 tyś. zł. 
+Większy pierwszy kwartyl występuje w grupie pojazdów niepowypadkowych, wynosi on 9,12 tyś. zł, w porównaniu dla grupy pojazdów powypadkowych jego wartość wynosi 6,65 tyś. zł.
+Większa wartość trzeciego kwartylu występuje dla pojazdów niepowypadkowych i wynosi 20,86 tyś. zł. Dla pojazdów powypadkowych wynosi on 15,73 tyś. zł.
+Największy zysk przyniósł pojazd z grupy niepowypadkowych i wyniósł on 168,51 tyś. zł. 
+Najmniejszy zysk natomiast przyniósł pojazd z grupy niepowypadkowych i wyniósł on -3,1 tyś. zł. Zatem częściej większy zysk dla warsztatu przynosi sprzedaż pojazdów niepowypadkowych. 
 
 \subsection{Pojemność silnika}
 
@@ -438,11 +432,11 @@ Ostatnią cechą braną pod uwagę jest pojemność silnika pojazdu.
 
 \end{knitrout}
 
-Na rysunku \ref{fig:fig_wypadkowy} przedstawione są wykresy pudełkowe zysków ze względu na pojemność silnika. Największa mediana, wynosząca 19.9 tyś. zł, jest dla pojazdów o pojemności silnika powyżej 1.8 litra. Natomiast najmniej ona wynosi 8.86 tyś. zł w grupie pojazdów o pojemności poniżej 1.3 litra. 
-Największy pierwszy kwartyl występuje w grupie pojazdów o pojemności powyżej 1.8 litra, wynosi on 14.22 tyś. zł, w porównaniu z pojazdami o pojemności poniżej 1.3 litra, dla których jego wartość jest najmniejsza i wynosi 6.6 tyś. zł.
-Największa wartość trzeciego kwartylu występuje dla pojazdów o pojemności powyżej 1.8 litra i wynosi 32.7 tyś. zł. Dla pojazdów poniżej 1.3 litra wynosi on 11.77 tyś. zł i jest to najmnijesza wartość w tych grupach.
-Największy zysk przyniósł pojazd o pojemności silnika powyżej 1.8 litra i wyniósł on 143.47 tyś. zł. 
-Najmniejszy zysk natomiast przyniósł pojazd z pojemnością silnika powyżej 1.8 litra i wyniósł on -3.2 tyś. zł. Zatem przeważnie największy zysk dla warsztatu przynosi sprzedaż pojazdów o pojemności silnika powyżej 1.8 litra. Najczęściej najmniejszy zysk przynosi sprzedaż pojazdów z pojemnością silnika poniżej 1.3 litra.
+Na rysunku \ref{fig:fig_wypadkowy} przedstawione są wykresy pudełkowe zysków ze względu na pojemność silnika. Największa mediana, wynosząca 20,18 tyś. zł, jest dla pojazdów o pojemności silnika powyżej 1,8 litra. Natomiast najmniej ona wynosi 7,93 tyś. zł w grupie pojazdów o pojemności poniżej 1,3 litra. 
+Największy pierwszy kwartyl występuje w grupie pojazdów o pojemności powyżej 1,8 litra, wynosi on 14,65 tyś. zł, w porównaniu z pojazdami o pojemności poniżej 1,3 litra, dla których jego wartość jest najmniejsza i wynosi 5,4 tyś. zł.
+Największa wartość trzeciego kwartylu występuje dla pojazdów o pojemności powyżej 1,8 litra i wynosi 30,01 tyś. zł. Dla pojazdów poniżej 1,3 litra wynosi on 10,66 tyś. zł i jest to najmnijesza wartość w tych grupach.
+Największy zysk przyniósł pojazd o pojemności silnika powyżej 1,8 litra i wyniósł on 168,51 tyś. zł. 
+Najmniejszy zysk natomiast przyniósł pojazd z pojemnością silnika pomiędzy 1,3 i 1,8 litra i wyniósł on -3,1 tyś. zł. Zatem przeważnie największy zysk dla warsztatu przynosi sprzedaż pojazdów o pojemności silnika powyżej 1,8 litra. Najczęściej najmniejszy zysk przynosi sprzedaż pojazdów z pojemnością silnika poniżej 1,3 litra.
 
 \section{Kim są najlepszy mechanik i sprzedawca w warsztacie?}
 
@@ -453,16 +447,42 @@ Warsztatowi zależy na tym by sprzedawca zarobił dla firmy dużą kwotę (Może
 
 Tabela, w której są dane o sprzedawcach  pracujących w dowolnym momencie w warsztacie wygląda następująco:
 
-{\color{red}[tu wstaw tamto]} 
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+##         sprzedawca     suma ile_sprzedanych płaca id_pracownika status
+## 1  Sylwia Rakowska 21164080             363    46             3      0
+## 2 Bogdan Kudrevych 21381016             367    50             2      1
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+Jeżeli pracownik odszedł z warsztatu, to nielogicznym jest, by rozważać danie mu podwyżki.
+
+Po usunięciu pracowników, którzy już nie pracują otrzymujemy taką tabelę:
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{verbatim}
-##              mechanik   suma ile_napraw płaca id_pracownika status
-## 1        Lena Olejnik  50221        143  47.7             8      0
-## 2 Sabina Naguschewska  99202        176  46.3             7      1
-## 3       Bożena Wencka 129073        212  45.9             4      0
-## 4   Małgorzata Beliak 142445        203  49.7             6      1
+##         sprzedawca     suma ile_sprzedanych płaca id_pracownika status
+## 1 Bogdan Kudrevych 21381016             367    50             2      1
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+Obecnie tylko jedna osoba pracuje w firmie na tym stanowisku i jest to Bogdan Kudrevych. Ta osoba sprzedała pojazdy łącznie na kwotę wynoszącą 21381015,96 zł na sprzedaży pojazdów, co stanowi 100,51\% średniej sumy całej kwoty, którą wynegocjował z klientami sprzedawca przez cały okres pracy. Zarabiana przez tego pracownika kwota za godzinę pracy (50,00 zł) stanowi 104,17 \% średniej płacy sprzedawcy (48,00 zł). Różnica procentowa wynosi 3,66\% na korzyść pracownika, jednak biorąc pod uwagę, że to jedyna osoba pracująca obecnie jako sprzedawca w warsztacie i była porównywana z byłymi pracownikami, można jej zaoferować podniesienie płacy, by pozytywnie wpłynąć na jej motywację. \\
+
+Ten sprzedawca namówił klientów do kupna pojazdów w liczbie 367, co stanowi 100,55\% ilości sprzedanych pojazdów dzielonej przez liczbę kiedykolwiek zatrudnionych pracowników. Podobnie jak wcześniej, możemy spróbować porównać zarobki z ilością sprzedaży. różnica między stosunkiem zarobków do średniej płacy i sprzedanych przez obecnego sprzedawcę samochodów do średniej liczby przypadającej na sprzedawcę  wynosi 3,62\%. Gdyby jedynie brać pod uwagę ilość sprzedaży przy analizie to możnaby było zauważyć, że różnica jest na korzyść pracownika. Drobna podwyżka może jednak okazać się dla niego dobrym motywatorem. 
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+##              mechanik  suma ile_napraw płaca id_pracownika status
+## 1   Wiktoria Kamińska 56286        121  48,9             6      0
+## 2 Małgorzata Mrzygłód 68371        151  55,6             8      1
+## 3       Lilla Kotynia 71598        153  53,8             9      1
+## 4         Jane Chocyk 77660        121  50,2             7      1
+## 5     Krystyna Konina 82081        152  57,5             4      1
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
@@ -475,16 +495,18 @@ Pozostali następujący pracownicy:
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{verbatim}
-##              mechanik   suma ile_napraw płaca id_pracownika status
-## 1 Sabina Naguschewska  99202        176  46.3             7      1
-## 2   Małgorzata Beliak 142445        203  49.7             6      1
+##              mechanik  suma ile_napraw płaca id_pracownika status
+## 1 Małgorzata Mrzygłód 68371        151  55,6             8      1
+## 2       Lilla Kotynia 71598        153  53,8             9      1
+## 3         Jane Chocyk 77660        121  50,2             7      1
+## 4     Krystyna Konina 82081        152  57,5             4      1
 \end{verbatim}
 \end{kframe}
 \end{knitrout}
 
-Mechanik, który wykonał w firmie naprawy, za które klienci (po odliczeniu kosztu części) zapłacili najwięcej to Małgorzata Beliak i jest to kwota 142445.00 zł, co stanowi 135.36\% średniego zysku z napraw na mechanika. Pracownik zarabia kwotę 49.70 zł za godzinę pracy, co stanowi 104.85 \% średniej płacy mechanika (47.40 zł). Różnica między tymi wartościami to 30.51\%, wobec czego dobrze by było, gdyby firma zauważyła świetne wyniki tego pracownika i jego pozytywny wpływ na finanse warsztatu. \\
+Mechanik, który wykonał w firmie naprawy, za które klienci (po odliczeniu kosztu części) zapłacili najwięcej to Krystyna Konina i jest to kwota 82081,00 zł, co stanowi 115,28\% średniego zysku z napraw na mechanika. Pracownik zarabia kwotę 57,50 zł za godzinę pracy, co stanowi 108,08 \% średniej płacy mechanika (53,20 zł). Różnica między tymi wartościami to 7,20\%, wobec czego dobrze by było, gdyby firma zauważyła świetne wyniki tego pracownika i jego pozytywny wpływ na finanse warsztatu. \\
 
-Pracownik, który dokonał największej liczby napraw to znów Małgorzata Beliak. Liczba napraw dokonana przez niego wynosi 203, co stanowi 110.93\% średniej ilości napraw na mechanika. Jej zarobki wynoszą 49.70 zł na godzinę, co stanowi 104.85 \% średniej płacy mechanika (47.40 zł). Różnica między tymi dwoma wartościami wynosi 6.08\%, więc podwyżka wydaje się rozsądnym rozwiązaniem, aby okazać mechanikowi, że warsztat go docenia.
+Pracownik, który dokonał największej liczby napraw to Lilla Kotynia. Liczba napraw dokonana przez niego wynosi 153, co stanowi 110,07\% średniej ilości napraw na mechanika. Jej zarobki wynoszą 53,80 zł na godzinę, co stanowi 101,13 \% średniej płacy mechanika (53,20 zł). Różnica między tymi dwoma wartościami wynosi 8,94\%, więc podwyżka wydaje się rozsądnym rozwiązaniem, aby okazać mechanikowi, że warsztat go docenia.
 
 \section{Analiza bilansu}
 
@@ -505,10 +527,10 @@ Sprawdziliśmy, jak wyglądają miesięczne wydatki na zakup pojazdów, które w
 \end{knitrout}
 
 Wykres \ref{fig:fig_zakup_pojazdu} przedstawia miesięczne wydatki na zakup pojazdów. 
-Największe wydatki warsztat miał w miesiącu październik 2015. Były one w wysokości 1408.2 tyś. zł. 
-Wydatki wielkości 1090.6 tyś. zł były drugimi najwyższymi i były 1.29 razy mniejsze od tych największych. Wystąpiły one w miesiącu wrzesień 2014.
-Najmniejsze wydatki warsztat zaobserwował w miesiącu luty 2016 i wyniosły one 392.7 tyś. zł. 
-Drugie co do wielkości najniższe wydatki na zakup pojazdów wystąpiły miesiącu styczeń 2016, a wyniosły one 398.5 tyś. zł.
+Największe wydatki warsztat miał w miesiącu wrzesień 2014. Były one w wysokości 1,17 mln. zł. 
+Wydatki wielkości 1,07 mln. zł tyś. zł były drugimi najwyższymi i były \text{1,1} razy mniejsze od tych największych. Wystąpiły one w miesiącu styczeń 2014.
+Najmniejsze wydatki warsztat zaobserwował w miesiącu lipiec 2017 i wyniosły one 372,3 tyś. zł. 
+Drugie co do wielkości najniższe wydatki na zakup pojazdów wystąpiły miesiącu luty 2014, a wyniosły one 381,6 tyś. zł.
 W każdym miesiącu działania warsztatu wydatki na zakup pojazdów wyniosły przynajmnej 400 tyś. zł.
 
 \subsection{Analiza wydatków na zakup części}
@@ -528,11 +550,11 @@ Następnie zostało sprawdzone, jak wyglądają miesięczne wydatki na zakup cz�
 \end{knitrout}
 
 Wykres \ref{fig:fig_zakup_czesci} przedstawia miesięczne wydatki na zakup części do naprawy pojazdów.
-Największe wydatki warsztat miał w miesiącu czerwiec 2017 i wyniosły one 16.77 tyś. zł. 
-Drugie najwyższye wydatkami były wielkości 16.01 tyś. zł i były 1.05 razy mniejsze od tych największych. Wystąpiły one w miesiącu kwiecień 2014.
-Najmniejsze wydatki na części zostały odnotowane w miesiącu styczeń 2014 i wyniosły 0 tyś. zł. 
-Drugie najmniejsze wydatki wyniosły 0.97 tyś. zł. Wystąpił on w miesiącu luty 2014.
-Ogólnie w każdym miesiącu działania warsztatu wydatki na zakup części wyniosły przynajmnej 0 tyś. zł.
+Największe wydatki warsztat miał w miesiącu lipiec 2015 i wyniosły one 11,29 tyś. zł. 
+Drugie najwyższe wydatkami były wielkości 10,82 tyś. zł i były \text{1,04} razy mniejsze od tych największych. Wystąpiły one w miesiącu grudzień 2016.
+Najmniejsze wydatki na części zostały odnotowane w miesiącu styczeń 2014 i wyniosły 0 zł. 
+Drugie najmniejsze wydatki wyniosły 973 zł. Wystąpił on w miesiącu luty 2014.
+Ogólnie w każdym miesiącu działania warsztatu wydatki na zakup części wyniosły przynajmnej 0 zł.
 
 \subsection{Analiza przychodów z usług warsztatu}
 
@@ -551,10 +573,10 @@ Chcielibyśmy sprawdzić, jak wyglądają miesięczne przychody (lub straty) wyn
 \end{knitrout}
 
 Na wykresie \ref{fig:fig_uslugi} przedstawiony jest miesięczny przychód wynikający z prowadzenia warsztatu. Zostały na nim uwzględnione koszty napraw własnych. 
-Największy przychód był zaobserwowany w miesiącu kwiecień 2014 i wyniósł on wtedy 40.86 tyś. zł.
-Następny co do wielkości przychód wystąpił w miesiącu maj 2017, wyniósł on 31.85 tyś. zł. Jest on 1.28 razy mniejszy niż najwyższy przychód.
-Najmniejszy przychód warsztat odnotował w miesiącu maj 2015, który wyniósł -3.26 tyś. zł. 
-Drugi najmniejszy przychód wyniósł -2.65 tyś. zł i wystąpił w miesiącu czerwiec 2014.
+Największy przychód był zaobserwowany w miesiącu styczeń 2016 i wyniósł on wtedy 27,19 tyś. zł.
+Następny co do wielkości przychód wystąpił w miesiącu luty 2016, wyniósł on 22,94 tyś. zł. Jest on \text{1,18} razy mniejszy niż najwyższy przychód.
+Najmniejszy przychód warsztat odnotował w miesiącu grudzień 2017, który wyniósł -2,28 tyś. zł. 
+Drugi najmniejszy przychód wyniósł -335 zł i wystąpił w miesiącu listopad 2017.
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
@@ -569,10 +591,10 @@ Drugi najmniejszy przychód wyniósł -2.65 tyś. zł i wystąpił w miesiącu c
 \end{knitrout}
 
 Na wykresie \ref{fig:fig_uslugi2} przedstawiony jest miesięczny przychód wynikający z prowadzenia warsztatu, ale tym razem bez uwzględnienia kosztów własnych. 
-Największy przychód warsztat zaobserwował w miesiącu kwiecień 2014, który wyniósł 41.2 tyś. zł.
-Drugi zaś co do wielkości przychód wsytąpił w miesiącu maj 2017, wyniósł on 31.88 tyś. zł, czyli jest 1.29 razy mniejszy niż ten najwyższy zaobserwowany.
-Najmniejszy przychód został odnotowany w miesiącu styczeń 2014 i wyniósł 0 tyś. zł. 
-Drugi najmniejszy przychód wyniósł 0.18 tyś. zł. Wystąpił on w miesiącu czerwiec 2014.
+Największy przychód warsztat zaobserwował w miesiącu styczeń 2016, który wyniósł 27,19 tyś. zł.
+Drugi zaś co do wielkości przychód wsytąpił w miesiącu luty 2016, wyniósł on 23,68 tyś. zł, czyli jest \text{1,15} razy mniejszy niż ten najwyższy zaobserwowany.
+Najmniejszy przychód został odnotowany w miesiącu styczeń 2014 i wyniósł 0 zł. 
+Drugi najmniejszy przychód wyniósł 947 zł. Wystąpił on w miesiącu grudzień 2017.
 
 \subsection{Koszty wypłat dla pracowników}
 
@@ -592,8 +614,8 @@ Zostanie sprawdzone, jakie miesięczne koszty ponosi warsztat na wypłaty pensji
 
 \end{knitrout}
 
-Wykres \ref{fig:fig_pracownicy} przedstawia miesięczne koszty wypłat pensji pracowników. Największy koszt warsztat odnotował w miesiącu październik 2016 i wyniósł on 102.49 tyś. zł. 
-Natomiast najmniejsze koszty wystąpiły w miesiącu styczeń 2014. Wyniosły one 0 zł. Wynika to z tego, że jest to pierwszy miesiąc działania warsztatu, a pensje wypłacamy pracownikom pierwszego dnia następnego miesiąca.. Poza tym miesiącem najmniej wypłacono pracownikom w miesiącu luty 2014. Była to kwota 44.03 tyś. zł
+Wykres \ref{fig:fig_pracownicy} przedstawia miesięczne koszty wypłat pensji pracowników. Największy koszt warsztat odnotował w miesiącu grudzień 2017 i wyniósł on 103,28 tyś. zł. Zatem widać, że aktualnie warsztat ponosi największe koszty wynikające z wypłat dla pracowników. 
+Natomiast najmniejsze koszty wystąpiły w miesiącu styczeń 2014. Wyniosły one 0 zł. Wynika to z tego, że jest to pierwszy miesiąc działania warsztatu, a pensje wypłacamy pracownikom pierwszego dnia następnego miesiąca.. Poza tym miesiącem najmniej wypłacono pracownikom w miesiącu luty 2014. Była to kwota 43,82 tyś. zł.
 
 \subsection{Wpływy ze sprzedaży pojazdów}
 
@@ -612,15 +634,15 @@ Następnie zostaną sprawdzone miesięczne wpływy finansowe ze sprzedaży pojaz
 \end{knitrout}
 
 Na wykresie \ref{fig:fig_samochody_wplywy} przedstawione są wpływy finansowe ze sprzedaży pojazdów. 
-Największe miesięczne wpływy warsztatu ze sprzedaży pojazdów wynosiły 1.24 mln. zł. Wystąpiły one w miesiącu grudzień 2015. 
-Drugie co do wielkości wpływy (w wysokości 1.17 mln. zł) zostały odnotowane w miesiącu kwiecień 2017. Są one 1.06 razy mniejsze niż te największe zaobserwowane.
-Najmniejsze miesięczne wpływy wyniosły 0.32 mln. zł, a wystąpiły one w miesiącu marzec 2014.
-Kolejnymi najmniejszymi są wpływy z miesiącu styczeń 2014. Są one wysokości 0.36 mln. zł.
+Największe miesięczne wpływy warsztatu ze sprzedaży pojazdów wynosiły 1,15 mln. zł. Wystąpiły one w miesiącu grudzień 2016. 
+Drugie co do wielkości wpływy (w wysokości 1,09 mln. zł) zostały odnotowane w miesiącu lipiec 2015. Są one \text{1,06} razy mniejsze niż te największe zaobserwowane.
+Najmniejsze miesięczne wpływy wyniosły 0,39835494 zł, a wystąpiły one w miesiącu luty 2014.
+Kolejnymi najmniejszymi są wpływy z miesiącu styczeń 2014. Są one wysokości 404,64 tyś. zł.
 
 
 \subsection{Bilans miesięczny}
 
-Teraz zostanie sprawdzoby miesięczny bilans warsztatu. Zostaną sprawdzone miesięczne przychody warsztaty przez cały okres jego działania oraz comiesięczny stan środków finansowych firmy, gdyby warsztat zaczynał bez posiadania żadnych średków pienięznych.
+Teraz zostanie sprawdzony miesięczny bilans warsztatu. Zostaną sprawdzone miesięczne przychody warsztaty przez cały okres jego działania oraz comiesięczny stan środków finansowych firmy, gdyby warsztat zaczynał bez posiadania żadnych średków pienięznych.
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
@@ -637,8 +659,8 @@ Teraz zostanie sprawdzoby miesięczny bilans warsztatu. Zostaną sprawdzone mies
 %złączenie: na miesiąc = naprawy(te z minusami, bo mają razem części) + sprzedaż pojazdu -zakup pojazdu - wypłaty (czy ja coś pominęłam?)
 
 Wykres \ref{fig:fig_bilans} przedstawia miesięczne przychody firmy od początku jej działalności. 
-Najwięcej warsztat zarobił (702.95 tyś. zł) w miesiącu styczeń 2016.
-Natomiast najmniej w miesiącu styczeń 2014. Zyski wyniosły wtedy -650.09 tyś. zł. Przez pierwsze 3 miesięcy pracy warsztat nie przynosił żadnych zysków.
+Najwięcej warsztat zarobił (409,05 tyś. zł) w miesiącu grudzień 2017.
+Natomiast najmniej w miesiącu styczeń 2014. Zyski wyniosły wtedy -662,16 tyś. zł. Przez pierwsze 5 miesięcy pracy warsztat nie przynosił żadnych zysków.
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[H]
@@ -652,12 +674,12 @@ Natomiast najmniej w miesiącu styczeń 2014. Zyski wyniosły wtedy -650.09 tyś
 
 \end{knitrout}
 
-Wykres \ref{fig:fig_bilans_suma} przedstawia miesięczny stan finansowy warsztatu, gdyby zaczynał działalność bez środków pieniężnych. W pierwszym miesiącu działalności stan finansowy wyniósł -0.65 mln. zł, natomiast aktualnie wynosi on 6.91 mln. zł. Przez pierwsze 14 miesięcy pracy warsztatu jego stan finansowy był ujemny.
-Największą ilością pieniędzy warsztat operował w miesiącu grudzień 2017, było to 6.91 mln. zł.
-Natomiast najmniejszą w miesiącu wrzesień 2014, a było to -1.82 mln. zł.
+Wykres \ref{fig:fig_bilans_suma} przedstawia miesięczny stan finansowy warsztatu, gdyby zaczynał działalność bez środków pieniężnych. W pierwszym miesiącu działalności stan finansowy wyniósł -662,16 tyś. zł, natomiast aktualnie wynosi on 6,25 mln. zł. Przez pierwsze 17 miesięcy pracy warsztatu jego stan finansowy był ujemny.
+Największą ilością pieniędzy warsztat operował w miesiącu grudzień 2017, było to 6,25 mln. zł.
+Natomiast najmniejszą w miesiącu wrzesień 2014, a było to -1,54 mln. zł.
 
 \section{Podsumowanie}
-
+W tym raporcie przeanalizowano różne aspekty działalności warsztatu. Sprawdzano między innymi dane dotyczące sprzedaży i napraw pojazdów. Przeanalizowano także, jak wygląda grupa docelowa warsztatu, czyli jakie cechy mają nasi klienci. Poddano także analizie miesięczne przychody warsztatu i sprawdzono to, którzy pracownicy się najbardziej przyczynili do sukcesu firmy.
 
 
 

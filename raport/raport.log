@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.4.13)  28 JUN 2024 17:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.4.13)  28 JUN 2024 18:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -72,17 +72,74 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameRule=\dimen143
 \FrameSep=\dimen144
 )
+(d:/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(d:/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(d:/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen145
+))
+(d:/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen146
+)
+(d:/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count187
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count188
+\leftroot@=\count189
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count190
+\DOTSCASE@=\count191
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen147
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count192
+\c@MaxMatrixCols=\count193
+\dotsspace@=\muskip16
+\c@parentequation=\count194
+\dspbrk@lvl=\count195
+\tag@help=\toks17
+\row@=\count196
+\column@=\count197
+\maxfields@=\count198
+\andhelp@=\toks18
+\eqnshift@=\dimen148
+\alignsep@=\dimen149
+\tagshift@=\dimen150
+\tagwidth@=\dimen151
+\totwidth@=\dimen152
+\lineht@=\dimen153
+\@envbody=\toks19
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
 (d:/texlive/2021/texmf-dist/tex/latex/base/alltt.sty
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
 (d:/texlive/2021/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2020/08/01 v1.3d Input encoding file
-\inpenc@prehook=\toks16
-\inpenc@posthook=\toks17
+\inpenc@prehook=\toks21
+\inpenc@posthook=\toks22
 )
 (d:/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks18
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
@@ -151,9 +208,9 @@ LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 )
 (d:/texlive/2021/texmf-dist/tex/latex/units/nicefrac.sty
 Package: nicefrac 1998/08/04 v0.9b Nice fractions
-\L@UnitsRaiseDisplaystyle=\skip50
-\L@UnitsRaiseTextstyle=\skip51
-\L@UnitsRaiseScriptstyle=\skip52
+\L@UnitsRaiseDisplaystyle=\skip53
+\L@UnitsRaiseTextstyle=\skip54
+\L@UnitsRaiseScriptstyle=\skip55
 
 (d:/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
@@ -164,16 +221,8 @@ Package: expl3 2021-02-18 L3 programming layer (loader)
 
 (d:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count187
-\l__pdf_internal_box=\box47
-))
-(d:/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2000/06/29 v2.01 AMS text
-
-(d:/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks19
-\ex@=\dimen145
+\l__color_backend_stack_int=\count199
+\l__pdf_internal_box=\box49
 ))
 (d:/texlive/2021/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
@@ -186,21 +235,21 @@ Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 (d:/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex)))
 (d:/texlive/2021/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
 Package: xtemplate 2021-03-12 L3 Experimental prototype document functions
-\l__xtemplate_tmp_dim=\dimen146
-\l__xtemplate_tmp_int=\count188
-\l__xtemplate_tmp_muskip=\muskip16
-\l__xtemplate_tmp_skip=\skip53
+\l__xtemplate_tmp_dim=\dimen154
+\l__xtemplate_tmp_int=\count266
+\l__xtemplate_tmp_muskip=\muskip17
+\l__xtemplate_tmp_skip=\skip56
 )
 Package: xfrac 2021-03-12 L3 Experimental split-level fractions
-\l__xfrac_slash_box=\box48
-\l__xfrac_tmp_box=\box49
-\l__xfrac_denominator_bot_sep_dim=\dimen147
-\l__xfrac_numerator_bot_sep_dim=\dimen148
-\l__xfrac_numerator_top_sep_dim=\dimen149
-\l__xfrac_slash_left_sep_dim=\dimen150
-\l__xfrac_slash_right_sep_dim=\dimen151
-\l__xfrac_slash_left_muskip=\muskip17
-\l__xfrac_slash_right_muskip=\muskip18
+\l__xfrac_slash_box=\box50
+\l__xfrac_tmp_box=\box51
+\l__xfrac_denominator_bot_sep_dim=\dimen155
+\l__xfrac_numerator_bot_sep_dim=\dimen156
+\l__xfrac_numerator_top_sep_dim=\dimen157
+\l__xfrac_slash_left_sep_dim=\dimen158
+\l__xfrac_slash_right_sep_dim=\dimen159
+\l__xfrac_slash_left_muskip=\muskip18
+\l__xfrac_slash_right_muskip=\muskip19
 
 Package xtemplate Info: Declaring object type 'xfrac' taking 3 argument(s) on
 (xtemplate)             line 80.
@@ -215,18 +264,18 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (d:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count189
-\Gm@cntv=\count190
-\c@Gm@tempcnt=\count191
-\Gm@bindingoffset=\dimen152
-\Gm@wd@mp=\dimen153
-\Gm@odd@mp=\dimen154
-\Gm@even@mp=\dimen155
-\Gm@layoutwidth=\dimen156
-\Gm@layoutheight=\dimen157
-\Gm@layouthoffset=\dimen158
-\Gm@layoutvoffset=\dimen159
-\Gm@dimlist=\toks20
+\Gm@cnth=\count267
+\Gm@cntv=\count268
+\c@Gm@tempcnt=\count269
+\Gm@bindingoffset=\dimen160
+\Gm@wd@mp=\dimen161
+\Gm@odd@mp=\dimen162
+\Gm@even@mp=\dimen163
+\Gm@layoutwidth=\dimen164
+\Gm@layoutheight=\dimen165
+\Gm@layouthoffset=\dimen166
+\Gm@layoutvoffset=\dimen167
+\Gm@dimlist=\toks23
 )
 (d:/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
@@ -257,9 +306,9 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 (d:/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-\@linkdim=\dimen160
-\Hy@linkcounter=\count192
-\Hy@pagecounter=\count193
+\@linkdim=\dimen168
+\Hy@linkcounter=\count270
+\Hy@pagecounter=\count271
 
 (d:/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
@@ -276,7 +325,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (d:/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count194
+\Hy@SavedSpaceFactor=\count272
 
 (d:/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
@@ -290,14 +339,14 @@ Package hyperref Info: Plain pages OFF on input line 4207.
 Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count195
+\c@Hy@tempcnt=\count273
 
 (d:/texlive/2021/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip19
+\Urlmuskip=\muskip20
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4804.
-\XeTeXLinkMargin=\dimen161
+\XeTeXLinkMargin=\dimen169
 
 (d:/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -306,9 +355,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count196
-\Field@Width=\dimen162
-\Fld@charsize=\dimen163
+\Fld@menulength=\count274
+\Field@Width=\dimen170
+\Fld@charsize=\dimen171
 Package hyperref Info: Hyper figures OFF on input line 6075.
 Package hyperref Info: Link nesting OFF on input line 6080.
 Package hyperref Info: Hyper index ON on input line 6083.
@@ -324,9 +373,9 @@ Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
 ge
 with kernel methods
 )
-\Hy@abspage=\count197
-\c@Item=\count198
-\c@Hfootnote=\count199
+\Hy@abspage=\count275
+\c@Item=\count276
+\c@Hfootnote=\count277
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -338,8 +387,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
 e
 with kernel methods
 )
-\Fld@listcount=\count266
-\c@bookmark@seq@number=\count267
+\Fld@listcount=\count278
+\c@bookmark@seq@number=\count279
 
 (d:/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
@@ -350,16 +399,16 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
-\Hy@SectionHShift=\skip54
+\Hy@SectionHShift=\skip57
 )
 (d:/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
 (d:/texlive/2021/texmf-dist/tex/latex/footmisc/footmisc.sty
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
-\FN@temptoken=\toks21
-\footnotemargin=\dimen164
-\c@pp@next@reset=\count268
+\FN@temptoken=\toks24
+\footnotemargin=\dimen172
+\c@pp@next@reset=\count280
 Package footmisc Info: Declaring symbol style bringhurst on input line 855.
 Package footmisc Info: Declaring symbol style chicago on input line 863.
 Package footmisc Info: Declaring symbol style wiley on input line 872.
@@ -371,11 +420,11 @@ Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
 )
 (d:/texlive/2021/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count269
-\float@exts=\toks22
-\float@box=\box50
-\@float@everytoks=\toks23
-\@floatcapt=\box51
+\c@float@type=\count281
+\float@exts=\toks25
+\float@box=\box52
+\@float@everytoks=\toks26
+\@floatcapt=\box53
 )
 (d:/texlive/2021/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
@@ -383,46 +432,46 @@ tim
 ) (./raport.aux)
 \openout1 = `raport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 68.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 69.
 LaTeX Font Info:    Trying to load font information for OT4+cmr on input line 6
-8.
+9.
 
 (d:/texlive/2021/texmf-dist/tex/latex/polski/ot4cmr.fd
 File: ot4cmr.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
 
 (d:/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count270
-\scratchdimen=\dimen165
-\scratchbox=\box52
-\nofMPsegments=\count271
-\nofMParguments=\count272
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count273
-\MPscratchDim=\dimen166
-\MPnumerator=\count274
-\makeMPintoPDFobject=\count275
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count282
+\scratchdimen=\dimen173
+\scratchbox=\box54
+\nofMPsegments=\count283
+\nofMParguments=\count284
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count285
+\MPscratchDim=\dimen174
+\MPnumerator=\count286
+\makeMPintoPDFobject=\count287
+\everyMPtoPDFconversion=\toks28
 ) (d:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -466,7 +515,7 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 68.
+Package hyperref Info: Link coloring OFF on input line 69.
 (d:/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -476,11 +525,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (d:/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count276
+\c@section@level=\count288
 )
-LaTeX Info: Redefining \ref on input line 68.
-LaTeX Info: Redefining \pageref on input line 68.
-LaTeX Info: Redefining \nameref on input line 68.
+LaTeX Info: Redefining \ref on input line 69.
+LaTeX Info: Redefining \pageref on input line 69.
+LaTeX Info: Redefining \nameref on input line 69.
 
 (./raport.out) (./raport.out)
 \@outlinefile=\write3
@@ -490,17 +539,17 @@ LaTeX Info: Redefining \nameref on input line 68.
 
 {d:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for OT4+cmtt on input line 
-119.
+120.
  (d:/texlive/2021/texmf-dist/tex/latex/polski/ot4cmtt.fd
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--210
+Underfull \hbox (badness 10000) in paragraph at lines 205--206
 
  []
 
@@ -509,61 +558,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 209--210
 File: figure/fig_naprawy_miesiecznie-1.pdf Graphic file (type pdf)
 <use figure/fig_naprawy_miesiecznie-1.pdf>
 Package pdftex.def Info: figure/fig_naprawy_miesiecznie-1.pdf  used on input li
-ne 238.
+ne 231.
 (pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
  [4pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.272 \end{kframe}
-                   <./figure/fig_naprawy_miesiecznie-1.pdf>]
+l.277 \subsection
+                 {PÅ‚eÄ‡} <./figure/fig_naprawy_miesiecznie-1.pdf>]
 <figure/fig_plec-1.pdf, id=120, 289.08pt x 289.08pt>
 File: figure/fig_plec-1.pdf Graphic file (type pdf)
 <use figure/fig_plec-1.pdf>
-Package pdftex.def Info: figure/fig_plec-1.pdf  used on input line 291.
+Package pdftex.def Info: figure/fig_plec-1.pdf  used on input line 284.
 (pdftex.def)             Requested size: 289.07928pt x 289.09251pt.
 <figure/fig_wiek-1.pdf, id=122, 361.35pt x 216.81pt>
 File: figure/fig_wiek-1.pdf Graphic file (type pdf)
 <use figure/fig_wiek-1.pdf>
-Package pdftex.def Info: figure/fig_wiek-1.pdf  used on input line 314.
+Package pdftex.def Info: figure/fig_wiek-1.pdf  used on input line 307.
 (pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
  [5pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.319 \end{figure}
-                   <./figure/fig_plec-1.pdf>]
+l.313 
+       <./figure/fig_plec-1.pdf>]
 LaTeX Font Info:    Trying to load font information for OML+plm on input line 3
-30.
+23.
 
 (d:/texlive/2021/texmf-dist/tex/latex/polski/omlplm.fd
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    Trying to load font information for OMS+plsy on input line 
-330.
+323.
 
 (d:/texlive/2021/texmf-dist/tex/latex/polski/omsplsy.fd
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    Trying to load font information for OMX+plex on input line 
-330.
+323.
 
 (d:/texlive/2021/texmf-dist/tex/latex/polski/omxplex.fd
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 330.
+(Font)              <10> on input line 323.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 330.
+(Font)              <7> on input line 323.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 330.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 330
+(Font)              <5> on input line 323.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 323
 .
 
 (d:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 330
+LaTeX Font Info:    Trying to load font information for U+msb on input line 323
 .
 
 (d:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -572,57 +621,57 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.358 
-      pdfTeX warning (ext4): destination with the same identifier (name{table.1
-}) has been already used, duplicate ignored
+l.353 \subsection
+                 {Karta lojalnoÅ›ciowa}pdfTeX warning (ext4): destination with 
+the same identifier (name{table.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.358 
-       <./figure/fig_wiek-1.pdf>]
+l.353 \subsection
+                 {Karta lojalnoÅ›ciowa} <./figure/fig_wiek-1.pdf>]
 <figure/fig_karta-1.pdf, id=146, 289.08pt x 289.08pt>
 File: figure/fig_karta-1.pdf Graphic file (type pdf)
 <use figure/fig_karta-1.pdf>
-Package pdftex.def Info: figure/fig_karta-1.pdf  used on input line 366.
+Package pdftex.def Info: figure/fig_karta-1.pdf  used on input line 360.
 (pdftex.def)             Requested size: 289.07928pt x 289.09251pt.
 <figure/fig_typ-1.pdf, id=147, 361.35pt x 289.08pt>
 File: figure/fig_typ-1.pdf Graphic file (type pdf)
 <use figure/fig_typ-1.pdf>
-Package pdftex.def Info: figure/fig_typ-1.pdf  used on input line 388.
+Package pdftex.def Info: figure/fig_typ-1.pdf  used on input line 382.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
  [7pdfTeX warning (ext4): destination with the same identifier (name{figure.4})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.394 
+l.388 
        <./figure/fig_karta-1.pdf>]
 <figure/fig_wypadkowy-1.pdf, id=161, 361.35pt x 289.08pt>
 File: figure/fig_wypadkowy-1.pdf Graphic file (type pdf)
 <use figure/fig_wypadkowy-1.pdf>
-Package pdftex.def Info: figure/fig_wypadkowy-1.pdf  used on input line 410.
+Package pdftex.def Info: figure/fig_wypadkowy-1.pdf  used on input line 404.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
  [8pdfTeX warning (ext4): destination with the same identifier (name{figure.5})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.416 
+l.410 
        <./figure/fig_typ-1.pdf>]
 <figure/fig_pojemnosc-1.pdf, id=173, 361.35pt x 289.08pt>
 File: figure/fig_pojemnosc-1.pdf Graphic file (type pdf)
 <use figure/fig_pojemnosc-1.pdf>
-Package pdftex.def Info: figure/fig_pojemnosc-1.pdf  used on input line 432.
+Package pdftex.def Info: figure/fig_pojemnosc-1.pdf  used on input line 426.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
  [9pdfTeX warning (ext4): destination with the same identifier (name{figure.6})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.438 
+l.432 
        <./figure/fig_wypadkowy-1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 449--450
+Underfull \hbox (badness 10000) in paragraph at lines 443--444
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 451--452
+Underfull \hbox (badness 10000) in paragraph at lines 445--446
 
  []
 
@@ -630,128 +679,136 @@ Underfull \hbox (badness 10000) in paragraph at lines 451--452
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.456 {\color{red}[
-                   tu wstaw tamto]} <./figure/fig_pojemnosc-1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 471--472
+l.451 ....969, 0.969}\color{fgcolor}\begin{kframe}
+                                                   <./figure/fig_pojemnosc-1.pd
+f>]
+Underfull \hbox (badness 10000) in paragraph at lines 473--474
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 485--486
+Underfull \hbox (badness 10000) in paragraph at lines 491--492
 
  []
 
-<figure/fig_zakup_pojazdu-1.pdf, id=195, 650.43pt x 289.08pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 507--508
+
+ []
+
+[11]
+<figure/fig_zakup_pojazdu-1.pdf, id=199, 650.43pt x 289.08pt>
 File: figure/fig_zakup_pojazdu-1.pdf Graphic file (type pdf)
 <use figure/fig_zakup_pojazdu-1.pdf>
-Package pdftex.def Info: figure/fig_zakup_pojazdu-1.pdf  used on input line 498
+Package pdftex.def Info: figure/fig_zakup_pojazdu-1.pdf  used on input line 520
 .
 (pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
-[11]
 <figure/fig_zakup_czesci-1.pdf, id=201, 650.43pt x 289.08pt>
 File: figure/fig_zakup_czesci-1.pdf Graphic file (type pdf)
 <use figure/fig_zakup_czesci-1.pdf>
-Package pdftex.def Info: figure/fig_zakup_czesci-1.pdf  used on input line 521.
+Package pdftex.def Info: figure/fig_zakup_czesci-1.pdf  used on input line 543.
 
 (pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
  [12pdfTeX warning (ext4): destination with the same identifier (name{figure.8}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.536 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-9}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.536 
-       <./figure/fig_zakup_pojazdu-1.pdf> <./figure/fig_zakup_czesci-1.pdf>]
-Overfull \hbox (0.79445pt too wide) in paragraph at lines 539--540
+l.549 
+       <./figure/fig_zakup_pojazdu-1.pdf>]
+Overfull \hbox (0.79529pt too wide) in paragraph at lines 561--562
 \OT4/qpl/m/n/10 Chcieliby±my spraw-dzi¢, jak wy-gl¡-da-j¡ mie-si¦cz-ne przy-cho
 -dy (lub stra-ty) wy-ni-ka-j¡-ce z pro-wa-dze-nia warsz-
  []
 
-<figure/fig_uslugi-1.pdf, id=219, 650.43pt x 289.08pt>
+<figure/fig_uslugi-1.pdf, id=213, 650.43pt x 289.08pt>
 File: figure/fig_uslugi-1.pdf Graphic file (type pdf)
 <use figure/fig_uslugi-1.pdf>
-Package pdftex.def Info: figure/fig_uslugi-1.pdf  used on input line 544.
+Package pdftex.def Info: figure/fig_uslugi-1.pdf  used on input line 566.
 (pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
-<figure/fig_uslugi2-1.pdf, id=221, 650.43pt x 289.08pt>
-File: figure/fig_uslugi2-1.pdf Graphic file (type pdf)
-<use figure/fig_uslugi2-1.pdf>
-Package pdftex.def Info: figure/fig_uslugi2-1.pdf  used on input line 562.
-(pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
-[13pdfTeX warning (ext4): destination with the same identifier (name{figure.10}
-) has been already used, duplicate ignored
+[13pdfTeX warning (ext4): destination with the same identifier (name{figure.9})
+ has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.568 
-       <./figure/fig_uslugi-1.pdf>]
+l.575 N
+       a wykresie \ref{fig:fig_uslugi} przedstawiony jest miesiÄ™czny przych...
+pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.575 N
+       a wykresie \ref{fig:fig_uslugi} przedstawiony jest miesiÄ™czny przych...
+ <./figure/fig_zakup_czesci-1.pdf> <./figure/fig_uslugi-1.pdf>]
+<figure/fig_uslugi2-1.pdf, id=232, 650.43pt x 289.08pt>
+File: figure/fig_uslugi2-1.pdf Graphic file (type pdf)
+<use figure/fig_uslugi2-1.pdf>
+Package pdftex.def Info: figure/fig_uslugi2-1.pdf  used on input line 584.
+(pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
 <figure/fig_pracownicy-1.pdf, id=234, 650.43pt x 289.08pt>
 File: figure/fig_pracownicy-1.pdf Graphic file (type pdf)
 <use figure/fig_pracownicy-1.pdf>
-Package pdftex.def Info: figure/fig_pracownicy-1.pdf  used on input line 586.
+Package pdftex.def Info: figure/fig_pracownicy-1.pdf  used on input line 608.
 (pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
  [14pdfTeX warning (ext4): destination with the same identifier (name{figure.11
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.597 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-12}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.597 
-       <./figure/fig_uslugi2-1.pdf> <./figure/fig_pracownicy-1.pdf>]
-<figure/fig_samochody_wplywy-1.pdf, id=252, 650.43pt x 289.08pt>
+l.614 
+       <./figure/fig_uslugi2-1.pdf>]
+<figure/fig_samochody_wplywy-1.pdf, id=246, 650.43pt x 289.08pt>
 File: figure/fig_samochody_wplywy-1.pdf Graphic file (type pdf)
 <use figure/fig_samochody_wplywy-1.pdf>
 Package pdftex.def Info: figure/fig_samochody_wplywy-1.pdf  used on input line 
-605.
+627.
 (pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
-<figure/fig_bilans-1.pdf, id=254, 650.43pt x 289.08pt>
-File: figure/fig_bilans-1.pdf Graphic file (type pdf)
-<use figure/fig_bilans-1.pdf>
-Package pdftex.def Info: figure/fig_bilans-1.pdf  used on input line 628.
-(pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
- [15pdfTeX warning (ext4): destination with the same identifier (name{figure.13
+ [15pdfTeX warning (ext4): destination with the same identifier (name{figure.12
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.634 
-       <./figure/fig_samochody_wplywy-1.pdf>]
+l.641 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+13}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.641 
+       <./figure/fig_pracownicy-1.pdf> <./figure/fig_samochody_wplywy-1.pdf>]
+<figure/fig_bilans-1.pdf, id=264, 650.43pt x 289.08pt>
+File: figure/fig_bilans-1.pdf Graphic file (type pdf)
+<use figure/fig_bilans-1.pdf>
+Package pdftex.def Info: figure/fig_bilans-1.pdf  used on input line 650.
+(pdftex.def)             Requested size: 469.75502pt x 208.78584pt.
 <figure/fig_bilans_suma-1.pdf, id=266, 650.43pt x 361.35pt>
 File: figure/fig_bilans_suma-1.pdf Graphic file (type pdf)
 <use figure/fig_bilans_suma-1.pdf>
-Package pdftex.def Info: figure/fig_bilans_suma-1.pdf  used on input line 646.
+Package pdftex.def Info: figure/fig_bilans_suma-1.pdf  used on input line 668.
 (pdftex.def)             Requested size: 469.75502pt x 260.98232pt.
- [16pdfTeX warning (ext4): destination with the same identifier (name{figure.14
-}) has been already used, duplicate ignored
+
+[16pdfTeX warning (ext4): destination with the same identifier (name{figure.14}
+) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.659 \section
-              {Podsumowanie}pdfTeX warning (ext4): destination with the same id
-entifier (name{figure.15}) has been already used, duplicate ignored
+l.674 
+       <./figure/fig_bilans-1.pdf>] [17pdfTeX warning (ext4): destination with 
+the same identifier (name{figure.15}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.659 \section
-              {Podsumowanie} <./figure/fig_bilans-1.pdf> <./figure/fig_bilans_s
-uma-1.pdf>] [17] (./raport.aux)
+l.687 \end{document}
+                     <./figure/fig_bilans_suma-1.pdf>] (./raport.aux)
 Package rerunfilecheck Info: File `raport.out' has not changed.
 (rerunfilecheck)             Checksum: 65BE5BBB26C7AB6C77339A10918D5A69;4020.
  ) 
 Here is how much of TeX's memory you used:
- 10515 strings out of 478994
- 159830 string characters out of 5862207
- 473937 words of memory out of 5000000
- 27733 multiletter control sequences out of 15000+600000
+ 11076 strings out of 478994
+ 166142 string characters out of 5862207
+ 494447 words of memory out of 5000000
+ 28285 multiletter control sequences out of 15000+600000
  434461 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,8n,75p,547b,464s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,9n,75p,748b,456s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/texlive/2021/texmf-dist/fonts/enc/dvips/pl/pltt.enc}{d:/texlive/2021/texm
 f-dist/fonts/enc/dvips/tex-gyre/q-rm.enc}<d:/texlive/2021/texmf-dist/fonts/type
 1/public/pl/pltt10.pfb><d:/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/
 qplb.pfb><d:/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb>
-Output written on raport.pdf (17 pages, 234528 bytes).
+Output written on raport.pdf (17 pages, 235515 bytes).
 PDF statistics:
  318 PDF objects out of 1000 (max. 8388607)
  263 compressed objects within 3 object streams
